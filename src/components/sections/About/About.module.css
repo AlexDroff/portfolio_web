@@ -1,0 +1,15 @@
+.inner {
+  max-width: 600px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.text {
+  margin-top: var(--space-4);
+  max-width: 600px;
+  color: var(--color-muted);
+  line-height: 1.6;
+}

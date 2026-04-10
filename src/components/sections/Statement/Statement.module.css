@@ -1,0 +1,18 @@
+.section {
+  padding: var(--space-9) 0;
+}
+
+.inner {
+  max-width: 900px;
+}
+
+.text {
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.line {
+  display: block;
+}

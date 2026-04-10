@@ -1,0 +1,25 @@
+.section {
+  padding: var(--space-9) 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--space-6);
+}
+
+.grid h3 {
+  margin-bottom: var(--space-3);
+}
+
+.grid p {
+  max-width: 600px;
+  line-height: 1.6;
+  color: var(--color-muted);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
