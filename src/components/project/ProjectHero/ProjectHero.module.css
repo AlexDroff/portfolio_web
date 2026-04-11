@@ -17,7 +17,7 @@
   max-width: 600px;
   font-size: 18px;
   line-height: 1.6;
-  color: var(--color-muted);
+  color: var(--text-secondary);
 }
 
 .meta {
@@ -25,5 +25,5 @@
   display: flex;
   gap: var(--space-5);
   font-size: 14px;
-  color: var(--color-muted);
+  color: var(--text-secondary);
 }

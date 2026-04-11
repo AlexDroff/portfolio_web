@@ -1,3 +1,9 @@
+.section {
+  background: var(--text-primary);
+  color: var(--bg-dark);
+  min-height: 900px;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -13,6 +19,10 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--space-5);
+}
+
+.step {
+  color: var(--bg-dark);
 }
 
 @media (max-width: 768px) {

@@ -2,9 +2,9 @@
   padding: var(--space-3) var(--space-5);
   border-radius: 8px;
   font-size: 16px;
-  background: white;
-  color: black;
-  border: none;
+  background: var(--text-primary);
+  color: var(--bg-dark);
+  border: 1px solid var(--text-primary);
   cursor: pointer;
   transition:
     transform 0.2s ease,

@@ -11,10 +11,9 @@
   --space-8: 64px;
   --space-9: 96px;
 
-  --color-bg: #0f0f0f;
-  --color-text: #ffffff;
-  --color-muted: #a1a1a1;
-  --color-primary: #4f46e5;
+  --bg-dark: #0b0f14;
+  --text-primary: #e6edf3;
+  --text-secondary: #9ca3af;
 }
 
 * {
@@ -24,7 +23,7 @@
 }
 
 body {
-  background: var(--color-bg);
-  color: var(--color-text);
+  background: var(--bg-dark);
+  color: var(--text-primary);
   font-family: Inter, sans-serif;
 }

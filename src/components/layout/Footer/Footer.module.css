@@ -1,0 +1,21 @@
+.footer {
+  background: var(--bg-dark);
+  padding: var(--space-5) 0;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  flex-wrap: wrap;
+}
+
+.email,
+.copy {
+  color: var(--text-secondary);
+}
+
+.email {
+  text-decoration: none;
+}

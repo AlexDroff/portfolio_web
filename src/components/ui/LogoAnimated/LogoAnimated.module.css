@@ -1,0 +1,24 @@
+.logo {
+  width: 140px;
+}
+
+/* перший path = кружечки */
+.logo path:first-of-type {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: rotate 5s linear infinite;
+}
+
+/* текст НЕ чіпаємо */
+.logo path:not(:first-of-type) {
+  animation: none;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

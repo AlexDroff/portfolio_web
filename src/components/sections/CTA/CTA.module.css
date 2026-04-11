@@ -1,9 +1,15 @@
 .section {
   padding: var(--space-9) 0;
+  min-height: 900px;
+  background: var(--bg-dark);
+  display: flex;
+  align-items: center;
 }
 
 .inner {
   max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .title {
@@ -17,9 +23,11 @@
   max-width: 600px;
   font-size: 18px;
   line-height: 1.6;
-  color: var(--color-muted);
+  color: var(--text-secondary);
 }
 
 .actions {
   margin-top: var(--space-6);
+  display: flex;
+  justify-content: center;
 }

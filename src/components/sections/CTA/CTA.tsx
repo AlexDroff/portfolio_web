@@ -9,11 +9,7 @@ export const CTA = () => {
     <section className={styles.section}>
       <Container>
         <div className={styles.inner}>
-          <h2 className={styles.title}>
-            Need a website?
-            <br />
-            Let’s build something that works.
-          </h2>
+          <h2 className={styles.title}>Need a website?</h2>
 
           <p className={styles.subtitle}>
             Fast, clean, and focused on results.
@@ -21,7 +17,7 @@ export const CTA = () => {
 
           <div className={styles.actions}>
             <Link href="/contact">
-              <Button>Contact me</Button>
+              <Button>Contact</Button>
             </Link>
           </div>
         </div>

@@ -2,19 +2,19 @@ import { Container } from "@/components/ui/Container/Container";
 import styles from "./ProjectHero.module.css";
 
 type ProjectHeroProps = {
-  title?: string;
-  subtitle?: string;
-  role?: string;
-  type?: string;
+  title: string;
+  subtitle: string;
+  role: string;
+  type: string;
   location?: string;
   focus?: string;
 };
 
 export const ProjectHero = ({
-  title = "Cleaning Company Website",
-  subtitle = "Website for a local cleaning business in Spain",
-  role = "Fullstack",
-  type = "Business website",
+  title,
+  subtitle,
+  role,
+  type,
   location,
   focus,
 }: ProjectHeroProps) => {

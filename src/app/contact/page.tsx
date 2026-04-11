@@ -9,11 +9,10 @@ export default function ContactPage() {
     <Section>
       <Container>
         <h1>Contact</h1>
-        <p>Let&apos;s build something together</p>
+        <p>Let&apos;s build something together.</p>
         <p>
           Email: <a href="mailto:hello@example.com">hello@example.com</a>
         </p>
-        <p>Telegram: @yourtelegram</p>
         <Link href="mailto:hello@example.com">
           <Button>Send Email</Button>
         </Link>

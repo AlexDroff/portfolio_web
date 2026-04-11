@@ -24,6 +24,7 @@ export const ProjectCard = ({
           src={image}
           alt={title}
           fill
+          sizes="(max-width: 768px) 100vw, 50vw"
           className={styles.image}
         />
       </div>
@@ -37,7 +38,7 @@ export const ProjectCard = ({
           <ul className={styles.list}>
             {highlights.map((item, index) => (
               <li key={index} className={styles.listItem}>
-                - {item}
+                {item}
               </li>
             ))}
           </ul>

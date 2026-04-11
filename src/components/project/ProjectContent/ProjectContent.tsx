@@ -2,15 +2,15 @@ import { Container } from "@/components/ui/Container/Container";
 import styles from "./ProjectContent.module.css";
 
 type ProjectContentProps = {
-  problem?: string;
-  solution?: string;
-  result?: string;
+  problem: string;
+  solution: string;
+  result: string;
 };
 
 export const ProjectContent = ({
-  problem = "The client had no online presence and relied only on local ads.",
-  solution = "I designed and developed a clean, fast website focused on clear services and easy contact.",
-  result = "The client received a modern website that clearly presents services and improves trust.",
+  problem,
+  solution,
+  result,
 }: ProjectContentProps) => {
   return (
     <section className={styles.section}>

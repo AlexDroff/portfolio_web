@@ -2,16 +2,14 @@
   display: block;
   border-radius: 16px;
   overflow: hidden;
-  background: #151515;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  background: var(--bg-dark);
+  border: 1px solid var(--text-secondary);
   transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+    transform 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
 }
 
 /* image */
@@ -48,25 +46,25 @@
 
 .description {
   font-size: 14px;
-  color: var(--color-muted);
+  color: var(--text-secondary);
 }
 
 /* highlights */
 .list {
   display: flex;
   flex-direction: column;
+  padding-left: var(--space-4);
   gap: var(--space-2);
 }
 
 .listItem {
   font-size: 14px;
-  color: var(--color-text);
-  opacity: 0.8;
+  color: var(--text-primary);
 }
 
 /* link */
 .link {
   margin-top: var(--space-3);
   font-size: 14px;
-  color: var(--color-primary);
+  color: var(--text-primary);
 }

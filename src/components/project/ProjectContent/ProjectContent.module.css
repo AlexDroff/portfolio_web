@@ -15,7 +15,7 @@
 .grid p {
   max-width: 600px;
   line-height: 1.6;
-  color: var(--color-muted);
+  color: var(--text-secondary);
 }
 
 @media (max-width: 768px) {

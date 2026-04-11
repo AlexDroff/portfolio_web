@@ -1,9 +1,11 @@
 .hero {
-  min-height: 90vh;
+  min-height: 900px;
   padding: var(--space-9) 0;
   display: flex;
   align-items: center;
+  background: var(--bg-dark);
   position: relative;
+  overflow: hidden;
 }
 
 .inner {
@@ -20,7 +22,7 @@
 .subtitle {
   font-size: 18px;
   line-height: 1.6;
-  color: var(--color-muted);
+  color: var(--text-secondary);
   margin-top: var(--space-5);
   max-width: 600px;
 }
@@ -31,21 +33,18 @@
   gap: var(--space-4);
 }
 
-/* glow */
 .hero::before {
   content: "";
   position: absolute;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(
-    circle,
-    rgba(79, 70, 229, 0.25) 0%,
-    transparent 70%
-  );
-  filter: blur(120px);
-  top: -100px;
-  left: -100px;
-  z-index: 0;
+  width: 300px;
+  height: 300px;
+  top: 120px;
+  left: -60px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--text-secondary) 0%, transparent 70%);
+  filter: blur(56px);
+  opacity: 0.12;
+  pointer-events: none;
 }
 
 .inner {
