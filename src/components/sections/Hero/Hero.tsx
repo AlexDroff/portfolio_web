@@ -1,12 +1,26 @@
 "use client";
 
+import type { MouseEvent } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import { Container } from "@/components/ui/Container/Container";
+import { scrollToHashTarget } from "@/utils/scrollToHashTarget";
 import styles from "./Hero.module.css";
-import { Button } from "@/components/ui/Button/Button";
 
 export const Hero = () => {
+  const pathname = usePathname();
+
+  const handleProjectsClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    if (pathname !== "/") {
+      return;
+    }
+
+    event.preventDefault();
+    window.history.replaceState(null, "", "/#projects");
+    scrollToHashTarget("projects");
+  };
+
   return (
     <section className={styles.hero}>
       <Container>
@@ -25,11 +39,15 @@ export const Hero = () => {
           </p>
 
           <div className={styles.actions}>
-            <Link href="#projects">
-              <Button>View Projects</Button>
+            <Link
+              href="/#projects"
+              className={styles.primaryBtn}
+              onClick={handleProjectsClick}
+            >
+              View Work
             </Link>
-            <Link href="/contact">
-              <Button>Contact</Button>
+            <Link href="/contact" className={styles.secondaryBtn}>
+              Get a website
             </Link>
           </div>
         </div>

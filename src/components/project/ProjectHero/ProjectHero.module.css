@@ -1,5 +1,6 @@
-.section {
-  padding: var(--space-9) 0;
+.container {
+  display: flex;
+  justify-content: center;
 }
 
 .inner {

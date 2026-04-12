@@ -1,11 +1,14 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { Container } from "@/components/ui/Container/Container";
 import { ProjectHero } from "@/components/project/ProjectHero/ProjectHero";
 import { ProjectContent } from "@/components/project/ProjectContent/ProjectContent";
 import { ProjectGallery } from "@/components/project/ProjectGallery/ProjectGallery";
 import { ProjectCTA } from "@/components/project/ProjectCTA/ProjectCTA";
 import { projects } from "@/data/projects";
 import { getProjectImages } from "@/utils/getProjectImages";
+import styles from "./page.module.css";
 
 type ProjectPageProps = {
   params: Promise<{
@@ -25,6 +28,13 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <>
+      <div className={styles.backLinkWrap}>
+        <Container>
+          <Link href="/" className={styles.backLink}>
+            &larr; Back to main page
+          </Link>
+        </Container>
+      </div>
       <ProjectHero
         title={project.caseStudy.hero.title}
         subtitle={project.caseStudy.hero.subtitle}

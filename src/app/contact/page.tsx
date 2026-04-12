@@ -3,11 +3,15 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container/Container";
 import { Section } from "@/components/ui/Section/Section";
 import { Button } from "@/components/ui/Button/Button";
+import styles from "./page.module.css";
 
 export default function ContactPage() {
   return (
     <Section>
       <Container>
+        <Link href="/" className={styles.backLink}>
+          &larr; Back to main page
+        </Link>
         <h1>Contact</h1>
         <p>Let&apos;s build something together.</p>
         <p>

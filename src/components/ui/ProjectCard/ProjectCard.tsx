@@ -35,13 +35,13 @@ export const ProjectCard = ({
         <p className={styles.description}>{description}</p>
 
         {highlights.length > 0 ? (
-          <ul className={styles.list}>
+          <div className={styles.highlights}>
             {highlights.map((item, index) => (
-              <li key={index} className={styles.listItem}>
-                {item}
-              </li>
+              <span key={`${item}-${index}`} className={styles.highlightItem}>
+                <span className={styles.highlightText}>{item}</span>
+              </span>
             ))}
-          </ul>
+          </div>
         ) : null}
 
         <span className={styles.link}>View project</span>
