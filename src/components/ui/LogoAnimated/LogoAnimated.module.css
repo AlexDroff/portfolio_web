@@ -1,5 +1,7 @@
 .logo {
-  width: 140px;
+  height: 100%;
+  width: auto;
+  display: block;
 }
 
 /* перший path = кружечки */

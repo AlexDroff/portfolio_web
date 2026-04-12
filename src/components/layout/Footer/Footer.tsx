@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { LogoAnimated } from "@/components/ui/LogoAnimated/LogoAnimated";
 import Link from "next/link";
 
 import { Container } from "@/components/ui/Container/Container";
@@ -11,13 +11,18 @@ export const Footer = () => {
     <footer className={styles.footer}>
       <Container>
         <div className={styles.inner}>
-          <Link href="/" aria-label="Home">
-            <Image src="/logo.svg" alt="Logo" width={156} height={42} />
+          <Link href="/" className={styles.logoLink} aria-label="Home">
+            <LogoAnimated />
           </Link>
-          <a href="mailto:hello@example.com" className={styles.email}>
-            hello@example.com
+          <a
+            href="mailto:olexandr.alexandroff@gmail.com"
+            className={styles.email}
+          >
+            olexandr.alexandroff@gmail.com
           </a>
-          <p className={styles.copy}>{"\u00A9"} {year}</p>
+          <p className={styles.copy}>
+            {"\u00A9"} {year}
+          </p>
         </div>
       </Container>
     </footer>

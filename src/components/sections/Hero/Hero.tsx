@@ -12,14 +12,16 @@ export const Hero = () => {
       <Container>
         <div className={styles.inner}>
           <h1 className={styles.title}>
-            Websites for small businesses
+            I build clean, fast websites
             <br />
-            that bring real clients
+            for real businesses
           </h1>
 
           <p className={styles.subtitle}>
-            I build clean, modern websites for small businesses - fast, simple,
-            and effective.
+            Fullstack developer with a design background.
+            <br />
+            I help small businesses launch modern, simple, and effective
+            websites.
           </p>
 
           <div className={styles.actions}>

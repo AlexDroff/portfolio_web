@@ -1,6 +1,6 @@
 .hero {
   min-height: 900px;
-  padding: var(--space-9) 0;
+  padding: var(--space-8) 0;
   display: flex;
   align-items: center;
   background: var(--bg-dark);
@@ -10,6 +10,10 @@
 
 .inner {
   max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  text-align: left;
 }
 
 .title {
@@ -23,14 +27,12 @@
   font-size: 18px;
   line-height: 1.6;
   color: var(--text-secondary);
-  margin-top: var(--space-5);
-  max-width: 600px;
+  max-width: 680px;
 }
 
 .actions {
-  margin-top: var(--space-6);
   display: flex;
-  gap: var(--space-4);
+  gap: var(--space-5);
 }
 
 .hero::before {
@@ -38,8 +40,8 @@
   position: absolute;
   width: 300px;
   height: 300px;
-  top: 120px;
-  left: -60px;
+  top: calc(var(--space-8) + var(--space-7) + var(--space-2));
+  left: calc((var(--space-7) + var(--space-3)) * -1);
   border-radius: 50%;
   background: radial-gradient(circle, var(--text-secondary) 0%, transparent 70%);
   filter: blur(56px);

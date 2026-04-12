@@ -1,6 +1,9 @@
 /* src/styles/globals.css */
 
+@import "modern-normalize/modern-normalize.css";
+
 :root {
+  /* spacing */
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -11,19 +14,82 @@
   --space-8: 64px;
   --space-9: 96px;
 
+  /* colors */
   --bg-dark: #0b0f14;
   --text-primary: #e6edf3;
   --text-secondary: #9ca3af;
+
+  /* accent (візьми зелений з логотипу якщо є точний) */
+  --accent: #22c55e;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--bg-dark);
   color: var(--text-primary);
   font-family: Inter, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* reset */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* links */
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+a:focus-visible {
+  color: var(--accent);
+}
+
+/* lists */
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* media */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* buttons */
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+/* inputs */
+
+input,
+textarea,
+select {
+  font: inherit;
 }

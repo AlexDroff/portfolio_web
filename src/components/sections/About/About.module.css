@@ -6,57 +6,102 @@
 }
 
 .inner {
-  max-width: 600px;
+  max-width: 700px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  align-items: flex-start;
 }
 
+/* 🔥 TITLE */
 .title {
   font-size: 32px;
   font-weight: 600;
+  margin-bottom: var(--space-6);
 }
 
+/* 🔥 BLOCK WRAPPER */
+.block {
+  margin-top: var(--space-5); /* 64px між блоками */
+  width: 100%;
+}
+
+/* 🔥 BLOCK TITLE */
+.blockTitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: var(--space-6); /* 32px під заголовком */
+}
+
+/* 🔥 TEXT GROUP (ВАЖЛИВО) */
+.textGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🔥 TEXT */
 .text {
-  max-width: 600px;
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 0.5;
 }
 
-.list {
+/* 🔥 GRID (єдиний для всіх) */
+.grid {
   list-style: none;
+  padding: 0;
+  margin-top: var(--space-6);
+
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--space-4);
+  gap: var(--space-6);
+
+  width: 100%;
+  justify-items: center;
+  align-items: center;
 }
 
-.processBlock {
-  margin-top: var(--space-5);
-}
-
-.processGrid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--space-4);
-}
-
+/* 🔥 ITEM */
 .item {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+
+  gap: var(--space-3);
   text-align: center;
-  color: var(--bg-dark);
+
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
 }
 
+/* 🔥 HOVER */
+.item:hover {
+  transform: translateY(-4px) scale(1.05);
+  color: var(--accent);
+}
+
+/* 🔥 ICON */
 .icon {
-  width: 67px;
-  height: 67px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
-  display: block;
+
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
 }
 
+/* 🔥 GREEN EFFECT (бо це <img>, не svg) */
+.item:hover .icon {
+  transform: scale(1.05);
+  filter: brightness(0) saturate(100%) invert(48%) sepia(96%) saturate(500%)
+    hue-rotate(90deg);
+}
+
+/* 🔥 TEXT UNDER ICON */
 .item span {
-  margin-top: 8px;
   font-size: 16px;
   line-height: 1.3;
 }

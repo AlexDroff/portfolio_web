@@ -18,4 +18,21 @@
 
 .email {
   text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.email:hover,
+.email:focus-visible {
+  color: var(--accent);
+  outline: none;
+}
+
+.logoLink {
+  display: inline-flex;
+  align-items: center;
+}
+
+.logoLink svg {
+  width: 200px;
+  height: auto;
 }

@@ -1,0 +1,41 @@
+.main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-dark);
+  color: var(--text-primary);
+}
+
+.inner {
+  text-align: center;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.logo {
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 32px;
+}
+
+.text {
+  color: var(--text-secondary);
+}
+
+.button {
+  margin-top: var(--space-3);
+  display: inline-block;
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  color: var(--accent);
+  outline: none;
+}

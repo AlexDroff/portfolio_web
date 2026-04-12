@@ -11,9 +11,12 @@ export default function ContactPage() {
         <h1>Contact</h1>
         <p>Let&apos;s build something together.</p>
         <p>
-          Email: <a href="mailto:hello@example.com">hello@example.com</a>
+          Email:{" "}
+          <a href="mailto:olexandr.alexandroff@gmail.com">
+            olexandr.alexandroff@gmail.com
+          </a>
         </p>
-        <Link href="mailto:hello@example.com">
+        <Link href="mailto:olexandr.alexandroff@gmail.com">
           <Button>Send Email</Button>
         </Link>
       </Container>
