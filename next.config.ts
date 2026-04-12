@@ -5,7 +5,6 @@ const nextConfig: NextConfig = {
     localPatterns: [
       {
         pathname: "/projects/**",
-        search: "?v=3",
       },
     ],
   },

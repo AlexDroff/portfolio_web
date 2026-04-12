@@ -4,6 +4,8 @@ import styles from "./Projects.module.css";
 import { ProjectCard } from "@/components/ui/ProjectCard/ProjectCard";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button/Button";
+import { projects } from "@/data/projects";
+import { COVER_INDEX } from "@/types/project";
 
 export const Projects = () => {
   return (
@@ -15,21 +17,16 @@ export const Projects = () => {
           </div>
 
           <div className={styles.grid}>
-            <ProjectCard
-              title="Cleaning Company Website"
-              description="Website for a local cleaning business in Spain"
-              image="/projects/cleaning/cleaning-3.webp?v=3"
-              slug="cleaning"
-              highlights={["Clean UI", "Mobile friendly", "Fast loading"]}
-            />
-
-            <ProjectCard
-              title="Countryside Rental Website"
-              description="Website for a vacation house"
-              image="/projects/rental/rental-1.webp?v=3"
-              slug="rental"
-              highlights={["Simple structure", "Atmospheric design", "Responsive"]}
-            />
+            {projects.map((project) => (
+              <ProjectCard
+                key={project.slug}
+                slug={project.slug}
+                title={project.title}
+                description={project.description}
+                image={`/projects/${project.imageFolder}/${COVER_INDEX}.webp`}
+                highlights={project.highlights}
+              />
+            ))}
           </div>
 
           <div className={styles.cta}>

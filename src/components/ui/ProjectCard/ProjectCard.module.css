@@ -3,7 +3,7 @@
   border-radius: 16px;
   overflow: hidden;
   background: var(--bg-dark);
-  border: 1px solid var(--text-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   transition: all 0.2s ease;
 }
 
@@ -27,19 +27,39 @@
   overflow: hidden;
 }
 
+.imageWrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
 .image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: all 0.2s ease;
+  filter: grayscale(100%);
+  transform: scale(1);
+  transition:
+    transform 0.4s ease,
+    filter 0.4s ease;
 }
 
 .card:hover .image {
-  transform: scale(1.03);
+  filter: grayscale(0%);
+  transform: scale(1.05);
 }
 
 .card:focus-visible .image {
-  transform: scale(1.03);
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+.card:hover .imageWrapper::after,
+.card:focus-visible .imageWrapper::after {
+  opacity: 0;
 }
 
 /* content */
@@ -78,6 +98,7 @@
   margin-top: var(--space-3);
   font-size: 14px;
   color: var(--text-primary);
+  display: inline-block;
   transition: all 0.2s ease;
 }
 
@@ -89,4 +110,5 @@
 .card:hover .link,
 .card:focus-visible .link {
   color: var(--accent);
+  transform: translateX(var(--space-1));
 }

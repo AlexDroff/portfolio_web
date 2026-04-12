@@ -3,11 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 type ProjectCardProps = {
+  slug: string;
   title: string;
   description: string;
   image: string;
-  slug: string;
-  highlights?: string[];
+  highlights: string[];
 };
 
 export const ProjectCard = ({
@@ -15,7 +15,7 @@ export const ProjectCard = ({
   description,
   image,
   slug,
-  highlights = [],
+  highlights,
 }: ProjectCardProps) => {
   return (
     <Link href={`/projects/${slug}`} className={styles.card}>
