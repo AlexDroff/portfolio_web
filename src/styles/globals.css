@@ -19,6 +19,7 @@
   --text-primary: #e6edf3;
   --text-secondary: #9ca3af;
   --text-thirdary: #696e77;
+  --error: #ef4444;
 
   /* accent (візьми зелений з логотипу якщо є точний) */
   --accent: #22c55e;
