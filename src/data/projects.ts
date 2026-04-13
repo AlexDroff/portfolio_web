@@ -49,26 +49,29 @@ export const projects: Project[] = [
       gallery: [
         {
           title: 'Responsive views',
+          layout: 'responsive-pair',
           images: [
-            { index: 1, label: 'Desktop view' },
-            { index: 2, label: 'Mobile view' },
+            { index: 1, label: 'Desktop view', kind: 'desktop' },
+            { index: 2, label: 'Mobile view', kind: 'mobile' },
           ],
         },
         {
           title: 'Key screens',
+          layout: 'grid',
           images: [
-            { index: 3, label: 'Hero section' },
-            { index: 4, label: 'Main content' },
-            { index: 5, label: 'Feature section' },
-            { index: 6, label: 'Additional section' },
+            { index: 3, label: 'Hero section', kind: 'default' },
+            { index: 4, label: 'Main content', kind: 'default' },
+            { index: 5, label: 'Section', kind: 'default' },
+            { index: 6, label: 'Section', kind: 'default' },
           ],
         },
         {
           title: 'Additional screens',
+          layout: 'grid',
           images: [
-            { index: 7, label: 'Extra screen 1' },
-            { index: 8, label: 'Extra screen 2' },
-            { index: 9, label: 'Extra screen 3' },
+            { index: 7, label: 'Screen', kind: 'default' },
+            { index: 8, label: 'Screen', kind: 'default' },
+            { index: 9, label: 'Screen', kind: 'default' },
           ],
         },
       ],
@@ -127,26 +130,29 @@ export const projects: Project[] = [
       gallery: [
         {
           title: 'Responsive views',
+          layout: 'responsive-pair',
           images: [
-            { index: 1, label: 'Desktop view' },
-            { index: 2, label: 'Mobile view' },
+            { index: 1, label: 'Desktop view', kind: 'desktop' },
+            { index: 2, label: 'Mobile view', kind: 'mobile' },
           ],
         },
         {
           title: 'Key screens',
+          layout: 'grid',
           images: [
-            { index: 3, label: 'Hero section' },
-            { index: 4, label: 'Main content' },
-            { index: 5, label: 'Feature section' },
-            { index: 6, label: 'Additional section' },
+            { index: 3, label: 'Hero section', kind: 'default' },
+            { index: 4, label: 'Main content', kind: 'default' },
+            { index: 5, label: 'Section', kind: 'default' },
+            { index: 6, label: 'Section', kind: 'default' },
           ],
         },
         {
           title: 'Additional screens',
+          layout: 'grid',
           images: [
-            { index: 7, label: 'Extra screen 1' },
-            { index: 8, label: 'Extra screen 2' },
-            { index: 9, label: 'Extra screen 3' },
+            { index: 7, label: 'Screen', kind: 'default' },
+            { index: 8, label: 'Screen', kind: 'default' },
+            { index: 9, label: 'Screen', kind: 'default' },
           ],
         },
       ],
@@ -206,26 +212,29 @@ export const projects: Project[] = [
       gallery: [
         {
           title: 'Responsive views',
+          layout: 'responsive-pair',
           images: [
-            { index: 1, label: 'Desktop view' },
-            { index: 2, label: 'Mobile view' },
+            { index: 1, label: 'Desktop view', kind: 'desktop' },
+            { index: 2, label: 'Mobile view', kind: 'mobile' },
           ],
         },
         {
           title: 'Key screens',
+          layout: 'grid',
           images: [
-            { index: 3, label: 'Hero section' },
-            { index: 4, label: 'Main content' },
-            { index: 5, label: 'Feature section' },
-            { index: 6, label: 'Additional section' },
+            { index: 3, label: 'Hero section', kind: 'default' },
+            { index: 4, label: 'Main content', kind: 'default' },
+            { index: 5, label: 'Section', kind: 'default' },
+            { index: 6, label: 'Section', kind: 'default' },
           ],
         },
         {
           title: 'Additional screens',
+          layout: 'grid',
           images: [
-            { index: 7, label: 'Extra screen 1' },
-            { index: 8, label: 'Extra screen 2' },
-            { index: 9, label: 'Extra screen 3' },
+            { index: 7, label: 'Screen', kind: 'default' },
+            { index: 8, label: 'Screen', kind: 'default' },
+            { index: 9, label: 'Screen', kind: 'default' },
           ],
         },
       ],
@@ -285,26 +294,29 @@ export const projects: Project[] = [
       gallery: [
         {
           title: 'Responsive views',
+          layout: 'responsive-pair',
           images: [
-            { index: 1, label: 'Desktop view' },
-            { index: 2, label: 'Mobile view' },
+            { index: 1, label: 'Desktop view', kind: 'desktop' },
+            { index: 2, label: 'Mobile view', kind: 'mobile' },
           ],
         },
         {
           title: 'Key screens',
+          layout: 'grid',
           images: [
-            { index: 3, label: 'Hero section' },
-            { index: 4, label: 'Main content' },
-            { index: 5, label: 'Feature section' },
-            { index: 6, label: 'Additional section' },
+            { index: 3, label: 'Hero section', kind: 'default' },
+            { index: 4, label: 'Main content', kind: 'default' },
+            { index: 5, label: 'Section', kind: 'default' },
+            { index: 6, label: 'Section', kind: 'default' },
           ],
         },
         {
           title: 'Additional screens',
+          layout: 'grid',
           images: [
-            { index: 7, label: 'Extra screen 1' },
-            { index: 8, label: 'Extra screen 2' },
-            { index: 9, label: 'Extra screen 3' },
+            { index: 7, label: 'Screen', kind: 'default' },
+            { index: 8, label: 'Screen', kind: 'default' },
+            { index: 9, label: 'Screen', kind: 'default' },
           ],
         },
       ],

@@ -14,10 +14,12 @@ export type ProjectMetaItem = {
 export type ProjectGalleryImage = {
   index: number;
   label: string;
+  kind: 'desktop' | 'mobile' | 'default';
 };
 
 export type ProjectGallerySection = {
   title: string;
+  layout: 'responsive-pair' | 'grid';
   images: ProjectGalleryImage[];
 };
 

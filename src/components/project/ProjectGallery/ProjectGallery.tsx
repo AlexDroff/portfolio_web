@@ -16,26 +16,39 @@ export const ProjectGallery = ({ folder, sections }: ProjectGalleryProps) => {
   return (
     <section className={styles.section}>
       <Container>
-        <div className={styles.stack}>
-          {sections.map((section) => (
-            <div key={section.title} className={styles.group}>
-              <h3 className={styles.groupTitle}>{section.title}</h3>
-              <div className={styles.images}>
-                {section.images.map((image) => (
-                  <Image
-                    key={`${section.title}-${image.index}`}
-                    src={`/projects/${folder}/${image.index}.webp`}
-                    alt={image.label}
-                    width={1200}
-                    height={700}
-                    style={{ height: "auto" }}
-                    className={styles.image}
-                  />
-                ))}
-              </div>
+        {sections.map((section) => (
+          <div key={section.title} className={styles.group}>
+            <h3 className={styles.groupTitle}>{section.title}</h3>
+            <div
+              className={
+                section.layout === "responsive-pair"
+                  ? styles.responsivePair
+                  : styles.gridLayout
+              }
+            >
+              {section.images.map((image) => (
+                <div key={`${section.title}-${image.index}`} className={styles.item}>
+                  <div
+                    className={
+                      section.layout === "responsive-pair"
+                        ? styles.pairFrame
+                        : styles.gridFrame
+                    }
+                  >
+                    <Image
+                      src={`/projects/${folder}/${image.index}.webp`}
+                      alt={image.label}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className={styles.image}
+                    />
+                  </div>
+                  <p className={styles.label}>{image.label}</p>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </Container>
     </section>
   );
