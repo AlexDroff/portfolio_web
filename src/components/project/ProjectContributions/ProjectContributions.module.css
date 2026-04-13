@@ -16,7 +16,7 @@
 .list {
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
+  gap: var(--space-4);
   list-style: disc;
   padding-left: var(--space-5);
 }
@@ -24,5 +24,5 @@
 .item {
   color: var(--bg-dark);
   opacity: 0.8;
-  line-height: 1.6;
+  line-height: 1.75;
 }

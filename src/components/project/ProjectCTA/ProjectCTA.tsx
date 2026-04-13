@@ -22,7 +22,7 @@ export const ProjectCTA = ({
           <h2 className={styles.title}>{title}</h2>
           {subtext ? <p className={styles.subtitle}>{subtext}</p> : null}
 
-          <Link href="/contact">
+          <Link href="/contact" className={styles.actions}>
             <Button>{buttonLabel}</Button>
           </Link>
         </div>

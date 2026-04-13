@@ -21,4 +21,5 @@
 
 .actions {
   margin-top: var(--space-6);
+  display: inline-flex;
 }
