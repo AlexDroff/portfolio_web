@@ -4,20 +4,9 @@ import styles from "./ProjectHero.module.css";
 type ProjectHeroProps = {
   title: string;
   subtitle: string;
-  role: string;
-  type: string;
-  location?: string;
-  focus?: string;
 };
 
-export const ProjectHero = ({
-  title,
-  subtitle,
-  role,
-  type,
-  location,
-  focus,
-}: ProjectHeroProps) => {
+export const ProjectHero = ({ title, subtitle }: ProjectHeroProps) => {
   return (
     <section className={styles.section}>
       <Container>
@@ -25,13 +14,6 @@ export const ProjectHero = ({
           <h1 className={styles.title}>{title}</h1>
 
           <p className={styles.subtitle}>{subtitle}</p>
-
-          <div className={styles.meta}>
-            <span>Role: {role}</span>
-            <span>Type: {type}</span>
-            {location ? <span>Location: {location}</span> : null}
-            {focus ? <span>Focus: {focus}</span> : null}
-          </div>
         </div>
       </Container>
     </section>

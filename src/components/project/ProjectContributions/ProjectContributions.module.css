@@ -1,0 +1,28 @@
+.section {
+  background: var(--text-primary);
+  color: var(--bg-dark);
+  padding: var(--space-8) 0;
+}
+
+.inner {
+  max-width: 800px;
+}
+
+.title {
+  margin-bottom: var(--space-4);
+  color: var(--bg-dark);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  list-style: disc;
+  padding-left: var(--space-5);
+}
+
+.item {
+  color: var(--bg-dark);
+  opacity: 0.8;
+  line-height: 1.6;
+}

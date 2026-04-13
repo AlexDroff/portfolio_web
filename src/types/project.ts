@@ -6,30 +6,53 @@ export const SCREEN_TYPES = {
 
 export const COVER_INDEX = SCREEN_TYPES.COVER;
 
-export type Project = {
+export type ProjectMetaItem = {
+  label: string;
+  value: string;
+};
+
+export type ProjectGalleryImage = {
+  index: number;
+  label: string;
+};
+
+export type ProjectGallerySection = {
+  title: string;
+  images: ProjectGalleryImage[];
+};
+
+export type ProjectCaseStudy = {
+  hero: {
+    title: string;
+    subtitle: string;
+  };
+  meta: ProjectMetaItem[];
+  content: {
+    problem: string;
+    solution: string;
+    result: string;
+  };
+  contributions: {
+    title: string;
+    items: string[];
+  };
+  gallery: ProjectGallerySection[];
+  cta: {
+    title: string;
+    subtext: string;
+    buttonLabel: string;
+  };
+};
+
+export type ProjectCardData = {
   slug: string;
   title: string;
   description: string;
   highlights: string[];
   imageFolder: string;
   screenshotsCount: number;
-  caseStudy: {
-    hero: {
-      title: string;
-      subtitle: string;
-      role: string;
-      type: string;
-      location?: string;
-      focus?: string;
-    };
-    content: {
-      problem: string;
-      solution: string;
-      result: string;
-    };
-    cta: {
-      title: string;
-      subtext: string;
-    };
-  };
+};
+
+export type Project = ProjectCardData & {
+  caseStudy: ProjectCaseStudy;
 };

@@ -3,11 +3,12 @@ import { notFound } from "next/navigation";
 
 import { Container } from "@/components/ui/Container/Container";
 import { ProjectHero } from "@/components/project/ProjectHero/ProjectHero";
+import { ProjectMeta } from "@/components/project/ProjectMeta/ProjectMeta";
 import { ProjectContent } from "@/components/project/ProjectContent/ProjectContent";
+import { ProjectContributions } from "@/components/project/ProjectContributions/ProjectContributions";
 import { ProjectGallery } from "@/components/project/ProjectGallery/ProjectGallery";
 import { ProjectCTA } from "@/components/project/ProjectCTA/ProjectCTA";
 import { projects } from "@/data/projects";
-import { getProjectImages } from "@/utils/getProjectImages";
 import styles from "./page.module.css";
 
 type ProjectPageProps = {
@@ -24,7 +25,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     notFound();
   }
 
-  const images = getProjectImages(project.imageFolder, project.screenshotsCount);
+  const { caseStudy } = project;
 
   return (
     <>
@@ -36,22 +37,24 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </Container>
       </div>
       <ProjectHero
-        title={project.caseStudy.hero.title}
-        subtitle={project.caseStudy.hero.subtitle}
-        role={project.caseStudy.hero.role}
-        type={project.caseStudy.hero.type}
-        location={project.caseStudy.hero.location}
-        focus={project.caseStudy.hero.focus}
+        title={caseStudy.hero.title}
+        subtitle={caseStudy.hero.subtitle}
       />
+      <ProjectMeta items={caseStudy.meta} />
       <ProjectContent
-        problem={project.caseStudy.content.problem}
-        solution={project.caseStudy.content.solution}
-        result={project.caseStudy.content.result}
+        problem={caseStudy.content.problem}
+        solution={caseStudy.content.solution}
+        result={caseStudy.content.result}
       />
-      <ProjectGallery images={images.map((image) => image.src)} />
+      <ProjectContributions
+        title={caseStudy.contributions.title}
+        items={caseStudy.contributions.items}
+      />
+      <ProjectGallery folder={project.imageFolder} sections={caseStudy.gallery} />
       <ProjectCTA
-        title={project.caseStudy.cta.title}
-        subtext={project.caseStudy.cta.subtext}
+        title={caseStudy.cta.title}
+        subtext={caseStudy.cta.subtext}
+        buttonLabel={caseStudy.cta.buttonLabel}
       />
     </>
   );
