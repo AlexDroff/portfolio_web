@@ -1,5 +1,5 @@
 .section {
-  background: var(--bg-dark);
+  background: var(--color-bg-primary);
   min-height: 900px;
   scroll-margin-top: calc(var(--space-8) + var(--space-5));
 }
@@ -25,29 +25,9 @@
   gap: var(--space-6);
 }
 
-.cta {
-  max-width: 600px;
-  text-align: center;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-4);
-}
-
-.ctaTitle {
-  font-size: 40px;
-  line-height: 1.15;
-  font-weight: 600;
-}
-
-.ctaText {
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
   }
 }
+

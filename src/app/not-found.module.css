@@ -3,8 +3,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg-dark);
-  color: var(--text-primary);
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
 }
 
 .inner {
@@ -24,18 +24,6 @@
 }
 
 .text {
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
 }
 
-.button {
-  margin-top: var(--space-3);
-  display: inline-block;
-  color: var(--text-primary);
-  transition: all 0.2s ease;
-}
-
-.button:hover,
-.button:focus-visible {
-  color: var(--accent);
-  outline: none;
-}

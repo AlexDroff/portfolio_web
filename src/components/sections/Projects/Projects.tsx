@@ -2,8 +2,7 @@ import { Container } from "@/components/ui/Container/Container";
 import { Section } from "@/components/ui/Section/Section";
 import styles from "./Projects.module.css";
 import { ProjectCard } from "@/components/ui/ProjectCard/ProjectCard";
-import Link from "next/link";
-import { Button } from "@/components/ui/Button/Button";
+import { CTA } from "@/components/ui/CTA/CTA";
 import { projects } from "@/data/projects";
 import { COVER_INDEX } from "@/types/project";
 
@@ -25,19 +24,20 @@ export const Projects = () => {
                 description={project.description}
                 image={`/projects/${project.imageFolder}/${COVER_INDEX}.webp`}
                 highlights={project.highlights}
+                liveDemoUrl={project.liveDemoUrl}
               />
             ))}
           </div>
 
-          <div className={styles.cta}>
-            <h3 className={styles.ctaTitle}>Need a website?</h3>
-            <p className={styles.ctaText}>Fast, clean, and focused on results.</p>
-            <Link href="/contact">
-              <Button>Contact</Button>
-            </Link>
-          </div>
+          <CTA
+            title="Need a website that brings real clients?"
+            subtext="I build fast, reliable websites with clear structure and real business logic."
+            buttonLabel="Start a project"
+            href="/contact"
+          />
         </div>
       </Container>
     </Section>
   );
 };
+

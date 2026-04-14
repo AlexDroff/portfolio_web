@@ -1,27 +1,21 @@
-import Link from "next/link";
-
 import { Container } from "@/components/ui/Container/Container";
+import { CTA as CTAContent } from "@/components/ui/CTA/CTA";
 import styles from "./CTA.module.css";
-import { Button } from "@/components/ui/Button/Button";
 
 export const CTA = () => {
   return (
     <section className={styles.section}>
       <Container>
         <div className={styles.inner}>
-          <h2 className={styles.title}>Need a website?</h2>
-
-          <p className={styles.subtitle}>
-            Fast, clean, and focused on results.
-          </p>
-
-          <div className={styles.actions}>
-            <Link href="/contact">
-              <Button>Contact</Button>
-            </Link>
-          </div>
+          <CTAContent
+            title="Need a website that brings real clients?"
+            subtext="I build fast, reliable websites with clear structure and real business logic."
+            buttonLabel="Start a project"
+            href="/contact"
+          />
         </div>
       </Container>
     </section>
   );
 };
+

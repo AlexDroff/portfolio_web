@@ -180,7 +180,9 @@ export default function ContactPage() {
                 )}
               </label>
 
-              <Button>Send message</Button>
+              <Button variant="primary" type="submit" fullWidth>
+                Send message
+              </Button>
             </form>
 
             <p className={styles.directEmail}>

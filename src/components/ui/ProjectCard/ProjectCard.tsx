@@ -1,6 +1,6 @@
 import styles from "./ProjectCard.module.css";
 import Image from "next/image";
-import Link from "next/link";
+import { Button } from "@/components/ui/Button/Button";
 
 type ProjectCardProps = {
   slug: string;
@@ -8,6 +8,7 @@ type ProjectCardProps = {
   description: string;
   image: string;
   highlights: string[];
+  liveDemoUrl: string;
 };
 
 export const ProjectCard = ({
@@ -16,9 +17,10 @@ export const ProjectCard = ({
   image,
   slug,
   highlights,
+  liveDemoUrl,
 }: ProjectCardProps) => {
   return (
-    <Link href={`/projects/${slug}`} className={styles.card}>
+    <article className={styles.card}>
       <div className={styles.imageWrapper}>
         <Image
           src={image}
@@ -44,8 +46,21 @@ export const ProjectCard = ({
           </div>
         ) : null}
 
-        <span className={styles.link}>View project</span>
+        <div className={styles.actions}>
+          <Button variant="primary" as="link" href={`/projects/${slug}`}>
+            View project
+          </Button>
+          <Button
+            variant="secondary"
+            as="link"
+            href={liveDemoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Live demo
+          </Button>
+        </div>
       </div>
-    </Link>
+    </article>
   );
 };

@@ -1,6 +1,7 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import styles from './not-found.module.css';
+import Image from "next/image";
+
+import { Button } from "@/components/ui/Button/Button";
+import styles from "./not-found.module.css";
 
 export default function NotFoundPage() {
   return (
@@ -17,12 +18,12 @@ export default function NotFoundPage() {
         <h1 className={styles.title}>Page not found</h1>
 
         <p className={styles.text}>
-          The page you are looking for doesn’t exist or was moved.
+          The page you are looking for doesn&apos;t exist or was moved.
         </p>
 
-        <Link href="/" className={styles.button}>
-          ← Back to home
-        </Link>
+        <Button as="link" href="/" variant="secondary">
+          {"\u2190 Back to home"}
+        </Button>
       </div>
     </main>
   );

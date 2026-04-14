@@ -3,47 +3,58 @@ import type { Project } from '@/types/project';
 export const projects: Project[] = [
   {
     slug: 'cleaning',
-    title: 'Cleaning Company Website',
+    title: 'Cleaning Services',
     description:
-      'Website for a local cleaning business focused on services, trust, and clear contact flow.',
+      'Website for a local cleaning business with service catalog and WhatsApp-based booking flow.',
     highlights: [
-      'Service-focused layout',
-      'Clear contact flow',
-      'Mobile-first design',
-      'Trust-oriented structure',
-      'Fast page loading',
-      'Responsive interface',
+      'Service selection UI',
+      'WhatsApp booking flow',
+      'Order summary logic',
     ],
+    liveDemoUrl:
+      'https://pure-soft-git-feature-dark-mode-i18n-alexdroffs-projects.vercel.app/',
     imageFolder: 'cleaning',
     screenshotsCount: 9,
     caseStudy: {
       hero: {
-        title: 'Cleaning Company Website',
-        subtitle: 'Modern website for a local cleaning service in Spain',
+        title: 'Cleaning Services',
+        subtitle:
+          'Website for a local cleaning company with a service catalog and a complete WhatsApp-based ordering flow.',
       },
       meta: [
-        { label: 'Role', value: 'Fullstack Developer' },
-        { label: 'Type', value: 'Business Website' },
+        { label: 'Role', value: 'Product Designer & Fullstack Developer' },
+        { label: 'Type', value: 'Business Website with order flow' },
         { label: 'Location', value: 'Spain' },
-        { label: 'Focus', value: 'Clarity and trust' },
+        {
+          label: 'Focus',
+          value:
+            'Designing a simple and clear ordering flow without complex forms or backend.',
+        },
         { label: 'Stack', value: 'Next.js, TypeScript, CSS Modules' },
-        { label: 'Duration', value: '4 weeks' },
+        {
+          label: 'Duration',
+          value: '3 weeks (1 week design, 2 weeks development)',
+        },
       ],
       content: {
         problem:
-          'The client had no professional website and relied mostly on local advertising and word of mouth. Potential customers had no clear place to learn about services or quickly get in touch.',
+          'The client had no website and no structured way to present services or accept orders. Requests were handled manually through calls and messaging apps, without a clear flow.',
         solution:
-          'I designed and developed a clean, modern website focused on clarity and usability. The structure highlights key services, builds trust through simple design, and makes it easy for users to contact the business.',
+          "I designed and built a service-based website with a simple ordering flow. Users can browse services, view details in modals, and add them to an order. The system generates a pre-filled WhatsApp message with selected services and total price, removing the need for a backend.",
         result:
-          'The client received a fast, responsive website that clearly presents services and improves online presence. The new website makes it easier for potential customers to understand the offer and reach out.',
+          'The result is a fast, clear website that helps the client receive structured service requests directly via WhatsApp.',
       },
       contributions: {
         title: 'What I did',
         items: [
-          'Planned the information architecture around service priorities.',
-          'Built responsive page layouts for desktop and mobile.',
-          'Implemented reusable UI blocks for faster content updates.',
-          'Optimized content flow to reduce friction before contact actions.',
+          'Designed the full UI/UX from scratch',
+          'Built fully responsive layouts (mobile, tablet, desktop)',
+          'Implemented cart logic and price calculation',
+          'Developed service detail modals',
+          'Built WhatsApp message generation logic',
+          'Implemented full order flow without backend',
+          'Added multilingual support (EN / ES)',
+          'Implemented dark and light themes',
         ],
       },
       gallery: [
@@ -76,55 +87,64 @@ export const projects: Project[] = [
         },
       ],
       cta: {
-        title: 'Need a website like this?',
-        subtext: "Let's build something simple, fast, and effective.",
-        buttonLabel: 'Contact me',
+        title: 'Need a website that brings real clients?',
+        subtext:
+          'I build fast, reliable websites with clear structure and real business logic.',
+        buttonLabel: 'Start a project',
       },
     },
   },
   {
     slug: 'rental',
-    title: 'Countryside Rental Website',
+    title: 'Countryside Retreat',
     description:
-      'Website for a countryside rental property focused on atmosphere and clear presentation.',
+      'Website for a countryside guest house with property presentation and direct-call booking flow.',
     highlights: [
-      'Atmosphere design',
-      'Property presentation',
-      'Mobile-first layout',
-      'Simple inquiry flow',
-      'Responsive interface',
-      'Clear structure',
+      'Atmosphere-driven design',
+      'House detail pages',
+      'Direct call booking',
     ],
+    liveDemoUrl: 'https://usadba.kr.ua/ua/',
     imageFolder: 'rental-house',
     screenshotsCount: 9,
     caseStudy: {
       hero: {
-        title: 'Countryside Rental Website',
-        subtitle: 'Website for a peaceful vacation house surrounded by nature',
+        title: 'Countryside Retreat',
+        subtitle:
+          'Website for a countryside guest house focused on atmosphere, property presentation, and direct-call booking.',
       },
       meta: [
-        { label: 'Role', value: 'Fullstack Developer' },
-        { label: 'Type', value: 'Rental / Hospitality Website' },
-        { label: 'Location', value: 'Europe' },
-        { label: 'Focus', value: 'Atmosphere and simplicity' },
+        { label: 'Role', value: 'Product Designer & Fullstack Developer' },
+        { label: 'Type', value: 'Vacation Rental Website' },
+        { label: 'Location', value: 'Ukraine' },
+        {
+          label: 'Focus',
+          value:
+            'Designing a calm, conversion-oriented experience that encourages users to explore the property and contact the owner directly.',
+        },
         { label: 'Stack', value: 'Next.js, TypeScript, CSS Modules' },
-        { label: 'Duration', value: '5 weeks' },
+        {
+          label: 'Duration',
+          value: '3 weeks (1 week design, 2 weeks development)',
+        },
       ],
       content: {
         problem:
-          'The client needed a simple website to present the house and attract guests, but had no clear online presence or structure.',
+          'The client had an outdated website that did not reflect the quality of the property or clearly present the offer. There was no simple way for users to contact the owner.',
         solution:
-          'I created a clean and atmospheric website focused on visual presentation and ease of navigation. The structure highlights the location, atmosphere, and key information for potential guests.',
+          "I designed and built a website focused on atmosphere and clarity. The structure highlights the property and houses, guiding users through the content. Instead of forms, the booking flow is simplified to a direct call.",
         result:
-          'The result is a calm, easy-to-use website that helps visitors quickly understand the place and feel its atmosphere, making it easier to get in touch and book.',
+          'The new website improves presentation and makes it easier for users to understand the offer and contact the owner.',
       },
       contributions: {
         title: 'What I did',
         items: [
-          'Designed a visual hierarchy that supports a calm, premium feel.',
-          'Built responsive sections for property details and inquiries.',
-          'Structured content modules for easy seasonal content updates.',
-          'Improved mobile readability for key booking information.',
+          'Designed the full UI/UX from scratch',
+          'Built fully responsive layouts (mobile, tablet, desktop)',
+          'Structured house cards and detailed property pages',
+          'Implemented direct-call booking flow (no forms)',
+          'Designed gallery and visual content presentation',
+          'Built contact section with map and location context',
         ],
       },
       gallery: [
@@ -157,56 +177,62 @@ export const projects: Project[] = [
         },
       ],
       cta: {
-        title: 'Want a website like this?',
-        subtext: 'I can help you create a clean and inviting online presence.',
-        buttonLabel: 'Contact me',
+        title: 'Need a website that brings real clients?',
+        subtext:
+          'I build fast, reliable websites with clear structure and real business logic.',
+        buttonLabel: 'Start a project',
       },
     },
   },
   {
     slug: 'rentalcar',
-    title: 'Car Rental Platform',
+    title: 'Car Rental App',
     description:
-      'Web platform for car rental with catalog, filtering, and booking flow.',
+      'Web application for browsing, filtering, and requesting car rentals with a structured booking flow.',
     highlights: [
-      'Dynamic filtering',
-      'Paginated catalog',
-      'Detailed listing pages',
-      'Favorites system',
+      'Dynamic filtering system',
+      'API-driven catalog',
       'Booking request flow',
-      'Responsive application',
     ],
+    liveDemoUrl: 'https://rentalcar-frontend-six.vercel.app/',
     imageFolder: 'rental-car',
     screenshotsCount: 9,
     caseStudy: {
       hero: {
-        title: 'Car Rental Platform',
+        title: 'Car Rental App',
         subtitle:
-          'Booking platform with dynamic search, filtering and rental requests',
+          'Web application for browsing, filtering, and booking rental cars with API-driven data and request flow.',
       },
       meta: [
-        { label: 'Role', value: 'Fullstack Developer' },
-        { label: 'Type', value: 'Booking Platform' },
+        { label: 'Role', value: 'Frontend Developer' },
+        { label: 'Type', value: 'Car Rental Web Application' },
         { label: 'Location', value: 'International' },
-        { label: 'Focus', value: 'Search, filtering, and conversion flow' },
+        {
+          label: 'Focus',
+          value:
+            'Implementing a dynamic catalog with filtering, booking flow, and API integration.',
+        },
         { label: 'Stack', value: 'Next.js, TypeScript, REST API' },
-        { label: 'Duration', value: '6 weeks' },
+        { label: 'Duration', value: '3 days' },
       ],
       content: {
         problem:
-          'The business needed a scalable web platform where users could quickly discover available cars and submit rental requests with minimal friction.',
+          'Users needed a fast and intuitive way to browse cars, apply filters, and submit booking requests without friction.',
         solution:
-          'I built a structured interface with backend-driven filters, fast category navigation, and a clear request flow designed to reduce drop-off.',
+          "I built a frontend application based on a provided design, focusing on dynamic filtering and API integration. Users can browse cars, filter results, view details, and submit booking requests with validation.",
         result:
-          'The platform provides a smoother booking experience, clearer inventory browsing, and a maintainable architecture for future growth.',
+          'The result is a functional application that demonstrates working with APIs, filtering logic, and real user interaction flows.',
       },
       contributions: {
         title: 'What I did',
         items: [
-          'Implemented catalog filtering and pagination driven by API data.',
-          'Designed reusable listing cards and detail page templates.',
-          'Built a clear booking request flow with validation.',
-          'Structured the codebase for scalable feature expansion.',
+          'Implemented full frontend based on Figma design',
+          'Built dynamic car catalog with API data',
+          'Developed filtering system (brand, price, mileage)',
+          'Implemented favorites functionality',
+          'Created detailed car pages with specifications',
+          'Built booking form with validation and date picker',
+          'Integrated API for data fetching and rendering',
         ],
       },
       gallery: [
@@ -239,56 +265,70 @@ export const projects: Project[] = [
         },
       ],
       cta: {
-        title: 'Need a booking platform like this?',
-        subtext: 'I can help you design and build it end-to-end.',
-        buttonLabel: 'Contact me',
+        title: 'Need a website that brings real clients?',
+        subtext:
+          'I build fast, reliable websites with clear structure and real business logic.',
+        buttonLabel: 'Start a project',
       },
     },
   },
   {
     slug: 'travel',
-    title: 'Travel Stories Platform',
+    title: 'Travel Stories',
     description:
-      'Multi-page platform for sharing travel stories with user profiles and content management.',
+      'Fullstack web application for publishing travel stories with user profiles and authentication.',
     highlights: [
-      'User profiles',
+      'Authentication system',
       'Story publishing flow',
-      'Protected routes',
-      'Dynamic content',
-      'Responsive interface',
-      'Content management',
+      'User profile system',
     ],
+    liveDemoUrl: 'https://travelers-khaki-ten.vercel.app/',
     imageFolder: 'travel',
     screenshotsCount: 9,
     caseStudy: {
       hero: {
-        title: 'Travel Stories Platform',
+        title: 'Travel Stories',
         subtitle:
-          'Content platform for publishing travel experiences with profile-driven pages',
+          'Fullstack platform for publishing travel stories with authentication, user profiles, and content management flows.',
       },
       meta: [
-        { label: 'Role', value: 'Fullstack Developer' },
-        { label: 'Type', value: 'Content Platform' },
-        { label: 'Location', value: 'International' },
-        { label: 'Focus', value: 'Publishing workflow and discoverability' },
-        { label: 'Stack', value: 'Next.js, TypeScript, Authentication' },
-        { label: 'Duration', value: '7 weeks' },
+        {
+          label: 'Role',
+          value: 'Frontend Developer + backend contribution',
+        },
+        {
+          label: 'Type',
+          value: 'Fullstack Content Platform',
+        },
+        { label: 'Location', value: 'Course project' },
+        {
+          label: 'Focus',
+          value:
+            'Building a scalable content platform with authentication, publishing workflows, and profile-driven user experience.',
+        },
+        { label: 'Stack', value: 'Next.js, TypeScript, Node.js, REST API' },
+        { label: 'Duration', value: '2 weeks' },
       ],
       content: {
         problem:
-          'The team needed a structured space to publish travel stories with consistent presentation, author visibility, and scalable page architecture.',
+          'The project required a fullstack platform where users can register, publish stories, manage profiles, and interact with content.',
         solution:
-          'I developed a multi-page system with reusable content modules, dynamic routes, and profile-oriented sections to keep browsing intuitive.',
+          "As part of a 12-person team, I contributed to both frontend and backend development. I built key UI components, including headers, modals, story cards, and profile editing flows, and worked with shared data structures on the backend.",
         result:
-          'The final product supports cleaner publishing workflows, better content discoverability, and easier collaboration across contributors.',
+          'The platform supports authentication, publishing, and user interaction, demonstrating real-world fullstack architecture and teamwork.',
       },
       contributions: {
         title: 'What I did',
         items: [
-          'Built a modular content architecture for story pages.',
-          'Implemented dynamic routes for user and article experiences.',
-          'Integrated protected flows for authenticated actions.',
-          'Improved content browsing with reusable UI patterns.',
+          'Implemented multiple header variations for different page contexts',
+          'Built the confirmation modal component (ConfirmModal)',
+          'Developed story card components',
+          'Built the profile editing page',
+          'Implemented active navigation logic based on route',
+          'Integrated SVG sprite system',
+          'Optimized image assets and structured public resources',
+          'Contributed to backend typing and shared data structures',
+          'Added project documentation (README)',
         ],
       },
       gallery: [
@@ -321,10 +361,13 @@ export const projects: Project[] = [
         },
       ],
       cta: {
-        title: 'Building a content platform?',
-        subtext: "Let's turn your concept into a scalable product.",
-        buttonLabel: 'Contact me',
+        title: 'Need a website that brings real clients?',
+        subtext:
+          'I build fast, reliable websites with clear structure and real business logic.',
+        buttonLabel: 'Start a project',
       },
     },
   },
 ];
+
+

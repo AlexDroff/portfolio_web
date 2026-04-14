@@ -1,6 +1,6 @@
 .section {
-  background: var(--text-primary);
-  color: var(--bg-dark);
+  background: var(--color-bg-surface);
+  color: var(--color-bg-primary);
   padding: var(--space-8) 0;
 }
 
@@ -10,7 +10,7 @@
 
 .title {
   margin-bottom: var(--space-4);
-  color: var(--bg-dark);
+  color: var(--color-bg-primary);
 }
 
 .list {
@@ -22,7 +22,8 @@
 }
 
 .item {
-  color: var(--bg-dark);
+  color: var(--color-bg-primary);
   opacity: 0.8;
   line-height: 1.75;
 }
+

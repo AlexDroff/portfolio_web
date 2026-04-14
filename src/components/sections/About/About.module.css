@@ -1,8 +1,8 @@
 .section {
   padding: var(--space-9) 0;
   min-height: 900px;
-  background: var(--text-primary);
-  color: var(--bg-dark);
+  background: var(--color-bg-surface);
+  color: var(--color-bg-primary);
 }
 
 .inner {
@@ -41,7 +41,7 @@
 
 /* 🔥 TEXT */
 .text {
-  color: var(--text-thirdary);
+  color: var(--color-text-muted);
   line-height: 0.5;
 }
 
@@ -79,7 +79,7 @@
 /* 🔥 HOVER */
 .item:hover {
   transform: translateY(-4px) scale(1.05);
-  color: var(--accent);
+  color: var(--color-brand-accent);
 }
 
 /* 🔥 ICON */
@@ -105,3 +105,4 @@
   font-size: 16px;
   line-height: 1.3;
 }
+

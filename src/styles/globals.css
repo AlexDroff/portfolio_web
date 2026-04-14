@@ -14,15 +14,26 @@
   --space-8: 64px;
   --space-9: 96px;
 
-  /* colors */
-  --bg-dark: #0b0f14;
-  --text-primary: #e6edf3;
-  --text-secondary: #9ca3af;
-  --text-thirdary: #696e77;
-  --error: #ef4444;
+  /* === COLORS SYSTEM === */
 
-  /* accent (візьми зелений з логотипу якщо є точний) */
-  --accent: #22c55e;
+  /* backgrounds */
+  --color-bg-primary: #0b0f14;
+  --color-bg-surface: #f3f4f6;
+
+  /* text */
+  --color-text-primary: #e6edf3;
+  --color-text-secondary: #9ca3af;
+  --color-text-muted: #696e77;
+
+  /* actions */
+  --color-brand-primary: #ffffff;
+  --color-brand-accent: #22c55e;
+
+  /* states */
+  --color-state-error: #ef4444;
+
+  /* borders */
+  --color-border-default: rgba(255, 255, 255, 0.14);
 }
 
 html {
@@ -30,8 +41,8 @@ html {
 }
 
 body {
-  background: var(--bg-dark);
-  color: var(--text-primary);
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
   font-family: Inter, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -53,12 +64,9 @@ a {
   transition: color 0.2s ease;
 }
 
-a:hover {
-  color: var(--accent);
-}
-
+a:hover,
 a:focus-visible {
-  color: var(--accent);
+  color: var(--color-brand-accent);
 }
 
 /* lists */

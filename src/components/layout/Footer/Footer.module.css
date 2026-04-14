@@ -1,5 +1,5 @@
 .footer {
-  background: var(--bg-dark);
+  background: var(--color-bg-primary);
   padding: var(--space-5) 0;
 }
 
@@ -13,7 +13,7 @@
 
 .email,
 .copy {
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
 }
 
 .email {
@@ -23,7 +23,7 @@
 
 .email:hover,
 .email:focus-visible {
-  color: var(--accent);
+  color: var(--color-brand-accent);
   outline: none;
 }
 
@@ -36,3 +36,4 @@
   width: 200px;
   height: auto;
 }
+

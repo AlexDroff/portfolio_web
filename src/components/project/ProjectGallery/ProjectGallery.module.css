@@ -10,7 +10,7 @@
 }
 
 .groupTitle {
-  color: var(--text-primary);
+  color: var(--color-text-primary);
 }
 
 .responsivePair {
@@ -63,7 +63,7 @@
 
 .label {
   margin-top: var(--space-1);
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
   font-size: 14px;
   text-align: center;
 }
@@ -93,3 +93,4 @@
     justify-self: stretch;
   }
 }
+

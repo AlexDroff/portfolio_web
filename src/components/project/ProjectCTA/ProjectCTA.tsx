@@ -1,7 +1,5 @@
-import Link from "next/link";
-
 import { Container } from "@/components/ui/Container/Container";
-import { Button } from "@/components/ui/Button/Button";
+import { CTA } from "@/components/ui/CTA/CTA";
 import styles from "./ProjectCTA.module.css";
 
 type ProjectCTAProps = {
@@ -11,20 +9,20 @@ type ProjectCTAProps = {
 };
 
 export const ProjectCTA = ({
-  title = "Need a website like this?",
-  subtext = "",
-  buttonLabel = "Contact me",
+  title = "Need a website that brings real clients?",
+  subtext = "I build fast, reliable websites with clear structure and real business logic.",
+  buttonLabel = "Start a project",
 }: ProjectCTAProps) => {
   return (
     <section className={styles.section}>
       <Container>
         <div className={styles.inner}>
-          <h2 className={styles.title}>{title}</h2>
-          {subtext ? <p className={styles.subtitle}>{subtext}</p> : null}
-
-          <Link href="/contact" className={styles.actions}>
-            <Button>{buttonLabel}</Button>
-          </Link>
+          <CTA
+            title={title}
+            subtext={subtext}
+            buttonLabel={buttonLabel}
+            href="/contact"
+          />
         </div>
       </Container>
     </section>

@@ -3,7 +3,7 @@
   padding: var(--space-8) 0;
   display: flex;
   align-items: center;
-  background: var(--bg-dark);
+  background: var(--color-bg-primary);
   position: relative;
   overflow: hidden;
 }
@@ -26,55 +26,13 @@
 .subtitle {
   font-size: 18px;
   line-height: 1.6;
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
   max-width: 680px;
 }
 
 .actions {
   display: flex;
   gap: var(--space-5);
-}
-
-.primaryBtn,
-.secondaryBtn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-3) var(--space-5);
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 400;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.primaryBtn {
-  background: #ffffff;
-  color: var(--bg-dark);
-  border: none;
-}
-
-.primaryBtn:hover,
-.primaryBtn:focus-visible {
-  background: var(--accent);
-  color: #ffffff;
-  border: none;
-  transform: none;
-}
-
-.secondaryBtn {
-  background: transparent;
-  border: 1px solid #ffffff;
-  color: #ffffff;
-}
-
-.secondaryBtn:hover,
-.secondaryBtn:focus-visible {
-  background: transparent;
-  border-color: var(--accent);
-  color: var(--accent);
-  transform: none;
 }
 
 .hero::before {
@@ -85,7 +43,7 @@
   top: calc(var(--space-8) + var(--space-7) + var(--space-2));
   left: calc((var(--space-7) + var(--space-3)) * -1);
   border-radius: 50%;
-  background: radial-gradient(circle, var(--text-secondary) 0%, transparent 70%);
+  background: radial-gradient(circle, var(--color-text-secondary) 0%, transparent 70%);
   filter: blur(56px);
   opacity: 0.12;
   pointer-events: none;
@@ -95,3 +53,4 @@
   position: relative;
   z-index: 1;
 }
+

@@ -19,7 +19,7 @@
   max-width: 600px;
   font-size: 18px;
   line-height: 1.6;
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
 }
 
 .meta {
@@ -27,5 +27,6 @@
   display: flex;
   gap: var(--space-5);
   font-size: 14px;
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
 }
+

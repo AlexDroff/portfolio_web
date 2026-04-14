@@ -8,6 +8,7 @@ import { ProjectContent } from "@/components/project/ProjectContent/ProjectConte
 import { ProjectContributions } from "@/components/project/ProjectContributions/ProjectContributions";
 import { ProjectGallery } from "@/components/project/ProjectGallery/ProjectGallery";
 import { ProjectCTA } from "@/components/project/ProjectCTA/ProjectCTA";
+import { BackToTop } from "@/components/ui/BackToTop/BackToTop";
 import { projects } from "@/data/projects";
 import styles from "./page.module.css";
 
@@ -56,6 +57,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         subtext={caseStudy.cta.subtext}
         buttonLabel={caseStudy.cta.buttonLabel}
       />
+      <BackToTop />
     </>
   );
 }
