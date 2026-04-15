@@ -14,7 +14,8 @@ export const projects: Project[] = [
     liveDemoUrl:
       'https://pure-soft-git-feature-dark-mode-i18n-alexdroffs-projects.vercel.app/',
     imageFolder: 'cleaning',
-    screenshotsCount: 9,
+    cardImage: '/projects cards/cleaning.webp',
+    screenshotsCount: 10,
     caseStudy: {
       hero: {
         title: 'Cleaning Services',
@@ -100,15 +101,23 @@ export const projects: Project[] = [
           ],
         },
         {
-          title: 'Ordering Flow',
+          title: 'Service Details Modal',
           description:
-            'Modal-based service selection with cart updates and instant subtotal feedback.',
+            'Focused modal view presenting a selected service, short explanation, and quick pricing context before adding it to the order.',
           layout: 'grid',
           images: [
-            { index: 7, label: 'Service details modal', kind: 'default' },
+            { index: 7, label: 'Selected service modal', kind: 'default' },
+          ],
+        },
+        {
+          title: 'Order Summary / Cart',
+          description:
+            'Order review step with selected services, quantity controls, and subtotal visibility before completing the request.',
+          layout: 'grid',
+          images: [
             {
               index: 8,
-              label: 'Cart sidebar with quantity controls and subtotal',
+              label: 'Cart sidebar with selected services and subtotal',
               kind: 'default',
             },
           ],
@@ -160,6 +169,7 @@ export const projects: Project[] = [
     ],
     liveDemoUrl: 'https://usadba.kr.ua/ua/',
     imageFolder: 'rental-house',
+    cardImage: '/projects cards/rental house.webp',
     screenshotsCount: 9,
     caseStudy: {
       hero: {
@@ -203,30 +213,70 @@ export const projects: Project[] = [
       },
       gallery: [
         {
-          title: 'Responsive views',
+          title: 'Hero',
+          description:
+            'Main project visual with the full desktop hero scene and sunset atmosphere.',
+          layout: 'hero',
+          images: [{ index: 3, label: 'Main landing hero', kind: 'default' }],
+        },
+        {
+          title: 'Responsive Design',
+          description:
+            'Desktop and mobile viewport presentation shown together as one responsive composition.',
           layout: 'responsive-pair',
           images: [
-            { index: 1, label: 'Desktop view', kind: 'desktop' },
-            { index: 2, label: 'Mobile view', kind: 'mobile' },
+            { index: 1, label: 'Desktop and mobile viewport presentation', kind: 'desktop' },
+            { index: 2, label: 'Desktop and mobile viewport presentation', kind: 'mobile' },
           ],
         },
         {
-          title: 'Key screens',
+          title: 'About / Concept',
+          description:
+            'Content storytelling block that explains the place, mood, and concept positioning.',
           layout: 'grid',
           images: [
-            { index: 3, label: 'Hero section', kind: 'default' },
-            { index: 4, label: 'Main content', kind: 'default' },
-            { index: 5, label: 'Section', kind: 'default' },
-            { index: 6, label: 'Section', kind: 'default' },
+            { index: 4, label: 'Project concept and atmosphere', kind: 'default' },
           ],
         },
         {
-          title: 'Additional screens',
+          title: 'Houses Preview',
+          description:
+            'Accommodation preview section with house cards, structure, and clear booking CTAs.',
           layout: 'grid',
           images: [
-            { index: 7, label: 'Screen', kind: 'default' },
-            { index: 8, label: 'Screen', kind: 'default' },
-            { index: 9, label: 'Screen', kind: 'default' },
+            { index: 5, label: 'Accommodation preview cards', kind: 'default' },
+          ],
+        },
+        {
+          title: 'Lifestyle / Experience',
+          description:
+            'Section focused on emotional value: nature, отдых, and leisure activities.',
+          layout: 'grid',
+          images: [
+            { index: 6, label: 'Lifestyle and отдых content section', kind: 'default' },
+          ],
+        },
+        {
+          title: 'Gallery',
+          description:
+            'Visual atmosphere and photo presentation block for browsing location imagery.',
+          layout: 'grid',
+          images: [{ index: 7, label: 'Photo gallery section', kind: 'default' }],
+        },
+        {
+          title: 'Contact / Location',
+          description:
+            'Final trust and conversion block with contact details and map context.',
+          layout: 'grid',
+          images: [{ index: 8, label: 'Contact and location section', kind: 'default' }],
+        },
+        {
+          title: 'House Details',
+          description:
+            'Detailed accommodation page with photos, description, pricing, and action path.',
+          layout: 'grid',
+          images: [
+            { index: 9, label: 'Detailed house page', kind: 'default' },
           ],
         },
       ],
@@ -250,7 +300,8 @@ export const projects: Project[] = [
     ],
     liveDemoUrl: 'https://rentalcar-frontend-six.vercel.app/',
     imageFolder: 'rental-car',
-    screenshotsCount: 9,
+    cardImage: '/projects cards/rental car.webp',
+    screenshotsCount: 8,
     caseStudy: {
       hero: {
         title: 'Car Rental App',
@@ -291,7 +342,16 @@ export const projects: Project[] = [
       },
       gallery: [
         {
-          title: 'Responsive views',
+          title: 'Hero',
+          description:
+            'Hero section with the main landing visual.',
+          layout: 'hero',
+          images: [{ index: 3, label: 'Hero section', kind: 'default' }],
+        },
+        {
+          title: 'Responsive Design',
+          description:
+            'Desktop and mobile viewport presentation.',
           layout: 'responsive-pair',
           images: [
             { index: 1, label: 'Desktop view', kind: 'desktop' },
@@ -299,22 +359,48 @@ export const projects: Project[] = [
           ],
         },
         {
-          title: 'Key screens',
+          title: 'Catalog Overview & Search',
+          description:
+            'Catalog layout with integrated search and browsing experience.',
           layout: 'grid',
           images: [
-            { index: 3, label: 'Hero section', kind: 'default' },
-            { index: 4, label: 'Main content', kind: 'default' },
-            { index: 5, label: 'Section', kind: 'default' },
-            { index: 6, label: 'Section', kind: 'default' },
+            { index: 4, label: 'Catalog overview', kind: 'default' },
           ],
         },
         {
-          title: 'Additional screens',
+          title: 'Filtering',
+          description:
+            'Filtering by brand, price, and mileage.',
           layout: 'grid',
           images: [
-            { index: 7, label: 'Screen', kind: 'default' },
-            { index: 8, label: 'Screen', kind: 'default' },
-            { index: 9, label: 'Screen', kind: 'default' },
+            { index: 5, label: 'Filtering by brand, price, and mileage', kind: 'default' },
+          ],
+        },
+        {
+          title: 'Favorites / Selected State',
+          description:
+            'Selected and favorites state in the catalog.',
+          layout: 'grid',
+          images: [
+            { index: 8, label: 'Selected / favorites state', kind: 'default' },
+          ],
+        },
+        {
+          title: 'Detail Variant',
+          description:
+            'Clean vehicle detail page variant.',
+          layout: 'grid',
+          images: [
+            { index: 6, label: 'Detail page variant', kind: 'default' },
+          ],
+        },
+        {
+          title: 'Booking Request Flow',
+          description:
+            'Submitting a rental request from the detail page.',
+          layout: 'grid',
+          images: [
+            { index: 7, label: 'Booking request flow', kind: 'default' },
           ],
         },
       ],
@@ -338,6 +424,7 @@ export const projects: Project[] = [
     ],
     liveDemoUrl: 'https://travelers-khaki-ten.vercel.app/',
     imageFolder: 'travel',
+    cardImage: '/projects cards/travels.webp',
     screenshotsCount: 9,
     caseStudy: {
       hero: {
@@ -387,7 +474,32 @@ export const projects: Project[] = [
       },
       gallery: [
         {
-          title: 'Responsive views',
+          title: 'Hero - Guest State',
+          description:
+            'Public landing experience introducing the platform and inviting new users to join the community.',
+          layout: 'grid',
+          images: [{ index: 3, label: 'Hero - Guest State', kind: 'default' }],
+        },
+        {
+          title: 'Hero - Authenticated State',
+          description:
+            'Authenticated landing state showing how navigation and available actions expand after login.',
+          layout: 'grid',
+          images: [{ index: 5, label: 'Hero - Authenticated State', kind: 'default' }],
+        },
+        {
+          title: 'Authentication',
+          description:
+            'Login flow providing access to personalized features, profile actions, and story publishing.',
+          layout: 'grid',
+          images: [
+            { index: 4, label: 'Authentication', kind: 'default' },
+          ],
+        },
+        {
+          title: 'Responsive Design',
+          description:
+            'Responsive adaptation of the landing experience across desktop and mobile screens.',
           layout: 'responsive-pair',
           images: [
             { index: 1, label: 'Desktop view', kind: 'desktop' },
@@ -395,22 +507,48 @@ export const projects: Project[] = [
           ],
         },
         {
-          title: 'Key screens',
+          title: 'Stories Feed & Discovery',
+          description:
+            'Main content feed combined with category-based discovery for browsing and exploring travel stories.',
           layout: 'grid',
           images: [
-            { index: 3, label: 'Hero section', kind: 'default' },
-            { index: 4, label: 'Main content', kind: 'default' },
-            { index: 5, label: 'Section', kind: 'default' },
-            { index: 6, label: 'Section', kind: 'default' },
+            { index: 6, label: 'Stories Feed & Discovery', kind: 'default' },
           ],
         },
         {
-          title: 'Additional screens',
+          title: 'Travelers',
+          description:
+            'Community directory presenting authors and making profile exploration easier.',
           layout: 'grid',
           images: [
-            { index: 7, label: 'Screen', kind: 'default' },
-            { index: 8, label: 'Screen', kind: 'default' },
-            { index: 9, label: 'Screen', kind: 'default' },
+            { index: 7, label: 'Travelers', kind: 'default' },
+          ],
+        },
+        {
+          title: 'User Profile',
+          description:
+            'Personal user area for managing saved stories and reviewing individual activity.',
+          layout: 'grid',
+          images: [
+            { index: 8, label: 'User Profile', kind: 'default' },
+          ],
+        },
+        {
+          title: 'Story Creation',
+          description:
+            'Publishing flow for creating and sharing new travel stories.',
+          layout: 'grid',
+          images: [
+            { index: 9, label: 'Story Creation', kind: 'default' },
+            ],
+        },
+        {
+          title: 'Story Detail',
+          description:
+            'Full article view with author metadata, category context, and reading-focused layout.',
+          layout: 'grid',
+          images: [
+            { index: 10, label: 'Story Detail', kind: 'default' },
           ],
         },
       ],

@@ -19,8 +19,17 @@ export const ProjectCard = ({
   highlights,
   liveDemoUrl,
 }: ProjectCardProps) => {
+  const enableHoverAccent = true;
+  const clsx = (...classNames: Array<string | false>) =>
+    classNames.filter(Boolean).join(" ");
+
   return (
-    <article className={styles.card}>
+    <article
+      className={clsx(
+        styles.card,
+        enableHoverAccent && styles["card--hover-accent"]
+      )}
+    >
       <div className={styles.imageWrapper}>
         <Image
           src={image}

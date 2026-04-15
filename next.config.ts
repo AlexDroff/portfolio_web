@@ -6,6 +6,12 @@ const nextConfig: NextConfig = {
       {
         pathname: "/projects/**",
       },
+      {
+        pathname: "/projects cards/**",
+      },
+      {
+        pathname: "/projects%20cards/**",
+      },
     ],
   },
 };

@@ -54,6 +54,7 @@ export type ProjectCardData = {
   highlights: string[];
   liveDemoUrl: string;
   imageFolder: string;
+  cardImage: string;
   screenshotsCount: number;
 };
 

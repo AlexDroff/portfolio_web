@@ -9,11 +9,30 @@ type ProjectGalleryProps = {
 };
 
 export const ProjectGallery = ({ folder, sections }: ProjectGalleryProps) => {
-  const isCleaningGallery = folder === "cleaning";
+  const fullWidthVisualSectionTitles = new Set([
+    "Landing Experience",
+    "Services Catalog",
+    "FAQ & Content",
+    "Contact / Conversion",
+    "About / Concept",
+    "Houses Preview",
+    "Lifestyle / Experience",
+    "Gallery",
+    "Contact / Location",
+    "House Details"
+  ]);
+  const fullContainerSectionTitles = new Set([
+    "Hero",
+    ...fullWidthVisualSectionTitles
+  ]);
 
   if (!sections.length) {
     return null;
   }
+
+  const isFullWidthImageSection = (section: ProjectGallerySection) =>
+    section.layout === "hero" ||
+    (section.layout !== "responsive-pair" && section.images.length === 1);
 
   const getLayoutClass = (section: ProjectGallerySection) => {
     const classNames: string[] = [];
@@ -28,23 +47,15 @@ export const ProjectGallery = ({ folder, sections }: ProjectGalleryProps) => {
       );
     }
 
-    if (isCleaningGallery && section.title === "Responsive Design") {
+    if (section.title === "Responsive Design") {
       classNames.push(styles.responsiveDesignLayout);
     }
 
-    if (isCleaningGallery && section.title === "Ordering Flow") {
+    if (section.title === "Ordering Flow") {
       classNames.push(styles.orderingFlowLayout);
     }
 
-    if (
-      isCleaningGallery &&
-      (
-        section.title === "Landing Experience" ||
-        section.title === "Services Catalog" ||
-        section.title === "FAQ & Content" ||
-        section.title === "Contact / Conversion"
-      )
-    ) {
+    if (fullWidthVisualSectionTitles.has(section.title)) {
       classNames.push(styles.fullWidthVisualLayout);
     }
 
@@ -55,15 +66,23 @@ export const ProjectGallery = ({ folder, sections }: ProjectGalleryProps) => {
     section: ProjectGallerySection,
     imageKind: ProjectGalleryImage["kind"]
   ) => {
+    const isFullContainerSection =
+      fullContainerSectionTitles.has(section.title) ||
+      isFullWidthImageSection(section);
+
     if (section.layout === "hero") {
-      return styles.heroFrame;
+      return isFullContainerSection
+        ? `${styles.heroFrame} ${styles.autoHeightFrame}`
+        : styles.heroFrame;
     }
 
     if (section.layout === "responsive-pair") {
       return imageKind === "mobile" ? styles.mobilePairFrame : styles.pairFrame;
     }
 
-    return styles.gridFrame;
+    return isFullContainerSection
+      ? `${styles.gridFrame} ${styles.autoHeightFrame}`
+      : styles.gridFrame;
   };
 
   const getImageSizes = (
@@ -113,14 +132,29 @@ export const ProjectGallery = ({ folder, sections }: ProjectGalleryProps) => {
                   }`}
                 >
                   <div className={getFrameClass(section, image.kind)}>
-                    <Image
-                      src={`/projects/${folder}/${image.index}.webp`}
-                      alt={image.label}
-                      fill
-                      sizes={getImageSizes(section, image)}
-                      quality={100}
-                      className={styles.image}
-                    />
+                    {(
+                      fullContainerSectionTitles.has(section.title) ||
+                      isFullWidthImageSection(section)
+                    ) ? (
+                      <Image
+                        src={`/projects/${folder}/${image.index}.webp`}
+                        alt={image.label}
+                        width={1600}
+                        height={900}
+                        sizes={getImageSizes(section, image)}
+                        quality={100}
+                        className={`${styles.image} ${styles.imageNatural}`}
+                      />
+                    ) : (
+                      <Image
+                        src={`/projects/${folder}/${image.index}.webp`}
+                        alt={image.label}
+                        fill
+                        sizes={getImageSizes(section, image)}
+                        quality={100}
+                        className={styles.image}
+                      />
+                    )}
                   </div>
                   <p className={styles.label}>{image.label}</p>
                 </article>

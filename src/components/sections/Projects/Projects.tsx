@@ -4,7 +4,6 @@ import styles from "./Projects.module.css";
 import { ProjectCard } from "@/components/ui/ProjectCard/ProjectCard";
 import { CTA } from "@/components/ui/CTA/CTA";
 import { projects } from "@/data/projects";
-import { COVER_INDEX } from "@/types/project";
 
 export const Projects = () => {
   return (
@@ -22,7 +21,7 @@ export const Projects = () => {
                 slug={project.slug}
                 title={project.title}
                 description={project.description}
-                image={`/projects/${project.imageFolder}/${COVER_INDEX}.webp`}
+                image={project.cardImage}
                 highlights={project.highlights}
                 liveDemoUrl={project.liveDemoUrl}
               />

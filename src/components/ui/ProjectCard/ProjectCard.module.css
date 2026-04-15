@@ -10,14 +10,31 @@
   isolation: isolate;
 }
 
+.card--hover-accent::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+  background: var(--color-text-primary);
+  opacity: 0;
+
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.card--hover-accent:has(.actions a:hover)::after,
+.card--hover-accent:has(.actions a:focus-visible)::after {
+  opacity: 0.05;
+}
+
 /* subtle light overlay to simulate slightly lighter surface */
 .card::before {
   content: '';
   position: absolute;
   inset: 0;
 
-  background: var(--color-brand-primary);
-  opacity: 0.05;
+  background: var(--color-text-primary); /* теж через токен */
+  opacity: 0.02;
 
   pointer-events: none;
   z-index: 0;
@@ -34,28 +51,26 @@
 .imageWrapper {
   position: relative;
   width: 100%;
-  height: 240px;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
 }
 
 .image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 
   filter: grayscale(90%) brightness(0.9) !important;
 
   transform: scale(1);
-  transition:
-    transform 0.45s ease,
-    filter 0.45s ease;
+  transition: filter 0.45s ease;
 }
 
 /* CTA-driven interaction */
 .card:has(.actions a:hover) .image,
 .card:has(.actions a:focus-visible) .image {
   filter: grayscale(0%) brightness(1) !important;
-  transform: scale(1.03);
+  transform: scale(1);
 }
 
 /* content */
