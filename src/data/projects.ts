@@ -59,30 +59,84 @@ export const projects: Project[] = [
       },
       gallery: [
         {
-          title: 'Responsive views',
+          title: 'Hero',
+          description: 'Main project visual showing the primary landing header and value proposition.',
+          layout: 'hero',
+          images: [{ index: 3, label: 'Main hero screen', kind: 'default' }],
+        },
+        {
+          title: 'Responsive Design',
+          description: 'Fully responsive layout optimized for desktop and mobile use.',
           layout: 'responsive-pair',
           images: [
-            { index: 1, label: 'Desktop view', kind: 'desktop' },
-            { index: 2, label: 'Mobile view', kind: 'mobile' },
+            { index: 1, label: 'Desktop viewport', kind: 'desktop' },
+            { index: 2, label: 'Mobile viewport', kind: 'mobile' },
           ],
         },
         {
-          title: 'Key screens',
+          title: 'Landing Experience',
+          description:
+            'Clear landing structure designed to communicate value and guide users through the service flow.',
           layout: 'grid',
           images: [
-            { index: 3, label: 'Hero section', kind: 'default' },
-            { index: 4, label: 'Main content', kind: 'default' },
-            { index: 5, label: 'Section', kind: 'default' },
-            { index: 6, label: 'Section', kind: 'default' },
+            {
+              index: 4,
+              label: 'Service steps and trust-building content',
+              kind: 'default',
+            },
           ],
         },
         {
-          title: 'Additional screens',
+          title: 'Services Catalog',
+          description:
+            'Structured service grid with clear pricing and promotional emphasis.',
           layout: 'grid',
           images: [
-            { index: 7, label: 'Screen', kind: 'default' },
-            { index: 8, label: 'Screen', kind: 'default' },
-            { index: 9, label: 'Screen', kind: 'default' },
+            {
+              index: 5,
+              label: 'Catalog cards grid with promo module',
+              kind: 'default',
+            },
+          ],
+        },
+        {
+          title: 'Ordering Flow',
+          description:
+            'Modal-based service selection with cart updates and instant subtotal feedback.',
+          layout: 'grid',
+          images: [
+            { index: 7, label: 'Service details modal', kind: 'default' },
+            {
+              index: 8,
+              label: 'Cart sidebar with quantity controls and subtotal',
+              kind: 'default',
+            },
+          ],
+        },
+        {
+          title: 'FAQ & Content',
+          description:
+            'Supporting content blocks that reduce friction and answer common questions.',
+          layout: 'grid',
+          images: [
+            {
+              index: 6,
+              label: 'FAQ list with supporting visual content section',
+              kind: 'default',
+            },
+          ],
+        },
+        {
+          title: 'Contact / Conversion',
+          description:
+            'Quick order form designed to simplify the final conversion step.',
+          layout: 'grid',
+          images: [
+            {
+              index: 9,
+              label: 'Final order and contact form modal',
+              kind: 'default',
+            },
           ],
         },
       ],

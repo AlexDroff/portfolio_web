@@ -19,7 +19,8 @@ export type ProjectGalleryImage = {
 
 export type ProjectGallerySection = {
   title: string;
-  layout: 'responsive-pair' | 'grid';
+  description?: string;
+  layout: 'hero' | 'responsive-pair' | 'grid';
   images: ProjectGalleryImage[];
 };
 

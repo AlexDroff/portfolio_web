@@ -40,6 +40,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       <ProjectHero
         title={caseStudy.hero.title}
         subtitle={caseStudy.hero.subtitle}
+        liveUrl={project.liveDemoUrl}
       />
       <ProjectMeta items={caseStudy.meta} />
       <ProjectContent

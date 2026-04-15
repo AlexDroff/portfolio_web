@@ -1,5 +1,6 @@
 import type { MouseEventHandler, ReactNode } from "react";
 import Link from "next/link";
+import type { LinkProps } from "next/link";
 import styles from "./Button.module.css";
 
 type ButtonBaseProps = {
@@ -19,7 +20,7 @@ type ButtonElementProps = ButtonBaseProps & {
 
 type ButtonLinkProps = ButtonBaseProps & {
   as: "link";
-  href: string;
+  href: LinkProps["href"];
   onClick?: MouseEventHandler<HTMLAnchorElement>;
   type?: never;
   target?: string;
@@ -28,17 +29,9 @@ type ButtonLinkProps = ButtonBaseProps & {
 
 type ButtonProps = ButtonElementProps | ButtonLinkProps;
 
-export const Button = ({
-  children,
-  variant = "primary",
-  as = "button",
-  href,
-  type = "button",
-  onClick,
-  fullWidth = false,
-  target,
-  rel,
-}: ButtonProps) => {
+export const Button = (props: ButtonProps) => {
+  const { children, variant = "primary", fullWidth = false } = props;
+
   const buttonClassName = [
     styles.button,
     styles[variant],
@@ -47,7 +40,9 @@ export const Button = ({
     .filter(Boolean)
     .join(" ");
 
-  if (as === "link") {
+  if (props.as === "link") {
+    const { href, onClick, target, rel } = props;
+
     return (
       <Link
         href={href}
@@ -60,6 +55,8 @@ export const Button = ({
       </Link>
     );
   }
+
+  const { type = "button", onClick } = props;
 
   return (
     <button type={type} className={buttonClassName} onClick={onClick}>
