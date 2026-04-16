@@ -4,6 +4,12 @@
   display: block;
 }
 
+.logoFallback {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
 /* перший path = кружечки */
 .logo path:first-of-type {
   transform-origin: center;

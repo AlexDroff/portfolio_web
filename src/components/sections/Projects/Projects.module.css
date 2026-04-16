@@ -1,6 +1,5 @@
 .section {
   background: var(--color-bg-primary);
-  min-height: 900px;
   scroll-margin-top: calc(var(--space-8) + var(--space-5));
 }
 

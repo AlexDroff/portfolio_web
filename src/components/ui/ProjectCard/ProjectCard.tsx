@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, type FocusEvent, type MouseEvent } from "react";
 import styles from "./ProjectCard.module.css";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button/Button";
@@ -20,14 +23,49 @@ export const ProjectCard = ({
   liveDemoUrl,
 }: ProjectCardProps) => {
   const enableHoverAccent = true;
+  const [isCtaActive, setIsCtaActive] = useState(false);
   const clsx = (...classNames: Array<string | false>) =>
     classNames.filter(Boolean).join(" ");
+
+  const activateOnButtonPointer = (target: EventTarget | null) => {
+    const element = target instanceof HTMLElement ? target : null;
+    setIsCtaActive(Boolean(element?.closest("a,button")));
+  };
+
+  const handleActionsPointerOver = (event: MouseEvent<HTMLDivElement>) => {
+    activateOnButtonPointer(event.target);
+  };
+
+  const handleActionsPointerOut = (event: MouseEvent<HTMLDivElement>) => {
+    const relatedTarget = event.relatedTarget;
+    if (!(relatedTarget instanceof Node) || !event.currentTarget.contains(relatedTarget)) {
+      setIsCtaActive(false);
+      return;
+    }
+
+    activateOnButtonPointer(relatedTarget);
+  };
+
+  const handleActionsFocusCapture = (event: FocusEvent<HTMLDivElement>) => {
+    activateOnButtonPointer(event.target);
+  };
+
+  const handleActionsBlurCapture = (event: FocusEvent<HTMLDivElement>) => {
+    const nextTarget = event.relatedTarget;
+    if (!(nextTarget instanceof Node) || !event.currentTarget.contains(nextTarget)) {
+      setIsCtaActive(false);
+      return;
+    }
+
+    activateOnButtonPointer(nextTarget);
+  };
 
   return (
     <article
       className={clsx(
         styles.card,
-        enableHoverAccent && styles["card--hover-accent"]
+        enableHoverAccent && styles["card--hover-accent"],
+        isCtaActive && styles.cardActive
       )}
     >
       <div className={styles.imageWrapper}>
@@ -55,7 +93,13 @@ export const ProjectCard = ({
           </div>
         ) : null}
 
-        <div className={styles.actions}>
+        <div
+          className={styles.actions}
+          onMouseOver={handleActionsPointerOver}
+          onMouseOut={handleActionsPointerOut}
+          onFocusCapture={handleActionsFocusCapture}
+          onBlurCapture={handleActionsBlurCapture}
+        >
           <Button variant="primary" as="link" href={`/projects/${slug}`}>
             View project
           </Button>

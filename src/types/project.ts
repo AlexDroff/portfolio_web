@@ -20,7 +20,7 @@ export type ProjectGalleryImage = {
 export type ProjectGallerySection = {
   title: string;
   description?: string;
-  layout: 'hero' | 'responsive-pair' | 'grid';
+  layout: 'single' | 'responsive' | 'grid' | 'fullWidth';
   images: ProjectGalleryImage[];
 };
 

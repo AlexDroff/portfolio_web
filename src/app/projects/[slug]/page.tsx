@@ -58,6 +58,13 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         subtext={caseStudy.cta.subtext}
         buttonLabel={caseStudy.cta.buttonLabel}
       />
+      <div className={styles.backLinkWrap}>
+        <Container>
+          <Link href="/" className={styles.backLink}>
+            &larr; Back to main page
+          </Link>
+        </Container>
+      </div>
       <BackToTop />
     </>
   );

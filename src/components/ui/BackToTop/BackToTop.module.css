@@ -5,7 +5,7 @@
   z-index: 60;
   width: 44px;
   height: 44px;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   border: none;
   background: var(--color-bg-primary);
   color: var(--color-text-primary);

@@ -62,13 +62,13 @@ export const projects: Project[] = [
         {
           title: 'Hero',
           description: 'Main project visual showing the primary landing header and value proposition.',
-          layout: 'hero',
+          layout: 'fullWidth',
           images: [{ index: 3, label: 'Main hero screen', kind: 'default' }],
         },
         {
           title: 'Responsive Design',
           description: 'Fully responsive layout optimized for desktop and mobile use.',
-          layout: 'responsive-pair',
+          layout: 'responsive',
           images: [
             { index: 1, label: 'Desktop viewport', kind: 'desktop' },
             { index: 2, label: 'Mobile viewport', kind: 'mobile' },
@@ -78,7 +78,7 @@ export const projects: Project[] = [
           title: 'Landing Experience',
           description:
             'Clear landing structure designed to communicate value and guide users through the service flow.',
-          layout: 'grid',
+          layout: 'fullWidth',
           images: [
             {
               index: 4,
@@ -91,7 +91,7 @@ export const projects: Project[] = [
           title: 'Services Catalog',
           description:
             'Structured service grid with clear pricing and promotional emphasis.',
-          layout: 'grid',
+          layout: 'fullWidth',
           images: [
             {
               index: 5,
@@ -104,7 +104,7 @@ export const projects: Project[] = [
           title: 'Service Details Modal',
           description:
             'Focused modal view presenting a selected service, short explanation, and quick pricing context before adding it to the order.',
-          layout: 'grid',
+          layout: 'single',
           images: [
             { index: 7, label: 'Selected service modal', kind: 'default' },
           ],
@@ -113,7 +113,7 @@ export const projects: Project[] = [
           title: 'Order Summary / Cart',
           description:
             'Order review step with selected services, quantity controls, and subtotal visibility before completing the request.',
-          layout: 'grid',
+          layout: 'single',
           images: [
             {
               index: 8,
@@ -126,7 +126,7 @@ export const projects: Project[] = [
           title: 'FAQ & Content',
           description:
             'Supporting content blocks that reduce friction and answer common questions.',
-          layout: 'grid',
+          layout: 'fullWidth',
           images: [
             {
               index: 6,
@@ -139,7 +139,7 @@ export const projects: Project[] = [
           title: 'Contact / Conversion',
           description:
             'Quick order form designed to simplify the final conversion step.',
-          layout: 'grid',
+          layout: 'fullWidth',
           images: [
             {
               index: 9,
@@ -216,14 +216,14 @@ export const projects: Project[] = [
           title: 'Hero',
           description:
             'Main project visual with the full desktop hero scene and sunset atmosphere.',
-          layout: 'hero',
+          layout: 'fullWidth',
           images: [{ index: 3, label: 'Main landing hero', kind: 'default' }],
         },
         {
           title: 'Responsive Design',
           description:
             'Desktop and mobile viewport presentation shown together as one responsive composition.',
-          layout: 'responsive-pair',
+          layout: 'responsive',
           images: [
             { index: 1, label: 'Desktop and mobile viewport presentation', kind: 'desktop' },
             { index: 2, label: 'Desktop and mobile viewport presentation', kind: 'mobile' },
@@ -233,7 +233,7 @@ export const projects: Project[] = [
           title: 'About / Concept',
           description:
             'Content storytelling block that explains the place, mood, and concept positioning.',
-          layout: 'grid',
+          layout: 'fullWidth',
           images: [
             { index: 4, label: 'Project concept and atmosphere', kind: 'default' },
           ],
@@ -242,7 +242,7 @@ export const projects: Project[] = [
           title: 'Houses Preview',
           description:
             'Accommodation preview section with house cards, structure, and clear booking CTAs.',
-          layout: 'grid',
+          layout: 'fullWidth',
           images: [
             { index: 5, label: 'Accommodation preview cards', kind: 'default' },
           ],
@@ -250,31 +250,31 @@ export const projects: Project[] = [
         {
           title: 'Lifestyle / Experience',
           description:
-            'Section focused on emotional value: nature, отдых, and leisure activities.',
-          layout: 'grid',
+            'Section focused on emotional value: nature, РѕС‚РґС‹С…, and leisure activities.',
+          layout: 'fullWidth',
           images: [
-            { index: 6, label: 'Lifestyle and отдых content section', kind: 'default' },
+            { index: 6, label: 'Lifestyle and РѕС‚РґС‹С… content section', kind: 'default' },
           ],
         },
         {
           title: 'Gallery',
           description:
             'Visual atmosphere and photo presentation block for browsing location imagery.',
-          layout: 'grid',
+          layout: 'fullWidth',
           images: [{ index: 7, label: 'Photo gallery section', kind: 'default' }],
         },
         {
           title: 'Contact / Location',
           description:
             'Final trust and conversion block with contact details and map context.',
-          layout: 'grid',
+          layout: 'fullWidth',
           images: [{ index: 8, label: 'Contact and location section', kind: 'default' }],
         },
         {
           title: 'House Details',
           description:
             'Detailed accommodation page with photos, description, pricing, and action path.',
-          layout: 'grid',
+          layout: 'fullWidth',
           images: [
             { index: 9, label: 'Detailed house page', kind: 'default' },
           ],
@@ -345,14 +345,14 @@ export const projects: Project[] = [
           title: 'Hero',
           description:
             'Hero section with the main landing visual.',
-          layout: 'hero',
+          layout: 'fullWidth',
           images: [{ index: 3, label: 'Hero section', kind: 'default' }],
         },
         {
           title: 'Responsive Design',
           description:
             'Desktop and mobile viewport presentation.',
-          layout: 'responsive-pair',
+          layout: 'responsive',
           images: [
             { index: 1, label: 'Desktop view', kind: 'desktop' },
             { index: 2, label: 'Mobile view', kind: 'mobile' },
@@ -362,7 +362,7 @@ export const projects: Project[] = [
           title: 'Catalog Overview & Search',
           description:
             'Catalog layout with integrated search and browsing experience.',
-          layout: 'grid',
+          layout: 'single',
           images: [
             { index: 4, label: 'Catalog overview', kind: 'default' },
           ],
@@ -371,7 +371,7 @@ export const projects: Project[] = [
           title: 'Filtering',
           description:
             'Filtering by brand, price, and mileage.',
-          layout: 'grid',
+          layout: 'single',
           images: [
             { index: 5, label: 'Filtering by brand, price, and mileage', kind: 'default' },
           ],
@@ -380,7 +380,7 @@ export const projects: Project[] = [
           title: 'Favorites / Selected State',
           description:
             'Selected and favorites state in the catalog.',
-          layout: 'grid',
+          layout: 'single',
           images: [
             { index: 8, label: 'Selected / favorites state', kind: 'default' },
           ],
@@ -389,7 +389,7 @@ export const projects: Project[] = [
           title: 'Detail Variant',
           description:
             'Clean vehicle detail page variant.',
-          layout: 'grid',
+          layout: 'single',
           images: [
             { index: 6, label: 'Detail page variant', kind: 'default' },
           ],
@@ -398,7 +398,7 @@ export const projects: Project[] = [
           title: 'Booking Request Flow',
           description:
             'Submitting a rental request from the detail page.',
-          layout: 'grid',
+          layout: 'single',
           images: [
             { index: 7, label: 'Booking request flow', kind: 'default' },
           ],
@@ -477,21 +477,21 @@ export const projects: Project[] = [
           title: 'Hero - Guest State',
           description:
             'Public landing experience introducing the platform and inviting new users to join the community.',
-          layout: 'grid',
+          layout: 'single',
           images: [{ index: 3, label: 'Hero - Guest State', kind: 'default' }],
         },
         {
           title: 'Hero - Authenticated State',
           description:
             'Authenticated landing state showing how navigation and available actions expand after login.',
-          layout: 'grid',
+          layout: 'single',
           images: [{ index: 5, label: 'Hero - Authenticated State', kind: 'default' }],
         },
         {
           title: 'Authentication',
           description:
             'Login flow providing access to personalized features, profile actions, and story publishing.',
-          layout: 'grid',
+          layout: 'single',
           images: [
             { index: 4, label: 'Authentication', kind: 'default' },
           ],
@@ -500,7 +500,7 @@ export const projects: Project[] = [
           title: 'Responsive Design',
           description:
             'Responsive adaptation of the landing experience across desktop and mobile screens.',
-          layout: 'responsive-pair',
+          layout: 'responsive',
           images: [
             { index: 1, label: 'Desktop view', kind: 'desktop' },
             { index: 2, label: 'Mobile view', kind: 'mobile' },
@@ -510,7 +510,7 @@ export const projects: Project[] = [
           title: 'Stories Feed & Discovery',
           description:
             'Main content feed combined with category-based discovery for browsing and exploring travel stories.',
-          layout: 'grid',
+          layout: 'single',
           images: [
             { index: 6, label: 'Stories Feed & Discovery', kind: 'default' },
           ],
@@ -519,7 +519,7 @@ export const projects: Project[] = [
           title: 'Travelers',
           description:
             'Community directory presenting authors and making profile exploration easier.',
-          layout: 'grid',
+          layout: 'single',
           images: [
             { index: 7, label: 'Travelers', kind: 'default' },
           ],
@@ -528,7 +528,7 @@ export const projects: Project[] = [
           title: 'User Profile',
           description:
             'Personal user area for managing saved stories and reviewing individual activity.',
-          layout: 'grid',
+          layout: 'single',
           images: [
             { index: 8, label: 'User Profile', kind: 'default' },
           ],
@@ -537,7 +537,7 @@ export const projects: Project[] = [
           title: 'Story Creation',
           description:
             'Publishing flow for creating and sharing new travel stories.',
-          layout: 'grid',
+          layout: 'single',
           images: [
             { index: 9, label: 'Story Creation', kind: 'default' },
             ],
@@ -546,7 +546,7 @@ export const projects: Project[] = [
           title: 'Story Detail',
           description:
             'Full article view with author metadata, category context, and reading-focused layout.',
-          layout: 'grid',
+          layout: 'single',
           images: [
             { index: 10, label: 'Story Detail', kind: 'default' },
           ],

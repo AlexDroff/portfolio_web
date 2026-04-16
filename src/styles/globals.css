@@ -19,6 +19,7 @@
   /* backgrounds */
   --color-bg-primary: #0b0f14;
   --color-bg-surface: #f3f4f6;
+  --color-bg-hover: #303337;
 
   /* text */
   --color-text-primary: #e6edf3;
@@ -34,6 +35,13 @@
 
   /* borders */
   --color-border-default: rgba(255, 255, 255, 0.14);
+  --color-border-soft: rgba(11, 15, 20, 0.14);
+
+  /* overlays */
+  --color-overlay-subtle: rgba(255, 255, 255, 0.03);
+
+  /* radius */
+  --radius-full: 999px;
 }
 
 html {

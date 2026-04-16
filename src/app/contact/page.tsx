@@ -51,12 +51,12 @@ export default function ContactPage() {
         "Name must be 3\u201318 characters and contain only letters.";
     }
 
-    if (!/^[^\s@]+@[^\s@]+.[^\s@]+$/.test(trimmedEmail)) {
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedEmail)) {
       nextErrors.email = "Enter a valid email address.";
     }
 
     if (trimmedMessage.length < 5 || trimmedMessage.length > 500) {
-      nextErrors.message = "Message must be at least 5 characters.";
+      nextErrors.message = "Message must be 5-500 characters.";
     }
 
     if (nextErrors.name || nextErrors.email || nextErrors.message) {

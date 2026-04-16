@@ -1,3 +1,7 @@
+.section {
+  padding: var(--space-9) 0;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -55,4 +59,3 @@
   font-size: 14px;
   color: var(--color-text-secondary);
 }
-

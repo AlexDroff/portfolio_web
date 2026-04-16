@@ -1,7 +1,7 @@
 .card {
   position: relative;
   display: block;
-  border-radius: 4px;
+  border-radius: var(--space-1);
   overflow: hidden;
 
   background: var(--color-bg-primary);
@@ -22,8 +22,7 @@
   pointer-events: none;
 }
 
-.card--hover-accent:has(.actions a:hover)::after,
-.card--hover-accent:has(.actions a:focus-visible)::after {
+.cardActive.card--hover-accent::after {
   opacity: 0.05;
 }
 
@@ -60,16 +59,15 @@
   height: 100%;
   object-fit: contain;
 
-  filter: grayscale(90%) brightness(0.9) !important;
+  filter: grayscale(90%) brightness(0.9);
 
   transform: scale(1);
   transition: filter 0.45s ease;
 }
 
 /* CTA-driven interaction */
-.card:has(.actions a:hover) .image,
-.card:has(.actions a:focus-visible) .image {
-  filter: grayscale(0%) brightness(1) !important;
+.cardActive .image {
+  filter: grayscale(0%) brightness(1);
   transform: scale(1);
 }
 

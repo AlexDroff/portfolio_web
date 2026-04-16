@@ -9,53 +9,30 @@ type ProjectGalleryProps = {
 };
 
 export const ProjectGallery = ({ folder, sections }: ProjectGalleryProps) => {
-  const fullWidthVisualSectionTitles = new Set([
-    "Landing Experience",
-    "Services Catalog",
-    "FAQ & Content",
-    "Contact / Conversion",
-    "About / Concept",
-    "Houses Preview",
-    "Lifestyle / Experience",
-    "Gallery",
-    "Contact / Location",
-    "House Details"
-  ]);
-  const fullContainerSectionTitles = new Set([
-    "Hero",
-    ...fullWidthVisualSectionTitles
-  ]);
-
   if (!sections.length) {
     return null;
   }
 
-  const isFullWidthImageSection = (section: ProjectGallerySection) =>
-    section.layout === "hero" ||
-    (section.layout !== "responsive-pair" && section.images.length === 1);
+  const isFullContainerLayout = (section: ProjectGallerySection) =>
+    section.layout === "single" || section.layout === "fullWidth";
 
   const getLayoutClass = (section: ProjectGallerySection) => {
     const classNames: string[] = [];
 
-    if (section.layout === "hero") {
+    if (section.layout === "responsive") {
+      classNames.push(styles.responsivePair, styles.responsiveDesignLayout);
+    }
+
+    if (section.layout === "grid") {
+      classNames.push(styles.gridLayout);
+    }
+
+    if (section.layout === "single") {
+      classNames.push(styles.singleLayout);
+    }
+
+    if (section.layout === "fullWidth") {
       classNames.push(styles.heroLayout);
-    } else if (section.layout === "responsive-pair") {
-      classNames.push(styles.responsivePair);
-    } else {
-      classNames.push(
-        section.images.length === 1 ? styles.singleLayout : styles.gridLayout
-      );
-    }
-
-    if (section.title === "Responsive Design") {
-      classNames.push(styles.responsiveDesignLayout);
-    }
-
-    if (section.title === "Ordering Flow") {
-      classNames.push(styles.orderingFlowLayout);
-    }
-
-    if (fullWidthVisualSectionTitles.has(section.title)) {
       classNames.push(styles.fullWidthVisualLayout);
     }
 
@@ -66,21 +43,15 @@ export const ProjectGallery = ({ folder, sections }: ProjectGalleryProps) => {
     section: ProjectGallerySection,
     imageKind: ProjectGalleryImage["kind"]
   ) => {
-    const isFullContainerSection =
-      fullContainerSectionTitles.has(section.title) ||
-      isFullWidthImageSection(section);
-
-    if (section.layout === "hero") {
-      return isFullContainerSection
-        ? `${styles.heroFrame} ${styles.autoHeightFrame}`
-        : styles.heroFrame;
-    }
-
-    if (section.layout === "responsive-pair") {
+    if (section.layout === "responsive") {
       return imageKind === "mobile" ? styles.mobilePairFrame : styles.pairFrame;
     }
 
-    return isFullContainerSection
+    if (section.layout === "fullWidth") {
+      return `${styles.heroFrame} ${styles.autoHeightFrame}`;
+    }
+
+    return isFullContainerLayout(section)
       ? `${styles.gridFrame} ${styles.autoHeightFrame}`
       : styles.gridFrame;
   };
@@ -91,11 +62,11 @@ export const ProjectGallery = ({ folder, sections }: ProjectGalleryProps) => {
   ) => {
     const mobileContainerWidth = "calc(100vw - 48px)";
 
-    if (section.layout === "hero") {
+    if (section.layout === "fullWidth") {
       return `(max-width: 768px) ${mobileContainerWidth}, 1136px`;
     }
 
-    if (section.layout === "responsive-pair") {
+    if (section.layout === "responsive") {
       if (image.kind === "mobile") {
         return `(max-width: 768px) ${mobileContainerWidth}, 340px`;
       }
@@ -103,7 +74,7 @@ export const ProjectGallery = ({ folder, sections }: ProjectGalleryProps) => {
       return `(max-width: 768px) ${mobileContainerWidth}, 860px`;
     }
 
-    if (section.images.length === 1) {
+    if (section.layout === "single") {
       return `(max-width: 768px) ${mobileContainerWidth}, 1136px`;
     }
 
@@ -126,16 +97,13 @@ export const ProjectGallery = ({ folder, sections }: ProjectGalleryProps) => {
                 <article
                   key={`${section.title}-${image.index}`}
                   className={`${styles.item} ${
-                    image.kind === "mobile" && section.layout === "responsive-pair"
+                    image.kind === "mobile" && section.layout === "responsive"
                       ? styles.mobileItem
                       : ""
                   }`}
                 >
                   <div className={getFrameClass(section, image.kind)}>
-                    {(
-                      fullContainerSectionTitles.has(section.title) ||
-                      isFullWidthImageSection(section)
-                    ) ? (
+                    {isFullContainerLayout(section) ? (
                       <Image
                         src={`/projects/${folder}/${image.index}.webp`}
                         alt={image.label}
