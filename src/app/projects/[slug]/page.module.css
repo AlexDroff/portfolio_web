@@ -14,3 +14,13 @@
 .backLink:hover {
   color: var(--color-brand-accent);
 }
+
+@media (max-width: 768px) {
+  .backLinkWrap {
+    padding-top: var(--space-8);
+  }
+
+  .backLink {
+    margin-bottom: var(--space-5);
+  }
+}

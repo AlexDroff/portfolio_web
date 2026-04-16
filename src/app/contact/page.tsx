@@ -194,6 +194,10 @@ export default function ContactPage() {
           </div>
 
           <p className={styles.trustText}>I usually reply within 24 hours.</p>
+
+          <Link href="/" className={styles.backLink}>
+            {"\u2190 Back to main page"}
+          </Link>
         </div>
       </Container>
     </Section>

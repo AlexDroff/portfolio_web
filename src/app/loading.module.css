@@ -9,7 +9,7 @@
 .loader {
   width: 32px;
   height: 32px;
-  border: 2px solid var(--color-text-secondary);
+  border: var(--border-width-strong) solid var(--color-text-secondary);
   border-top-color: var(--color-brand-accent);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;

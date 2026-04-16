@@ -110,7 +110,6 @@ export const ProjectGallery = ({ folder, sections }: ProjectGalleryProps) => {
                         width={1600}
                         height={900}
                         sizes={getImageSizes(section, image)}
-                        quality={100}
                         className={`${styles.image} ${styles.imageNatural}`}
                       />
                     ) : (
@@ -119,7 +118,6 @@ export const ProjectGallery = ({ folder, sections }: ProjectGalleryProps) => {
                         alt={image.label}
                         fill
                         sizes={getImageSizes(section, image)}
-                        quality={100}
                         className={styles.image}
                       />
                     )}

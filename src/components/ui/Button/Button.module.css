@@ -6,7 +6,7 @@
   height: 44px;
   padding: 0 18px;
   border-radius: var(--space-2);
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   font-weight: 500;
   cursor: pointer;
   text-decoration: none;
@@ -42,7 +42,7 @@
 .secondary {
   background: transparent;
   color: var(--color-brand-primary);
-  border: 1.5px solid var(--color-brand-primary);
+  border: var(--border-width-soft) solid var(--color-brand-primary);
 }
 
 .secondary:hover,

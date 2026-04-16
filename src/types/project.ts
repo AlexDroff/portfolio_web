@@ -1,11 +1,3 @@
-export const SCREEN_TYPES = {
-  DESKTOP: 1,
-  MOBILE: 2,
-  COVER: 3,
-} as const;
-
-export const COVER_INDEX = SCREEN_TYPES.COVER;
-
 export type ProjectMetaItem = {
   label: string;
   value: string;
@@ -55,7 +47,6 @@ export type ProjectCardData = {
   liveDemoUrl: string;
   imageFolder: string;
   cardImage: string;
-  screenshotsCount: number;
 };
 
 export type Project = ProjectCardData & {

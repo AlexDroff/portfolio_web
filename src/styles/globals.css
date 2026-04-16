@@ -14,6 +14,26 @@
   --space-8: 64px;
   --space-9: 96px;
 
+  /* typography */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 32px;
+  --font-size-3xl: 40px;
+  --font-size-4xl: 56px;
+
+  /* border width */
+  --border-width-default: 1px;
+  --border-width-soft: 1.5px;
+  --border-width-strong: 2px;
+
+  /* logo sizes */
+  --logo-size-lg: 350px;
+  --logo-size-md: 200px;
+  --logo-size-sm: 120px;
+
   /* === COLORS SYSTEM === */
 
   /* backgrounds */
@@ -93,6 +113,10 @@ canvas,
 svg {
   display: block;
   max-width: 100%;
+}
+
+img {
+  height: auto;
 }
 
 /* buttons */

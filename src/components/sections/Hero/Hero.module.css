@@ -18,14 +18,14 @@
 }
 
 .title {
-  font-size: 56px;
+  font-size: var(--font-size-4xl);
   line-height: 1.1;
   font-weight: 600;
   letter-spacing: -0.02em;
 }
 
 .subtitle {
-  font-size: 18px;
+  font-size: var(--font-size-lg);
   line-height: 1.6;
   color: var(--color-text-secondary);
   max-width: 680px;
@@ -53,5 +53,31 @@
 .inner {
   position: relative;
   z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: calc(var(--space-8) + var(--space-5)) 0;
+  }
+
+  .inner {
+    gap: var(--space-4);
+  }
+
+  .title {
+    font-size: var(--font-size-2xl);
+    max-width: 22ch;
+    line-height: 1.15;
+  }
+
+  .subtitle {
+    font-size: var(--font-size-md);
+  }
+
+  .actions {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 

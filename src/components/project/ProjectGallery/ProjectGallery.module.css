@@ -131,7 +131,7 @@
 .label {
   margin: 0;
   color: var(--color-text-secondary);
-  font-size: 14px;
+  font-size: var(--font-size-sm);
   line-height: 1.4;
   width: min(100%, 560px);
   text-align: center;
@@ -163,25 +163,6 @@
   aspect-ratio: auto;
 }
 
-.orderingFlowLayout {
-  display: flex;
-  gap: var(--space-6);
-}
-
-.orderingFlowLayout > .item {
-  flex: 1 1 0;
-  min-width: 0;
-}
-
-.orderingFlowLayout .gridFrame {
-  aspect-ratio: 16 / 9;
-  max-height: 460px;
-}
-
-.orderingFlowLayout .image {
-  object-fit: contain;
-}
-
 .fullWidthVisualLayout .gridFrame {
   width: 100%;
 }
@@ -191,14 +172,23 @@
 }
 
 @media (max-width: 768px) {
+  .group {
+    margin-top: var(--space-5);
+  }
+
+  .image,
+  .imageNatural {
+    width: 100%;
+    height: auto;
+  }
+
   .responsivePair,
   .gridLayout,
   .singleLayout {
     grid-template-columns: 1fr;
   }
 
-  .responsiveDesignLayout,
-  .orderingFlowLayout {
+  .responsiveDesignLayout {
     display: grid;
     gap: var(--space-3);
   }
@@ -206,11 +196,6 @@
   .responsiveDesignLayout .pairFrame,
   .responsiveDesignLayout .mobilePairFrame {
     height: calc(var(--space-9) * 4);
-  }
-
-  .orderingFlowLayout .gridFrame {
-    aspect-ratio: 16 / 9;
-    max-height: 420px;
   }
 
   .heroFrame,
@@ -225,7 +210,8 @@
   }
 
   .mobileItem {
-    max-width: min(100%, 300px);
+    width: 100%;
+    max-width: 100%;
     justify-self: center;
     flex: initial;
   }

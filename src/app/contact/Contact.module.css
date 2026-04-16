@@ -8,7 +8,17 @@
 }
 
 .backLink {
-  color: var(--color-text-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text-secondary);
+  transition: color 0.2s ease;
+}
+
+.backLink:hover,
+.backLink:focus-visible {
+  color: var(--color-brand-accent);
+  outline: none;
 }
 
 .intro {
@@ -48,15 +58,14 @@
   outline: none;
 }
 
-.iconBox,
-.iconWrapper {
+.iconBox {
   width: 44px;
   height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: transparent;
-  border: 1px solid var(--color-text-primary);
+  border: var(--border-width-default) solid var(--color-text-primary);
   border-radius: var(--space-2);
   transition:
     border-color 0.2s ease,
@@ -98,9 +107,7 @@
 }
 
 .contactItem:hover .iconBox,
-.contactItem:focus-visible .iconBox,
-.contactItem:hover .iconWrapper,
-.contactItem:focus-visible .iconWrapper {
+.contactItem:focus-visible .iconBox {
   border-color: var(--color-brand-accent);
 }
 
@@ -135,7 +142,7 @@
 .textarea {
   width: 100%;
   padding: var(--space-3);
-  border: 1px solid var(--color-border-default);
+  border: var(--border-width-default) solid var(--color-border-default);
   border-radius: var(--space-2);
   background: var(--color-bg-primary);
   color: var(--color-text-primary);
@@ -163,7 +170,7 @@
 
 .error {
   color: var(--color-state-error);
-  font-size: 12px;
+  font-size: var(--font-size-xs);
   margin-top: var(--space-1);
 }
 
@@ -184,7 +191,7 @@
 .directEmail {
   margin: var(--space-4) 0 0;
   color: var(--color-text-secondary);
-  font-size: 16px;
+  font-size: var(--font-size-md);
 }
 
 .directEmail a {
@@ -200,5 +207,29 @@
 .trustText {
   margin: 0;
   color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .contacts {
+    width: fit-content;
+    margin: 0 auto;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .contactItem {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .directEmail,
+  .trustText {
+    width: 100%;
+    text-align: center;
+  }
+
+  .directEmail a {
+    overflow-wrap: anywhere;
+  }
 }
 

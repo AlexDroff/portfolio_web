@@ -16,6 +16,10 @@
   color: var(--color-text-secondary);
 }
 
+.copy {
+  margin: 0;
+}
+
 .email {
   text-decoration: none;
   transition: all 0.2s ease;
@@ -33,7 +37,29 @@
 }
 
 .logoLink svg {
-  width: 200px;
+  width: var(--logo-size-md);
   height: auto;
+}
+
+@media (max-width: 768px) {
+  .inner {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+    text-align: center;
+  }
+
+  .logoLink svg {
+    width: var(--logo-size-sm);
+  }
+
+  .email {
+    font-size: var(--font-size-sm);
+    overflow-wrap: anywhere;
+  }
+
+  .copy {
+    font-size: var(--font-size-xs);
+  }
 }
 

@@ -15,7 +15,6 @@ export const projects: Project[] = [
       'https://pure-soft-git-feature-dark-mode-i18n-alexdroffs-projects.vercel.app/',
     imageFolder: 'cleaning',
     cardImage: '/projects cards/cleaning.webp',
-    screenshotsCount: 10,
     caseStudy: {
       hero: {
         title: 'Cleaning Services',
@@ -170,7 +169,6 @@ export const projects: Project[] = [
     liveDemoUrl: 'https://usadba.kr.ua/ua/',
     imageFolder: 'rental-house',
     cardImage: '/projects cards/rental house.webp',
-    screenshotsCount: 9,
     caseStudy: {
       hero: {
         title: 'Countryside Retreat',
@@ -250,10 +248,10 @@ export const projects: Project[] = [
         {
           title: 'Lifestyle / Experience',
           description:
-            'Section focused on emotional value: nature, РѕС‚РґС‹С…, and leisure activities.',
+            'Section focused on emotional value: nature, relaxation, and leisure activities.',
           layout: 'fullWidth',
           images: [
-            { index: 6, label: 'Lifestyle and РѕС‚РґС‹С… content section', kind: 'default' },
+            { index: 6, label: 'Lifestyle and relaxation content section', kind: 'default' },
           ],
         },
         {
@@ -301,7 +299,6 @@ export const projects: Project[] = [
     liveDemoUrl: 'https://rentalcar-frontend-six.vercel.app/',
     imageFolder: 'rental-car',
     cardImage: '/projects cards/rental car.webp',
-    screenshotsCount: 8,
     caseStudy: {
       hero: {
         title: 'Car Rental App',
@@ -425,7 +422,6 @@ export const projects: Project[] = [
     liveDemoUrl: 'https://travelers-khaki-ten.vercel.app/',
     imageFolder: 'travel',
     cardImage: '/projects cards/travels.webp',
-    screenshotsCount: 9,
     caseStudy: {
       hero: {
         title: 'Travel Stories',

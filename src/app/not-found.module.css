@@ -20,7 +20,7 @@
 }
 
 .title {
-  font-size: 32px;
+  font-size: var(--font-size-2xl);
 }
 
 .text {
