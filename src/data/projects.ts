@@ -11,8 +11,7 @@ export const projects: Project[] = [
       'WhatsApp booking flow',
       'Order summary logic',
     ],
-    liveDemoUrl:
-      'https://pure-soft-git-feature-dark-mode-i18n-alexdroffs-projects.vercel.app/',
+    liveDemoUrl: 'https://pure-soft-six.vercel.app/',
     imageFolder: 'cleaning',
     cardImage: '/projects cards/cleaning.webp',
     caseStudy: {
@@ -40,7 +39,7 @@ export const projects: Project[] = [
         problem:
           'The client had no website and no structured way to present services or accept orders. Requests were handled manually through calls and messaging apps, without a clear flow.',
         solution:
-          "I designed and built a service-based website with a simple ordering flow. Users can browse services, view details in modals, and add them to an order. The system generates a pre-filled WhatsApp message with selected services and total price, removing the need for a backend.",
+          'I designed and built a service-based website with a simple ordering flow. Users can browse services, view details in modals, and add them to an order. The system generates a pre-filled WhatsApp message with selected services and total price, removing the need for a backend.',
         result:
           'The result is a fast, clear website that helps the client receive structured service requests directly via WhatsApp.',
       },
@@ -60,13 +59,15 @@ export const projects: Project[] = [
       gallery: [
         {
           title: 'Hero',
-          description: 'Main project visual showing the primary landing header and value proposition.',
+          description:
+            'Main project visual showing the primary landing header and value proposition.',
           layout: 'fullWidth',
           images: [{ index: 3, label: 'Main hero screen', kind: 'default' }],
         },
         {
           title: 'Responsive Design',
-          description: 'Fully responsive layout optimized for desktop and mobile use.',
+          description:
+            'Fully responsive layout optimized for desktop and mobile use.',
           layout: 'responsive',
           images: [
             { index: 1, label: 'Desktop viewport', kind: 'desktop' },
@@ -166,7 +167,7 @@ export const projects: Project[] = [
       'House detail pages',
       'Direct call booking',
     ],
-    liveDemoUrl: 'https://usadba.kr.ua/ua/',
+    liveDemoUrl: 'https://sablino.vercel.app/',
     imageFolder: 'rental-house',
     cardImage: '/projects cards/rental house.webp',
     caseStudy: {
@@ -194,7 +195,7 @@ export const projects: Project[] = [
         problem:
           'The client had an outdated website that did not reflect the quality of the property or clearly present the offer. There was no simple way for users to contact the owner.',
         solution:
-          "I designed and built a website focused on atmosphere and clarity. The structure highlights the property and houses, guiding users through the content. Instead of forms, the booking flow is simplified to a direct call.",
+          'I designed and built a website focused on atmosphere and clarity. The structure highlights the property and houses, guiding users through the content. Instead of forms, the booking flow is simplified to a direct call.',
         result:
           'The new website improves presentation and makes it easier for users to understand the offer and contact the owner.',
       },
@@ -213,69 +214,95 @@ export const projects: Project[] = [
         {
           title: 'Hero',
           description:
-            'Main project visual with the full desktop hero scene and sunset atmosphere.',
+            'Main project visual with the full desktop hero scene, direct call CTA, and calm countryside atmosphere.',
           layout: 'fullWidth',
           images: [{ index: 3, label: 'Main landing hero', kind: 'default' }],
         },
         {
           title: 'Responsive Design',
           description:
-            'Desktop and mobile viewport presentation shown together as one responsive composition.',
+            'Desktop and mobile viewport presentation showing how the landing page adapts across devices.',
           layout: 'responsive',
           images: [
-            { index: 1, label: 'Desktop and mobile viewport presentation', kind: 'desktop' },
-            { index: 2, label: 'Desktop and mobile viewport presentation', kind: 'mobile' },
+            {
+              index: 1,
+              label: 'Desktop viewport presentation',
+              kind: 'desktop',
+            },
+            {
+              index: 2,
+              label: 'Mobile viewport presentation',
+              kind: 'mobile',
+            },
           ],
         },
         {
           title: 'About / Concept',
           description:
-            'Content storytelling block that explains the place, mood, and concept positioning.',
+            'Content storytelling block that explains the place, mood, and positioning of the countryside retreat.',
           layout: 'fullWidth',
           images: [
-            { index: 4, label: 'Project concept and atmosphere', kind: 'default' },
+            {
+              index: 4,
+              label: 'About section with atmosphere and concept',
+              kind: 'default',
+            },
           ],
         },
         {
           title: 'Houses Preview',
           description:
-            'Accommodation preview section with house cards, structure, and clear booking CTAs.',
+            'Accommodation preview section with house cards, pricing, and clear navigation to detailed pages.',
           layout: 'fullWidth',
           images: [
             { index: 5, label: 'Accommodation preview cards', kind: 'default' },
           ],
         },
         {
-          title: 'Lifestyle / Experience',
+          title: 'Gallery',
           description:
-            'Section focused on emotional value: nature, relaxation, and leisure activities.',
+            'Photo gallery section designed to show the property, houses, and surrounding atmosphere.',
           layout: 'fullWidth',
           images: [
-            { index: 6, label: 'Lifestyle and relaxation content section', kind: 'default' },
+            {
+              index: 6,
+              label: 'Photo gallery section',
+              kind: 'default',
+            },
           ],
         },
         {
-          title: 'Gallery',
+          title: 'CTA Section',
           description:
-            'Visual atmosphere and photo presentation block for browsing location imagery.',
+            'Conversion-focused section that gives the visitor a final clear action: call the estate and move from browsing to direct contact.',
           layout: 'fullWidth',
-          images: [{ index: 7, label: 'Photo gallery section', kind: 'default' }],
+          images: [
+            {
+              index: 7,
+              label: 'Final call-to-action section',
+              kind: 'default',
+            },
+          ],
         },
         {
           title: 'Contact / Location',
           description:
-            'Final trust and conversion block with contact details and map context.',
+            'Final trust and conversion block with contact details, phone numbers, map, and location context.',
           layout: 'fullWidth',
-          images: [{ index: 8, label: 'Contact and location section', kind: 'default' }],
+          images: [
+            {
+              index: 8,
+              label: 'Contact and location section',
+              kind: 'default',
+            },
+          ],
         },
         {
           title: 'House Details',
           description:
-            'Detailed accommodation page with photos, description, pricing, and action path.',
+            'Detailed accommodation page with photos, characteristics, pricing, and direct action path.',
           layout: 'fullWidth',
-          images: [
-            { index: 9, label: 'Detailed house page', kind: 'default' },
-          ],
+          images: [{ index: 9, label: 'Detailed house page', kind: 'default' }],
         },
       ],
       cta: {
@@ -321,7 +348,7 @@ export const projects: Project[] = [
         problem:
           'Users needed a fast and intuitive way to browse cars, apply filters, and submit booking requests without friction.',
         solution:
-          "I built a frontend application based on a provided design, focusing on dynamic filtering and API integration. Users can browse cars, filter results, view details, and submit booking requests with validation.",
+          'I built a frontend application based on a provided design, focusing on dynamic filtering and API integration. Users can browse cars, filter results, view details, and submit booking requests with validation.',
         result:
           'The result is a functional application that demonstrates working with APIs, filtering logic, and real user interaction flows.',
       },
@@ -340,15 +367,13 @@ export const projects: Project[] = [
       gallery: [
         {
           title: 'Hero',
-          description:
-            'Hero section with the main landing visual.',
+          description: 'Hero section with the main landing visual.',
           layout: 'fullWidth',
           images: [{ index: 3, label: 'Hero section', kind: 'default' }],
         },
         {
           title: 'Responsive Design',
-          description:
-            'Desktop and mobile viewport presentation.',
+          description: 'Desktop and mobile viewport presentation.',
           layout: 'responsive',
           images: [
             { index: 1, label: 'Desktop view', kind: 'desktop' },
@@ -360,23 +385,23 @@ export const projects: Project[] = [
           description:
             'Catalog layout with integrated search and browsing experience.',
           layout: 'single',
-          images: [
-            { index: 4, label: 'Catalog overview', kind: 'default' },
-          ],
+          images: [{ index: 4, label: 'Catalog overview', kind: 'default' }],
         },
         {
           title: 'Filtering',
-          description:
-            'Filtering by brand, price, and mileage.',
+          description: 'Filtering by brand, price, and mileage.',
           layout: 'single',
           images: [
-            { index: 5, label: 'Filtering by brand, price, and mileage', kind: 'default' },
+            {
+              index: 5,
+              label: 'Filtering by brand, price, and mileage',
+              kind: 'default',
+            },
           ],
         },
         {
           title: 'Favorites / Selected State',
-          description:
-            'Selected and favorites state in the catalog.',
+          description: 'Selected and favorites state in the catalog.',
           layout: 'single',
           images: [
             { index: 8, label: 'Selected / favorites state', kind: 'default' },
@@ -384,17 +409,13 @@ export const projects: Project[] = [
         },
         {
           title: 'Detail Variant',
-          description:
-            'Clean vehicle detail page variant.',
+          description: 'Clean vehicle detail page variant.',
           layout: 'single',
-          images: [
-            { index: 6, label: 'Detail page variant', kind: 'default' },
-          ],
+          images: [{ index: 6, label: 'Detail page variant', kind: 'default' }],
         },
         {
           title: 'Booking Request Flow',
-          description:
-            'Submitting a rental request from the detail page.',
+          description: 'Submitting a rental request from the detail page.',
           layout: 'single',
           images: [
             { index: 7, label: 'Booking request flow', kind: 'default' },
@@ -450,7 +471,7 @@ export const projects: Project[] = [
         problem:
           'The project required a fullstack platform where users can register, publish stories, manage profiles, and interact with content.',
         solution:
-          "As part of a 12-person team, I contributed to both frontend and backend development. I built key UI components, including headers, modals, story cards, and profile editing flows, and worked with shared data structures on the backend.",
+          'As part of a 12-person team, I contributed to both frontend and backend development. I built key UI components, including headers, modals, story cards, and profile editing flows, and worked with shared data structures on the backend.',
         result:
           'The platform supports authentication, publishing, and user interaction, demonstrating real-world fullstack architecture and teamwork.',
       },
@@ -481,16 +502,16 @@ export const projects: Project[] = [
           description:
             'Authenticated landing state showing how navigation and available actions expand after login.',
           layout: 'single',
-          images: [{ index: 5, label: 'Hero - Authenticated State', kind: 'default' }],
+          images: [
+            { index: 5, label: 'Hero - Authenticated State', kind: 'default' },
+          ],
         },
         {
           title: 'Authentication',
           description:
             'Login flow providing access to personalized features, profile actions, and story publishing.',
           layout: 'single',
-          images: [
-            { index: 4, label: 'Authentication', kind: 'default' },
-          ],
+          images: [{ index: 4, label: 'Authentication', kind: 'default' }],
         },
         {
           title: 'Responsive Design',
@@ -516,36 +537,28 @@ export const projects: Project[] = [
           description:
             'Community directory presenting authors and making profile exploration easier.',
           layout: 'single',
-          images: [
-            { index: 7, label: 'Travelers', kind: 'default' },
-          ],
+          images: [{ index: 7, label: 'Travelers', kind: 'default' }],
         },
         {
           title: 'User Profile',
           description:
             'Personal user area for managing saved stories and reviewing individual activity.',
           layout: 'single',
-          images: [
-            { index: 8, label: 'User Profile', kind: 'default' },
-          ],
+          images: [{ index: 8, label: 'User Profile', kind: 'default' }],
         },
         {
           title: 'Story Creation',
           description:
             'Publishing flow for creating and sharing new travel stories.',
           layout: 'single',
-          images: [
-            { index: 9, label: 'Story Creation', kind: 'default' },
-            ],
+          images: [{ index: 9, label: 'Story Creation', kind: 'default' }],
         },
         {
           title: 'Story Detail',
           description:
             'Full article view with author metadata, category context, and reading-focused layout.',
           layout: 'single',
-          images: [
-            { index: 10, label: 'Story Detail', kind: 'default' },
-          ],
+          images: [{ index: 10, label: 'Story Detail', kind: 'default' }],
         },
       ],
       cta: {
@@ -557,5 +570,3 @@ export const projects: Project[] = [
     },
   },
 ];
-
-
