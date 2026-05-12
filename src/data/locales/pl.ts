@@ -1153,7 +1153,7 @@ const ui: LocaleContent["ui"] = {
     nextProject: "Nastepny projekt",
   },
   projectCard: {
-    viewCaseStudy: "Zobacz case study",
+    viewCaseStudy: "Szczegóły",
     liveWebsite: "Zobacz strone",
   },
   projectDetail: {

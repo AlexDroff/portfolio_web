@@ -1,8 +1,18 @@
 .section {
   background: var(--color-bg-primary);
+  color: var(--color-text-primary);
 }
 
 .wrapper {
   display: flex;
+  border: var(--border-width-default) solid var(--color-border-default);
+  background: var(--color-overlay-subtle);
+  border-radius: var(--space-1);
+  padding: var(--space-6);
 }
 
+@media (max-width: 768px) {
+  .wrapper {
+    padding: var(--space-5);
+  }
+}

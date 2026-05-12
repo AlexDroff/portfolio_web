@@ -93,38 +93,61 @@ export const About = () => {
 
             <ul className={styles.grid}>
               {whatYouGetBlock.items.map((item) => (
-                <li
-                  key={item.id}
-                  className={`${styles.item} ${styles.iconItem} ${activeItem === item.id ? styles.iconItemActive : ''}`}
-                  onMouseLeave={() => handleItemMouseLeave(item.id)}
-                  onBlur={(event) => handleItemBlur(event, item.id)}
-                  data-about-popover-item="true"
-                >
-                  <button
-                    type="button"
-                    className={styles.itemButton}
-                    onClick={() => handleItemClick(item.id)}
-                    aria-expanded={activeItem === item.id}
-                    aria-describedby={
-                      activeItem === item.id ? `about-popover-${item.id}` : undefined
-                    }
-                  >
-                    <Image
-                      src={item.iconSrc}
-                      alt={item.iconAlt}
-                      width={80}
-                      height={80}
-                      className={styles.icon}
-                    />
-                    <span>{item.title}</span>
-                  </button>
-                  <div
-                    id={`about-popover-${item.id}`}
-                    className={`${styles.popover} ${activeItem === item.id ? styles.popoverActive : ''}`}
-                  >
-                    {item.description}
-                  </div>
-                </li>
+                (() => {
+                  const isExpanded = activeItem === item.id;
+                  return (
+                    <li
+                      key={item.id}
+                      className={`${styles.item} ${styles.iconItem} ${isExpanded ? styles.iconItemActive : ''}`}
+                      onMouseLeave={() => handleItemMouseLeave(item.id)}
+                      onBlur={(event) => handleItemBlur(event, item.id)}
+                      data-about-popover-item="true"
+                    >
+                      {isExpanded ? (
+                        <button
+                          type="button"
+                          className={styles.itemButton}
+                          onClick={() => handleItemClick(item.id)}
+                          aria-expanded="true"
+                          aria-controls={`about-popover-${item.id}`}
+                          aria-describedby={`about-popover-${item.id}`}
+                        >
+                          <Image
+                            src={item.iconSrc}
+                            alt={item.iconAlt}
+                            width={80}
+                            height={80}
+                            className={styles.icon}
+                          />
+                          <span>{item.title}</span>
+                        </button>
+                      ) : (
+                        <button
+                          type="button"
+                          className={styles.itemButton}
+                          onClick={() => handleItemClick(item.id)}
+                          aria-expanded="false"
+                          aria-controls={`about-popover-${item.id}`}
+                        >
+                          <Image
+                            src={item.iconSrc}
+                            alt={item.iconAlt}
+                            width={80}
+                            height={80}
+                            className={styles.icon}
+                          />
+                          <span>{item.title}</span>
+                        </button>
+                      )}
+                      <div
+                        id={`about-popover-${item.id}`}
+                        className={`${styles.popover} ${isExpanded ? styles.popoverActive : ''}`}
+                      >
+                        {item.description}
+                      </div>
+                    </li>
+                  );
+                })()
               ))}
             </ul>
           </div>
@@ -142,38 +165,61 @@ export const About = () => {
 
             <ul className={styles.grid}>
               {howIWorkBlock.items.map((item) => (
-                <li
-                  key={item.id}
-                  className={`${styles.item} ${styles.iconItem} ${activeItem === item.id ? styles.iconItemActive : ''}`}
-                  onMouseLeave={() => handleItemMouseLeave(item.id)}
-                  onBlur={(event) => handleItemBlur(event, item.id)}
-                  data-about-popover-item="true"
-                >
-                  <button
-                    type="button"
-                    className={styles.itemButton}
-                    onClick={() => handleItemClick(item.id)}
-                    aria-expanded={activeItem === item.id}
-                    aria-describedby={
-                      activeItem === item.id ? `about-popover-${item.id}` : undefined
-                    }
-                  >
-                    <Image
-                      src={item.iconSrc}
-                      alt={item.iconAlt}
-                      width={80}
-                      height={80}
-                      className={styles.icon}
-                    />
-                    <span>{item.title}</span>
-                  </button>
-                  <div
-                    id={`about-popover-${item.id}`}
-                    className={`${styles.popover} ${activeItem === item.id ? styles.popoverActive : ''}`}
-                  >
-                    {item.description}
-                  </div>
-                </li>
+                (() => {
+                  const isExpanded = activeItem === item.id;
+                  return (
+                    <li
+                      key={item.id}
+                      className={`${styles.item} ${styles.iconItem} ${isExpanded ? styles.iconItemActive : ''}`}
+                      onMouseLeave={() => handleItemMouseLeave(item.id)}
+                      onBlur={(event) => handleItemBlur(event, item.id)}
+                      data-about-popover-item="true"
+                    >
+                      {isExpanded ? (
+                        <button
+                          type="button"
+                          className={styles.itemButton}
+                          onClick={() => handleItemClick(item.id)}
+                          aria-expanded="true"
+                          aria-controls={`about-popover-${item.id}`}
+                          aria-describedby={`about-popover-${item.id}`}
+                        >
+                          <Image
+                            src={item.iconSrc}
+                            alt={item.iconAlt}
+                            width={80}
+                            height={80}
+                            className={styles.icon}
+                          />
+                          <span>{item.title}</span>
+                        </button>
+                      ) : (
+                        <button
+                          type="button"
+                          className={styles.itemButton}
+                          onClick={() => handleItemClick(item.id)}
+                          aria-expanded="false"
+                          aria-controls={`about-popover-${item.id}`}
+                        >
+                          <Image
+                            src={item.iconSrc}
+                            alt={item.iconAlt}
+                            width={80}
+                            height={80}
+                            className={styles.icon}
+                          />
+                          <span>{item.title}</span>
+                        </button>
+                      )}
+                      <div
+                        id={`about-popover-${item.id}`}
+                        className={`${styles.popover} ${isExpanded ? styles.popoverActive : ''}`}
+                      >
+                        {item.description}
+                      </div>
+                    </li>
+                  );
+                })()
               ))}
             </ul>
           </div>

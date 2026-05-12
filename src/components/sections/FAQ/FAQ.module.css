@@ -1,5 +1,6 @@
-﻿.section {
-  background: var(--color-bg-primary);
+.section {
+  background: var(--color-bg-surface);
+  color: var(--color-bg-primary);
 }
 
 .wrapper {
@@ -23,7 +24,7 @@
   margin: var(--space-4) 0 0;
   font-size: var(--font-size-md);
   line-height: 1.55;
-  color: var(--color-text-secondary);
+  color: var(--color-text-muted);
 }
 
 .list {
@@ -35,9 +36,9 @@
 }
 
 .item {
-  border: var(--border-width-default) solid var(--color-border-default);
+  border: var(--border-width-default) solid var(--color-border-soft);
   border-radius: var(--space-1);
-  background: var(--color-overlay-subtle);
+  background: var(--color-brand-primary);
 }
 
 .details {
@@ -52,7 +53,7 @@
   font-size: var(--font-size-lg);
   line-height: 1.4;
   font-weight: 600;
-  color: var(--color-text-primary);
+  color: var(--color-bg-primary);
 }
 
 .summary::-webkit-details-marker {
@@ -62,16 +63,16 @@
 .summary::after {
   content: "+";
   float: right;
-  color: var(--color-text-secondary);
+  color: var(--color-text-muted);
   margin-left: var(--space-4);
 }
 
 .details[open] .summary::after {
-  content: "−";
+  content: "-";
 }
 
 .summary:focus-visible {
-  outline: 2px solid var(--color-text-primary);
+  outline: 2px solid var(--color-bg-primary);
   outline-offset: 2px;
   border-radius: var(--space-1);
 }
@@ -81,7 +82,7 @@
   padding: 0 var(--space-5) var(--space-5);
   font-size: var(--font-size-sm);
   line-height: 1.6;
-  color: var(--color-text-secondary);
+  color: var(--color-text-muted);
 }
 
 @media (max-width: 768px) {
@@ -102,4 +103,3 @@
     padding: 0 var(--space-4) var(--space-4);
   }
 }
-

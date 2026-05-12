@@ -122,19 +122,29 @@ export const Header = () => {
             <Link href="/contact">{navigation.contact}</Link>
           </nav>
 
-          <button
-            type="button"
-            className={styles.menuToggle}
-            aria-label={isMenuOpen ? navigation.closeMenu : navigation.openMenu}
-            aria-expanded={isMenuOpen}
-            aria-controls="mobile-menu"
-            onClick={() => setIsMenuOpen((prev) => !prev)}
-          >
-            <span
-              className={`${styles.menuIcon} ${isMenuOpen ? styles.closeIcon : styles.burgerIcon}`}
-              aria-hidden="true"
-            />
-          </button>
+          {isMenuOpen ? (
+            <button
+              type="button"
+              className={styles.menuToggle}
+              aria-label={navigation.closeMenu}
+              aria-expanded="true"
+              aria-controls="mobile-menu"
+              onClick={() => setIsMenuOpen((prev) => !prev)}
+            >
+              <span className={`${styles.menuIcon} ${styles.closeIcon}`} aria-hidden="true" />
+            </button>
+          ) : (
+            <button
+              type="button"
+              className={styles.menuToggle}
+              aria-label={navigation.openMenu}
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+              onClick={() => setIsMenuOpen((prev) => !prev)}
+            >
+              <span className={`${styles.menuIcon} ${styles.burgerIcon}`} aria-hidden="true" />
+            </button>
+          )}
         </div>
       </Container>
 

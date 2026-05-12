@@ -125,50 +125,58 @@ export const Projects = () => {
         <div className={styles.wrapper}>
           <div className={styles.header}>
             <h2 className={styles.title}>{projectsContent.title}</h2>
-            <div className={styles.controls}>
-              <button
-                type="button"
-                className={styles.controlButton}
-                onClick={handlePrevClick}
-                disabled={!canScrollPrev}
-                aria-label={projectsSection.previousProject}
-              >
-                {projectsSection.previousProject}
-              </button>
-              <button
-                type="button"
-                className={styles.controlButton}
-                onClick={handleNextClick}
-                disabled={!canScrollNext}
-                aria-label={projectsSection.nextProject}
-              >
-                {projectsSection.nextProject}
-              </button>
-            </div>
           </div>
 
-          <ul
-            className={styles.sliderTrack}
-            ref={trackRef}
-            onScroll={handleTrackScroll}
-          >
-            {projects.map((project) => (
-              <li
-                key={project.slug}
-                className={styles.slide}
-                data-project-slide="true"
-              >
-                <ProjectCard
-                  slug={project.slug}
-                  title={project.title}
-                  image={project.cardImage}
-                  businessSummary={project.businessSummary}
-                  badges={project.badges}
-                  liveDemoUrl={project.liveDemoUrl}
-                />
-              </li>
-            ))}
-          </ul>
+          <div className={styles.sliderFrame}>
+            <button
+              type="button"
+              className={`${styles.arrowButton} ${styles.arrowButtonPrev}`}
+              onClick={handlePrevClick}
+              disabled={!canScrollPrev}
+              aria-label={projectsSection.previousProject}
+            >
+              <span
+                className={`${styles.arrowIcon} ${styles.arrowIconPrev}`}
+                aria-hidden="true"
+              />
+            </button>
+
+            <ul
+              className={styles.sliderTrack}
+              ref={trackRef}
+              onScroll={handleTrackScroll}
+            >
+              {projects.map((project) => (
+                <li
+                  key={project.slug}
+                  className={styles.slide}
+                  data-project-slide="true"
+                >
+                  <ProjectCard
+                    slug={project.slug}
+                    title={project.title}
+                    image={project.cardImage}
+                    businessSummary={project.businessSummary}
+                    badges={project.badges}
+                    liveDemoUrl={project.liveDemoUrl}
+                  />
+                </li>
+              ))}
+            </ul>
+
+            <button
+              type="button"
+              className={`${styles.arrowButton} ${styles.arrowButtonNext}`}
+              onClick={handleNextClick}
+              disabled={!canScrollNext}
+              aria-label={projectsSection.nextProject}
+            >
+              <span
+                className={`${styles.arrowIcon} ${styles.arrowIconNext}`}
+                aria-hidden="true"
+              />
+            </button>
+          </div>
         </div>
       </Container>
     </Section>
