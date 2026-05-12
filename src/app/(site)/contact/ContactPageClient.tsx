@@ -1,9 +1,11 @@
-"use client";
+﻿"use client";
 
 import type { SubmitEvent } from "react";
 import { useState } from "react";
 import Link from "next/link";
 
+import { siteConfig } from "@/config/site";
+import { siteContent } from "@/data/locales";
 import { Container } from "@/components/ui/Container/Container";
 import { Section } from "@/components/ui/Section/Section";
 import { Button } from "@/components/ui/Button/Button";
@@ -31,7 +33,8 @@ const GitHubIcon = ({ className }: IconProps) => (
   <span className={`${styles.icon} ${className}`} aria-hidden="true" />
 );
 
-export default function ContactPage() {
+export const ContactPageClient = () => {
+  const { contact } = siteContent;
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -47,16 +50,15 @@ export default function ContactPage() {
     const nextErrors: FormErrors = {};
 
     if (!/^[A-Za-z\s]{3,18}$/.test(trimmedName)) {
-      nextErrors.name =
-        "Name must be 3\u201318 characters and contain only letters.";
+      nextErrors.name = contact.validation.nameInvalid;
     }
 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedEmail)) {
-      nextErrors.email = "Enter a valid email address.";
+      nextErrors.email = contact.validation.emailInvalid;
     }
 
     if (trimmedMessage.length < 5 || trimmedMessage.length > 500) {
-      nextErrors.message = "Message must be 5-500 characters.";
+      nextErrors.message = contact.validation.messageInvalid;
     }
 
     if (nextErrors.name || nextErrors.email || nextErrors.message) {
@@ -66,13 +68,13 @@ export default function ContactPage() {
 
     setErrors({});
 
-    const subject = encodeURIComponent("New project inquiry");
+    const subject = encodeURIComponent(contact.mailto.subject);
 
     const body = encodeURIComponent(
-      `Name: ${trimmedName}\n\nEmail: ${trimmedEmail}\n\nMessage:\n${trimmedMessage}`,
+      `${contact.mailto.nameLabel}: ${trimmedName}\n\n${contact.mailto.emailLabel}: ${trimmedEmail}\n\n${contact.mailto.messageLabel}:\n${trimmedMessage}`,
     );
 
-    const mailto = `mailto:olexandr.alexandroff@gmail.com?subject=${subject}&body=${body}`;
+    const mailto = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
 
     window.location.href = mailto;
   };
@@ -82,66 +84,66 @@ export default function ContactPage() {
       <Container>
         <div className={styles.wrapper}>
           <Link href="/" className={styles.backLink}>
-            {"\u2190 Back to main page"}
+            {`\u2190 ${contact.links.backHome}`}
           </Link>
 
           <div className={styles.intro}>
-            <h1 className={styles.title}>Let&apos;s work together</h1>
+            <h1 className={styles.title}>{contact.title}</h1>
             <p className={styles.subtitle}>
-              Have a project in mind? Send me a message and I&apos;ll get back
-              to you.
+              {contact.intro}
             </p>
           </div>
 
           <div className={styles.contacts}>
             <a
               className={styles.contactItem}
-              href="https://t.me/Oleksandr_Alexandrov"
+              href={siteConfig.telegramUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
               <span className={styles.iconBox}>
                 <TelegramIcon className={styles.telegramIcon} />
               </span>
-              <span>Telegram</span>
+              <span>{contact.links.telegram}</span>
             </a>
 
             <a
               className={styles.contactItem}
-              href="https://www.linkedin.com/in/oleksandr-aleksandov/"
+              href={siteConfig.linkedinUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
               <span className={styles.iconBox}>
                 <LinkedInIcon className={styles.linkedinIcon} />
               </span>
-              <span>LinkedIn</span>
+              <span>{contact.links.linkedin}</span>
             </a>
 
             <a
               className={styles.contactItem}
-              href="https://github.com/AlexDroff"
+              href={siteConfig.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
               <span className={styles.iconBox}>
                 <GitHubIcon className={styles.githubIcon} />
               </span>
-              <span>GitHub</span>
+              <span>{contact.links.github}</span>
             </a>
           </div>
 
           <div className={styles.formBlock}>
-            <h2 className={styles.formTitle}>Send a message</h2>
+            <h2 className={styles.formTitle}>{contact.formTitle}</h2>
+            <p className={styles.subtitle}>{contact.helperText}</p>
             <form className={styles.form} onSubmit={handleSubmit}>
               <label className={styles.field}>
-                <span className={styles.fieldLabel}>Name</span>
+                <span className={styles.fieldLabel}>{contact.nameLabel}</span>
                 <input
                   className={`${styles.input} ${
                     errors.name ? styles.inputError : ""
                   }`}
                   type="text"
-                  placeholder="Your name"
+                  placeholder={contact.namePlaceholder}
                   value={name}
                   onChange={(event) => setName(event.target.value)}
                 />
@@ -149,13 +151,13 @@ export default function ContactPage() {
               </label>
 
               <label className={styles.field}>
-                <span className={styles.fieldLabel}>Email</span>
+                <span className={styles.fieldLabel}>{contact.emailLabel}</span>
                 <input
                   className={`${styles.input} ${
                     errors.email ? styles.inputError : ""
                   }`}
                   type="email"
-                  placeholder="Your email"
+                  placeholder={contact.emailPlaceholder}
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
                 />
@@ -165,12 +167,12 @@ export default function ContactPage() {
               </label>
 
               <label className={styles.field}>
-                <span className={styles.fieldLabel}>Message</span>
+                <span className={styles.fieldLabel}>{contact.messageLabel}</span>
                 <textarea
                   className={`${styles.textarea} ${
                     errors.message ? styles.inputError : ""
                   }`}
-                  placeholder="Write your message"
+                  placeholder={contact.messagePlaceholder}
                   rows={6}
                   value={message}
                   onChange={(event) => setMessage(event.target.value)}
@@ -181,25 +183,25 @@ export default function ContactPage() {
               </label>
 
               <Button variant="primary" type="submit" fullWidth>
-                Send message
+                {contact.submitLabel}
               </Button>
             </form>
 
             <p className={styles.directEmail}>
-              Or email me directly:{" "}
-              <a href="mailto:olexandr.alexandroff@gmail.com">
-                olexandr.alexandroff@gmail.com
-              </a>
+              {`${contact.links.directEmail} `}
+              <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
             </p>
           </div>
 
-          <p className={styles.trustText}>I usually reply within 24 hours.</p>
+          <p className={styles.trustText}>{contact.links.trustResponseTime}</p>
 
           <Link href="/" className={styles.backLink}>
-            {"\u2190 Back to main page"}
+            {`\u2190 ${contact.links.backHome}`}
           </Link>
         </div>
       </Container>
     </Section>
   );
-}
+};
+
+

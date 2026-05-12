@@ -1,5 +1,6 @@
 import { Container } from "@/components/ui/Container/Container";
 import { CTA } from "@/components/ui/CTA/CTA";
+import { siteContent } from "@/data/locales";
 import styles from "./ProjectCTA.module.css";
 
 type ProjectCTAProps = {
@@ -9,18 +10,20 @@ type ProjectCTAProps = {
 };
 
 export const ProjectCTA = ({
-  title = "Need a website that brings real clients?",
-  subtext = "I build fast, reliable websites with clear structure and real business logic.",
-  buttonLabel = "Start a project",
+  title,
+  subtext,
+  buttonLabel,
 }: ProjectCTAProps) => {
+  const { projectDetail } = siteContent.ui;
+
   return (
     <section className={styles.section}>
       <Container>
         <div className={styles.inner}>
           <CTA
-            title={title}
-            subtext={subtext}
-            buttonLabel={buttonLabel}
+            title={title ?? projectDetail.projectCtaFallbackTitle}
+            subtext={subtext ?? projectDetail.projectCtaFallbackDescription}
+            buttonLabel={buttonLabel ?? projectDetail.projectCtaFallbackButton}
             href="/contact"
           />
         </div>

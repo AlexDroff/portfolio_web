@@ -1,5 +1,6 @@
 import { Container } from "@/components/ui/Container/Container";
 import { Button } from "@/components/ui/Button/Button";
+import { siteContent } from "@/data/locales";
 import styles from "./ProjectHero.module.css";
 
 type ProjectHeroProps = {
@@ -9,6 +10,8 @@ type ProjectHeroProps = {
 };
 
 export const ProjectHero = ({ title, subtitle, liveUrl }: ProjectHeroProps) => {
+  const { projectDetail } = siteContent.ui;
+
   return (
     <section className={styles.section}>
       <Container>
@@ -25,7 +28,7 @@ export const ProjectHero = ({ title, subtitle, liveUrl }: ProjectHeroProps) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              View Live
+              {projectDetail.liveProject}
             </Button>
           </div>
         </div>

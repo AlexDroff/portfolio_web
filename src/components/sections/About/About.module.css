@@ -21,6 +21,29 @@
   margin-bottom: var(--space-5);
 }
 
+.introRow {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-5);
+  align-items: start;
+}
+
+.profileCard {
+  width: min(220px, 36vw);
+  border: var(--border-width-default) solid var(--color-border-soft);
+  border-radius: var(--space-2);
+  overflow: hidden;
+  background: var(--color-bg-primary);
+}
+
+.profileImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
 /* BLOCK WRAPPER */
 .block {
   margin-top: var(--space-4);
@@ -79,6 +102,29 @@
     color 0.2s ease;
 }
 
+.itemButton {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.itemButton:focus-visible {
+  outline: 2px solid var(--color-bg-primary);
+  outline-offset: 4px;
+  border-radius: var(--space-2);
+}
+
 .iconItem {
   position: relative;
   cursor: pointer;
@@ -90,6 +136,11 @@
 
 /* HOVER */
 .item:hover {
+  transform: translateY(-4px) scale(1.05);
+  color: var(--color-brand-accent);
+}
+
+.item:focus-within {
   transform: translateY(-4px) scale(1.05);
   color: var(--color-brand-accent);
 }
@@ -107,6 +158,12 @@
 
 /* GREEN EFFECT */
 .item:hover .icon {
+  transform: scale(1.05);
+  filter: brightness(0) saturate(100%) invert(48%) sepia(96%) saturate(500%)
+    hue-rotate(90deg);
+}
+
+.item:focus-within .icon {
   transform: scale(1.05);
   filter: brightness(0) saturate(100%) invert(48%) sepia(96%) saturate(500%)
     hue-rotate(90deg);
@@ -171,6 +228,14 @@
     margin-top: var(--space-4);
     gap: var(--space-4);
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .introRow {
+    grid-template-columns: 1fr;
+  }
+
+  .profileCard {
+    width: min(260px, 100%);
   }
 }
 

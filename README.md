@@ -1,131 +1,141 @@
-# Portfolio Website
+﻿# Alexandroff Portfolio
 
-Modern portfolio website built to showcase real-world projects with a strong focus on clarity, structure, and user experience.
-
----
-
-## Overview
-
-This project is a personal portfolio designed to present case studies in a structured and readable way.
-Each project is displayed not just as a visual demo, but as a clear product story: problem → solution → result.
-
-The goal is to make the work understandable for both developers and non-technical clients.
-
----
+A personal portfolio and freelance service website for web development services focused on small service businesses, business websites, booking/contact flows, web apps, SEO basics, and deployment support.
 
 ## Tech Stack
 
-- **Frontend:** Next.js (App Router), React
-- **Language:** TypeScript
-- **Styling:** CSS Modules
-- **State:** Zustand (where needed)
-- **Forms:** Formik + Yup
-- **API:** REST (for dynamic projects)
-
----
+- Next.js 16 App Router
+- React 19
+- TypeScript
+- CSS Modules
+- modern-normalize
+- ESLint
 
 ## Features
 
-- Structured case-study pages (not just screenshots)
-- Responsive layout (desktop + mobile)
-- Reusable UI components
-- Clean project cards with controlled hover interactions
-- Image optimization with Next.js
-- Consistent design system (colors, spacing, typography)
+- Freelance-focused landing page
+- Hero section with service positioning
+- About section focused on process and trust
+- Projects horizontal slider
+- Project cards with business summaries and badges
+- Project detail pages with project summary blocks
+- Services section
+- Packages / starting prices section
+- FAQ section
+- Contact page with mailto-based form logic
+- Shared site layout with Header, Footer, and BackToTop
+- SEO metadata
+- Dynamic sitemap
+- Robots file
+- llms.txt
+- JSON-LD structured data for WebSite, Person, and ProfessionalService
 
----
+## Routes
+
+- `/` - home page
+- `/contact` - contact page
+- `/projects/[slug]` - project detail pages
+- `/robots.txt` - robots file
+- `/sitemap.xml` - sitemap
+
+Project pages:
+
+- `/projects/cleaning`
+- `/projects/rental`
+- `/projects/rentalcar`
+- `/projects/travel`
 
 ## Project Structure
 
-```bash
-src/
-  app/
-    projects/
-      [slug]/          # dynamic project pages
-  components/
-    ui/               # reusable UI (Button, Card, etc.)
-    sections/         # page sections (Hero, Projects, etc.)
-  data/
-    projects.ts       # project content and configuration
-  styles/
-    globals.css       # design tokens (colors, spacing)
+```txt
+src
+├─ app
+│  ├─ (site)
+│  │  ├─ contact
+│  │  ├─ projects
+│  │  │  └─ [slug]
+│  │  ├─ layout.tsx
+│  │  └─ page.tsx
+│  ├─ robots.ts
+│  ├─ sitemap.ts
+│  ├─ layout.tsx
+│  ├─ loading.tsx
+│  └─ not-found.tsx
+├─ components
+│  ├─ layout
+│  ├─ project
+│  ├─ sections
+│  ├─ seo
+│  └─ ui
+├─ config
+├─ data
+├─ styles
+├─ types
+└─ utils
 ```
 
----
+- `src/app` - App Router routes, layouts, metadata, sitemap and robots.
+- `src/components/sections` - home page sections.
+- `src/components/project` - project detail blocks.
+- `src/components/seo` - JSON-LD structured data.
+- `src/components/ui` - reusable UI primitives.
+- `src/config` - site-wide configuration.
+- `src/data` - content/data sources.
+- `src/types` - TypeScript domain types.
+- `src/styles` - global CSS tokens and normalize import.
 
-## Case Study Approach
+## Data and Configuration
 
-Each project follows a consistent structure:
+- `src/config/site.ts` - site name, URL, email, social links, location and main stack.
+- `src/data/home.ts` - content for Hero, About, Projects, Services and Packages.
+- `src/data/projects.ts` - project cards and project detail content.
+- `src/data/faq.ts` - FAQ content.
 
-- Hero (first impression)
-- Responsive view
-- Key sections (based on product logic)
-- Interaction states (modals, forms, flows)
-- Clear captions explaining what is happening
+## SEO
 
-The goal is to show:
+The project includes:
 
-- how the product works
-- what problem it solves
-- how the user interacts with it
+- root metadata via Next.js Metadata API
+- page-level metadata for `/contact`
+- dynamic metadata for `/projects/[slug]`
+- `generateStaticParams` for project detail pages
+- `robots.ts`
+- `sitemap.ts`
+- `public/llms.txt`
+- JSON-LD structured data:
+  - `WebSite`
+  - `Person`
+  - `ProfessionalService`
 
----
+The site URL is configured through `NEXT_PUBLIC_SITE_URL` with fallback in `src/config/site.ts`.
 
-## Image Strategy
+## Environment Variables
 
-- Dedicated images for:
-  - project cards
-  - case-study gallery
+Create `.env.local` if needed:
 
-- Fixed aspect ratios to maintain layout consistency
-- No distortion or cropping of screenshots
-- High-quality assets optimized for performance
+```env
+NEXT_PUBLIC_SITE_URL=https://www.alexandroff.pl
+```
 
----
+For local development:
 
-## Interaction Design
+```env
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+```
 
-- Card interactions are **CTA-driven**
-- Hover effects are subtle and controlled
-- No aggressive animations or unnecessary visual noise
-- Focus on readability and usability
-
----
-
-## Getting Started
+## Scripts
 
 ```bash
-npm install
 npm run dev
-```
-
-Open:
-
-```
-http://localhost:3000
-```
-
----
-
-## Build
-
-```bash
 npm run build
 npm run start
+npm run lint
 ```
 
----
+## Development Notes
 
-## Purpose
-
-This project is focused on:
-
-- improving product thinking
-- building real-world UI structure
-- presenting work in a clear and professional way
-
----
-
-## Author
-
-Oleksandr Alexandrov
+- The project is currently frontend-only and content-driven.
+- There are no API routes or backend services in this repository.
+- Project content is managed through TypeScript data files.
+- Styling is handled with CSS Modules and global CSS tokens.
+- Contact form logic currently uses a mailto-based flow.

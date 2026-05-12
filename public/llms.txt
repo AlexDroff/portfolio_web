@@ -1,0 +1,34 @@
+# Alexandroff
+
+Alexandroff to portfolio i strona usługowa freelancera oferującego web development dla małych firm.
+
+Domyślny język:
+- polski
+
+Główne usługi:
+- szybkie strony internetowe dla małych firm usługowych
+- flow kontaktowe i rezerwacyjne
+- strony firmowe
+- aplikacje webowe / MVP
+- modernizacja stron
+- podstawy SEO i wsparcie przy wdrożeniu
+
+Główne technologie:
+- Next.js
+- React
+- TypeScript
+- Node.js
+- REST API
+- PostgreSQL
+- MongoDB
+
+Ważne strony:
+- /
+- /contact
+- /projects/cleaning
+- /projects/rental
+- /projects/rentalcar
+- /projects/travel
+
+Kontakt:
+- olexandr.alexandroff@gmail.com

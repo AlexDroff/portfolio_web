@@ -1,12 +1,22 @@
-'use client';
+﻿'use client';
 
-import { useEffect, useState } from 'react';
+import {
+  useEffect,
+  useState,
+  type FocusEvent,
+} from 'react';
 import Image from 'next/image';
 import { Container } from '@/components/ui/Container/Container';
+import { homeContent } from '@/data/home';
+import { siteContent } from '@/data/locales';
 import styles from './About.module.css';
+import myPhoto from '../../../../public/my_photo.webp';
 
 export const About = () => {
   const [activeItem, setActiveItem] = useState<string | null>(null);
+  const { about } = homeContent;
+  const { common } = siteContent.ui;
+  const [whatYouGetBlock, howIWorkBlock] = about.blocks;
 
   useEffect(() => {
     const handleDocumentClick = (event: MouseEvent) => {
@@ -30,20 +40,13 @@ export const About = () => {
     }
   };
 
-  const handleKeyDown = (event: React.KeyboardEvent<HTMLLIElement>, id: string) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
-      handleItemClick(id);
-    }
-  };
-
   const handleItemMouseLeave = (id: string) => {
     if (activeItem === id) {
       setActiveItem(null);
     }
   };
 
-  const handleItemBlur = (event: React.FocusEvent<HTMLLIElement>, id: string) => {
+  const handleItemBlur = (event: FocusEvent<HTMLLIElement>, id: string) => {
     const nextFocused = event.relatedTarget as Node | null;
     if (activeItem === id && !event.currentTarget.contains(nextFocused)) {
       setActiveItem(null);
@@ -54,220 +57,124 @@ export const About = () => {
     <section className={styles.section}>
       <Container>
         <div className={styles.inner}>
-          <h2 className={styles.title}>About</h2>
+          <h2 className={styles.title}>{about.title}</h2>
 
-          {/* INTRO */}
-          <div className={styles.textGroup}>
-            <p className={styles.text}>
-              I&apos;m a fullstack developer with a design background.
-            </p>
-            <p className={styles.text}>
-              I help small businesses launch modern websites that are fast,
-              clear, and built to convert.
-            </p>
-            <p className={styles.text}>
-              You don&apos;t just get a website - you get a tool that works for
-              your business.
-            </p>
+          <div className={styles.introRow}>
+            <div className={styles.textGroup}>
+              {about.description.map((paragraph) => (
+                <p key={paragraph} className={styles.text}>
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+
+            <div className={styles.profileCard} aria-label={common.profilePhoto}>
+              <Image
+                src={myPhoto}
+                alt={common.profilePhoto}
+                width={myPhoto.width}
+                height={myPhoto.height}
+                className={styles.profileImage}
+                priority={false}
+              />
+            </div>
           </div>
 
-          {/* WHAT YOU GET */}
           <div className={styles.block}>
-            <h3 className={styles.blockTitle}>What you get</h3>
+            <h3 className={styles.blockTitle}>{whatYouGetBlock.title}</h3>
 
             <div className={styles.textGroup}>
-              <p className={styles.text}>
-                Each project is built with a clear focus on performance,
-                usability, and structure.
-              </p>
-              <p className={styles.text}>
-                Everything is designed to be fast, mobile-friendly, and easy to
-                scale.
-              </p>
+              {whatYouGetBlock.description.map((paragraph) => (
+                <p key={paragraph} className={styles.text}>
+                  {paragraph}
+                </p>
+              ))}
             </div>
 
             <ul className={styles.grid}>
-              <li
-                className={`${styles.item} ${styles.iconItem} ${activeItem === 'fast' ? styles.iconItemActive : ''}`}
-                onClick={() => handleItemClick('fast')}
-                onKeyDown={event => handleKeyDown(event, 'fast')}
-                onMouseLeave={() => handleItemMouseLeave('fast')}
-                onBlur={event => handleItemBlur(event, 'fast')}
-                role="button"
-                tabIndex={0}
-                aria-expanded={activeItem === 'fast'}
-                data-about-popover-item="true"
-              >
-                <Image
-                  src="/icons/lightning.svg"
-                  alt=""
-                  width={80}
-                  height={80}
-                  className={styles.icon}
-                />
-                <span>Built fast</span>
-                <div
-                  className={`${styles.popover} ${activeItem === 'fast' ? styles.popoverActive : ''}`}
-                  aria-hidden={activeItem !== 'fast'}
+              {whatYouGetBlock.items.map((item) => (
+                <li
+                  key={item.id}
+                  className={`${styles.item} ${styles.iconItem} ${activeItem === item.id ? styles.iconItemActive : ''}`}
+                  onMouseLeave={() => handleItemMouseLeave(item.id)}
+                  onBlur={(event) => handleItemBlur(event, item.id)}
+                  data-about-popover-item="true"
                 >
-                  Fast delivery without unnecessary complexity. Focus on clarity
-                  and speed.
-                </div>
-              </li>
-
-              <li
-                className={`${styles.item} ${styles.iconItem} ${activeItem === 'mobile' ? styles.iconItemActive : ''}`}
-                onClick={() => handleItemClick('mobile')}
-                onKeyDown={event => handleKeyDown(event, 'mobile')}
-                onMouseLeave={() => handleItemMouseLeave('mobile')}
-                onBlur={event => handleItemBlur(event, 'mobile')}
-                role="button"
-                tabIndex={0}
-                aria-expanded={activeItem === 'mobile'}
-                data-about-popover-item="true"
-              >
-                <Image
-                  src="/icons/smartphone.svg"
-                  alt=""
-                  width={80}
-                  height={80}
-                  className={styles.icon}
-                />
-                <span>Mobile-first approach</span>
-                <div
-                  className={`${styles.popover} ${activeItem === 'mobile' ? styles.popoverActive : ''}`}
-                  aria-hidden={activeItem !== 'mobile'}
-                >
-                  Most users visit from mobile, so everything is designed
-                  mobile-first.
-                </div>
-              </li>
-
-              <li
-                className={`${styles.item} ${styles.iconItem} ${activeItem === 'code' ? styles.iconItemActive : ''}`}
-                onClick={() => handleItemClick('code')}
-                onKeyDown={event => handleKeyDown(event, 'code')}
-                onMouseLeave={() => handleItemMouseLeave('code')}
-                onBlur={event => handleItemBlur(event, 'code')}
-                role="button"
-                tabIndex={0}
-                aria-expanded={activeItem === 'code'}
-                data-about-popover-item="true"
-              >
-                <Image
-                  src="/icons/grid.svg"
-                  alt=""
-                  width={80}
-                  height={80}
-                  className={styles.icon}
-                />
-                <span>Clean, scalable code</span>
-                <div
-                  className={`${styles.popover} ${activeItem === 'code' ? styles.popoverActive : ''}`}
-                  aria-hidden={activeItem !== 'code'}
-                >
-                  Structured code that is easy to maintain and scale.
-                </div>
-              </li>
+                  <button
+                    type="button"
+                    className={styles.itemButton}
+                    onClick={() => handleItemClick(item.id)}
+                    aria-expanded={activeItem === item.id}
+                    aria-describedby={
+                      activeItem === item.id ? `about-popover-${item.id}` : undefined
+                    }
+                  >
+                    <Image
+                      src={item.iconSrc}
+                      alt={item.iconAlt}
+                      width={80}
+                      height={80}
+                      className={styles.icon}
+                    />
+                    <span>{item.title}</span>
+                  </button>
+                  <div
+                    id={`about-popover-${item.id}`}
+                    className={`${styles.popover} ${activeItem === item.id ? styles.popoverActive : ''}`}
+                  >
+                    {item.description}
+                  </div>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* HOW I WORK */}
           <div className={styles.block}>
-            <h3 className={styles.blockTitle}>How I work</h3>
+            <h3 className={styles.blockTitle}>{howIWorkBlock.title}</h3>
 
             <div className={styles.textGroup}>
-              <p className={styles.text}>
-                Every project starts with an idea - yours or one we shape
-                together.
-              </p>
-              <p className={styles.text}>
-                Then I turn it into a working product and bring it to launch.
-              </p>
+              {howIWorkBlock.description.map((paragraph) => (
+                <p key={paragraph} className={styles.text}>
+                  {paragraph}
+                </p>
+              ))}
             </div>
 
             <ul className={styles.grid}>
-              <li
-                className={`${styles.item} ${styles.iconItem} ${activeItem === 'idea' ? styles.iconItemActive : ''}`}
-                onClick={() => handleItemClick('idea')}
-                onKeyDown={event => handleKeyDown(event, 'idea')}
-                onMouseLeave={() => handleItemMouseLeave('idea')}
-                onBlur={event => handleItemBlur(event, 'idea')}
-                role="button"
-                tabIndex={0}
-                aria-expanded={activeItem === 'idea'}
-                data-about-popover-item="true"
-              >
-                <Image
-                  src="/icons/lightbulb.svg"
-                  alt=""
-                  width={80}
-                  height={80}
-                  className={styles.icon}
-                />
-                <span>Idea</span>
-                <div
-                  className={`${styles.popover} ${activeItem === 'idea' ? styles.popoverActive : ''}`}
-                  aria-hidden={activeItem !== 'idea'}
+              {howIWorkBlock.items.map((item) => (
+                <li
+                  key={item.id}
+                  className={`${styles.item} ${styles.iconItem} ${activeItem === item.id ? styles.iconItemActive : ''}`}
+                  onMouseLeave={() => handleItemMouseLeave(item.id)}
+                  onBlur={(event) => handleItemBlur(event, item.id)}
+                  data-about-popover-item="true"
                 >
-                  We define your goals and shape the idea together.
-                </div>
-              </li>
-
-              <li
-                className={`${styles.item} ${styles.iconItem} ${activeItem === 'development' ? styles.iconItemActive : ''}`}
-                onClick={() => handleItemClick('development')}
-                onKeyDown={event => handleKeyDown(event, 'development')}
-                onMouseLeave={() => handleItemMouseLeave('development')}
-                onBlur={event => handleItemBlur(event, 'development')}
-                role="button"
-                tabIndex={0}
-                aria-expanded={activeItem === 'development'}
-                data-about-popover-item="true"
-              >
-                <Image
-                  src="/icons/code.svg"
-                  alt=""
-                  width={80}
-                  height={80}
-                  className={styles.icon}
-                />
-                <span>Development</span>
-                <div
-                  className={`${styles.popover} ${activeItem === 'development' ? styles.popoverActive : ''}`}
-                  aria-hidden={activeItem !== 'development'}
-                >
-                  I turn the idea into a working product with real
-                  functionality.
-                </div>
-              </li>
-
-              <li
-                className={`${styles.item} ${styles.iconItem} ${activeItem === 'launch' ? styles.iconItemActive : ''}`}
-                onClick={() => handleItemClick('launch')}
-                onKeyDown={event => handleKeyDown(event, 'launch')}
-                onMouseLeave={() => handleItemMouseLeave('launch')}
-                onBlur={event => handleItemBlur(event, 'launch')}
-                role="button"
-                tabIndex={0}
-                aria-expanded={activeItem === 'launch'}
-                data-about-popover-item="true"
-              >
-                <Image
-                  src="/icons/rocket.svg"
-                  alt=""
-                  width={80}
-                  height={80}
-                  className={styles.icon}
-                />
-                <span>Launch</span>
-                <div
-                  className={`${styles.popover} ${activeItem === 'launch' ? styles.popoverActive : ''}`}
-                  aria-hidden={activeItem !== 'launch'}
-                >
-                  You receive a ready-to-use product for real business use.
-                </div>
-              </li>
+                  <button
+                    type="button"
+                    className={styles.itemButton}
+                    onClick={() => handleItemClick(item.id)}
+                    aria-expanded={activeItem === item.id}
+                    aria-describedby={
+                      activeItem === item.id ? `about-popover-${item.id}` : undefined
+                    }
+                  >
+                    <Image
+                      src={item.iconSrc}
+                      alt={item.iconAlt}
+                      width={80}
+                      height={80}
+                      className={styles.icon}
+                    />
+                    <span>{item.title}</span>
+                  </button>
+                  <div
+                    id={`about-popover-${item.id}`}
+                    className={`${styles.popover} ${activeItem === item.id ? styles.popoverActive : ''}`}
+                  >
+                    {item.description}
+                  </div>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

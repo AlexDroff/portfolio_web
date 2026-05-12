@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { siteContent } from "@/data/locales";
 import styles from "./BackToTop.module.css";
 
 const VISIBILITY_SCROLL_OFFSET = 300;
 
 export const BackToTop = () => {
+  const { common } = siteContent.ui;
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -34,7 +36,7 @@ export const BackToTop = () => {
       type="button"
       className={className}
       onClick={handleClick}
-      aria-label="Back to top"
+      aria-label={common.backToTop}
     >
       {"\u2191"}
     </button>

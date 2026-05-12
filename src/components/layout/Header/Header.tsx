@@ -7,11 +7,13 @@ import { usePathname } from "next/navigation";
 
 import { Container } from "@/components/ui/Container/Container";
 import { LogoAnimated } from "@/components/ui/LogoAnimated/LogoAnimated";
+import { siteContent } from "@/data/locales";
 import { scrollToHashTarget } from "@/utils/scrollToHashTarget";
 
 import styles from "./Header.module.css";
 
 export const Header = () => {
+  const { navigation } = siteContent.ui;
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const skipScrollRestoreRef = useRef(false);
@@ -109,21 +111,21 @@ export const Header = () => {
     <header className={styles.header}>
       <Container>
         <div className={styles.inner}>
-          <Link href="/" className={styles.logoLink} aria-label="Home">
+          <Link href="/" className={styles.logoLink} aria-label={navigation.home}>
             <LogoAnimated />
           </Link>
 
           <nav className={styles.nav}>
             <Link href="/#projects" onClick={handleProjectsClick}>
-              Projects
+              {navigation.projects}
             </Link>
-            <Link href="/contact">Contact</Link>
+            <Link href="/contact">{navigation.contact}</Link>
           </nav>
 
           <button
             type="button"
             className={styles.menuToggle}
-            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-label={isMenuOpen ? navigation.closeMenu : navigation.openMenu}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-menu"
             onClick={() => setIsMenuOpen((prev) => !prev)}
@@ -143,14 +145,14 @@ export const Header = () => {
             className={styles.menuPanel}
             role="dialog"
             aria-modal="true"
-            aria-label="Mobile navigation menu"
+            aria-label={navigation.mobileMenu}
             onClick={(event) => event.stopPropagation()}
           >
             <div className={styles.menuHeader}>
               <button
                 type="button"
                 className={styles.menuClose}
-                aria-label="Close menu"
+                aria-label={navigation.closeMenu}
                 onClick={closeMenu}
               >
                 <span className={`${styles.menuIcon} ${styles.closeIcon}`} aria-hidden="true" />
@@ -159,10 +161,10 @@ export const Header = () => {
 
             <nav className={styles.menuNav}>
               <Link href="/#projects" onClick={handleProjectsClickAndClose}>
-                Projects
+                {navigation.projects}
               </Link>
               <Link href="/contact" onClick={closeMenu}>
-                Contact
+                {navigation.contact}
               </Link>
             </nav>
           </div>
