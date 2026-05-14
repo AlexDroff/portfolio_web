@@ -54,6 +54,10 @@
   line-height: 1.4;
   font-weight: 600;
   color: var(--color-bg-primary);
+  border-radius: inherit;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .summary::-webkit-details-marker {
@@ -65,15 +69,32 @@
   float: right;
   color: var(--color-text-muted);
   margin-left: var(--space-4);
+  transition: color 0.2s ease;
 }
 
 .details[open] .summary::after {
   content: "-";
 }
 
+.details[open] .summary {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.details:hover .summary,
+.details:focus-within .summary {
+  background: var(--color-brand-accent);
+  color: var(--color-brand-primary);
+}
+
+.details:hover .summary::after,
+.details:focus-within .summary::after {
+  color: var(--color-brand-primary);
+}
+
 .summary:focus-visible {
-  outline: 2px solid var(--color-bg-primary);
-  outline-offset: 2px;
+  outline: var(--border-width-strong) solid var(--color-brand-accent);
+  outline-offset: var(--space-2);
   border-radius: var(--space-1);
 }
 

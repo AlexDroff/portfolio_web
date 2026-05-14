@@ -1,5 +1,5 @@
 .section {
-  padding: var(--space-9) 0;
+  padding: var(--space-6) 0 var(--space-6);
 }
 
 .inner {
@@ -27,7 +27,7 @@
 .subtitle {
   grid-column: 1;
   margin-top: var(--space-4);
-  margin-bottom: var(--space-9);
+  margin-bottom: var(--space-6);
   max-width: 600px;
   font-size: var(--font-size-lg);
   line-height: 1.6;
@@ -43,13 +43,13 @@
   }
 
   .subtitle {
-    margin-bottom: var(--space-5);
+    margin-bottom: var(--space-4);
   }
 }
 
 @media (max-width: 768px) {
   .section {
-    padding: var(--space-8) 0;
+    padding: var(--space-6) 0 var(--space-5);
   }
 
   .inner {

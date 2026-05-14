@@ -34,20 +34,50 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-5);
+  align-items: stretch;
+}
+
+.cardItem {
+  min-width: 0;
 }
 
 .card {
+  display: block;
+  height: 100%;
   border: var(--border-width-default) solid var(--color-border-soft);
   border-radius: var(--space-1);
   padding: var(--space-5);
   background: var(--color-brand-primary);
   color: var(--color-bg-primary);
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.card::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  margin-bottom: var(--space-4);
+  border-radius: var(--radius-full);
+  background: var(--color-brand-accent);
+  transition: background-color 0.2s ease, width 0.2s ease;
 }
 
 .card:hover {
-  border-color: var(--color-bg-primary);
-  transform: translateY(-2px);
+  background: var(--color-brand-accent);
+  color: var(--color-brand-primary);
+  border-color: var(--color-brand-accent);
+  transform: translateY(-4px);
+}
+
+.card:hover::before {
+  width: 56px;
+  background: var(--color-brand-primary);
 }
 
 .cardTitle {
@@ -62,6 +92,47 @@
   font-size: var(--font-size-sm);
   line-height: 1.5;
   color: var(--color-text-muted);
+}
+
+.card:hover .cardDescription {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.ctaCard {
+  background: var(--color-brand-accent);
+  color: var(--color-brand-primary);
+  border-color: var(--color-brand-accent);
+}
+
+.ctaCard::before {
+  background: var(--color-brand-primary);
+}
+
+.ctaCard .cardDescription {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.ctaCard:hover,
+.ctaCard:focus-visible {
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  border-color: var(--color-bg-primary);
+  transform: translateY(-4px);
+}
+
+.ctaCard:hover::before,
+.ctaCard:focus-visible::before {
+  background: var(--color-brand-accent);
+}
+
+.ctaCard:hover .cardDescription,
+.ctaCard:focus-visible .cardDescription {
+  color: var(--color-text-secondary);
+}
+
+.ctaCard:focus-visible {
+  outline: var(--border-width-strong) solid var(--color-brand-accent);
+  outline-offset: var(--space-2);
 }
 
 @media (max-width: 1024px) {

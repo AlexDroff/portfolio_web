@@ -5,7 +5,7 @@ import styles from "./FAQ.module.css";
 
 export const FAQ = () => {
   return (
-    <Section className={styles.section}>
+    <Section id="faq" className={styles.section}>
       <Container>
         <div className={styles.wrapper}>
           <div className={styles.header}>

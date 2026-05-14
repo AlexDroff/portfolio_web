@@ -1,10 +1,16 @@
 .section {
-  padding: var(--space-9) 0;
+  padding: var(--space-6) 0;
 }
 
 .inner {
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--space-5) 0;
+  }
 }
 

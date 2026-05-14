@@ -2,6 +2,26 @@ import type { HomeContent } from "@/types/home";
 import type { FAQContent } from "@/types/faq";
 import type { Project } from "@/types/project";
 
+export type LocaleServiceItem = HomeContent["services"]["items"][number] & {
+  variant?: "default" | "cta";
+  href?: string;
+};
+
+export type LocalePackageItem = HomeContent["packages"]["items"][number] & {
+  badge?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+};
+
+export type LocaleHomeContent = Omit<HomeContent, "services"> & {
+  services: Omit<HomeContent["services"], "items"> & {
+    items: LocaleServiceItem[];
+  };
+  packages: Omit<HomeContent["packages"], "items"> & {
+    items: LocalePackageItem[];
+  };
+};
+
 export type ContactContent = {
   title: string;
   intro: string;
@@ -27,8 +47,8 @@ export type ContactContent = {
   };
   links: {
     backHome: string;
-    directEmail: string;
-    trustResponseTime: string;
+    directEmailPrefix: string;
+    responseTime: string;
     telegram: string;
     linkedin: string;
     github: string;
@@ -91,7 +111,7 @@ export type LocaleUiContent = {
 };
 
 export type LocaleContent = {
-  home: HomeContent;
+  home: LocaleHomeContent;
   faq: FAQContent;
   projects: Project[];
   contact: ContactContent;

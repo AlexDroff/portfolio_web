@@ -98,6 +98,19 @@
   display: none;
 }
 
+.mobileMenuSeparator {
+  width: 100%;
+  height: var(--border-width-default);
+  margin: var(--space-5) 0;
+  background: var(--color-border-default);
+}
+
+.mobileMenuActions {
+  display: grid;
+  gap: var(--space-3);
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   .header {
     z-index: 1000;
@@ -198,5 +211,6 @@
     color: var(--color-brand-accent);
     outline: none;
   }
+
 }
 

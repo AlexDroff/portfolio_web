@@ -8,7 +8,7 @@ import "@/styles/globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Alexandroff — strony internetowe dla małych firm",
+    default: "Alexandroff – strony internetowe dla małych firm",
     template: "%s | Alexandroff",
   },
   description:
@@ -24,14 +24,14 @@ export const metadata: Metadata = {
     type: "website",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: "Alexandroff — strony internetowe dla małych firm",
+    title: "Alexandroff – strony internetowe dla małych firm",
     description:
       "Szybkie strony internetowe i proste flow kontaktowe dla małych firm usługowych.",
     locale: "pl_PL",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alexandroff — strony internetowe dla małych firm",
+    title: "Alexandroff – strony internetowe dla małych firm",
     description:
       "Szybkie strony internetowe i proste flow kontaktowe dla małych firm usługowych.",
   },

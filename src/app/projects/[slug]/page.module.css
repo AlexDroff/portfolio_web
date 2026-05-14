@@ -1,12 +1,12 @@
 .backLinkWrap {
-  padding-top: var(--space-9);
+  padding-top: var(--space-6);
 }
 
 .backLink {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-3);
   color: var(--color-text-secondary);
   transition: color 0.2s ease;
 }
@@ -17,10 +17,10 @@
 
 @media (max-width: 768px) {
   .backLinkWrap {
-    padding-top: var(--space-8);
+    padding-top: var(--space-5);
   }
 
   .backLink {
-    margin-bottom: var(--space-5);
+    margin-bottom: var(--space-3);
   }
 }

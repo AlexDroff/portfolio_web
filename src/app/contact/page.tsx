@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     canonical: "/contact",
   },
   openGraph: {
-    title: "Kontakt — Alexandroff",
+    title: "Kontakt – Alexandroff",
     description:
       "Wyślij krótki opis projektu i otrzymaj orientacyjny zakres, termin oraz cenę startową.",
     url: `${siteConfig.url}/contact`,

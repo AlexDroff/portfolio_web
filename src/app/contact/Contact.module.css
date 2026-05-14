@@ -39,14 +39,14 @@
 
 .contacts {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: calc(var(--space-3) * 2);
 }
 
 .contactItem {
   display: flex;
   align-items: center;
-  gap: var(--space-4);
   color: var(--color-text-primary);
   text-decoration: none;
   transition: color 0.2s ease;
@@ -120,6 +120,9 @@
 .formTitle {
   margin: 0;
   color: var(--color-text-primary);
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 .form {
@@ -189,7 +192,7 @@
 }
 
 .directEmail {
-  margin: var(--space-4) 0 0;
+  margin: 0;
   color: var(--color-text-secondary);
   font-size: var(--font-size-md);
 }
@@ -204,28 +207,19 @@
   outline: none;
 }
 
-.trustText {
-  margin: 0;
-  color: var(--color-text-secondary);
-}
-
 @media (max-width: 768px) {
   .contacts {
-    width: fit-content;
-    margin: 0 auto;
-    align-items: flex-start;
-    text-align: left;
+    width: 100%;
+    justify-content: center;
   }
 
   .contactItem {
-    width: 100%;
-    justify-content: flex-start;
+    min-width: 0;
   }
 
-  .directEmail,
-  .trustText {
+  .directEmail {
     width: 100%;
-    text-align: center;
+    text-align: left;
   }
 
   .directEmail a {

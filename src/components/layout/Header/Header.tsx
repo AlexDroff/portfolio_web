@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import { Button } from "@/components/ui/Button/Button";
 import { Container } from "@/components/ui/Container/Container";
 import { LogoAnimated } from "@/components/ui/LogoAnimated/LogoAnimated";
 import { siteContent } from "@/data/locales";
@@ -14,6 +15,7 @@ import styles from "./Header.module.css";
 
 export const Header = () => {
   const { navigation } = siteContent.ui;
+  const { hero } = siteContent.home;
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const skipScrollRestoreRef = useRef(false);
@@ -84,6 +86,26 @@ export const Header = () => {
     scrollToHashTarget("projects");
   };
 
+  const handlePackagesClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    if (pathname !== "/") {
+      return;
+    }
+
+    event.preventDefault();
+    window.history.replaceState(null, "", "/#packages");
+    scrollToHashTarget("packages");
+  };
+
+  const handleFaqClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    if (pathname !== "/") {
+      return;
+    }
+
+    event.preventDefault();
+    window.history.replaceState(null, "", "/#faq");
+    scrollToHashTarget("faq");
+  };
+
   const handleProjectsClickAndClose = (event: MouseEvent<HTMLAnchorElement>) => {
     skipScrollRestoreRef.current = true;
 
@@ -103,6 +125,44 @@ export const Header = () => {
     }, 120);
   };
 
+  const handlePackagesClickAndClose = (event: MouseEvent<HTMLAnchorElement>) => {
+    skipScrollRestoreRef.current = true;
+
+    if (pathname === "/") {
+      event.preventDefault();
+      window.history.replaceState(null, "", "/#packages");
+    }
+
+    setIsMenuOpen(false);
+
+    window.setTimeout(() => {
+      if (window.location.pathname !== "/" || window.location.hash !== "#packages") {
+        return;
+      }
+
+      scrollToHashTarget("packages");
+    }, 120);
+  };
+
+  const handleFaqClickAndClose = (event: MouseEvent<HTMLAnchorElement>) => {
+    skipScrollRestoreRef.current = true;
+
+    if (pathname === "/") {
+      event.preventDefault();
+      window.history.replaceState(null, "", "/#faq");
+    }
+
+    setIsMenuOpen(false);
+
+    window.setTimeout(() => {
+      if (window.location.pathname !== "/" || window.location.hash !== "#faq") {
+        return;
+      }
+
+      scrollToHashTarget("faq");
+    }, 120);
+  };
+
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
@@ -118,6 +178,12 @@ export const Header = () => {
           <nav className={styles.nav}>
             <Link href="/#projects" onClick={handleProjectsClick}>
               {navigation.projects}
+            </Link>
+            <Link href="/#packages" onClick={handlePackagesClick}>
+              {navigation.packages}
+            </Link>
+            <Link href="/#faq" onClick={handleFaqClick}>
+              {navigation.faq}
             </Link>
             <Link href="/contact">{navigation.contact}</Link>
           </nav>
@@ -176,7 +242,30 @@ export const Header = () => {
               <Link href="/contact" onClick={closeMenu}>
                 {navigation.contact}
               </Link>
+              <Link href="/#packages" onClick={handlePackagesClickAndClose}>
+                {navigation.packages}
+              </Link>
+              <Link href="/#faq" onClick={handleFaqClickAndClose}>
+                {navigation.faq}
+              </Link>
             </nav>
+
+            <div className={styles.mobileMenuSeparator} aria-hidden="true" />
+
+            <div className={styles.mobileMenuActions}>
+              <Button as="link" href="/contact" onClick={closeMenu} fullWidth>
+                {hero.primaryCta.label}
+              </Button>
+              <Button
+                as="link"
+                variant="secondary"
+                href="/#projects"
+                onClick={handleProjectsClickAndClose}
+                fullWidth
+              >
+                {hero.secondaryCta?.label ?? navigation.projects}
+              </Button>
+            </div>
           </div>
         </div>
       ) : null}

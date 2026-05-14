@@ -6,7 +6,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import { Container } from "@/components/ui/Container/Container";
-import { siteConfig } from "@/config/site";
 import { siteContent } from "@/data/locales";
 import styles from "./Footer.module.css";
 
@@ -36,14 +35,12 @@ export const Footer = () => {
           >
             <LogoAnimated />
           </Link>
-          <a href={`mailto:${siteConfig.email}`} className={styles.email}>
-            {siteConfig.email}
-          </a>
           <p className={styles.copy}>
-            {"\u00A9"} {year}
+            © {year} Loading. Wszelkie prawa zastrzeżone.
           </p>
         </div>
       </Container>
     </footer>
   );
 };
+

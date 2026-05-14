@@ -94,44 +94,6 @@ export const ContactPageClient = () => {
             </p>
           </div>
 
-          <div className={styles.contacts}>
-            <a
-              className={styles.contactItem}
-              href={siteConfig.telegramUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className={styles.iconBox}>
-                <TelegramIcon className={styles.telegramIcon} />
-              </span>
-              <span>{contact.links.telegram}</span>
-            </a>
-
-            <a
-              className={styles.contactItem}
-              href={siteConfig.linkedinUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className={styles.iconBox}>
-                <LinkedInIcon className={styles.linkedinIcon} />
-              </span>
-              <span>{contact.links.linkedin}</span>
-            </a>
-
-            <a
-              className={styles.contactItem}
-              href={siteConfig.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className={styles.iconBox}>
-                <GitHubIcon className={styles.githubIcon} />
-              </span>
-              <span>{contact.links.github}</span>
-            </a>
-          </div>
-
           <div className={styles.formBlock}>
             <h2 className={styles.formTitle}>{contact.formTitle}</h2>
             <p className={styles.subtitle}>{contact.helperText}</p>
@@ -186,14 +148,57 @@ export const ContactPageClient = () => {
                 {contact.submitLabel}
               </Button>
             </form>
-
-            <p className={styles.directEmail}>
-              {`${contact.links.directEmail} `}
-              <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
-            </p>
           </div>
 
-          <p className={styles.trustText}>{contact.links.trustResponseTime}</p>
+          <p className={styles.directEmail}>
+            {`${contact.links.directEmailPrefix} `}
+            <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>
+            {" \u2013 "}
+            {contact.links.responseTime}
+          </p>
+
+          <p className={styles.formTitle}>Znajdziesz mnie też tutaj:</p>
+
+          <div className={styles.contacts}>
+            <a
+              className={styles.contactItem}
+              href={siteConfig.telegramUrl}
+              aria-label={contact.links.telegram}
+              title={contact.links.telegram}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className={styles.iconBox}>
+                <TelegramIcon className={styles.telegramIcon} />
+              </span>
+            </a>
+
+            <a
+              className={styles.contactItem}
+              href={siteConfig.linkedinUrl}
+              aria-label={contact.links.linkedin}
+              title={contact.links.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className={styles.iconBox}>
+                <LinkedInIcon className={styles.linkedinIcon} />
+              </span>
+            </a>
+
+            <a
+              className={styles.contactItem}
+              href={siteConfig.githubUrl}
+              aria-label={contact.links.github}
+              title={contact.links.github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className={styles.iconBox}>
+                <GitHubIcon className={styles.githubIcon} />
+              </span>
+            </a>
+          </div>
 
           <Link href="/" className={styles.backLink}>
             {`\u2190 ${contact.links.backHome}`}

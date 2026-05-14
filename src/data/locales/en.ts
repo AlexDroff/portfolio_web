@@ -1,9 +1,8 @@
-import type { HomeContent } from "@/types/home";
 import type { FAQContent } from "@/types/faq";
 import type { Project } from "@/types/project";
 import type { LocaleContent } from "./types";
 
-const home: HomeContent = {
+const home: LocaleContent["home"] = {
   "hero": {
     "title": "I build fast websites and booking flows for small service businesses.",
     "description": "Mobile-first websites with clear structure, basic SEO, and contact flows that help visitors become real clients.",
@@ -134,6 +133,13 @@ const home: HomeContent = {
         "id": "seo-deployment",
         "title": "SEO basics & deployment",
         "description": "Basic metadata, sitemap, robots, Open Graph setup, Vercel deployment, domain setup, and post-launch fixes."
+      },
+      {
+        "id": "services-contact-cta",
+        "title": "Want to build your project?",
+        "description": "Tell me about it →",
+        "variant": "cta",
+        "href": "/contact"
       }
     ]
   },
@@ -151,8 +157,10 @@ const home: HomeContent = {
           "Responsive layout",
           "Clear contact CTA",
           "Basic SEO metadata",
-          "Vercel deployment"
-        ]
+          "Deployment on the selected platform"
+        ],
+        "ctaLabel": "Ask about this package \u2192",
+        "ctaHref": "/contact"
       },
       {
         "id": "business-website",
@@ -165,7 +173,9 @@ const home: HomeContent = {
           "Responsive UI",
           "Contact section",
           "Basic SEO and deployment"
-        ]
+        ],
+        "ctaLabel": "Ask about this package \u2192",
+        "ctaHref": "/contact"
       },
       {
         "id": "booking-flow",
@@ -179,7 +189,10 @@ const home: HomeContent = {
           "Validation and UX states",
           "Post-launch fixes"
         ],
-        "note": "Best fit for local services, rentals, salons, and small service businesses."
+        "note": "Best fit for local services, rentals, salons, and small service businesses.",
+        "badge": "Most common choice",
+        "ctaLabel": "Ask about this package \u2192",
+        "ctaHref": "/contact"
       },
       {
         "id": "custom-web-app",
@@ -192,7 +205,9 @@ const home: HomeContent = {
           "Authentication or user flows",
           "PostgreSQL or MongoDB when needed",
           "Scalable project structure"
-        ]
+        ],
+        "ctaLabel": "Ask about this package \u2192",
+        "ctaHref": "/contact"
       }
     ]
   }
@@ -1071,8 +1086,8 @@ const contact: LocaleContent["contact"] = {
   },
   links: {
     backHome: "Back to home",
-    directEmail: "Or email me directly:",
-    trustResponseTime: "I usually reply within 24 hours.",
+    directEmailPrefix: "You can also email me directly:",
+    responseTime: "I usually reply within 24 hours.",
     telegram: "Telegram",
     linkedin: "LinkedIn",
     github: "GitHub",

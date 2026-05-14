@@ -1,13 +1,16 @@
 import { Container } from "@/components/ui/Container/Container";
 import { Section } from "@/components/ui/Section/Section";
 import { homeContent } from "@/data/home";
+import type { LocalePackageItem } from "@/data/locales/types";
+import Link from "next/link";
 import styles from "./Packages.module.css";
 
 export const Packages = () => {
   const { packages } = homeContent;
+  const packageItems = packages.items as LocalePackageItem[];
 
   return (
-    <Section className={styles.section}>
+    <Section id="packages" className={styles.section}>
       <Container>
         <div className={styles.wrapper}>
           <div className={styles.header}>
@@ -16,8 +19,9 @@ export const Packages = () => {
           </div>
 
           <ul className={styles.grid}>
-            {packages.items.map((item) => (
+            {packageItems.map((item) => (
               <li key={item.id} className={styles.card}>
+                {item.badge ? <span className={styles.badge}>{item.badge}</span> : null}
                 <h3 className={styles.cardTitle}>{item.title}</h3>
                 <p className={styles.price}>{item.price}</p>
                 <p className={styles.cardDescription}>{item.description}</p>
@@ -29,6 +33,11 @@ export const Packages = () => {
                   ))}
                 </ul>
                 {item.note ? <p className={styles.note}>{item.note}</p> : null}
+                {item.ctaLabel && item.ctaHref ? (
+                  <Link href={item.ctaHref} className={styles.cardCta}>
+                    {item.ctaLabel}
+                  </Link>
+                ) : null}
               </li>
             ))}
           </ul>

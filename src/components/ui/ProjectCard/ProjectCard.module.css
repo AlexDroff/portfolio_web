@@ -18,22 +18,24 @@
 .imageWrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
-  background: var(--color-bg-hover);
+  background: var(--color-bg-primary);
 }
 
 .image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  filter: saturate(0.9);
-  transition: transform 0.35s ease, filter 0.35s ease;
+  object-fit: contain;
+  transform: none;
+  filter: grayscale(1);
+  transition: filter 0.25s ease;
 }
 
-.card:hover .image {
-  transform: scale(1.02);
-  filter: saturate(1);
+.card:hover .image,
+.card:focus-within .image {
+  transform: none;
+  filter: grayscale(0);
 }
 
 .content {
@@ -56,6 +58,7 @@
   margin: 0;
   font-size: var(--font-size-md);
   line-height: 1.45;
+  min-height: calc(var(--font-size-md) * 1.45 * 2);
   color: var(--color-text-secondary);
 }
 

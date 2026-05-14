@@ -1,5 +1,5 @@
 .section {
-  padding: var(--space-9) 0;
+  padding: var(--space-5) 0 var(--space-9);
 }
 
 .grid {
@@ -19,6 +19,10 @@
 }
 
 @media (max-width: 768px) {
+  .section {
+    padding: var(--space-4) 0 var(--space-8);
+  }
+
   .grid {
     grid-template-columns: 1fr;
   }

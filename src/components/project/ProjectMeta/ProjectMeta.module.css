@@ -1,7 +1,7 @@
 .section {
   background: var(--color-bg-surface);
   color: var(--color-bg-primary);
-  padding: var(--space-8) 0;
+  padding: var(--space-6) 0 var(--space-8);
 }
 
 .grid {
@@ -29,6 +29,10 @@
 }
 
 @media (max-width: 768px) {
+  .section {
+    padding: var(--space-5) 0 var(--space-8);
+  }
+
   .grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

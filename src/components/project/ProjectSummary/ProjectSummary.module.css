@@ -1,5 +1,5 @@
 .section {
-  padding: var(--space-9) 0;
+  padding: var(--space-9) 0 var(--space-4);
 }
 
 .wrapper {
@@ -52,7 +52,7 @@
 
 @media (max-width: 768px) {
   .section {
-    padding: var(--space-8) 0;
+    padding: var(--space-8) 0 var(--space-4);
   }
 
   .title {

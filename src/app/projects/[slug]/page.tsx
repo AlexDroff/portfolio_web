@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 
 import { siteConfig } from "@/config/site";
 import { Container } from "@/components/ui/Container/Container";
+import { BackToTop } from "@/components/ui/BackToTop/BackToTop";
 import { ProjectHero } from "@/components/project/ProjectHero/ProjectHero";
 import { ProjectMeta } from "@/components/project/ProjectMeta/ProjectMeta";
 import { ProjectSummary } from "@/components/project/ProjectSummary/ProjectSummary";
@@ -55,7 +56,7 @@ export async function generateMetadata({
       canonical: `/projects/${project.slug}`,
     },
     openGraph: {
-      title: `${project.title} — Realizacja`,
+      title: `${project.title} – Realizacja`,
       description,
       url: `${siteConfig.url}/projects/${project.slug}`,
       type: "article",
@@ -112,6 +113,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </Link>
         </Container>
       </div>
+      <BackToTop />
     </>
   );
 }

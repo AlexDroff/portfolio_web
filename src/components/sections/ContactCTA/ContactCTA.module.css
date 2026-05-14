@@ -5,8 +5,8 @@
 
 .wrapper {
   display: flex;
-  border: var(--border-width-default) solid var(--color-border-default);
-  background: var(--color-overlay-subtle);
+  border: none;
+  background: transparent;
   border-radius: var(--space-1);
   padding: var(--space-6);
 }
@@ -16,3 +16,4 @@
     padding: var(--space-5);
   }
 }
+
