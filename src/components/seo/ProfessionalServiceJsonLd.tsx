@@ -1,19 +1,30 @@
-import { siteConfig } from "@/config/site";
-import { homeContent } from "@/data/home";
+﻿import { siteConfig } from "@/config/site";
+import type { Locale, LocaleContent } from "@/data/locales";
+import { getLocalizedPath } from "@/data/locales";
 
-export function ProfessionalServiceJsonLd() {
-  const services = homeContent.services.items.map((service) => service.title);
+type ProfessionalServiceJsonLdProps = {
+  locale: Locale;
+  home: LocaleContent["home"];
+  seo: LocaleContent["seo"];
+};
+
+export function ProfessionalServiceJsonLd({
+  locale,
+  home,
+  seo,
+}: ProfessionalServiceJsonLdProps) {
+  const services = home.services.items.map((service) => service.title);
+  const localizedHomeUrl = `${siteConfig.url}${getLocalizedPath(locale, "/")}`;
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": `${siteConfig.url}/#website`,
+        "@id": `${localizedHomeUrl}/#website`,
         name: siteConfig.name,
-        url: siteConfig.url,
-        description:
-          "Portfolio i strona usługowa freelancera oferującego web development dla małych firm.",
+        url: localizedHomeUrl,
+        description: seo.jsonLd.websiteDescription,
         publisher: {
           "@id": `${siteConfig.url}/#person`,
         },
@@ -24,7 +35,7 @@ export function ProfessionalServiceJsonLd() {
         name: siteConfig.name,
         url: siteConfig.url,
         email: siteConfig.email,
-        jobTitle: "Fullstack Developer",
+        jobTitle: seo.jsonLd.personJobTitle,
         sameAs: [siteConfig.githubUrl, siteConfig.linkedinUrl].filter(Boolean),
         knowsAbout: siteConfig.mainStack,
       },
@@ -32,10 +43,9 @@ export function ProfessionalServiceJsonLd() {
         "@type": "ProfessionalService",
         "@id": `${siteConfig.url}/#professional-service`,
         name: siteConfig.name,
-        url: siteConfig.url,
+        url: localizedHomeUrl,
         email: siteConfig.email,
-        description:
-          "Usługi web development dla małych firm usługowych: szybkie strony internetowe, flow kontaktowe i rezerwacyjne, aplikacje webowe, modernizacja stron, podstawy SEO oraz wsparcie przy wdrożeniu.",
+        description: seo.jsonLd.professionalServiceDescription,
         areaServed: {
           "@type": "Country",
           name: siteConfig.location,

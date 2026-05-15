@@ -1,17 +1,20 @@
-import { Container } from "@/components/ui/Container/Container";
+﻿import { Container } from "@/components/ui/Container/Container";
 import { Button } from "@/components/ui/Button/Button";
-import { siteContent } from "@/data/locales";
 import styles from "./ProjectHero.module.css";
 
 type ProjectHeroProps = {
   title: string;
   subtitle: string;
   liveUrl: string;
+  liveProjectLabel: string;
 };
 
-export const ProjectHero = ({ title, subtitle, liveUrl }: ProjectHeroProps) => {
-  const { projectDetail } = siteContent.ui;
-
+export const ProjectHero = ({
+  title,
+  subtitle,
+  liveUrl,
+  liveProjectLabel,
+}: ProjectHeroProps) => {
   return (
     <section className={styles.section}>
       <Container>
@@ -28,7 +31,7 @@ export const ProjectHero = ({ title, subtitle, liveUrl }: ProjectHeroProps) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              {projectDetail.liveProject}
+              {liveProjectLabel}
             </Button>
           </div>
         </div>

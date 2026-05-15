@@ -32,6 +32,12 @@
   gap: var(--space-5);
 }
 
+.desktopControls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
 .nav a {
   color: var(--color-text-primary);
   text-decoration: none;
@@ -64,6 +70,133 @@
 
 .nav a:focus-visible {
   color: var(--color-brand-accent);
+  outline: none;
+}
+
+.languageDropdown {
+  position: relative;
+  margin-left: 0;
+  padding-left: var(--space-4);
+}
+
+.languageDropdown::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: calc(var(--border-width-default) * 2);
+  height: 18px;
+  transform: translateY(-50%);
+  background: var(--color-border-default);
+  opacity: 0.75;
+}
+
+.languageTrigger {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 32px;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-text-primary);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: normal;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.languageTrigger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: calc(var(--space-1) * -1);
+  height: 1px;
+  background: var(--color-brand-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+
+.languageTrigger:hover,
+.languageTrigger:focus-visible,
+.languageDropdownOpen .languageTrigger {
+  color: var(--color-brand-accent);
+}
+
+.languageTrigger:hover::after,
+.languageTrigger:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.languageTrigger:focus-visible {
+  outline: 2px solid rgba(117, 255, 133, 0.45);
+  outline-offset: 4px;
+}
+
+.languageChevron {
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translateY(-1px);
+  transform-origin: center;
+  transition: transform 0.2s ease;
+}
+
+.languageChevronOpen {
+  transform: rotate(-135deg) translateY(-1px);
+}
+
+.languageMenu {
+  list-style: none;
+  margin: 0;
+  padding: var(--space-2);
+  position: absolute;
+  top: calc(100% + var(--space-2));
+  right: 0;
+  min-width: 0;
+  width: max-content;
+  border: var(--border-width-default) solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius-md);
+  background: rgba(7, 12, 16, 0.98);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+  display: grid;
+  gap: 2px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  z-index: 220;
+}
+
+.languageDropdown:hover .languageMenu,
+.languageDropdown:focus-within .languageMenu,
+.languageDropdownOpen .languageMenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.languageMenuLink {
+  display: block;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.languageMenuLink:hover,
+.languageMenuLink:focus-visible {
+  color: var(--color-brand-accent);
+  background: rgba(117, 255, 133, 0.12);
   outline: none;
 }
 
@@ -111,6 +244,132 @@
   width: 100%;
 }
 
+.mobileNavLink {
+  position: relative;
+  width: fit-content;
+  color: var(--color-brand-primary);
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.mobileNavLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: var(--border-width-default);
+  background: var(--color-brand-accent);
+  transition: width 0.2s ease;
+}
+
+.mobileNavLink:hover,
+.mobileNavLink:focus-visible {
+  color: var(--color-brand-accent);
+}
+
+.mobileNavLink:hover::after,
+.mobileNavLink:focus-visible::after {
+  width: 100%;
+}
+
+.mobileLanguageDropdown {
+  width: 100%;
+  margin-top: var(--space-3);
+  padding-top: var(--space-4);
+  border-top: var(--border-width-default) solid var(--color-border-default);
+}
+
+.mobileLanguageTrigger {
+  width: fit-content;
+  max-width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--space-2);
+  min-height: 32px;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-text-primary);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: normal;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.mobileLanguageTrigger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 1px;
+  background: var(--color-brand-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+
+.mobileLanguageTrigger:hover,
+.mobileLanguageTrigger:focus-visible,
+.mobileLanguageDropdownOpen .mobileLanguageTrigger {
+  color: var(--color-brand-accent);
+}
+
+.mobileLanguageTrigger:hover::after,
+.mobileLanguageTrigger:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.mobileLanguageTrigger:focus-visible {
+  outline: 2px solid rgba(117, 255, 133, 0.45);
+  outline-offset: 4px;
+}
+
+.mobileLanguageMenu {
+  list-style: none;
+  margin: var(--space-2) 0 0;
+  padding: var(--space-2);
+  border: var(--border-width-default) solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-md);
+  background: rgba(7, 12, 16, 0.96);
+  display: none;
+  gap: 2px;
+  min-width: 0;
+  width: max-content;
+}
+
+.mobileLanguageDropdownOpen .mobileLanguageMenu,
+.mobileLanguageDropdown:hover .mobileLanguageMenu,
+.mobileLanguageDropdown:focus-within .mobileLanguageMenu {
+  display: grid;
+}
+
+.mobileLanguageMenuLink {
+  display: block;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.mobileLanguageMenuLink:hover,
+.mobileLanguageMenuLink:focus-visible {
+  color: var(--color-brand-accent);
+  background: rgba(117, 255, 133, 0.12);
+  outline: none;
+}
+
+.mobileLanguageMenuLink:active {
+  background: rgba(117, 255, 133, 0.2);
+}
+
 @media (max-width: 768px) {
   .header {
     z-index: 1000;
@@ -121,6 +380,10 @@
   }
 
   .nav {
+    display: none;
+  }
+
+  .desktopControls {
     display: none;
   }
 
@@ -202,13 +465,11 @@
   }
 
   .menuNav a {
-    color: var(--color-text-primary);
     text-decoration: none;
   }
 
   .menuNav a:hover,
   .menuNav a:focus-visible {
-    color: var(--color-brand-accent);
     outline: none;
   }
 

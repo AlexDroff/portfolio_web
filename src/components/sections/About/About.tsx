@@ -8,15 +8,17 @@ import {
 } from 'react';
 import Image from 'next/image';
 import { Container } from '@/components/ui/Container/Container';
-import { homeContent } from '@/data/home';
-import { siteContent } from '@/data/locales';
+import type { LocaleContent } from '@/data/locales';
 import styles from './About.module.css';
 import myPhoto from '../../../../public/my_photo.webp';
 
-export const About = () => {
+type AboutProps = {
+  about: LocaleContent['home']['about'];
+  profilePhotoLabel: string;
+};
+
+export const About = ({ about, profilePhotoLabel }: AboutProps) => {
   const [activeItem, setActiveItem] = useState<string | null>(null);
-  const { about } = homeContent;
-  const { common } = siteContent.ui;
   const [whatYouGetBlock, howIWorkBlock] = about.blocks;
 
   useEffect(() => {
@@ -87,10 +89,10 @@ export const About = () => {
               ))}
             </div>
 
-            <div className={styles.profileCard} aria-label={common.profilePhoto}>
+            <div className={styles.profileCard} aria-label={profilePhotoLabel}>
               <Image
                 src={myPhoto}
-                alt={common.profilePhoto}
+                alt={profilePhotoLabel}
                 width={myPhoto.width}
                 height={myPhoto.height}
                 className={styles.profileImage}
@@ -112,63 +114,61 @@ export const About = () => {
               </div>
 
               <ul className={styles.grid}>
-                {whatYouGetBlock.items.map((item) => (
-                  (() => {
-                    const isExpanded = activeItem === item.id;
-                    return (
-                      <li
-                        key={item.id}
-                        className={`${styles.item} ${styles.iconItem} ${isExpanded ? styles.iconItemActive : ''}`}
-                        onMouseLeave={() => handleItemMouseLeave(item.id)}
-                        onBlur={(event) => handleItemBlur(event, item.id)}
-                        data-about-popover-item="true"
-                      >
-                        {isExpanded ? (
-                          <button
-                            type="button"
-                            className={styles.itemButton}
-                            onClick={() => handleItemClick(item.id)}
-                            aria-expanded="true"
-                            aria-controls={`about-popover-${item.id}`}
-                            aria-describedby={`about-popover-${item.id}`}
-                          >
-                            <Image
-                              src={item.iconSrc}
-                              alt={item.iconAlt}
-                              width={80}
-                              height={80}
-                              className={styles.icon}
-                            />
-                            <span>{item.title}</span>
-                          </button>
-                        ) : (
-                          <button
-                            type="button"
-                            className={styles.itemButton}
-                            onClick={() => handleItemClick(item.id)}
-                            aria-expanded="false"
-                            aria-controls={`about-popover-${item.id}`}
-                          >
-                            <Image
-                              src={item.iconSrc}
-                              alt={item.iconAlt}
-                              width={80}
-                              height={80}
-                              className={styles.icon}
-                            />
-                            <span>{item.title}</span>
-                          </button>
-                        )}
-                        <div
-                          id={`about-popover-${item.id}`}
-                          className={`${styles.popover} ${isExpanded ? styles.popoverActive : ''}`}
+                {whatYouGetBlock.items.map((item) => {
+                  const isExpanded = activeItem === item.id;
+                  return (
+                    <li
+                      key={item.id}
+                      className={`${styles.item} ${styles.iconItem} ${isExpanded ? styles.iconItemActive : ''}`}
+                      onMouseLeave={() => handleItemMouseLeave(item.id)}
+                      onBlur={(event) => handleItemBlur(event, item.id)}
+                      data-about-popover-item="true"
+                    >
+                      {isExpanded ? (
+                        <button
+                          type="button"
+                          className={styles.itemButton}
+                          onClick={() => handleItemClick(item.id)}
+                          aria-expanded="true"
+                          aria-controls={`about-popover-${item.id}`}
+                          aria-describedby={`about-popover-${item.id}`}
                         >
-                          {item.description}
-                        </div>
-                      </li>
-                    );
-                  })()
-                ))}
+                          <Image
+                            src={item.iconSrc}
+                            alt={item.iconAlt}
+                            width={80}
+                            height={80}
+                            className={styles.icon}
+                          />
+                          <span>{item.title}</span>
+                        </button>
+                      ) : (
+                        <button
+                          type="button"
+                          className={styles.itemButton}
+                          onClick={() => handleItemClick(item.id)}
+                          aria-expanded="false"
+                          aria-controls={`about-popover-${item.id}`}
+                        >
+                          <Image
+                            src={item.iconSrc}
+                            alt={item.iconAlt}
+                            width={80}
+                            height={80}
+                            className={styles.icon}
+                          />
+                          <span>{item.title}</span>
+                        </button>
+                      )}
+                      <div
+                        id={`about-popover-${item.id}`}
+                        className={`${styles.popover} ${isExpanded ? styles.popoverActive : ''}`}
+                      >
+                        {item.description}
+                      </div>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
 
@@ -186,63 +186,61 @@ export const About = () => {
               </div>
 
               <ul className={styles.grid}>
-                {howIWorkBlock.items.map((item) => (
-                  (() => {
-                    const isExpanded = activeItem === item.id;
-                    return (
-                      <li
-                        key={item.id}
-                        className={`${styles.item} ${styles.iconItem} ${isExpanded ? styles.iconItemActive : ''}`}
-                        onMouseLeave={() => handleItemMouseLeave(item.id)}
-                        onBlur={(event) => handleItemBlur(event, item.id)}
-                        data-about-popover-item="true"
-                      >
-                        {isExpanded ? (
-                          <button
-                            type="button"
-                            className={styles.itemButton}
-                            onClick={() => handleItemClick(item.id)}
-                            aria-expanded="true"
-                            aria-controls={`about-popover-${item.id}`}
-                            aria-describedby={`about-popover-${item.id}`}
-                          >
-                            <Image
-                              src={item.iconSrc}
-                              alt={item.iconAlt}
-                              width={80}
-                              height={80}
-                              className={styles.icon}
-                            />
-                            <span>{item.title}</span>
-                          </button>
-                        ) : (
-                          <button
-                            type="button"
-                            className={styles.itemButton}
-                            onClick={() => handleItemClick(item.id)}
-                            aria-expanded="false"
-                            aria-controls={`about-popover-${item.id}`}
-                          >
-                            <Image
-                              src={item.iconSrc}
-                              alt={item.iconAlt}
-                              width={80}
-                              height={80}
-                              className={styles.icon}
-                            />
-                            <span>{item.title}</span>
-                          </button>
-                        )}
-                        <div
-                          id={`about-popover-${item.id}`}
-                          className={`${styles.popover} ${isExpanded ? styles.popoverActive : ''}`}
+                {howIWorkBlock.items.map((item) => {
+                  const isExpanded = activeItem === item.id;
+                  return (
+                    <li
+                      key={item.id}
+                      className={`${styles.item} ${styles.iconItem} ${isExpanded ? styles.iconItemActive : ''}`}
+                      onMouseLeave={() => handleItemMouseLeave(item.id)}
+                      onBlur={(event) => handleItemBlur(event, item.id)}
+                      data-about-popover-item="true"
+                    >
+                      {isExpanded ? (
+                        <button
+                          type="button"
+                          className={styles.itemButton}
+                          onClick={() => handleItemClick(item.id)}
+                          aria-expanded="true"
+                          aria-controls={`about-popover-${item.id}`}
+                          aria-describedby={`about-popover-${item.id}`}
                         >
-                          {item.description}
-                        </div>
-                      </li>
-                    );
-                  })()
-                ))}
+                          <Image
+                            src={item.iconSrc}
+                            alt={item.iconAlt}
+                            width={80}
+                            height={80}
+                            className={styles.icon}
+                          />
+                          <span>{item.title}</span>
+                        </button>
+                      ) : (
+                        <button
+                          type="button"
+                          className={styles.itemButton}
+                          onClick={() => handleItemClick(item.id)}
+                          aria-expanded="false"
+                          aria-controls={`about-popover-${item.id}`}
+                        >
+                          <Image
+                            src={item.iconSrc}
+                            alt={item.iconAlt}
+                            width={80}
+                            height={80}
+                            className={styles.icon}
+                          />
+                          <span>{item.title}</span>
+                        </button>
+                      )}
+                      <div
+                        id={`about-popover-${item.id}`}
+                        className={`${styles.popover} ${isExpanded ? styles.popoverActive : ''}`}
+                      >
+                        {item.description}
+                      </div>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>

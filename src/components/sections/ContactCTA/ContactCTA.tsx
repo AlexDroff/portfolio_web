@@ -1,12 +1,16 @@
-import { Container } from "@/components/ui/Container/Container";
+﻿import { Container } from "@/components/ui/Container/Container";
 import { Section } from "@/components/ui/Section/Section";
 import { CTA } from "@/components/ui/CTA/CTA";
-import { homeContent } from "@/data/home";
+import type { Locale, LocaleContent } from "@/data/locales";
+import { getLocalizedPath } from "@/data/locales";
 import styles from "./ContactCTA.module.css";
 
-export const ContactCTA = () => {
-  const { projects } = homeContent;
+type ContactCTAProps = {
+  locale: Locale;
+  projects: LocaleContent["home"]["projects"];
+};
 
+export const ContactCTA = ({ locale, projects }: ContactCTAProps) => {
   return (
     <Section className={styles.section}>
       <Container>
@@ -15,7 +19,7 @@ export const ContactCTA = () => {
             title={projects.cta.title}
             subtext={projects.cta.subtext}
             buttonLabel={projects.cta.buttonLabel}
-            href={projects.cta.href}
+            href={getLocalizedPath(locale, projects.cta.href)}
           />
         </div>
       </Container>

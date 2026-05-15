@@ -1,11 +1,15 @@
-"use client";
+﻿"use client";
 
 import styles from "./ProjectCard.module.css";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button/Button";
-import { siteContent } from "@/data/locales";
+import type { Locale } from "@/data/locales";
+import { getLocalizedPath } from "@/data/locales";
 
 type ProjectCardProps = {
+  locale: Locale;
+  viewCaseStudyLabel: string;
+  liveWebsiteLabel: string;
   slug: string;
   title: string;
   image: string;
@@ -15,6 +19,9 @@ type ProjectCardProps = {
 };
 
 export const ProjectCard = ({
+  locale,
+  viewCaseStudyLabel,
+  liveWebsiteLabel,
   title,
   image,
   slug,
@@ -22,8 +29,6 @@ export const ProjectCard = ({
   badges,
   liveDemoUrl,
 }: ProjectCardProps) => {
-  const { projectCard } = siteContent.ui;
-
   return (
     <article className={styles.card}>
       <div className={styles.imageWrapper}>
@@ -52,8 +57,8 @@ export const ProjectCard = ({
         ) : null}
 
         <div className={styles.actions}>
-          <Button variant="primary" as="link" href={`/projects/${slug}`}>
-            {projectCard.viewCaseStudy}
+          <Button variant="primary" as="link" href={getLocalizedPath(locale, `/projects/${slug}`)}>
+            {viewCaseStudyLabel}
           </Button>
           {liveDemoUrl ? (
             <Button
@@ -63,7 +68,7 @@ export const ProjectCard = ({
               target="_blank"
               rel="noopener noreferrer"
             >
-              {projectCard.liveWebsite}
+              {liveWebsiteLabel}
             </Button>
           ) : null}
         </div>

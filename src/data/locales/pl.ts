@@ -6,11 +6,11 @@ import { enContent } from './en';
 const home: LocaleContent['home'] = {
   hero: {
     title:
-      'Tworze szybkie strony i proste systemy kontaktu dla malych firm uslugowych.',
+      'Szybkie strony dla ma\u0142ych firm us\u0142ugowych, kt\u00f3re u\u0142atwiaj\u0105 klientom kontakt.',
     description:
-      'Strony mobile-first z przejrzysta struktura, podstawami SEO i flow kontaktowym, ktore pomaga zamieniac odwiedzajacych w realnych klientow.',
+      'Porz\u0105dkuj\u0119 ofert\u0119, projektuj\u0119 czytelny uk\u0142ad i prowadz\u0119 u\u017cytkownika do zapytania, rezerwacji albo rozmowy.',
     primaryCta: {
-      label: 'Opisz swoj projekt',
+      label: 'Opisz sw\u00f3j projekt',
       href: '/contact',
     },
     secondaryCta: {
@@ -19,36 +19,35 @@ const home: LocaleContent['home'] = {
     },
   },
   about: {
-    title:
-      'Loading \u2013 web development dla ma\u0142ych firm us\u0142ugowych.',
+    title: 'Loading \u2013 strony dla ma\u0142ych firm us\u0142ugowych.',
     description: [
-      'Nazywam si\u0119 Oleksandr Aleksandrov i stoj\u0119 za Loading \u2013 kameraln\u0105 pracowni\u0105 web developmentu. Tworz\u0119 strony i aplikacje dla ma\u0142ych firm us\u0142ugowych, kt\u00f3re potrzebuj\u0105 przejrzystej obecno\u015bci w sieci, prostego kontaktu z klientem i strony, kt\u00f3ra realnie wspiera sprzeda\u017c us\u0142ug.',
-      '\u0141\u0105cz\u0119 podej\u015bcie fullstack developera z praktycznym my\u015bleniem o biznesie. Dbam o struktur\u0119 oferty, czytelny uk\u0142ad, responsywny interfejs, szybkie dzia\u0142anie i \u015bcie\u017ck\u0119 kontaktu, kt\u00f3ra pomaga u\u017cytkownikowi \u0142atwo zrobi\u0107 kolejny krok.',
-      'Loading jest m\u0142od\u0105 pracowni\u0105, dlatego ka\u017cdy projekt traktuj\u0119 bardzo konkretnie i z du\u017cym zaanga\u017cowaniem. Szukam rozwi\u0105za\u0144, kt\u00f3re maj\u0105 sens na danym etapie biznesu \u2013 bez dok\u0142adania zb\u0119dnych funkcji tylko po to, \u017ceby projekt wygl\u0105da\u0142 na bardziej skomplikowany.',
-      'Mam ju\u017c zrealizowane strony i aplikacje webowe, a teraz rozwijam Loading jako studio dla ma\u0142ych firm, kt\u00f3re chc\u0105 wystartowa\u0107 albo uporz\u0105dkowa\u0107 swoj\u0105 obecno\u015b\u0107 online.',
+      'Nazywam si\u0119 Oleksandr Aleksandrov i rozwijam Loading \u2013 ma\u0142e studio, kt\u00f3re pomaga firmom us\u0142ugowym uporz\u0105dkowa\u0107 obecno\u015b\u0107 w internecie. Przygotowuj\u0119 strony, formularze i proste rozwi\u0105zania, dzi\u0119ki kt\u00f3rym klient szybciej rozumie ofert\u0119 i \u0142atwiej nawi\u0105zuje kontakt.',
+      'Projektuj\u0119 strony z my\u015bl\u0105 o konkretnym celu: jasnej prezentacji us\u0142ug, wygodnej strukturze na r\u00f3\u017cnych ekranach i prostym przej\u015bciu od pierwszej wizyty do zapytania, rezerwacji albo rozmowy.',
+      'Loading jest m\u0142odym studiem, dlatego ka\u017cdy projekt traktuj\u0119 konkretnie i z du\u017cym zaanga\u017cowaniem. Dobieram rozwi\u0105zania do aktualnego etapu firmy, bez dok\u0142adania funkcji, kt\u00f3re nie pomagaj\u0105 u\u017cytkownikowi ani w\u0142a\u015bcicielowi biznesu.',
+      'Mam ju\u017c zrealizowane strony i aplikacje webowe, a teraz rozwijam Loading jako miejsce dla ma\u0142ych firm, kt\u00f3re chc\u0105 wystartowa\u0107 online, od\u015bwie\u017cy\u0107 obecn\u0105 stron\u0119 albo upro\u015bci\u0107 kontakt z klientami.',
     ],
     blocks: [
       {
         title: 'Co otrzymujesz',
         description: [
-          'Stronę lub aplikację, która ma jasną strukturę, dobrze działa na telefonie i prowadzi użytkownika do kontaktu – bez zbędnej technicznej złożoności.',
+          'Stron\u0119 lub prost\u0105 aplikacj\u0119 z jasn\u0105 struktur\u0105, wygodnym dzia\u0142aniem na telefonie i \u015bcie\u017ck\u0105, kt\u00f3ra prowadzi klienta do kontaktu.',
         ],
         items: [
           {
             id: 'business-first-structure',
             iconSrc: '/icons/lightning.svg',
             iconAlt: '',
-            title: 'Struktura pod ofertę',
+            title: 'Struktura pod ofert\u0119',
             description:
-              'Pomagam ulozyc strone wokol oferty, pytan uzytkownika, punktow kontaktu i dzialania, ktore odwiedzajacy ma wykonac.',
+              'Pomagam u\u0142o\u017cy\u0107 stron\u0119 wok\u00f3\u0142 oferty, pyta\u0144 klienta i kluczowych dzia\u0142a\u0144, kt\u00f3re maj\u0105 prowadzi\u0107 do kontaktu.',
           },
           {
             id: 'mobile-first-ui',
             iconSrc: '/icons/smartphone.svg',
             iconAlt: '',
-            title: 'Mobile-first UI',
+            title: 'Wygoda na telefonie',
             description:
-              'Najpierw projektuje uklad pod telefon, a potem dopasowuje go do tabletu i desktopu.',
+              'Uk\u0142ad od pocz\u0105tku przygotowuj\u0119 tak, \u017ceby by\u0142 czytelny i wygodny na smartfonie, tablecie i komputerze.',
           },
           {
             id: 'contact-booking-flows',
@@ -56,22 +55,22 @@ const home: LocaleContent['home'] = {
             iconAlt: '',
             title: 'Kontakt i rezerwacje',
             description:
-              'Moge wdrozyc formularze, CTA do telefonu, flow przez WhatsApp lub Telegram oraz proste systemy zapytan.',
+              'Wdra\u017cam formularze, szybkie przyciski kontaktu i prost\u0105 \u015bcie\u017ck\u0119 zapytania lub rezerwacji.',
           },
           {
             id: 'seo-deployment-basics',
             iconSrc: '/icons/rocket.svg',
             iconAlt: '',
-            title: 'SEO i wdrożenie',
+            title: 'SEO i wdro\u017cenie',
             description:
-              'Przygotowuje metadata, czysta strukture, sitemap/robots i konfiguracje wdrozenia.',
+              'Przygotowuj\u0119 podstawy SEO i spokojne wdro\u017cenie, \u017ceby strona by\u0142a gotowa do dzia\u0142ania od startu.',
           },
         ],
       },
       {
-        title: 'Jak pracuję',
+        title: 'Jak pracuj\u0119',
         description: [
-          'Najpierw ustalamy cel i zakres, potem buduję prostą, czystą wersję projektu, testuję ją i pomagam po publikacji.',
+          'Najpierw ustalamy cel i zakres, potem przygotowuj\u0119 stron\u0119 krok po kroku, testuj\u0119 j\u0105 i wspieram Ci\u0119 po publikacji.',
         ],
         items: [
           {
@@ -80,23 +79,23 @@ const home: LocaleContent['home'] = {
             iconAlt: '',
             title: 'Jasny zakres',
             description:
-              'Przed startem developmentu ustalam, co budujemy teraz, co moze poczekac i czego nie warto dodawac na tym etapie.',
+              'Na pocz\u0105tku ustalamy, co jest najwa\u017cniejsze teraz, a co warto doda\u0107 dopiero w kolejnym etapie.',
           },
           {
             id: 'clean-implementation',
             iconSrc: '/icons/code.svg',
             iconAlt: '',
-            title: 'Czysta implementacja',
+            title: 'Przejrzysta realizacja',
             description:
-              'Dbam o zrozumiala strukture projektu i unikam dokładania zaleznosci bez realnej potrzeby.',
+              'Dbam o porz\u0105dek w projekcie i rozwi\u0105zania, kt\u00f3re \u0142atwo utrzyma\u0107 i rozwija\u0107.',
           },
           {
             id: 'direct-communication',
             iconSrc: '/icons/rocket.svg',
             iconAlt: '',
-            title: 'Bezpośredni kontakt',
+            title: 'Bezpo\u015bredni kontakt',
             description:
-              'Kontaktujesz sie bezposrednio z osoba, ktora buduje projekt.',
+              'Rozmawiasz ze mn\u0105 bez po\u015brednik\u00f3w, dzi\u0119ki czemu decyzje zapadaj\u0105 szybciej i spokojniej.',
           },
           {
             id: 'post-launch-support',
@@ -104,7 +103,7 @@ const home: LocaleContent['home'] = {
             iconAlt: '',
             title: 'Wsparcie po starcie',
             description:
-              'Po starcie moge pomoc z poprawkami, aktualizacja tresci i dalszym rozwojem funkcji.',
+              'Po publikacji pomagam z poprawkami, aktualizacjami i kolejnymi usprawnieniami.',
           },
         ],
       },
@@ -113,47 +112,47 @@ const home: LocaleContent['home'] = {
   projects: {
     title: 'Wybrane realizacje',
     cta: {
-      title: 'Potrzebujesz strony, ktora realnie pozyskuje klientow?',
+      title: 'Potrzebujesz strony, kt\u00f3ra u\u0142atwia klientom kontakt?',
       subtext:
-        'Tworze szybkie i niezawodne strony z przejrzysta struktura i realna logika biznesowa.',
+        'Przygotuj\u0119 przejrzyst\u0105 stron\u0119 z prost\u0105 \u015bcie\u017ck\u0105 do zapytania, rezerwacji albo rozmowy.',
       buttonLabel: 'Rozpocznij projekt',
       href: '/contact',
     },
   },
   services: {
-    title: 'Co mog\u0119 dla Ciebie zbudowa\u0107',
+    title: 'Co mog\u0119 dla Ciebie przygotowa\u0107',
     description:
-      'Praktyczne strony i aplikacje dla ma\u0142ych firm us\u0142ugowych \u2013 z jasn\u0105 struktur\u0105, responsywnym interfejsem i prost\u0105 \u015bcie\u017ck\u0105 kontaktu.',
+      'Strony i proste aplikacje, kt\u00f3re porz\u0105dkuj\u0105 ofert\u0119, u\u0142atwiaj\u0105 kontakt i pomagaj\u0105 wystartowa\u0107 bez zb\u0119dnej komplikacji.',
     items: [
       {
         id: 'business-websites',
         title: 'Strony dla firm',
         description:
-          'Strony us\u0142ugowe, landing page i portfolio, kt\u00f3re jasno pokazuj\u0105 ofert\u0119 i prowadz\u0105 klienta do kontaktu.',
+          'Tworz\u0119 czytelne strony us\u0142ugowe, landing page i portfolio, kt\u00f3re jasno pokazuj\u0105 ofert\u0119 i kieruj\u0105 do kontaktu.',
       },
       {
         id: 'booking-contact-flows',
         title: 'Kontakt i rezerwacje',
         description:
-          'Formularze kontaktowe, zapytania o rezerwacj\u0119, CTA do telefonu oraz flow przez email, Telegram lub WhatsApp.',
+          'Przygotowuj\u0119 formularze, zapytania o rezerwacj\u0119 i prost\u0105 \u015bcie\u017ck\u0119 kontaktu przez email, telefon, Telegram lub WhatsApp.',
       },
       {
         id: 'web-apps-mvp',
         title: 'Aplikacje webowe / MVP',
         description:
-          'Katalogi, dashboardy i proste aplikacje webowe z logik\u0105 u\u017cytkownika, API lub baz\u0105 danych.',
+          'Buduj\u0119 proste aplikacje, katalogi i panele, kt\u00f3re wspieraj\u0105 codzienny proces pracy i kontakt z klientem.',
       },
       {
         id: 'website-modernization',
         title: 'Modernizacja strony',
         description:
-          'Poprawki UI, responsywno\u015b\u0107, wydajno\u015b\u0107 i uporz\u0105dkowanie strony, kt\u00f3ra ju\u017c istnieje.',
+          'Od\u015bwie\u017cam istniej\u0105ce strony, poprawiam czytelno\u015b\u0107, wygod\u0119 na telefonie i og\u00f3lne dzia\u0142anie serwisu.',
       },
       {
         id: 'seo-deployment',
         title: 'SEO i wdro\u017cenie',
         description:
-          'Metadata, sitemap, robots, Open Graph, konfiguracja domeny i wdro\u017cenie na wybranej platformie.',
+          'Przygotowuj\u0119 metadane, sitemap, robots, konfiguracj\u0119 domeny i publikacj\u0119 strony na wybranej platformie.',
       },
       {
         id: 'services-contact-cta',
@@ -167,7 +166,7 @@ const home: LocaleContent['home'] = {
   packages: {
     title: 'Pakiety projekt\u00f3w',
     description:
-      'Orientacyjne pakiety dla typowych projekt\u00f3w. Ko\u0144cowa wycena zale\u017cy od zakresu, tre\u015bci, integracji i terminu realizacji.',
+      'Orientacyjne punkty startowe dla najcz\u0119stszych potrzeb. Ostateczny zakres i cen\u0119 ustalamy po kr\u00f3tkiej rozmowie o projekcie.',
     items: [
       {
         id: 'landing-page',
@@ -176,9 +175,9 @@ const home: LocaleContent['home'] = {
         description:
           'Dla jednej us\u0142ugi, kampanii albo prostej oferty, kt\u00f3r\u0105 trzeba szybko i jasno pokaza\u0107 online.',
         features: [
-          'Struktura one-page',
+          'Strona one-page',
           'Sekcje oferty, korzy\u015bci i kontaktu',
-          'Responsywny layout',
+          'Wygodny uk\u0142ad na telefonie i komputerze',
           'Wyra\u017ane CTA kontaktowe',
           'Podstawowe SEO i publikacja',
         ],
@@ -190,11 +189,11 @@ const home: LocaleContent['home'] = {
         title: 'Strona firmowa',
         price: 'od 3000 PLN',
         description:
-          'Dla ma\u0142ej firmy, kt\u00f3ra potrzebuje pe\u0142niejszej strony z ofert\u0105, zaufaniem i kontaktem.',
+          'Dla ma\u0142ej firmy, kt\u00f3ra potrzebuje pe\u0142niejszej strony z ofert\u0105, zaufaniem i prostym kontaktem.',
         features: [
-          'Struktura oferty i us\u0142ug',
+          'Jasna struktura us\u0142ug i oferty',
           'Kilka sekcji lub podstron',
-          'Responsywny interfejs',
+          'Responsywny uk\u0142ad',
           'Sekcja kontaktowa',
           'Podstawowe SEO i wdro\u017cenie',
         ],
@@ -203,15 +202,15 @@ const home: LocaleContent['home'] = {
       },
       {
         id: 'booking-flow',
-        title: 'Strona + flow rezerwacji',
+        title: 'Strona + ścieżka rezerwacji',
         price: 'od 4500 PLN',
         description:
           'Dla us\u0142ug, w kt\u00f3rych liczy si\u0119 szybkie zapytanie, rezerwacja albo kontakt z klientem.',
         features: [
           'Strona firmowa',
           'Formularz kontaktowy lub rezerwacyjny',
-          'Flow przez email, Telegram lub WhatsApp',
-          'Walidacja i stany UX',
+          '\u015acie\u017cka kontaktu przez email, Telegram lub WhatsApp',
+          'Walidacja i czytelne komunikaty',
           'Poprawki po wdro\u017ceniu',
         ],
         badge: 'Polecany pakiet',
@@ -223,11 +222,11 @@ const home: LocaleContent['home'] = {
         title: 'Aplikacja webowa / MVP',
         price: 'od 8000 PLN',
         description:
-          'Dla projektu, kt\u00f3ry potrzebuje logiki u\u017cytkownika, danych, panelu, API, autoryzacji albo w\u0142asnego flow biznesowego.',
+          'Dla projektu, kt\u00f3ry potrzebuje prostego procesu, panelu danych, integracji lub indywidualnych funkcji.',
         features: [
           'Frontend React / Next.js',
           'Backend/API, je\u015bli projekt tego wymaga',
-          'Integracje REST API lub zewn\u0119trzne us\u0142ugi',
+          'Integracje z zewn\u0119trznymi us\u0142ugami',
           'Autoryzacja i role u\u017cytkownik\u00f3w',
           'PostgreSQL lub MongoDB',
           'Walidacja formularzy i stany UX',
@@ -244,67 +243,67 @@ const home: LocaleContent['home'] = {
 const faq: FAQContent = {
   title: 'FAQ',
   description:
-    'Najcz\u0119stsze pytania o wycen\u0119, terminy, proces, wdro\u017cenie i wsparcie.',
+    'Najcz\u0119stsze pytania o koszt, terminy, spos\u00f3b wsp\u00f3\u0142pracy, wdro\u017cenie i wsparcie.',
   items: [
     {
       id: 'website-cost',
       question: 'Ile kosztuje strona internetowa?',
       answer:
-        'Prosty landing page zaczyna si\u0119 od 1800 PLN, strona firmowa od 3000 PLN, a strona z formularzem lub flow rezerwacji od 4500 PLN. Ko\u0144cowa cena zale\u017cy od zakresu, tre\u015bci i integracji.',
+        'Landing page zwykle zaczyna si\u0119 od 1800 PLN, strona firmowa od 3000 PLN, a projekt z rezerwacj\u0105 od 4500 PLN. Dok\u0142adn\u0105 wycen\u0119 ustalamy po kr\u00f3tkiej rozmowie o zakresie.',
     },
     {
       id: 'price-factors',
       question: 'Od czego zale\u017cy ko\u0144cowa cena?',
       answer:
-        'Od liczby sekcji lub podstron, ilo\u015bci tre\u015bci, z\u0142o\u017cono\u015bci formularzy, integracji, wersji j\u0119zykowych oraz tego, czy projekt wymaga backendu, API, bazy danych albo autoryzacji.',
+        'Wp\u0142ywa na ni\u0105 zakres strony, liczba sekcji, tre\u015bci, potrzebne funkcje oraz integracje. Im ja\u015bniej ustalimy potrzeby na starcie, tym dok\u0142adniejsza b\u0119dzie wycena.',
     },
     {
       id: 'timeline',
       question: 'Ile trwa wykonanie strony?',
       answer:
-        'Landing page zwykle zajmuje 1\u20132 tygodnie, strona firmowa 2\u20134 tygodnie, a bardziej rozbudowany projekt 4\u20136 tygodni lub wi\u0119cej. Dok\u0142adny termin zale\u017cy od zakresu.',
+        'Landing page to zwykle 1–2 tygodnie, strona firmowa 2–4 tygodnie, a wi\u0119kszy projekt 4–6 tygodni. Termin zale\u017cy od zakresu i tempa przekazywania materia\u0142\u00f3w.',
     },
     {
       id: 'process',
       question: 'Jak wygl\u0105da proces wsp\u00f3\u0142pracy?',
       answer:
-        'Najpierw ustalamy cel, zakres i potrzebne tre\u015bci. Potem buduj\u0119 stron\u0119 lub aplikacj\u0119, testuj\u0119 responsywno\u015b\u0107, wdra\u017cam projekt i pomagam z poprawkami po starcie.',
+        'Najpierw ustalamy cel, zakres i priorytety. Nast\u0119pnie przygotowuj\u0119 projekt, testuj\u0119 go i wdra\u017cam, a po publikacji pomagam w dopracowaniu detali.',
     },
     {
       id: 'domain-deployment',
       question: 'Czy pomagasz z domen\u0105 i wdro\u017ceniem?',
       answer:
-        'Tak. Pomagam z publikacj\u0105 projektu na wybranej platformie, konfiguracj\u0105 domeny, zmiennymi \u015brodowiskowymi oraz podstawowym technicznym SEO.',
+        'Tak. Pomagam z publikacj\u0105 strony, podpi\u0119ciem domeny, konfiguracj\u0105 i podstawowym przygotowaniem technicznym SEO.',
     },
     {
       id: 'mobile-friendly',
       question: 'Czy strona b\u0119dzie dobrze dzia\u0142a\u0107 na telefonie?',
       answer:
-        'Tak. Projektuj\u0119 mobile-first, a potem dopasowuj\u0119 layout do tabletu i desktopu, \u017ceby strona by\u0142a wygodna na ka\u017cdym ekranie.',
+        'Tak. Dbam o czytelny uk\u0142ad i wygodn\u0105 obs\u0142ug\u0119 na smartfonie, bo to tam wi\u0119kszo\u015b\u0107 klient\u00f3w pierwszy raz trafia na stron\u0119.',
     },
     {
       id: 'booking-contact-form',
       question: 'Czy mo\u017cesz zrobi\u0107 formularz kontaktowy albo rezerwacj\u0119?',
       answer:
-        'Tak. Mog\u0119 przygotowa\u0107 formularz kontaktowy, zapytanie o rezerwacj\u0119, CTA do telefonu albo flow przez email, Telegram lub WhatsApp.',
+        'Tak. Mog\u0119 wdro\u017cy\u0107 formularz kontaktowy, zapytanie o rezerwacj\u0119, szybki przycisk telefonu lub prost\u0105 \u015bcie\u017ck\u0119 kontaktu przez komunikator.',
     },
     {
       id: 'content-editing',
       question: 'Czy b\u0119d\u0119 m\u00f3g\u0142 sam edytowa\u0107 tre\u015bci?',
       answer:
-        'To zale\u017cy od projektu. Przy prostych stronach tre\u015bci mog\u0105 by\u0107 zapisane w projekcie, a je\u015bli potrzebujesz cz\u0119stych zmian, mo\u017cna doda\u0107 CMS albo prosty panel.',
+        'Tak, zakres edycji ustalamy przed startem. W razie potrzeby mog\u0119 te\u017c przygotowa\u0107 rozwi\u0105zanie, kt\u00f3re u\u0142atwi samodzielne aktualizowanie tre\u015bci.',
     },
     {
       id: 'seo',
       question: 'Czy zajmujesz si\u0119 SEO?',
       answer:
-        'Tak, w zakresie technicznej podstawy: semantyczna struktura, metadata, Open Graph, sitemap, robots, nag\u0142\u00f3wki, responsywno\u015b\u0107 i wydajne wdro\u017cenie.',
+        'Tak, w zakresie podstaw: struktura tre\u015bci, metadane, Open Graph, sitemap, robots i przygotowanie strony pod dobre indeksowanie.',
     },
     {
       id: 'support',
       question: 'Czy oferujesz wsparcie po uruchomieniu strony?',
       answer:
-        'Tak. Po publikacji mog\u0119 pom\u00f3c z poprawkami, aktualizacj\u0105 tre\u015bci, nowymi sekcjami, wydajno\u015bci\u0105, SEO i dalszym rozwojem funkcji.',
+        'Tak. Po publikacji mog\u0119 pom\u00f3c z poprawkami, aktualizacjami tre\u015bci i kolejnymi usprawnieniami strony.',
     },
   ],
 };
@@ -312,46 +311,46 @@ const faq: FAQContent = {
 const projects: Project[] = enContent.projects.map((project) => {
   const localizedCta = {
     ...project.caseStudy.cta,
-    title: 'Potrzebujesz strony, ktora realnie pozyskuje klientow?',
+    title: 'Potrzebujesz strony, kt\u00f3ra u\u0142atwia klientom kontakt?',
     subtext:
-      'Tworze szybkie i niezawodne strony z przejrzysta struktura i realna logika biznesowa.',
+      'Przygotuj\u0119 przejrzyst\u0105 stron\u0119 z prost\u0105 \u015bcie\u017ck\u0105 do zapytania, rezerwacji albo rozmowy.',
     buttonLabel: 'Rozpocznij projekt',
   };
 
   if (project.slug === 'cleaning') {
     return {
       ...project,
-      title: 'Uslugi sprzatania',
+      title: 'Usługi sprzątania',
       description:
-        'Strona lokalnej firmy sprzatajacej z katalogiem uslug i flow zamowien przez WhatsApp.',
+        'Strona lokalnej firmy sprzątającej z katalogiem usług i ścieżką zamówienia przez WhatsApp.',
       highlights: [
-        'Interfejs wyboru uslug',
-        'Flow zamowienia przez WhatsApp',
-        'Logika podsumowania zamowienia',
+        'Interfejs wyboru usług',
+        'Ścieżka zamówienia przez WhatsApp',
+        'Logika podsumowania zamówienia',
       ],
       businessSummary:
         'Strona usługowa z wyceną, wyborem usług i szybkim zapytaniem przez WhatsApp.',
-      badges: ['React', 'TypeScript', 'Logika wyceny', 'Flow WhatsApp'],
+      badges: ['React', 'TypeScript', 'Logika wyceny', 'Ścieżka WhatsApp'],
       summary: {
-        projectType: 'Strona dla firmy uslugowej',
-        goal: 'Przejrzyscie pokazac uslugi sprzatania i ulatwic klientom przygotowanie zapytania oraz szybki kontakt z firma.',
+        projectType: 'Strona dla firmy usługowej',
+        goal: 'Przejrzyście pokazać usługi sprzątania i ułatwić klientom przygotowanie zapytania oraz szybki kontakt z firmą.',
         mainFeatures: [
-          'Struktura uslug',
+          'Struktura usług',
           'Logika wyceny',
-          'Flow zapytania w stylu koszyka',
-          'Zamowienie przez WhatsApp',
+          'Ścieżka zapytania w stylu koszyka',
+          'Zamówienie przez WhatsApp',
           'Responsywny layout',
         ],
-        role: 'Projekt i implementacja frontendu, struktura UI, logika interakcji oraz przygotowanie do wdrozenia.',
+        role: 'Projekt i implementacja frontendu, struktura UI, logika interakcji oraz przygotowanie do wdrożenia.',
         stack: project.summary.stack,
         result:
-          'Gotowa produkcyjnie strona z czytelna oferta, interaktywna wycena i bezposrednia sciezka od wyboru uslugi do kontaktu.',
+          'Gotowa produkcyjnie strona z czytelną ofertą, interaktywną wyceną i bezpośrednią ścieżką od wyboru usługi do kontaktu.',
       },
       caseStudy: {
         hero: {
-          title: 'Uslugi sprzatania',
+          title: 'Usługi sprzątania',
           subtitle:
-            'Strona lokalnej firmy sprzatajacej z katalogiem uslug i kompletnym flow zamowienia przez WhatsApp.',
+            'Strona lokalnej firmy sprzątającej z katalogiem usług i kompletną ścieżką zamówienia przez WhatsApp.',
         },
         meta: [
           {
@@ -360,7 +359,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           },
           {
             label: 'Typ',
-            value: 'Strona firmowa z flow zamowienia',
+            value: 'Strona firmowa ze ścieżką zamówienia',
           },
           {
             label: 'Lokalizacja',
@@ -369,7 +368,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             label: 'Zakres',
             value:
-              'Zaprojektowanie prostego i czytelnego flow zamowienia bez rozbudowanego backendu.',
+              'Zaprojektowanie prostej i czytelnej ścieżki zamówienia bez rozbudowanego backendu.',
           },
           {
             label: 'Stack',
@@ -378,48 +377,48 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             label: 'Czas realizacji',
             value:
-              '3 tygodnie (1 tydzien projektowania, 2 tygodnie developmentu)',
+              '3 tygodnie (1 tydzień projektowania, 2 tygodnie developmentu)',
           },
         ],
         content: {
           problem:
-            'Klient nie mial strony internetowej ani uporzadkowanego sposobu prezentacji uslug i przyjmowania zamowien.',
+            'Klient nie miał strony internetowej ani uporządkowanego sposobu prezentacji usług i przyjmowania zamówień.',
           solution:
-            'Zaprojektowalem i wdrozylem strone uslugowa z prostym flow zamowien. Uzytkownik wybiera uslugi, sprawdza szczegoly i dodaje je do zapytania, a system generuje gotowa wiadomosc WhatsApp z podsumowaniem.',
+            'Zaprojektowałem i wdrożyłem stronę usługową z prostą ścieżką zamówień. Użytkownik wybiera usługi, sprawdza szczegóły i dodaje je do zapytania, a system generuje gotową wiadomość WhatsApp z podsumowaniem.',
           result:
-            'Efektem jest szybka i czytelna strona, ktora pomaga klientowi otrzymywac uporzadkowane zapytania przez WhatsApp.',
+            'Efektem jest szybka i czytelna strona, która pomaga klientowi otrzymywać uporządkowane zapytania przez WhatsApp.',
         },
         contributions: {
-          title: 'Co zrobilem',
+          title: 'Co zrobiłem',
           items: [
-            'Zaprojektowalem caly interfejs i UX od podstaw',
-            'Przygotowalem w pelni responsywne widoki (mobile, tablet, desktop)',
-            'Wdrozylem logike koszyka i kalkulacje ceny',
-            'Zaimplementowalem modale ze szczegolami uslug',
-            'Wdrozylem generowanie wiadomosci do WhatsApp',
-            'Zbudowalem kompletny flow zamowienia bez backendu',
-            'Dodalem obsluge wielu wersji jezykowych (EN / ES)',
-            'Wdrozylem motyw jasny i ciemny',
+            'Zaprojektowałem cały interfejs i UX od podstaw',
+            'Przygotowałem w pełni responsywne widoki (mobile, tablet, desktop)',
+            'Wdrożyłem logikę koszyka i kalkulację ceny',
+            'Zaimplementowałem modale ze szczegółami usług',
+            'Wdrożyłem generowanie wiadomości do WhatsApp',
+            'Zbudowałem kompletną ścieżkę zamówienia bez backendu',
+            'Dodałem obsługę wielu wersji językowych (EN / ES)',
+            'Wdrożyłem motyw jasny i ciemny',
           ],
         },
         gallery: [
           {
             title: 'Hero',
             description:
-              'Glowne otwarcie strony z najwazniejsza propozycja wartosci.',
+              'Główne otwarcie strony z najważniejszą propozycją wartości.',
             layout: 'fullWidth',
             images: [
               {
                 index: 3,
-                label: 'Glowne ujecie hero',
+                label: 'Główne ujęcie hero',
                 kind: 'default',
               },
             ],
           },
           {
-            title: 'Responsywnosc',
+            title: 'Responsywność',
             description:
-              'Widoki desktop i mobile pokazujace pelna responsywnosc interfejsu.',
+              'Widoki desktop i mobile pokazujące pełną responsywność interfejsu.',
             layout: 'responsive',
             images: [
               {
@@ -437,46 +436,46 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             title: 'Landing page',
             description:
-              'Sekcje budujace zaufanie i prowadzace uzytkownika przez oferte.',
+              'Sekcje budujące zaufanie i prowadzące użytkownika przez ofertę.',
             layout: 'fullWidth',
             images: [
               {
                 index: 4,
-                label: 'Kroki uslugi i sekcje zaufania',
+                label: 'Kroki usługi i sekcje zaufania',
                 kind: 'default',
               },
             ],
           },
           {
-            title: 'Katalog uslug',
+            title: 'Katalog usług',
             description:
-              'Przejrzysty grid uslug z cenami i dodatkowymi informacjami.',
+              'Przejrzysty grid usług z cenami i dodatkowymi informacjami.',
             layout: 'fullWidth',
             images: [
               {
                 index: 5,
-                label: 'Grid kart uslug',
+                label: 'Grid kart usług',
                 kind: 'default',
               },
             ],
           },
           {
-            title: 'Modal uslugi',
+            title: 'Modal usługi',
             description:
-              'Szczegoly wybranej uslugi przed dodaniem do zapytania.',
+              'Szczegóły wybranej usługi przed dodaniem do zapytania.',
             layout: 'single',
             images: [
               {
                 index: 7,
-                label: 'Modal wybranej uslugi',
+                label: 'Modal wybranej usługi',
                 kind: 'default',
               },
             ],
           },
           {
-            title: 'Podsumowanie zamowienia',
+            title: 'Podsumowanie zamówienia',
             description:
-              'Widok zapytania z wybranymi uslugami, iloscia i suma.',
+              'Widok zapytania z wybranymi usługami, ilością i sumą.',
             layout: 'single',
             images: [
               {
@@ -487,14 +486,14 @@ const projects: Project[] = enContent.projects.map((project) => {
             ],
           },
           {
-            title: 'FAQ i tresci wspierajace',
+            title: 'FAQ i treści wspierające',
             description:
-              'Bloki informacyjne, ktore redukuja bariery przed kontaktem.',
+              'Bloki informacyjne, które redukują bariery przed kontaktem.',
             layout: 'fullWidth',
             images: [
               {
                 index: 6,
-                label: 'Sekcja FAQ i tresci wspierajace',
+                label: 'Sekcja FAQ i treści wspierające',
                 kind: 'default',
               },
             ],
@@ -502,7 +501,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             title: 'Kontakt i konwersja',
             description:
-              'Finalny krok, ktory ulatwia szybkie wyslanie zapytania.',
+              'Finalny krok, który ułatwia szybkie wysłanie zapytania.',
             layout: 'fullWidth',
             images: [
               {
@@ -523,35 +522,35 @@ const projects: Project[] = enContent.projects.map((project) => {
       ...project,
       title: 'Wiejskie zacisze',
       description:
-        'Strona pensjonatu na wsi z prezentacja obiektu i flow rezerwacji przez bezposredni telefon.',
+        'Strona pensjonatu na wsi z prezentacją obiektu i ścieżką rezerwacji przez bezpośredni telefon.',
       highlights: [
         'Projekt oparty na klimacie marki',
-        'Podstrony domkow',
-        'Bezposrednia rezerwacja telefoniczna',
+        'Podstrony domków',
+        'Bezpośrednia rezerwacja telefoniczna',
       ],
       businessSummary:
         'Strona obiektu z ofertą domków, galerią i prostą ścieżką do rezerwacji.',
-      badges: ['Next.js', 'TypeScript', 'Podstawy SEO', 'Flow rezerwacji'],
+      badges: ['Next.js', 'TypeScript', 'Podstawy SEO', 'Ścieżka rezerwacji'],
       summary: {
         projectType: 'Strona dla biznesu wynajmu',
-        goal: 'Pokazac domki, warunki pobytu, galerie i opcje kontaktu dla obiektu wynajmu na wsi.',
+        goal: 'Pokazać domki, warunki pobytu, galerie i opcje kontaktu dla obiektu wynajmu na wsi.',
         mainFeatures: [
-          'Lista domkow',
-          'Podstrony szczegolowe domkow',
+          'Lista domków',
+          'Podstrony szczegółowe domków',
           'Galeria',
           'CTA kontaktowe',
           'Struktura gotowa pod SEO',
         ],
-        role: 'Implementacja frontendu, struktura tresci, responsywny UI, podstawy SEO i wsparcie wdrozenia.',
+        role: 'Implementacja frontendu, struktura treści, responsywny UI, podstawy SEO i wsparcie wdrożenia.',
         stack: project.summary.stack,
         result:
-          'Gotowa produkcyjnie strona wynajmu z uporzadkowanymi podstronami i flow kontaktu pod rezerwacje.',
+          'Gotowa produkcyjnie strona wynajmu z uporządkowanymi podstronami i prostą ścieżką kontaktu przy rezerwacji.',
       },
       caseStudy: {
         hero: {
           title: 'Wiejskie zacisze',
           subtitle:
-            'Strona pensjonatu na wsi skupiona na klimacie miejsca, prezentacji obiektu i bezposredniej rezerwacji telefonicznej.',
+            'Strona pensjonatu na wsi skupiona na klimacie miejsca, prezentacji obiektu i bezpośredniej rezerwacji telefonicznej.',
         },
         meta: [
           {
@@ -569,7 +568,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             label: 'Zakres',
             value:
-              'Zaprojektowanie spokojnego i konwersyjnego UX, ktory prowadzi od przegladania oferty do bezposredniego kontaktu.',
+              'Zaprojektowanie spokojnego i konwersyjnego UX, który prowadzi od przeglądania oferty do bezpośredniego kontaktu.',
           },
           {
             label: 'Stack',
@@ -578,46 +577,46 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             label: 'Czas realizacji',
             value:
-              '3 tygodnie (1 tydzien projektowania, 2 tygodnie developmentu)',
+              '3 tygodnie (1 tydzień projektowania, 2 tygodnie developmentu)',
           },
         ],
         content: {
           problem:
-            'Klient mial przestarzala strone, ktora nie oddawala jakosci obiektu i nie prowadzila uzytkownika do kontaktu.',
+            'Klient miał przestarzałą stronę, która nie oddawała jakości obiektu i nie prowadziła użytkownika do kontaktu.',
           solution:
-            'Zaprojektowalem i wdrozylem strone oparta na klimacie miejsca i czytelnej strukturze oferty. Zamiast formularzy zastosowalem prosty flow rezerwacji oparty o bezposredni telefon.',
+            'Zaprojektowałem i wdrożyłem stronę opartą na klimacie miejsca i czytelnej strukturze oferty. Zamiast formularzy zastosowałem prostą ścieżkę rezerwacji opartą na bezpośrednim kontakcie telefonicznym.',
           result:
-            'Nowa strona poprawia prezentacje oferty i ulatwia szybki kontakt z wlascicielem.',
+            'Nowa strona lepiej pokazuje ofertę i ułatwia szybki kontakt z właścicielem.',
         },
         contributions: {
-          title: 'Co zrobilem',
+          title: 'Co zrobiłem',
           items: [
-            'Zaprojektowalem caly interfejs i UX od podstaw',
-            'Przygotowalem w pelni responsywne widoki (mobile, tablet, desktop)',
-            'Ulozylem karty domkow i szczegolowe podstrony obiektu',
-            'Wdrozylem flow rezerwacji przez bezposredni telefon (bez formularzy)',
-            'Zaprojektowalem sekcje galerii i prezentacji tresci',
-            'Zbudowalem sekcje kontaktu z mapa i kontekstem lokalizacji',
+            'Zaprojektowałem cały interfejs i UX od podstaw',
+            'Przygotowałem w pełni responsywne widoki (mobile, tablet, desktop)',
+            'Ułożyłem karty domków i szczegółowe podstrony obiektu',
+            'Wdrożyłem ścieżkę rezerwacji przez bezpośredni telefon (bez formularzy)',
+            'Zaprojektowałem sekcje galerii i prezentacji treści',
+            'Zbudowałem sekcję kontaktu z mapą i kontekstem lokalizacji',
           ],
         },
         gallery: [
           {
             title: 'Hero',
             description:
-              'Glowne ujecie projektu z widocznym CTA i klimatem miejsca.',
+              'Główne ujęcie projektu z widocznym CTA i klimatem miejsca.',
             layout: 'fullWidth',
             images: [
               {
                 index: 3,
-                label: 'Glowne ujecie strony',
+                label: 'Główne ujęcie strony',
                 kind: 'default',
               },
             ],
           },
           {
-            title: 'Responsywnosc',
+            title: 'Responsywność',
             description:
-              'Prezentacja widoku desktop i mobile z dopasowaniem ukladu.',
+              'Prezentacja widoków desktop i mobile z dopasowaniem układu.',
             layout: 'responsive',
             images: [
               {
@@ -635,7 +634,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             title: 'Sekcja o obiekcie',
             description:
-              'Blok storytellingowy pokazujacy klimat i charakter miejsca.',
+              'Blok storytellingowy pokazujący klimat i charakter miejsca.',
             layout: 'fullWidth',
             images: [
               {
@@ -646,21 +645,21 @@ const projects: Project[] = enContent.projects.map((project) => {
             ],
           },
           {
-            title: 'Podglad domkow',
+            title: 'Podgląd domków',
             description:
-              'Karty domkow z podstawowymi informacjami i przejsciem do szczegolow.',
+              'Karty domków z podstawowymi informacjami i przejściem do szczegółów.',
             layout: 'fullWidth',
             images: [
               {
                 index: 5,
-                label: 'Karty domkow',
+                label: 'Karty domków',
                 kind: 'default',
               },
             ],
           },
           {
             title: 'Galeria',
-            description: 'Sekcja galerii prezentujaca obiekt i jego otoczenie.',
+            description: 'Sekcja galerii prezentująca obiekt i jego otoczenie.',
             layout: 'fullWidth',
             images: [
               {
@@ -673,7 +672,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             title: 'Sekcja CTA',
             description:
-              'Finalny blok konwersyjny prowadzacy do bezposredniego kontaktu telefonicznego.',
+              'Finalny blok konwersyjny prowadzący do bezpośredniego kontaktu telefonicznego.',
             layout: 'fullWidth',
             images: [
               {
@@ -686,7 +685,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             title: 'Kontakt i lokalizacja',
             description:
-              'Blok kontaktowy z numerami telefonu, mapa i kontekstem lokalizacji.',
+              'Blok kontaktowy z numerami telefonu, mapą i kontekstem lokalizacji.',
             layout: 'fullWidth',
             images: [
               {
@@ -697,14 +696,14 @@ const projects: Project[] = enContent.projects.map((project) => {
             ],
           },
           {
-            title: 'Szczegoly domku',
+            title: 'Szczegóły domku',
             description:
-              'Podstrona szczegolowa z opisem, zdjeciami i jasna sciezka kontaktu.',
+              'Podstrona szczegółowa z opisem, zdjęciami i jasną ścieżką kontaktu.',
             layout: 'fullWidth',
             images: [
               {
                 index: 9,
-                label: 'Podstrona szczegolowa domku',
+                label: 'Podstrona szczegółowa domku',
                 kind: 'default',
               },
             ],
@@ -720,35 +719,35 @@ const projects: Project[] = enContent.projects.map((project) => {
       ...project,
       title: 'Aplikacja wynajmu aut',
       description:
-        'Aplikacja webowa do przegladania, filtrowania i wysylania zapytan o wynajem auta.',
+        'Aplikacja webowa do przeglądania, filtrowania i wysyłania zapytań o wynajem auta.',
       highlights: [
         'Dynamiczny system filtrowania',
         'Katalog oparty o API',
-        'Flow zapytania o rezerwacje',
+        'Ścieżka zapytania o rezerwację',
       ],
       businessSummary:
         'Katalog wynajmu aut z filtrowaniem, ulubionymi i zapytaniem o rezerwację.',
-      badges: ['React', 'API', 'Filtrowanie', 'Zapytanie o rezerwacje'],
+      badges: ['React', 'API', 'Filtrowanie', 'Zapytanie o rezerwację'],
       summary: {
         projectType: 'Aplikacja katalogowa',
-        goal: 'Stworzyc interfejs wynajmu aut, w ktorym uzytkownik moze przegladac auta, filtrowac oferty i wysylac zapytanie o rezerwacje.',
+        goal: 'Stworzyć interfejs wynajmu aut, w którym użytkownik może przeglądać auta, filtrować oferty i wysyłać zapytanie o rezerwację.',
         mainFeatures: [
           'Katalog aut',
           'Filtrowanie',
           'Ulubione',
-          'Flow zapytania o rezerwacje',
+          'Ścieżka zapytania o rezerwację',
           'Integracja API',
         ],
-        role: 'Implementacja frontendu, logika UI, obsluga danych z API i responsywny layout.',
+        role: 'Implementacja frontendu, logika UI, obsługa danych z API i responsywny layout.',
         stack: project.summary.stack,
         result:
-          'Aplikacja katalogowa z uporzadkowanym przegladaniem ofert, wygodnym filtrowaniem i czytelnym flow zapytania.',
+          'Aplikacja katalogowa z uporządkowanym przeglądaniem ofert, wygodnym filtrowaniem i czytelną ścieżką zapytania.',
       },
       caseStudy: {
         hero: {
           title: 'Aplikacja wynajmu aut',
           subtitle:
-            'Aplikacja webowa do przegladania, filtrowania i rezerwacji samochodow, oparta o dane z API.',
+            'Aplikacja webowa do przeglądania, filtrowania i rezerwacji samochodów, oparta o dane z API.',
         },
         meta: [
           {
@@ -761,12 +760,12 @@ const projects: Project[] = enContent.projects.map((project) => {
           },
           {
             label: 'Lokalizacja',
-            value: 'Projekt miedzynarodowy',
+            value: 'Projekt międzynarodowy',
           },
           {
             label: 'Zakres',
             value:
-              'Implementacja dynamicznego katalogu z filtrowaniem, flow rezerwacji i integracja API.',
+              'Implementacja dynamicznego katalogu z filtrowaniem, ścieżką rezerwacji i integracją API.',
           },
           {
             label: 'Stack',
@@ -779,28 +778,28 @@ const projects: Project[] = enContent.projects.map((project) => {
         ],
         content: {
           problem:
-            'Uzytkownicy potrzebowali szybkiego i intuicyjnego sposobu na przegladanie aut, filtrowanie ofert i wysylanie zapytan o rezerwacje.',
+            'Użytkownicy potrzebowali szybkiego i intuicyjnego sposobu na przeglądanie aut, filtrowanie ofert i wysyłanie zapytań o rezerwację.',
           solution:
-            'Na bazie dostarczonego projektu graficznego przygotowalem frontend z dynamicznym filtrowaniem i integracja API. Uzytkownik moze przegladac oferty, filtrowac wyniki, sprawdzac szczegoly oraz wysylac zapytanie z walidacja.',
+            'Na bazie dostarczonego projektu graficznego przygotowałem frontend z dynamicznym filtrowaniem i integracją API. Użytkownik może przeglądać oferty, filtrować wyniki, sprawdzać szczegóły oraz wysyłać zapytanie z walidacją.',
           result:
-            'Powstala funkcjonalna aplikacja, ktora prezentuje praktyczne wykorzystanie API, logiki filtrowania i realnych flow uzytkownika.',
+            'Powstała funkcjonalna aplikacja, która pokazuje praktyczne wykorzystanie API, logiki filtrowania i realnej ścieżki użytkownika.',
         },
         contributions: {
-          title: 'Co zrobilem',
+          title: 'Co zrobiłem',
           items: [
-            'Zaimplementowalem caly frontend na podstawie projektu z Figma',
-            'Zbudowalem dynamiczny katalog aut oparty o dane z API',
-            'Wdrozylem system filtrowania (marka, cena, przebieg)',
-            'Zaimplementowalem funkcje ulubionych',
-            'Przygotowalem strony szczegolowe pojazdow',
-            'Zbudowalem formularz rezerwacji z walidacja i date pickerem',
-            'Zintegrowalem API do pobierania i renderowania danych',
+            'Zaimplementowałem cały frontend na podstawie projektu z Figma',
+            'Zbudowałem dynamiczny katalog aut oparty o dane z API',
+            'Wdrożyłem system filtrowania (marka, cena, przebieg)',
+            'Zaimplementowałem funkcję ulubionych',
+            'Przygotowałem strony szczegółowe pojazdów',
+            'Zbudowałem formularz rezerwacji z walidacją i date pickerem',
+            'Zintegrowałem API do pobierania i renderowania danych',
           ],
         },
         gallery: [
           {
             title: 'Hero',
-            description: 'Sekcja otwierajaca z glownym przekazem aplikacji.',
+            description: 'Sekcja otwierająca z głównym przekazem aplikacji.',
             layout: 'fullWidth',
             images: [
               {
@@ -811,7 +810,7 @@ const projects: Project[] = enContent.projects.map((project) => {
             ],
           },
           {
-            title: 'Responsywnosc',
+            title: 'Responsywność',
             description: 'Widok aplikacji na desktopie i mobile.',
             layout: 'responsive',
             images: [
@@ -828,9 +827,9 @@ const projects: Project[] = enContent.projects.map((project) => {
             ],
           },
           {
-            title: 'Przeglad katalogu',
+            title: 'Przegląd katalogu',
             description:
-              'Widok katalogu samochodow z wyszukiwaniem i przegladaniem ofert.',
+              'Widok katalogu samochodów z wyszukiwaniem i przeglądaniem ofert.',
             layout: 'single',
             images: [
               {
@@ -854,7 +853,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           },
           {
             title: 'Ulubione i zaznaczenia',
-            description: 'Stan zaznaczonych ofert i obsluga listy ulubionych.',
+            description: 'Stan zaznaczonych ofert i obsługa listy ulubionych.',
             layout: 'single',
             images: [
               {
@@ -865,27 +864,27 @@ const projects: Project[] = enContent.projects.map((project) => {
             ],
           },
           {
-            title: 'Szczegoly pojazdu',
+            title: 'Szczegóły pojazdu',
             description:
-              'Podstrona szczegolowa z parametrami i informacjami o aucie.',
+              'Podstrona szczegółowa z parametrami i informacjami o aucie.',
             layout: 'single',
             images: [
               {
                 index: 6,
-                label: 'Widok szczegolow auta',
+                label: 'Widok szczegółów auta',
                 kind: 'default',
               },
             ],
           },
           {
-            title: 'Flow zapytania',
+            title: 'Ścieżka zapytania',
             description:
-              'Wysylanie zapytania o wynajem bezposrednio ze strony szczegolowej.',
+              'Wysyłanie zapytania o wynajem bezpośrednio ze strony szczegółowej.',
             layout: 'single',
             images: [
               {
                 index: 7,
-                label: 'Formularz zapytania o rezerwacje',
+                label: 'Formularz zapytania o rezerwację',
                 kind: 'default',
               },
             ],
@@ -899,37 +898,37 @@ const projects: Project[] = enContent.projects.map((project) => {
   if (project.slug === 'travel') {
     return {
       ...project,
-      title: 'Historie z podrozy',
+      title: 'Historie z podróży',
       description:
-        'Fullstack aplikacja webowa do publikowania historii podrozniczych z profilami uzytkownikow i autoryzacja.',
+        'Fullstackowa aplikacja webowa do publikowania historii podróżniczych z profilami użytkowników i autoryzacją.',
       highlights: [
         'System autoryzacji',
-        'Flow publikacji historii',
-        'System profili uzytkownika',
+        'Ścieżka publikacji historii',
+        'System profili użytkownika',
       ],
       businessSummary:
         'Platforma podróżnicza z logowaniem, profilami i publikowaniem historii.',
       badges: ['React', 'Node.js', 'MongoDB', 'Autoryzacja'],
       summary: {
         projectType: 'Platforma fullstack',
-        goal: 'Zbudowac platforme historii podrozniczych z kontami uzytkownikow, profilami i publikowaniem tresci.',
+        goal: 'Zbudować platformę historii podróżniczych z kontami użytkowników, profilami i publikowaniem treści.',
         mainFeatures: [
           'Autoryzacja',
-          'Profile uzytkownikow',
+          'Profile użytkowników',
           'Publikowanie historii',
           'Backend API',
-          'Integracja z baza danych',
+          'Integracja z bazą danych',
         ],
-        role: 'Wklad fullstack obejmujacy frontend, backend API, strukture danych i implementacje funkcji.',
+        role: 'Wkład fullstack obejmujący frontend, backend API, strukturę danych i implementację funkcji.',
         stack: project.summary.stack,
         result:
-          'Platforma fullstack z flow opartym o konta uzytkownikow, publikowanie tresci i uporzadkowana integracje backendu.',
+          'Platforma fullstack z kontami użytkowników, publikowaniem treści i uporządkowaną integracją backendu.',
       },
       caseStudy: {
         hero: {
-          title: 'Historie z podrozy',
+          title: 'Historie z podróży',
           subtitle:
-            'Fullstack platforma do publikowania historii podrozniczych z autoryzacja, profilami i zarzadzaniem trescia.',
+            'Fullstackowa platforma do publikowania historii podróżniczych z autoryzacją, profilami i zarządzaniem treścią.',
         },
         meta: [
           {
@@ -947,7 +946,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             label: 'Zakres',
             value:
-              'Budowa skalowalnej platformy tresciowej z autoryzacja, publikowaniem historii i profilem uzytkownika.',
+              'Budowa skalowalnej platformy treściowej z autoryzacją, publikowaniem historii i profilem użytkownika.',
           },
           {
             label: 'Stack',
@@ -960,49 +959,49 @@ const projects: Project[] = enContent.projects.map((project) => {
         ],
         content: {
           problem:
-            'Projekt wymagal stworzenia platformy fullstack, w ktorej uzytkownicy moga rejestrowac konta, publikowac historie, zarzadzac profilem i wchodzic w interakcje z trescia.',
+            'Projekt wymagał stworzenia platformy fullstack, w której użytkownicy mogą rejestrować konta, publikować historie, zarządzać profilem i wchodzić w interakcje z treścią.',
           solution:
-            'W zespole 12-osobowym realizowalem zadania frontendowe i wspieralem backend. Zaimplementowalem kluczowe komponenty UI, miedzy innymi naglowki, modale, karty historii i flow edycji profilu, oraz pracowalem nad wspolnymi strukturami danych.',
+            'W zespole 12-osobowym realizowałem zadania frontendowe i wspierałem backend. Zaimplementowałem kluczowe komponenty UI, między innymi nagłówki, modale, karty historii i ścieżkę edycji profilu, oraz pracowałem nad wspólnymi strukturami danych.',
           result:
-            'Platforma obsluguje autoryzacje, publikowanie i interakcje uzytkownikow, pokazujac praktyczna architekture fullstack i prace zespolowa.',
+            'Platforma obsługuje autoryzację, publikowanie i interakcje użytkowników, pokazując praktyczną architekturę fullstack i pracę zespołową.',
         },
         contributions: {
-          title: 'Co zrobilem',
+          title: 'Co zrobiłem',
           items: [
-            'Zaimplementowalem kilka wariantow naglowka dla roznych kontekstow strony',
-            'Zbudowalem komponent modala potwierdzajacego (ConfirmModal)',
-            'Przygotowalem komponenty kart historii',
-            'Zaimplementowalem strone edycji profilu',
-            'Wdrozylem logike aktywnej nawigacji na podstawie trasy',
-            'Zintegrowalem system SVG sprite',
-            'Zoptymalizowalem zasoby obrazow i strukture katalogu public',
-            'Wsparlem typowanie backendu i wspolne struktury danych',
-            'Dodalem dokumentacje projektu (README)',
+            'Zaimplementowałem kilka wariantów nagłówka dla różnych kontekstów strony',
+            'Zbudowałem komponent modala potwierdzającego (ConfirmModal)',
+            'Przygotowałem komponenty kart historii',
+            'Zaimplementowałem stronę edycji profilu',
+            'Wdrożyłem logikę aktywnej nawigacji na podstawie trasy',
+            'Zintegrowałem system SVG sprite',
+            'Zoptymalizowałem zasoby obrazów i strukturę katalogu public',
+            'Wsparłem typowanie backendu i wspólne struktury danych',
+            'Dodałem dokumentację projektu (README)',
           ],
         },
         gallery: [
           {
-            title: 'Hero - stan goscia',
+            title: 'Hero – stan gościa',
             description:
-              'Publiczny widok startowy zapraszajacy nowych uzytkownikow.',
+              'Publiczny widok startowy zapraszający nowych użytkowników.',
             layout: 'single',
             images: [
               {
                 index: 3,
-                label: 'Hero - stan goscia',
+                label: 'Hero – stan gościa',
                 kind: 'default',
               },
             ],
           },
           {
-            title: 'Hero - stan zalogowany',
+            title: 'Hero – stan zalogowany',
             description:
-              'Widok po zalogowaniu z rozszerzona nawigacja i dodatkowymi akcjami.',
+              'Widok po zalogowaniu z rozszerzoną nawigacją i dodatkowymi akcjami.',
             layout: 'single',
             images: [
               {
                 index: 5,
-                label: 'Hero - stan zalogowany',
+                label: 'Hero – stan zalogowany',
                 kind: 'default',
               },
             ],
@@ -1010,7 +1009,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             title: 'Autoryzacja',
             description:
-              'Flow logowania dajacy dostep do publikacji i funkcji profilu.',
+              'Ścieżka logowania dająca dostęp do publikacji i funkcji profilu.',
             layout: 'single',
             images: [
               {
@@ -1021,9 +1020,9 @@ const projects: Project[] = enContent.projects.map((project) => {
             ],
           },
           {
-            title: 'Responsywnosc',
+            title: 'Responsywność',
             description:
-              'Dopasowanie glownego widoku aplikacji do desktopu i mobile.',
+              'Dopasowanie głównego widoku aplikacji do desktopu i mobile.',
             layout: 'responsive',
             images: [
               {
@@ -1039,9 +1038,9 @@ const projects: Project[] = enContent.projects.map((project) => {
             ],
           },
           {
-            title: 'Feed i odkrywanie tresci',
+            title: 'Feed i odkrywanie treści',
             description:
-              'Glowny feed historii wraz z sekcjami odkrywania wedlug kategorii.',
+              'Główny feed historii wraz z sekcjami odkrywania według kategorii.',
             layout: 'single',
             images: [
               {
@@ -1052,34 +1051,34 @@ const projects: Project[] = enContent.projects.map((project) => {
             ],
           },
           {
-            title: 'Spolecznosc podroznikow',
+            title: 'Społeczność podróżników',
             description:
-              'Katalog autorow ulatwiajacy przegladanie profili uzytkownikow.',
+              'Katalog autorów ułatwiający przeglądanie profili użytkowników.',
             layout: 'single',
             images: [
               {
                 index: 7,
-                label: 'Widok spolecznosci',
+                label: 'Widok społeczności',
                 kind: 'default',
               },
             ],
           },
           {
-            title: 'Profil uzytkownika',
+            title: 'Profil użytkownika',
             description:
-              'Obszar profilu do zarzadzania aktywnoscia i zapisanymi tresciami.',
+              'Obszar profilu do zarządzania aktywnością i zapisanymi treściami.',
             layout: 'single',
             images: [
               {
                 index: 8,
-                label: 'Widok profilu uzytkownika',
+                label: 'Widok profilu użytkownika',
                 kind: 'default',
               },
             ],
           },
           {
             title: 'Tworzenie historii',
-            description: 'Flow publikacji nowych historii podrozniczych.',
+            description: 'Ścieżka publikacji nowych historii podróżniczych.',
             layout: 'single',
             images: [
               {
@@ -1090,14 +1089,14 @@ const projects: Project[] = enContent.projects.map((project) => {
             ],
           },
           {
-            title: 'Szczegoly historii',
+            title: 'Szczegóły historii',
             description:
-              'Widok artykulu z metadanymi autora i kontekstem kategorii.',
+              'Widok artykułu z metadanymi autora i kontekstem kategorii.',
             layout: 'single',
             images: [
               {
                 index: 10,
-                label: 'Widok szczegolow historii',
+                label: 'Widok szczegółów historii',
                 kind: 'default',
               },
             ],
@@ -1112,30 +1111,31 @@ const projects: Project[] = enContent.projects.map((project) => {
 });
 
 const contact: LocaleContent['contact'] = {
-  title: 'Porozmawiajmy o Twoim projekcie',
+  title: 'Opisz sw\u00f3j projekt',
   intro:
-    'Napisz krotko, czego potrzebujesz: strony firmowej, landing page, formularza kontaktowego, flow rezerwacji albo aplikacji webowej. Odpowiem z pierwsza ocena zakresu, terminu i mozliwego budzetu.',
+    'Napisz kr\u00f3tko, czym zajmuje si\u0119 Twoja firma, czego potrzebujesz i kiedy chcesz wystartowa\u0107. Odpowiem z pierwsz\u0105 ocen\u0105 zakresu, terminu i mo\u017cliwego bud\u017cetu.',
   helperText:
-    'Opisz swoj pomysl, etap projektu i najwazniejsze funkcje. Mozesz tez dodac link do obecnej strony albo przyklady stron, ktore Ci sie podobaja.',
-  namePlaceholder: 'Twoje im\u0119',
+    'Mo\u017cesz doda\u0107 typ projektu, planowany termin, potrzebne funkcje i linki do obecnej strony lub inspiracji.',
+  socialTitle: 'Znajdziesz mnie te\u017c tutaj:',
+  namePlaceholder: 'Twoje imi\u0119',
   emailPlaceholder: 'twoj@email.com',
   messagePlaceholder:
-    'Napisz, co chcesz zbudowa\u0107, jaki masz cel i kiedy chcesz wystartowa\u0107.',
-  submitLabel: 'Wyslij szczegoly projektu',
+    'Napisz, co chcesz przygotowa\u0107, jaki masz cel i kiedy chcesz wystartowa\u0107.',
+  submitLabel: 'Wy\u015blij szczeg\u00f3\u0142y projektu',
   formTitle: 'Wy\u015blij wiadomo\u015b\u0107',
-  nameLabel: 'Imie',
+  nameLabel: 'Imi\u0119',
   emailLabel: 'Email',
-  messageLabel: 'Wiadomosc',
+  messageLabel: 'Wiadomo\u015b\u0107',
   validation: {
-    nameInvalid: 'Imie musi miec 3-18 znakow i zawierac tylko litery.',
+    nameInvalid: 'Imi\u0119 musi mie\u0107 3–18 znak\u00f3w.',
     emailInvalid: 'Wpisz poprawny adres email.',
-    messageInvalid: 'Wiadomosc musi miec 5-500 znakow.',
+    messageInvalid: 'Wiadomo\u015b\u0107 musi mie\u0107 5–500 znak\u00f3w.',
   },
   mailto: {
     subject: 'Zapytanie o projekt',
-    nameLabel: 'Imie',
+    nameLabel: 'Imi\u0119',
     emailLabel: 'Email',
-    messageLabel: 'Wiadomosc',
+    messageLabel: 'Wiadomo\u015b\u0107',
   },
   links: {
     backHome: 'Wr\u00f3\u0107 na stron\u0119 g\u0142\u00f3wn\u0105',
@@ -1151,56 +1151,96 @@ const ui: LocaleContent['ui'] = {
     home: 'Start',
     about: 'O mnie',
     projects: 'Realizacje',
-    services: 'Uslugi',
+    services: 'Us\u0142ugi',
     packages: 'Pakiety',
     faq: 'FAQ',
     contact: 'Kontakt',
-    openMenu: 'Otworz menu',
+    openMenu: 'Otw\u00f3rz menu',
     closeMenu: 'Zamknij menu',
     mobileMenu: 'Menu nawigacji mobilnej',
   },
   projectsSection: {
     previousProject: 'Poprzedni projekt',
-    nextProject: 'Nastepny projekt',
+    nextProject: 'Nast\u0119pny projekt',
   },
   projectCard: {
-    viewCaseStudy: 'Szczegóły',
-    liveWebsite: 'Zobacz strone',
+    viewCaseStudy: 'Szczeg\u00f3\u0142y',
+    liveWebsite: 'Zobacz stron\u0119',
   },
   projectDetail: {
     projectSummaryTitle: 'Podsumowanie projektu',
     projectType: 'Typ projektu',
     goal: 'Cel',
-    mainFeatures: 'Glowne funkcje',
+    mainFeatures: 'G\u0142\u00f3wne funkcje',
     myRole: 'Moja rola',
     stack: 'Stack',
     result: 'Rezultat',
     problem: 'Problem',
-    solution: 'Rozwiazanie',
+    solution: 'Rozwi\u0105zanie',
     outcome: 'Efekt',
     contributions: 'Zakres prac',
     gallery: 'Galeria',
     liveProject: 'Zobacz projekt',
-    backToProjects: 'Wroc do realizacji',
+    backToProjects: 'Wr\u00f3\u0107 do realizacji',
     projectNotFoundTitle: 'Nie znaleziono projektu',
     projectNotFoundDescription:
-      'Projekt, ktorego szukasz, nie istnieje albo zostal usuniety.',
-    backToHome: 'Wroc na strone glowna',
+      'Projekt, kt\u00f3rego szukasz, nie istnieje albo zosta\u0142 usuni\u0119ty.',
+    backToHome: 'Wr\u00f3\u0107 na stron\u0119 g\u0142\u00f3wn\u0105',
     projectCtaFallbackTitle: 'Potrzebujesz podobnego projektu?',
     projectCtaFallbackDescription:
-      'Napisz krotko, czego potrzebujesz, a odpowiem z orientacyjnym zakresem, terminem i cena startowa.',
-    projectCtaFallbackButton: 'Opisz swoj projekt',
+      'Napisz kr\u00f3tko, czego potrzebujesz, a wr\u00f3c\u0119 z pierwsz\u0105 ocen\u0105 zakresu.',
+    projectCtaFallbackButton: 'Opisz sw\u00f3j projekt',
   },
   common: {
-    backToTop: 'Wroc na gore',
-    profilePhoto: 'Oleksandr Alexandroff - fullstack developer',
-    homeAriaLabel: 'Strona glowna',
+    backToTop: 'Wr\u00f3\u0107 na g\u00f3r\u0119',
+    profilePhoto: 'Oleksandr Aleksandrov \u2013 fullstack developer',
+    homeAriaLabel: 'Strona g\u0142\u00f3wna',
+    logoAlt: 'Logo OA',
+  },
+  footer: {
+    copyright: '\u00a9 {year} Loading. Wszelkie prawa zastrze\u017cone.',
   },
   notFound: {
     title: 'Nie znaleziono strony',
     description:
-      'Strona, ktorej szukasz, nie istnieje albo zostala przeniesiona.',
-    backHome: 'Wroc na strone glowna',
+      'Strona, kt\u00f3rej szukasz, nie istnieje albo zosta\u0142a przeniesiona.',
+    backHome: 'Wr\u00f3\u0107 na stron\u0119 g\u0142\u00f3wn\u0105',
+  },
+};
+
+const seo: LocaleContent['seo'] = {
+  root: {
+    title: 'Alexandroff \u2013 strony dla ma\u0142ych firm us\u0142ugowych',
+    titleTemplate: '%s | Alexandroff',
+    description:
+      'Projektuj\u0119 szybkie, responsywne strony oraz proste \u015bcie\u017cki kontaktu i rezerwacji dla ma\u0142ych firm us\u0142ugowych. Pomagam uporz\u0105dkowa\u0107 ofert\u0119, przygotowa\u0107 podstawy SEO i bezpiecznie wdro\u017cy\u0107 stron\u0119.',
+    openGraphTitle: 'Alexandroff \u2013 strony dla ma\u0142ych firm us\u0142ugowych',
+    openGraphDescription:
+      'Szybkie strony, czytelna oferta i prostszy kontakt z klientami dla ma\u0142ych firm us\u0142ugowych.',
+    twitterTitle: 'Alexandroff \u2013 strony dla ma\u0142ych firm us\u0142ugowych',
+    twitterDescription:
+      'Szybkie strony, czytelna oferta i prostszy kontakt z klientami dla ma\u0142ych firm us\u0142ugowych.',
+  },
+  contact: {
+    title: 'Kontakt',
+    description:
+      'Napisz, je\u015bli potrzebujesz strony, formularza kontaktowego, zapyta\u0144 o rezerwacj\u0119 albo od\u015bwie\u017cenia obecnej witryny.',
+    openGraphTitle: 'Kontakt \u2013 Alexandroff',
+    openGraphDescription:
+      'Opisz sw\u00f3j projekt, a wr\u00f3c\u0119 z pierwsz\u0105 ocen\u0105 zakresu, terminu i mo\u017cliwego bud\u017cetu.',
+  },
+  projects: {
+    notFoundTitle: 'Nie znaleziono projektu',
+    fallbackDescription:
+      'Wybrana realizacja z portfolio Alexandroff.',
+    openGraphTitleSuffix: '\u2013 Realizacja',
+  },
+  jsonLd: {
+    websiteDescription:
+      'Portfolio i oferta tworzenia stron dla ma\u0142ych firm us\u0142ugowych.',
+    personJobTitle: 'Fullstack Developer',
+    professionalServiceDescription:
+      'Pomagam ma\u0142ym firmom us\u0142ugowym przygotowa\u0107 szybkie strony, czyteln\u0105 ofert\u0119 i prost\u0105 \u015bcie\u017ck\u0119 kontaktu lub rezerwacji.',
   },
 };
 
@@ -1210,4 +1250,14 @@ export const plContent: LocaleContent = {
   projects,
   contact,
   ui,
+  seo,
 };
+
+
+
+
+
+
+
+
+

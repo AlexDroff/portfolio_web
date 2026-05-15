@@ -5,7 +5,7 @@ import { siteContent } from "@/data/locales";
 import styles from "./not-found.module.css";
 
 export default function NotFoundPage() {
-  const { notFound } = siteContent.ui;
+  const { common, notFound } = siteContent.ui;
 
   return (
     <main className={styles.main}>
@@ -14,7 +14,7 @@ export default function NotFoundPage() {
           src="/logo.svg"
           width={48}
           height={48}
-          alt="OA Studio logo"
+          alt={common.logoAlt}
           className={styles.logo}
         />
 

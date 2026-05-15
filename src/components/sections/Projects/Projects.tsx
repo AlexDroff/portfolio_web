@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import {
   useCallback,
@@ -10,13 +10,24 @@ import { Container } from "@/components/ui/Container/Container";
 import { Section } from "@/components/ui/Section/Section";
 import styles from "./Projects.module.css";
 import { ProjectCard } from "@/components/ui/ProjectCard/ProjectCard";
-import { homeContent } from "@/data/home";
-import { projects } from "@/data/projects";
-import { siteContent } from "@/data/locales";
+import type { Locale, LocaleContent } from "@/data/locales";
+import type { Project } from "@/types/project";
 
-export const Projects = () => {
-  const { projects: projectsContent } = homeContent;
-  const { projectsSection } = siteContent.ui;
+type ProjectsProps = {
+  locale: Locale;
+  projectsContent: LocaleContent["home"]["projects"];
+  projectsSectionLabels: LocaleContent["ui"]["projectsSection"];
+  projectCardLabels: LocaleContent["ui"]["projectCard"];
+  projects: Project[];
+};
+
+export const Projects = ({
+  locale,
+  projectsContent,
+  projectsSectionLabels,
+  projectCardLabels,
+  projects,
+}: ProjectsProps) => {
   const trackRef = useRef<HTMLUListElement>(null);
   const frameRef = useRef<number | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -133,7 +144,7 @@ export const Projects = () => {
               className={`${styles.arrowButton} ${styles.arrowButtonPrev}`}
               onClick={handlePrevClick}
               disabled={!canScrollPrev}
-              aria-label={projectsSection.previousProject}
+              aria-label={projectsSectionLabels.previousProject}
             >
               <span
                 className={`${styles.arrowIcon} ${styles.arrowIconPrev}`}
@@ -153,6 +164,9 @@ export const Projects = () => {
                   data-project-slide="true"
                 >
                   <ProjectCard
+                    locale={locale}
+                    viewCaseStudyLabel={projectCardLabels.viewCaseStudy}
+                    liveWebsiteLabel={projectCardLabels.liveWebsite}
                     slug={project.slug}
                     title={project.title}
                     image={project.cardImage}
@@ -169,7 +183,7 @@ export const Projects = () => {
               className={`${styles.arrowButton} ${styles.arrowButtonNext}`}
               onClick={handleNextClick}
               disabled={!canScrollNext}
-              aria-label={projectsSection.nextProject}
+              aria-label={projectsSectionLabels.nextProject}
             >
               <span
                 className={`${styles.arrowIcon} ${styles.arrowIconNext}`}
@@ -182,4 +196,3 @@ export const Projects = () => {
     </Section>
   );
 };
-

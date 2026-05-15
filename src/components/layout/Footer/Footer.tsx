@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import type { MouseEvent } from "react";
 import { LogoAnimated } from "@/components/ui/LogoAnimated/LogoAnimated";
@@ -6,20 +6,28 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import { Container } from "@/components/ui/Container/Container";
-import { siteContent } from "@/data/locales";
+import type { Locale, LocaleContent } from "@/data/locales";
+import { getLocalizedPath } from "@/data/locales";
 import styles from "./Footer.module.css";
 
-export const Footer = () => {
+type FooterProps = {
+  locale: Locale;
+  common: LocaleContent["ui"]["common"];
+  footer: LocaleContent["ui"]["footer"];
+};
+
+export const Footer = ({ locale, common, footer }: FooterProps) => {
   const pathname = usePathname();
-  const { common } = siteContent.ui;
   const year = new Date().getFullYear();
+  const homePath = getLocalizedPath(locale, "/");
+
   const handleLogoClick = (event: MouseEvent<HTMLAnchorElement>) => {
-    if (pathname !== "/") {
+    if (pathname !== homePath) {
       return;
     }
 
     event.preventDefault();
-    window.history.replaceState(null, "", "/");
+    window.history.replaceState(null, "", homePath);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -28,19 +36,16 @@ export const Footer = () => {
       <Container>
         <div className={styles.inner}>
           <Link
-            href="/"
+            href={homePath}
             className={styles.logoLink}
             aria-label={common.homeAriaLabel}
             onClick={handleLogoClick}
           >
             <LogoAnimated />
           </Link>
-          <p className={styles.copy}>
-            © {year} Loading. Wszelkie prawa zastrzeżone.
-          </p>
+          <p className={styles.copy}>{footer.copyright.replace("{year}", String(year))}</p>
         </div>
       </Container>
     </footer>
   );
 };
-

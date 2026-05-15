@@ -2,24 +2,29 @@
 
 import { siteConfig } from "@/config/site";
 import { ContactPageClient } from "./ContactPageClient";
+import { getContent, getLocalizedPath } from "@/data/locales";
+
+const content = getContent("pl");
 
 export const metadata: Metadata = {
-  title: "Kontakt",
-  description:
-    "Napisz do Alexandroff w sprawie strony internetowej, flow rezerwacji, formularza kontaktowego albo aplikacji webowej.",
+  title: content.seo.contact.title,
+  description: content.seo.contact.description,
   alternates: {
-    canonical: "/contact",
+    canonical: getLocalizedPath("pl", "/contact"),
+    languages: {
+      pl: getLocalizedPath("pl", "/contact"),
+      en: getLocalizedPath("en", "/contact"),
+      uk: getLocalizedPath("uk", "/contact"),
+      "x-default": getLocalizedPath("pl", "/contact"),
+    },
   },
   openGraph: {
-    title: "Kontakt – Alexandroff",
-    description:
-      "Wyślij krótki opis projektu i otrzymaj orientacyjny zakres, termin oraz cenę startową.",
-    url: `${siteConfig.url}/contact`,
+    title: content.seo.contact.openGraphTitle,
+    description: content.seo.contact.openGraphDescription,
+    url: `${siteConfig.url}${getLocalizedPath("pl", "/contact")}`,
   },
 };
 
 export default function ContactPage() {
-  return <ContactPageClient />;
+  return <ContactPageClient locale="pl" contact={content.contact} />;
 }
-
-

@@ -1,6 +1,6 @@
 "use client";
 
-import type { MouseEvent } from "react";
+import type { FocusEvent, MouseEvent } from "react";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -8,17 +8,64 @@ import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/Button/Button";
 import { Container } from "@/components/ui/Container/Container";
 import { LogoAnimated } from "@/components/ui/LogoAnimated/LogoAnimated";
-import { siteContent } from "@/data/locales";
+import type { Locale, LocaleContent } from "@/data/locales";
+import { getLanguageSwitchPath, getLocalizedPath } from "@/data/locales";
 import { scrollToHashTarget } from "@/utils/scrollToHashTarget";
 
 import styles from "./Header.module.css";
 
-export const Header = () => {
-  const { navigation } = siteContent.ui;
-  const { hero } = siteContent.home;
+type HeaderProps = {
+  locale: Locale;
+  navigation: LocaleContent["ui"]["navigation"];
+  hero: LocaleContent["home"]["hero"];
+};
+
+export const Header = ({ locale, navigation, hero }: HeaderProps) => {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDesktopLanguageOpen, setIsDesktopLanguageOpen] = useState(false);
+  const [isMobileLanguageOpen, setIsMobileLanguageOpen] = useState(false);
+  const [currentHash, setCurrentHash] = useState("");
   const skipScrollRestoreRef = useRef(false);
+  const homePath = getLocalizedPath(locale, "/");
+  const projectsPath = getLocalizedPath(locale, "/#projects");
+  const packagesPath = getLocalizedPath(locale, "/#packages");
+  const faqPath = getLocalizedPath(locale, "/#faq");
+  const contactPath = getLocalizedPath(locale, "/contact");
+  const currentPath = `${pathname}${currentHash}`;
+  const languageOptions: ReadonlyArray<Locale> = ["pl", "en", "uk"];
+  const languageLabels: Record<
+    Locale,
+    { code: "PL" | "EN" | "UK"; ariaLabel: "Switch language to Polish" | "Switch language to English" | "Switch language to Ukrainian" }
+  > = {
+    pl: {
+      code: "PL",
+      ariaLabel: "Switch language to Polish",
+    },
+    en: {
+      code: "EN",
+      ariaLabel: "Switch language to English",
+    },
+    uk: {
+      code: "UK",
+      ariaLabel: "Switch language to Ukrainian",
+    },
+  };
+  const currentLanguage = languageLabels[locale];
+  const otherLanguages = languageOptions.filter((language) => language !== locale);
+
+  useEffect(() => {
+    const syncHash = () => {
+      setCurrentHash(window.location.hash);
+    };
+
+    syncHash();
+    window.addEventListener("hashchange", syncHash);
+
+    return () => {
+      window.removeEventListener("hashchange", syncHash);
+    };
+  }, [pathname]);
 
   useEffect(() => {
     if (!isMenuOpen) {
@@ -76,117 +123,122 @@ export const Header = () => {
     };
   }, [isMenuOpen]);
 
-  const handleProjectsClick = (event: MouseEvent<HTMLAnchorElement>) => {
-    if (pathname !== "/") {
+  const handleHashClick = (
+    event: MouseEvent<HTMLAnchorElement>,
+    targetPath: string,
+    hash: "projects" | "packages" | "faq",
+  ) => {
+    if (pathname !== homePath) {
       return;
     }
 
     event.preventDefault();
-    window.history.replaceState(null, "", "/#projects");
-    scrollToHashTarget("projects");
+    window.history.replaceState(null, "", targetPath);
+    scrollToHashTarget(hash);
   };
 
-  const handlePackagesClick = (event: MouseEvent<HTMLAnchorElement>) => {
-    if (pathname !== "/") {
-      return;
-    }
-
-    event.preventDefault();
-    window.history.replaceState(null, "", "/#packages");
-    scrollToHashTarget("packages");
-  };
-
-  const handleFaqClick = (event: MouseEvent<HTMLAnchorElement>) => {
-    if (pathname !== "/") {
-      return;
-    }
-
-    event.preventDefault();
-    window.history.replaceState(null, "", "/#faq");
-    scrollToHashTarget("faq");
-  };
-
-  const handleProjectsClickAndClose = (event: MouseEvent<HTMLAnchorElement>) => {
+  const handleHashClickAndClose = (
+    event: MouseEvent<HTMLAnchorElement>,
+    targetPath: string,
+    hash: "projects" | "packages" | "faq",
+  ) => {
     skipScrollRestoreRef.current = true;
 
-    if (pathname === "/") {
+    if (pathname === homePath) {
       event.preventDefault();
-      window.history.replaceState(null, "", "/#projects");
+      window.history.replaceState(null, "", targetPath);
     }
 
     setIsMenuOpen(false);
 
     window.setTimeout(() => {
-      if (window.location.pathname !== "/" || window.location.hash !== "#projects") {
+      if (window.location.pathname !== homePath || window.location.hash !== `#${hash}`) {
         return;
       }
 
-      scrollToHashTarget("projects");
-    }, 120);
-  };
-
-  const handlePackagesClickAndClose = (event: MouseEvent<HTMLAnchorElement>) => {
-    skipScrollRestoreRef.current = true;
-
-    if (pathname === "/") {
-      event.preventDefault();
-      window.history.replaceState(null, "", "/#packages");
-    }
-
-    setIsMenuOpen(false);
-
-    window.setTimeout(() => {
-      if (window.location.pathname !== "/" || window.location.hash !== "#packages") {
-        return;
-      }
-
-      scrollToHashTarget("packages");
-    }, 120);
-  };
-
-  const handleFaqClickAndClose = (event: MouseEvent<HTMLAnchorElement>) => {
-    skipScrollRestoreRef.current = true;
-
-    if (pathname === "/") {
-      event.preventDefault();
-      window.history.replaceState(null, "", "/#faq");
-    }
-
-    setIsMenuOpen(false);
-
-    window.setTimeout(() => {
-      if (window.location.pathname !== "/" || window.location.hash !== "#faq") {
-        return;
-      }
-
-      scrollToHashTarget("faq");
+      scrollToHashTarget(hash);
     }, 120);
   };
 
   const closeMenu = () => {
+    setIsMobileLanguageOpen(false);
     setIsMenuOpen(false);
+  };
+
+  const handleDesktopDropdownBlur = (event: FocusEvent<HTMLDivElement>) => {
+    const nextFocused = event.relatedTarget as Node | null;
+    if (!event.currentTarget.contains(nextFocused)) {
+      setIsDesktopLanguageOpen(false);
+    }
   };
 
   return (
     <header className={styles.header}>
       <Container>
         <div className={styles.inner}>
-          <Link href="/" className={styles.logoLink} aria-label={navigation.home}>
+          <Link href={homePath} className={styles.logoLink} aria-label={navigation.home}>
             <LogoAnimated />
           </Link>
 
-          <nav className={styles.nav}>
-            <Link href="/#projects" onClick={handleProjectsClick}>
-              {navigation.projects}
-            </Link>
-            <Link href="/#packages" onClick={handlePackagesClick}>
-              {navigation.packages}
-            </Link>
-            <Link href="/#faq" onClick={handleFaqClick}>
-              {navigation.faq}
-            </Link>
-            <Link href="/contact">{navigation.contact}</Link>
-          </nav>
+          <div className={styles.desktopControls}>
+            <nav className={styles.nav}>
+              <Link
+                href={projectsPath}
+                onClick={(event) => handleHashClick(event, projectsPath, "projects")}
+              >
+                {navigation.projects}
+              </Link>
+              <Link
+                href={packagesPath}
+                onClick={(event) => handleHashClick(event, packagesPath, "packages")}
+              >
+                {navigation.packages}
+              </Link>
+              <Link href={faqPath} onClick={(event) => handleHashClick(event, faqPath, "faq")}>
+                {navigation.faq}
+              </Link>
+              <Link href={contactPath}>{navigation.contact}</Link>
+            </nav>
+
+            <div
+              className={`${styles.languageDropdown} ${isDesktopLanguageOpen ? styles.languageDropdownOpen : ""}`}
+              onMouseEnter={() => setIsDesktopLanguageOpen(true)}
+              onMouseLeave={() => setIsDesktopLanguageOpen(false)}
+              onFocusCapture={() => setIsDesktopLanguageOpen(true)}
+              onBlurCapture={handleDesktopDropdownBlur}
+            >
+              <button
+                type="button"
+                className={styles.languageTrigger}
+                aria-label="Choose language"
+                aria-haspopup="menu"
+                aria-expanded={isDesktopLanguageOpen}
+                onClick={() => setIsDesktopLanguageOpen((prev) => !prev)}
+              >
+                <span>{currentLanguage.code}</span>
+                <span
+                  className={`${styles.languageChevron} ${isDesktopLanguageOpen ? styles.languageChevronOpen : ""}`}
+                  aria-hidden="true"
+                />
+              </button>
+
+              <ul className={styles.languageMenu} role="menu" aria-label="Choose language">
+                {otherLanguages.map((language) => (
+                  <li key={language} role="none">
+                    <Link
+                      href={getLanguageSwitchPath(language, currentPath)}
+                      className={styles.languageMenuLink}
+                      role="menuitem"
+                      aria-label={languageLabels[language].ariaLabel}
+                      onClick={() => setIsDesktopLanguageOpen(false)}
+                    >
+                      {languageLabels[language].code}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
 
           {isMenuOpen ? (
             <button
@@ -195,7 +247,10 @@ export const Header = () => {
               aria-label={navigation.closeMenu}
               aria-expanded="true"
               aria-controls="mobile-menu"
-              onClick={() => setIsMenuOpen((prev) => !prev)}
+              onClick={() => {
+                setIsMobileLanguageOpen(false);
+                setIsMenuOpen((prev) => !prev);
+              }}
             >
               <span className={`${styles.menuIcon} ${styles.closeIcon}`} aria-hidden="true" />
             </button>
@@ -206,7 +261,10 @@ export const Header = () => {
               aria-label={navigation.openMenu}
               aria-expanded="false"
               aria-controls="mobile-menu"
-              onClick={() => setIsMenuOpen((prev) => !prev)}
+              onClick={() => {
+                setIsMobileLanguageOpen(false);
+                setIsMenuOpen((prev) => !prev);
+              }}
             >
               <span className={`${styles.menuIcon} ${styles.burgerIcon}`} aria-hidden="true" />
             </button>
@@ -236,31 +294,78 @@ export const Header = () => {
             </div>
 
             <nav className={styles.menuNav}>
-              <Link href="/#projects" onClick={handleProjectsClickAndClose}>
+              <Link
+                href={projectsPath}
+                className={styles.mobileNavLink}
+                onClick={(event) => handleHashClickAndClose(event, projectsPath, "projects")}
+              >
                 {navigation.projects}
               </Link>
-              <Link href="/contact" onClick={closeMenu}>
+              <Link href={contactPath} className={styles.mobileNavLink} onClick={closeMenu}>
                 {navigation.contact}
               </Link>
-              <Link href="/#packages" onClick={handlePackagesClickAndClose}>
+              <Link
+                href={packagesPath}
+                className={styles.mobileNavLink}
+                onClick={(event) => handleHashClickAndClose(event, packagesPath, "packages")}
+              >
                 {navigation.packages}
               </Link>
-              <Link href="/#faq" onClick={handleFaqClickAndClose}>
+              <Link
+                href={faqPath}
+                className={styles.mobileNavLink}
+                onClick={(event) => handleHashClickAndClose(event, faqPath, "faq")}
+              >
                 {navigation.faq}
               </Link>
             </nav>
 
+            <div
+              className={`${styles.mobileLanguageDropdown} ${isMobileLanguageOpen ? styles.mobileLanguageDropdownOpen : ""}`}
+            >
+              <button
+                type="button"
+                className={styles.mobileLanguageTrigger}
+                aria-label="Choose language"
+                aria-haspopup="menu"
+                aria-expanded={isMobileLanguageOpen}
+                onClick={() => setIsMobileLanguageOpen((prev) => !prev)}
+              >
+                <span>{currentLanguage.code}</span>
+                <span
+                  className={`${styles.languageChevron} ${isMobileLanguageOpen ? styles.languageChevronOpen : ""}`}
+                  aria-hidden="true"
+                />
+              </button>
+
+              <ul className={styles.mobileLanguageMenu} role="menu" aria-label="Choose language">
+                {otherLanguages.map((language) => (
+                  <li key={language} role="none">
+                    <Link
+                      href={getLanguageSwitchPath(language, currentPath)}
+                      className={styles.mobileLanguageMenuLink}
+                      role="menuitem"
+                      aria-label={languageLabels[language].ariaLabel}
+                      onClick={closeMenu}
+                    >
+                      {languageLabels[language].code}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
             <div className={styles.mobileMenuSeparator} aria-hidden="true" />
 
             <div className={styles.mobileMenuActions}>
-              <Button as="link" href="/contact" onClick={closeMenu} fullWidth>
+              <Button as="link" href={getLocalizedPath(locale, hero.primaryCta.href)} onClick={closeMenu} fullWidth>
                 {hero.primaryCta.label}
               </Button>
               <Button
                 as="link"
                 variant="secondary"
-                href="/#projects"
-                onClick={handleProjectsClickAndClose}
+                href={projectsPath}
+                onClick={(event) => handleHashClickAndClose(event, projectsPath, "projects")}
                 fullWidth
               >
                 {hero.secondaryCta?.label ?? navigation.projects}

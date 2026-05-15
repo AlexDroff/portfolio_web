@@ -1,36 +1,35 @@
-import { Container } from "@/components/ui/Container/Container";
+﻿import { Container } from "@/components/ui/Container/Container";
 import type { ProjectSummary as ProjectSummaryType } from "@/types/project";
-import { siteContent } from "@/data/locales";
+import type { LocaleContent } from "@/data/locales";
 import styles from "./ProjectSummary.module.css";
 
 type ProjectSummaryProps = {
   summary: ProjectSummaryType;
+  labels: LocaleContent["ui"]["projectDetail"];
 };
 
-export const ProjectSummary = ({ summary }: ProjectSummaryProps) => {
-  const { projectDetail } = siteContent.ui;
-
+export const ProjectSummary = ({ summary, labels }: ProjectSummaryProps) => {
   return (
     <section className={styles.section} aria-labelledby="project-summary-title">
       <Container>
         <div className={styles.wrapper}>
           <h2 id="project-summary-title" className={styles.title}>
-            {projectDetail.projectSummaryTitle}
+            {labels.projectSummaryTitle}
           </h2>
 
           <dl className={styles.grid}>
             <div className={styles.item}>
-              <dt className={styles.term}>{projectDetail.projectType}</dt>
+              <dt className={styles.term}>{labels.projectType}</dt>
               <dd className={styles.value}>{summary.projectType}</dd>
             </div>
 
             <div className={styles.item}>
-              <dt className={styles.term}>{projectDetail.goal}</dt>
+              <dt className={styles.term}>{labels.goal}</dt>
               <dd className={styles.value}>{summary.goal}</dd>
             </div>
 
             <div className={styles.item}>
-              <dt className={styles.term}>{projectDetail.mainFeatures}</dt>
+              <dt className={styles.term}>{labels.mainFeatures}</dt>
               <dd className={styles.value}>
                 <ul className={styles.list}>
                   {summary.mainFeatures.map((feature) => (
@@ -41,12 +40,12 @@ export const ProjectSummary = ({ summary }: ProjectSummaryProps) => {
             </div>
 
             <div className={styles.item}>
-              <dt className={styles.term}>{projectDetail.myRole}</dt>
+              <dt className={styles.term}>{labels.myRole}</dt>
               <dd className={styles.value}>{summary.role}</dd>
             </div>
 
             <div className={styles.item}>
-              <dt className={styles.term}>{projectDetail.stack}</dt>
+              <dt className={styles.term}>{labels.stack}</dt>
               <dd className={styles.value}>
                 <ul className={styles.list}>
                   {summary.stack.map((item) => (
@@ -57,7 +56,7 @@ export const ProjectSummary = ({ summary }: ProjectSummaryProps) => {
             </div>
 
             <div className={styles.item}>
-              <dt className={styles.term}>{projectDetail.result}</dt>
+              <dt className={styles.term}>{labels.result}</dt>
               <dd className={styles.value}>{summary.result}</dd>
             </div>
           </dl>

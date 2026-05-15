@@ -1,27 +1,31 @@
-// src/app/page.tsx
+﻿import type { Metadata } from "next";
 
-import { Hero } from "@/components/sections/Hero/Hero";
-import { Projects } from "@/components/sections/Projects/Projects";
-import { About } from "@/components/sections/About/About";
-import { Services } from "@/components/sections/Services/Services";
-import { Packages } from "@/components/sections/Packages/Packages";
-import { FAQ } from "@/components/sections/FAQ/FAQ";
-import { ContactCTA } from "@/components/sections/ContactCTA/ContactCTA";
-import { ProfessionalServiceJsonLd } from "@/components/seo/ProfessionalServiceJsonLd";
-import { HashScrollHandler } from "@/components/ui/HashScrollHandler/HashScrollHandler";
+import { siteConfig } from "@/config/site";
+import { HomePage } from "@/components/pages/HomePage/HomePage";
+import { getContent, getLocalizedPath } from "@/data/locales";
+
+const content = getContent("pl");
+
+export const metadata: Metadata = {
+  title: content.seo.root.title,
+  description: content.seo.root.description,
+  alternates: {
+    canonical: getLocalizedPath("pl", "/"),
+    languages: {
+      pl: getLocalizedPath("pl", "/"),
+      en: getLocalizedPath("en", "/"),
+      uk: getLocalizedPath("uk", "/"),
+      "x-default": getLocalizedPath("pl", "/"),
+    },
+  },
+  openGraph: {
+    title: content.seo.root.openGraphTitle,
+    description: content.seo.root.openGraphDescription,
+    url: `${siteConfig.url}${getLocalizedPath("pl", "/")}`,
+    type: "website",
+  },
+};
 
 export default function Home() {
-  return (
-    <>
-      <ProfessionalServiceJsonLd />
-      <HashScrollHandler hash="projects" />
-      <Hero />
-      <About />
-      <Projects />
-      <Services />
-      <Packages />
-      <FAQ />
-      <ContactCTA />
-    </>
-  );
+  return <HomePage locale="pl" content={content} />;
 }

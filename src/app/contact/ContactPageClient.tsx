@@ -5,7 +5,8 @@ import { useState } from "react";
 import Link from "next/link";
 
 import { siteConfig } from "@/config/site";
-import { siteContent } from "@/data/locales";
+import type { Locale, LocaleContent } from "@/data/locales";
+import { getLocalizedPath } from "@/data/locales";
 import { Container } from "@/components/ui/Container/Container";
 import { Section } from "@/components/ui/Section/Section";
 import { Button } from "@/components/ui/Button/Button";
@@ -21,6 +22,11 @@ type IconProps = {
   className: string;
 };
 
+type ContactPageClientProps = {
+  locale: Locale;
+  contact: LocaleContent["contact"];
+};
+
 const TelegramIcon = ({ className }: IconProps) => (
   <span className={`${styles.icon} ${className}`} aria-hidden="true" />
 );
@@ -33,12 +39,12 @@ const GitHubIcon = ({ className }: IconProps) => (
   <span className={`${styles.icon} ${className}`} aria-hidden="true" />
 );
 
-export const ContactPageClient = () => {
-  const { contact } = siteContent;
+export const ContactPageClient = ({ locale, contact }: ContactPageClientProps) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState<FormErrors>({});
+  const backHomeHref = getLocalizedPath(locale, "/");
 
   const handleSubmit = (event: SubmitEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -83,7 +89,7 @@ export const ContactPageClient = () => {
     <Section>
       <Container>
         <div className={styles.wrapper}>
-          <Link href="/" className={styles.backLink}>
+          <Link href={backHomeHref} className={styles.backLink}>
             {`\u2190 ${contact.links.backHome}`}
           </Link>
 
@@ -157,7 +163,7 @@ export const ContactPageClient = () => {
             {contact.links.responseTime}
           </p>
 
-          <p className={styles.formTitle}>Znajdziesz mnie też tutaj:</p>
+          <p className={styles.formTitle}>{contact.socialTitle}</p>
 
           <div className={styles.contacts}>
             <a
@@ -200,7 +206,7 @@ export const ContactPageClient = () => {
             </a>
           </div>
 
-          <Link href="/" className={styles.backLink}>
+          <Link href={backHomeHref} className={styles.backLink}>
             {`\u2190 ${contact.links.backHome}`}
           </Link>
         </div>
@@ -208,5 +214,3 @@ export const ContactPageClient = () => {
     </Section>
   );
 };
-
-

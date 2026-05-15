@@ -42,6 +42,8 @@
 }
 
 .card {
+  --separator-color: var(--color-brand-accent);
+  position: relative;
   display: block;
   height: 100%;
   border: var(--border-width-default) solid var(--color-border-soft);
@@ -60,24 +62,54 @@
 .card::before {
   content: "";
   display: block;
+  position: relative;
   width: 40px;
   height: 3px;
   margin-bottom: var(--space-4);
   border-radius: var(--radius-full);
-  background: var(--color-brand-accent);
+  background: var(--separator-color);
   transition: background-color 0.2s ease, width 0.2s ease;
 }
 
-.card:hover {
+.card::after {
+  content: "";
+  position: absolute;
+  top: calc(var(--space-5) + 1.5px);
+  left: 46px;
+  width: 10px;
+  height: 10px;
+  border-top: 3px solid var(--separator-color);
+  border-right: 3px solid var(--separator-color);
+  opacity: 0;
+  transform: translateY(-50%) translateX(-6px) rotate(45deg);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    left 0.2s ease,
+    border-color 0.2s ease;
+  pointer-events: none;
+}
+
+.card:hover,
+.card:focus-within {
+  --separator-color: var(--color-brand-primary);
   background: var(--color-brand-accent);
   color: var(--color-brand-primary);
   border-color: var(--color-brand-accent);
   transform: translateY(-4px);
 }
 
-.card:hover::before {
-  width: 56px;
+.card:hover::before,
+.card:focus-within::before {
+  width: 66%;
   background: var(--color-brand-primary);
+}
+
+.card:hover::after,
+.card:focus-within::after {
+  left: calc(66% + 6px);
+  opacity: 1;
+  transform: translateY(-50%) translateX(0) rotate(45deg);
 }
 
 .cardTitle {
@@ -94,11 +126,13 @@
   color: var(--color-text-muted);
 }
 
-.card:hover .cardDescription {
+.card:hover .cardDescription,
+.card:focus-within .cardDescription {
   color: rgba(255, 255, 255, 0.88);
 }
 
 .ctaCard {
+  --separator-color: var(--color-brand-primary);
   background: var(--color-brand-accent);
   color: var(--color-brand-primary);
   border-color: var(--color-brand-accent);
@@ -114,6 +148,7 @@
 
 .ctaCard:hover,
 .ctaCard:focus-visible {
+  --separator-color: var(--color-brand-accent);
   background: var(--color-bg-primary);
   color: var(--color-text-primary);
   border-color: var(--color-bg-primary);
@@ -133,6 +168,14 @@
 .ctaCard:focus-visible {
   outline: var(--border-width-strong) solid var(--color-brand-accent);
   outline-offset: var(--space-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card::before,
+  .card::after {
+    transition: none;
+  }
 }
 
 @media (max-width: 1024px) {

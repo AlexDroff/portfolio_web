@@ -5,21 +5,28 @@ import { usePathname } from "next/navigation";
 
 import { Button } from "@/components/ui/Button/Button";
 import { Container } from "@/components/ui/Container/Container";
-import { homeContent } from "@/data/home";
+import type { Locale, LocaleContent } from "@/data/locales";
+import { getLocalizedPath } from "@/data/locales";
 import { scrollToHashTarget } from "@/utils/scrollToHashTarget";
 import styles from "./Hero.module.css";
 
-export const Hero = () => {
+type HeroProps = {
+  locale: Locale;
+  hero: LocaleContent["home"]["hero"];
+};
+
+export const Hero = ({ locale, hero }: HeroProps) => {
   const pathname = usePathname();
-  const { hero } = homeContent;
+  const homePath = getLocalizedPath(locale, "/");
+  const projectsPath = getLocalizedPath(locale, "/#projects");
 
   const handleProjectsClick = (event: MouseEvent<HTMLAnchorElement>) => {
-    if (pathname !== "/") {
+    if (pathname !== homePath) {
       return;
     }
 
     event.preventDefault();
-    window.history.replaceState(null, "", "/#projects");
+    window.history.replaceState(null, "", projectsPath);
     scrollToHashTarget("projects");
   };
 
@@ -32,13 +39,13 @@ export const Hero = () => {
           <p className={styles.subtitle}>{hero.description}</p>
 
           <div className={styles.actions}>
-            <Button as="link" href={hero.primaryCta.href} variant="primary">
+            <Button as="link" href={getLocalizedPath(locale, hero.primaryCta.href)} variant="primary">
               {hero.primaryCta.label}
             </Button>
             {hero.secondaryCta ? (
               <Button
                 as="link"
-                href={hero.secondaryCta.href}
+                href={getLocalizedPath(locale, hero.secondaryCta.href)}
                 variant="secondary"
                 onClick={handleProjectsClick}
               >

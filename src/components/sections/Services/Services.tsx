@@ -1,11 +1,16 @@
-import { Container } from "@/components/ui/Container/Container";
+﻿import { Container } from "@/components/ui/Container/Container";
 import { Section } from "@/components/ui/Section/Section";
-import { homeContent } from "@/data/home";
+import type { Locale, LocaleContent } from "@/data/locales";
+import { getLocalizedPath } from "@/data/locales";
 import Link from "next/link";
 import styles from "./Services.module.css";
 
-export const Services = () => {
-  const { services } = homeContent;
+type ServicesProps = {
+  locale: Locale;
+  services: LocaleContent["home"]["services"];
+};
+
+export const Services = ({ locale, services }: ServicesProps) => {
   type ServiceListItem = (typeof services.items)[number];
 
   const isCtaItem = (
@@ -30,7 +35,10 @@ export const Services = () => {
               return (
                 <li key={item.id} className={styles.cardItem}>
                   {isCtaItem(item) ? (
-                    <Link href={item.href} className={`${styles.card} ${styles.ctaCard}`}>
+                    <Link
+                      href={getLocalizedPath(locale, item.href)}
+                      className={`${styles.card} ${styles.ctaCard}`}
+                    >
                       <h3 className={styles.cardTitle}>{item.title}</h3>
                       <p className={styles.cardDescription}>{item.description}</p>
                     </Link>

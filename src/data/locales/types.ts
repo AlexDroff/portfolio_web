@@ -26,6 +26,7 @@ export type ContactContent = {
   title: string;
   intro: string;
   helperText: string;
+  socialTitle: string;
   namePlaceholder: string;
   emailPlaceholder: string;
   messagePlaceholder: string;
@@ -102,11 +103,43 @@ export type LocaleUiContent = {
     backToTop: string;
     profilePhoto: string;
     homeAriaLabel: string;
+    logoAlt: string;
+  };
+  footer: {
+    copyright: string;
   };
   notFound: {
     title: string;
     description: string;
     backHome: string;
+  };
+};
+
+export type LocaleSeoContent = {
+  root: {
+    title: string;
+    titleTemplate: string;
+    description: string;
+    openGraphTitle: string;
+    openGraphDescription: string;
+    twitterTitle: string;
+    twitterDescription: string;
+  };
+  contact: {
+    title: string;
+    description: string;
+    openGraphTitle: string;
+    openGraphDescription: string;
+  };
+  projects: {
+    notFoundTitle: string;
+    fallbackDescription: string;
+    openGraphTitleSuffix: string;
+  };
+  jsonLd: {
+    websiteDescription: string;
+    personJobTitle: string;
+    professionalServiceDescription: string;
   };
 };
 
@@ -116,4 +149,5 @@ export type LocaleContent = {
   projects: Project[];
   contact: ContactContent;
   ui: LocaleUiContent;
+  seo: LocaleSeoContent;
 };

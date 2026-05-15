@@ -1,12 +1,17 @@
-import { Container } from "@/components/ui/Container/Container";
+﻿import { Container } from "@/components/ui/Container/Container";
 import { Section } from "@/components/ui/Section/Section";
-import { homeContent } from "@/data/home";
+import type { Locale, LocaleContent } from "@/data/locales";
+import { getLocalizedPath } from "@/data/locales";
 import type { LocalePackageItem } from "@/data/locales/types";
 import Link from "next/link";
 import styles from "./Packages.module.css";
 
-export const Packages = () => {
-  const { packages } = homeContent;
+type PackagesProps = {
+  locale: Locale;
+  packages: LocaleContent["home"]["packages"];
+};
+
+export const Packages = ({ locale, packages }: PackagesProps) => {
   const packageItems = packages.items as LocalePackageItem[];
 
   return (
@@ -34,7 +39,7 @@ export const Packages = () => {
                 </ul>
                 {item.note ? <p className={styles.note}>{item.note}</p> : null}
                 {item.ctaLabel && item.ctaHref ? (
-                  <Link href={item.ctaHref} className={styles.cardCta}>
+                  <Link href={getLocalizedPath(locale, item.ctaHref)} className={styles.cardCta}>
                     {item.ctaLabel}
                   </Link>
                 ) : null}

@@ -2,38 +2,44 @@
 import type { Metadata } from "next";
 
 import { siteConfig } from "@/config/site";
+import { getContent, getLocalizedPath } from "@/data/locales";
 
 import "@/styles/globals.css";
+
+const content = getContent("pl");
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Alexandroff – strony internetowe dla małych firm",
-    template: "%s | Alexandroff",
+    default: content.seo.root.title,
+    template: content.seo.root.titleTemplate,
   },
-  description:
-    "Tworzę szybkie, responsywne strony internetowe oraz proste systemy kontaktu i rezerwacji dla małych firm usługowych. Next.js, React, TypeScript, podstawy SEO i wsparcie przy wdrożeniu.",
+  description: content.seo.root.description,
   applicationName: siteConfig.name,
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
   alternates: {
-    canonical: "/",
+    canonical: getLocalizedPath("pl", "/"),
+    languages: {
+      pl: getLocalizedPath("pl", "/"),
+      en: getLocalizedPath("en", "/"),
+      uk: getLocalizedPath("uk", "/"),
+      "x-default": getLocalizedPath("pl", "/"),
+    },
   },
   openGraph: {
     type: "website",
-    url: siteConfig.url,
+    url: `${siteConfig.url}${getLocalizedPath("pl", "/")}`,
     siteName: siteConfig.name,
-    title: "Alexandroff – strony internetowe dla małych firm",
-    description:
-      "Szybkie strony internetowe i proste flow kontaktowe dla małych firm usługowych.",
+    title: content.seo.root.openGraphTitle,
+    description: content.seo.root.openGraphDescription,
     locale: "pl_PL",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alexandroff – strony internetowe dla małych firm",
-    description:
-      "Szybkie strony internetowe i proste flow kontaktowe dla małych firm usługowych.",
+    title: content.seo.root.twitterTitle,
+    description: content.seo.root.twitterDescription,
   },
   robots: {
     index: true,
@@ -48,4 +54,3 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     </html>
   );
 }
-
