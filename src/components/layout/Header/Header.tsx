@@ -207,28 +207,41 @@ export const Header = ({ locale, navigation, hero }: HeaderProps) => {
               onFocusCapture={() => setIsDesktopLanguageOpen(true)}
               onBlurCapture={handleDesktopDropdownBlur}
             >
-              <button
-                type="button"
-                className={styles.languageTrigger}
-                aria-label="Choose language"
-                aria-haspopup="menu"
-                aria-expanded={isDesktopLanguageOpen}
-                onClick={() => setIsDesktopLanguageOpen((prev) => !prev)}
-              >
-                <span>{currentLanguage.code}</span>
-                <span
-                  className={`${styles.languageChevron} ${isDesktopLanguageOpen ? styles.languageChevronOpen : ""}`}
-                  aria-hidden="true"
-                />
-              </button>
+              {isDesktopLanguageOpen ? (
+                <button
+                  type="button"
+                  className={styles.languageTrigger}
+                  aria-label="Choose language"
+                  aria-haspopup="true"
+                  aria-expanded="true"
+                  onClick={() => setIsDesktopLanguageOpen(false)}
+                >
+                  <span>{currentLanguage.code}</span>
+                  <span
+                    className={`${styles.languageChevron} ${styles.languageChevronOpen}`}
+                    aria-hidden="true"
+                  />
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  className={styles.languageTrigger}
+                  aria-label="Choose language"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  onClick={() => setIsDesktopLanguageOpen(true)}
+                >
+                  <span>{currentLanguage.code}</span>
+                  <span className={styles.languageChevron} aria-hidden="true" />
+                </button>
+              )}
 
-              <ul className={styles.languageMenu} role="menu" aria-label="Choose language">
+              <ul className={styles.languageMenu} aria-label="Choose language">
                 {otherLanguages.map((language) => (
-                  <li key={language} role="none">
+                  <li key={language}>
                     <Link
                       href={getLanguageSwitchPath(language, currentPath)}
                       className={styles.languageMenuLink}
-                      role="menuitem"
                       aria-label={languageLabels[language].ariaLabel}
                       onClick={() => setIsDesktopLanguageOpen(false)}
                     >
@@ -323,28 +336,41 @@ export const Header = ({ locale, navigation, hero }: HeaderProps) => {
             <div
               className={`${styles.mobileLanguageDropdown} ${isMobileLanguageOpen ? styles.mobileLanguageDropdownOpen : ""}`}
             >
-              <button
-                type="button"
-                className={styles.mobileLanguageTrigger}
-                aria-label="Choose language"
-                aria-haspopup="menu"
-                aria-expanded={isMobileLanguageOpen}
-                onClick={() => setIsMobileLanguageOpen((prev) => !prev)}
-              >
-                <span>{currentLanguage.code}</span>
-                <span
-                  className={`${styles.languageChevron} ${isMobileLanguageOpen ? styles.languageChevronOpen : ""}`}
-                  aria-hidden="true"
-                />
-              </button>
+              {isMobileLanguageOpen ? (
+                <button
+                  type="button"
+                  className={styles.mobileLanguageTrigger}
+                  aria-label="Choose language"
+                  aria-haspopup="true"
+                  aria-expanded="true"
+                  onClick={() => setIsMobileLanguageOpen(false)}
+                >
+                  <span>{currentLanguage.code}</span>
+                  <span
+                    className={`${styles.languageChevron} ${styles.languageChevronOpen}`}
+                    aria-hidden="true"
+                  />
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  className={styles.mobileLanguageTrigger}
+                  aria-label="Choose language"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  onClick={() => setIsMobileLanguageOpen(true)}
+                >
+                  <span>{currentLanguage.code}</span>
+                  <span className={styles.languageChevron} aria-hidden="true" />
+                </button>
+              )}
 
-              <ul className={styles.mobileLanguageMenu} role="menu" aria-label="Choose language">
+              <ul className={styles.mobileLanguageMenu} aria-label="Choose language">
                 {otherLanguages.map((language) => (
-                  <li key={language} role="none">
+                  <li key={language}>
                     <Link
                       href={getLanguageSwitchPath(language, currentPath)}
                       className={styles.mobileLanguageMenuLink}
-                      role="menuitem"
                       aria-label={languageLabels[language].ariaLabel}
                       onClick={closeMenu}
                     >
