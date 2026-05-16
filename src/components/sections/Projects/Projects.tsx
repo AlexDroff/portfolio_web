@@ -6,6 +6,7 @@ import {
   useRef,
   useState,
 } from "react";
+import { Reveal } from "@/components/animation/Reveal";
 import { Container } from "@/components/ui/Container/Container";
 import { Section } from "@/components/ui/Section/Section";
 import styles from "./Projects.module.css";
@@ -136,9 +137,9 @@ export const Projects = ({
     <Section id="projects" className={styles.section}>
       <Container>
         <div className={styles.wrapper}>
-          <div className={styles.header}>
+          <Reveal className={styles.header}>
             <h2 className={styles.title}>{projectsContent.title}</h2>
-          </div>
+          </Reveal>
 
           <div className={styles.sliderFrame}>
             <button
@@ -159,23 +160,25 @@ export const Projects = ({
               ref={trackRef}
               onScroll={handleTrackScroll}
             >
-              {projects.map((project) => (
+              {projects.map((project, index) => (
                 <li
                   key={project.slug}
                   className={styles.slide}
                   data-project-slide="true"
                 >
-                  <ProjectCard
-                    locale={locale}
-                    viewCaseStudyLabel={projectCardLabels.viewCaseStudy}
-                    liveWebsiteLabel={projectCardLabels.liveWebsite}
-                    slug={project.slug}
-                    title={project.title}
-                    image={project.cardImage}
-                    businessSummary={project.businessSummary}
-                    badges={project.badges}
-                    liveDemoUrl={project.liveDemoUrl}
-                  />
+                  <Reveal delay={index * 0.08}>
+                    <ProjectCard
+                      locale={locale}
+                      viewCaseStudyLabel={projectCardLabels.viewCaseStudy}
+                      liveWebsiteLabel={projectCardLabels.liveWebsite}
+                      slug={project.slug}
+                      title={project.title}
+                      image={project.cardImage}
+                      businessSummary={project.businessSummary}
+                      badges={project.badges}
+                      liveDemoUrl={project.liveDemoUrl}
+                    />
+                  </Reveal>
                 </li>
               ))}
             </ul>
