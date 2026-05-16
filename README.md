@@ -1,6 +1,6 @@
-﻿# Alexandroff Portfolio
+﻿# Loading Studio Portfolio
 
-A personal portfolio and freelance service website for web development services focused on small service businesses, business websites, booking/contact flows, web apps, SEO basics, and deployment support.
+A portfolio and freelance service website for Loading Studio focused on fast web development for small service businesses, business websites, booking/contact flows, web apps, SEO basics, and deployment support.
 
 ## Tech Stack
 
@@ -114,7 +114,7 @@ The site URL is configured through `NEXT_PUBLIC_SITE_URL` with fallback in `src/
 Create `.env.local` if needed:
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://www.alexandroff.pl
+NEXT_PUBLIC_SITE_URL=https://www.loadingstudio.pl
 ```
 
 For local development:

@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     template: content.seo.root.titleTemplate,
   },
   description: content.seo.root.description,
-  applicationName: siteConfig.name,
-  authors: [{ name: siteConfig.name }],
-  creator: siteConfig.name,
-  publisher: siteConfig.name,
+  applicationName: siteConfig.brandName,
+  authors: [{ name: siteConfig.ownerName }],
+  creator: siteConfig.ownerName,
+  publisher: siteConfig.brandName,
   alternates: {
     canonical: getLocalizedPath("pl", "/"),
     languages: {
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: `${siteConfig.url}${getLocalizedPath("pl", "/")}`,
-    siteName: siteConfig.name,
+    siteName: siteConfig.brandName,
     title: content.seo.root.openGraphTitle,
     description: content.seo.root.openGraphDescription,
     locale: "pl_PL",

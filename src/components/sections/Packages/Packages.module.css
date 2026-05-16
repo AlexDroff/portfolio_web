@@ -41,14 +41,18 @@
   border-radius: var(--space-1);
   background: var(--color-overlay-subtle);
   padding: var(--space-5);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
   height: 100%;
   transition:
     transform 0.2s ease,
     border-color 0.2s ease,
     background-color 0.2s ease;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  height: 100%;
 }
 
 .card:hover,
@@ -92,7 +96,6 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
-  flex: 1;
 }
 
 .featureItem {
@@ -116,7 +119,7 @@
 }
 
 .note {
-  margin: var(--space-2) 0 0;
+  margin: 0;
   font-size: var(--font-size-xs);
   line-height: 1.5;
   color: var(--color-text-secondary);
@@ -128,7 +131,6 @@
   align-items: center;
   border-radius: var(--radius-full);
   padding: var(--space-1) var(--space-3);
-  margin-bottom: var(--space-3);
   background: var(--color-brand-accent);
   color: var(--color-bg-primary);
   font-size: var(--font-size-xs);
@@ -182,5 +184,9 @@
 
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  .cardContent {
+    gap: var(--space-2);
   }
 }

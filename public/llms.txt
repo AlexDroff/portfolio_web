@@ -1,6 +1,6 @@
-# Alexandroff
+# Loading Studio
 
-Alexandroff to portfolio i strona usługowa freelancera oferującego web development dla małych firm.
+Loading Studio to portfolio i strona usługowa studia tworzącego szybkie strony internetowe, landing pages i proste systemy kontaktu dla małych firm usługowych.
 
 Domyślny język:
 - polski

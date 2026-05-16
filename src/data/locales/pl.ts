@@ -202,7 +202,7 @@ const home: LocaleContent['home'] = {
       },
       {
         id: 'booking-flow',
-        title: 'Strona + Е›cieЕјka rezerwacji',
+        title: 'Strona + ścieżka rezerwacji',
         price: 'od 4500 PLN',
         description:
           'Dla us\u0142ug, w kt\u00f3rych liczy si\u0119 szybkie zapytanie, rezerwacja albo kontakt z klientem.',
@@ -1206,14 +1206,14 @@ const ui: LocaleContent['ui'] = {
 
 const seo: LocaleContent['seo'] = {
   root: {
-    title: 'Alexandroff \u2013 strony dla ma\u0142ych firm us\u0142ugowych',
-    titleTemplate: '%s | Alexandroff',
+    title: 'Loading Studio \u2013 szybkie strony dla ma\u0142ych firm us\u0142ugowych',
+    titleTemplate: '%s | Loading Studio',
     description:
-      'Projektuj\u0119 szybkie, responsywne strony oraz proste \u015bcie\u017cki kontaktu i rezerwacji dla ma\u0142ych firm us\u0142ugowych. Pomagam uporz\u0105dkowa\u0107 ofert\u0119, przygotowa\u0107 podstawy SEO i bezpiecznie wdro\u017cy\u0107 stron\u0119.',
-    openGraphTitle: 'Alexandroff \u2013 strony dla ma\u0142ych firm us\u0142ugowych',
+      'Loading Studio tworzy szybkie, responsywne strony internetowe, landing pages i proste systemy kontaktu dla ma\u0142ych firm us\u0142ugowych.',
+    openGraphTitle: 'Loading Studio \u2013 szybkie strony dla ma\u0142ych firm us\u0142ugowych',
     openGraphDescription:
       'Szybkie strony, czytelna oferta i prostszy kontakt z klientami dla ma\u0142ych firm us\u0142ugowych.',
-    twitterTitle: 'Alexandroff \u2013 strony dla ma\u0142ych firm us\u0142ugowych',
+    twitterTitle: 'Loading Studio \u2013 szybkie strony dla ma\u0142ych firm us\u0142ugowych',
     twitterDescription:
       'Szybkie strony, czytelna oferta i prostszy kontakt z klientami dla ma\u0142ych firm us\u0142ugowych.',
   },
@@ -1221,14 +1221,14 @@ const seo: LocaleContent['seo'] = {
     title: 'Kontakt',
     description:
       'Napisz, je\u015bli potrzebujesz strony, formularza kontaktowego, zapyta\u0144 o rezerwacj\u0119 albo od\u015bwie\u017cenia obecnej witryny.',
-    openGraphTitle: 'Kontakt \u2013 Alexandroff',
+    openGraphTitle: 'Kontakt \u2013 Loading Studio',
     openGraphDescription:
       'Opisz sw\u00f3j projekt, a wr\u00f3c\u0119 z pierwsz\u0105 ocen\u0105 zakresu, terminu i mo\u017cliwego bud\u017cetu.',
   },
   projects: {
     notFoundTitle: 'Nie znaleziono projektu',
     fallbackDescription:
-      'Wybrana realizacja z portfolio Alexandroff.',
+      'Wybrana realizacja z portfolio Loading Studio.',
     openGraphTitleSuffix: '\u2013 Realizacja',
   },
   jsonLd: {

@@ -21,8 +21,8 @@ export function ProfessionalServiceJsonLd({
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": `${localizedHomeUrl}/#website`,
-        name: siteConfig.name,
+        "@id": `${siteConfig.url}/#website`,
+        name: siteConfig.brandName,
         url: localizedHomeUrl,
         description: seo.jsonLd.websiteDescription,
         publisher: {
@@ -32,7 +32,7 @@ export function ProfessionalServiceJsonLd({
       {
         "@type": "Person",
         "@id": `${siteConfig.url}/#person`,
-        name: siteConfig.name,
+        name: siteConfig.ownerName,
         url: siteConfig.url,
         email: siteConfig.email,
         jobTitle: seo.jsonLd.personJobTitle,
@@ -42,7 +42,7 @@ export function ProfessionalServiceJsonLd({
       {
         "@type": "ProfessionalService",
         "@id": `${siteConfig.url}/#professional-service`,
-        name: siteConfig.name,
+        name: siteConfig.brandName,
         url: localizedHomeUrl,
         email: siteConfig.email,
         description: seo.jsonLd.professionalServiceDescription,

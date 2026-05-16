@@ -1,4 +1,7 @@
-﻿import { Reveal } from "@/components/animation/Reveal";
+﻿"use client";
+
+import { useEffect, useRef } from "react";
+import { Reveal } from "@/components/animation/Reveal";
 import { Container } from "@/components/ui/Container/Container";
 import { Section } from "@/components/ui/Section/Section";
 import type { Locale, LocaleContent } from "@/data/locales";
@@ -14,6 +17,50 @@ type PackagesProps = {
 
 export const Packages = ({ locale, packages }: PackagesProps) => {
   const packageItems = packages.items as LocalePackageItem[];
+  const gridRef = useRef<HTMLUListElement | null>(null);
+
+  useEffect(() => {
+    const grid = gridRef.current;
+    if (!grid) {
+      return;
+    }
+
+    const cards = Array.from(grid.querySelectorAll<HTMLElement>(`.${styles.card}`));
+    if (cards.length === 0) {
+      return;
+    }
+
+    const desktopQuery = window.matchMedia("(min-width: 769px)");
+
+    const syncHeights = () => {
+      cards.forEach((card) => {
+        card.style.minHeight = "";
+      });
+
+      if (!desktopQuery.matches) {
+        return;
+      }
+
+      const maxHeight = Math.max(...cards.map((card) => card.offsetHeight));
+      cards.forEach((card) => {
+        card.style.minHeight = `${maxHeight}px`;
+      });
+    };
+
+    syncHeights();
+
+    const resizeObserver = new ResizeObserver(syncHeights);
+    cards.forEach((card) => resizeObserver.observe(card));
+
+    window.addEventListener("resize", syncHeights);
+    desktopQuery.addEventListener("change", syncHeights);
+
+    return () => {
+      resizeObserver.disconnect();
+      window.removeEventListener("resize", syncHeights);
+      desktopQuery.removeEventListener("change", syncHeights);
+    };
+  }, []);
 
   return (
     <Section id="packages" className={styles.section}>
@@ -24,10 +71,10 @@ export const Packages = ({ locale, packages }: PackagesProps) => {
             <p className={styles.description}>{packages.description}</p>
           </Reveal>
 
-          <ul className={styles.grid}>
+          <ul className={styles.grid} ref={gridRef}>
             {packageItems.map((item, index) => (
               <li key={item.id} className={styles.card}>
-                <Reveal delay={index * 0.08}>
+                <Reveal className={styles.cardContent} delay={index * 0.08}>
                   {item.badge ? <span className={styles.badge}>{item.badge}</span> : null}
                   <h3 className={styles.cardTitle}>{item.title}</h3>
                   <p className={styles.price}>{item.price}</p>

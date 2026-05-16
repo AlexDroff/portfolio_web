@@ -1013,14 +1013,14 @@ const ui: LocaleContent['ui'] = {
 
 const seo: LocaleContent['seo'] = {
   root: {
-    title: 'Alexandroff – сайти для малого бізнесу у сфері послуг',
-    titleTemplate: '%s | Alexandroff',
+    title: 'Loading Studio – швидкі сайти для малого сервісного бізнесу',
+    titleTemplate: '%s | Loading Studio',
     description:
       'Проєктую швидкі адаптивні сайти та прості шляхи контакту або бронювання для малого бізнесу у сфері послуг. Допомагаю впорядкувати пропозицію, підготувати базове SEO і безпечно запустити сайт.',
-    openGraphTitle: 'Alexandroff – сайти для малого бізнесу у сфері послуг',
+    openGraphTitle: 'Loading Studio – швидкі сайти для малого сервісного бізнесу',
     openGraphDescription:
       'Швидкі сайти, зрозуміла пропозиція і простіший контакт із клієнтами для малого бізнесу у сфері послуг.',
-    twitterTitle: 'Alexandroff – сайти для малого бізнесу у сфері послуг',
+    twitterTitle: 'Loading Studio – швидкі сайти для малого сервісного бізнесу',
     twitterDescription:
       'Швидкі сайти, зрозуміла пропозиція і простіший контакт із клієнтами для малого бізнесу у сфері послуг.',
   },
@@ -1028,13 +1028,13 @@ const seo: LocaleContent['seo'] = {
     title: 'Контакт',
     description:
       'Напишіть мені, якщо вам потрібен сайт, landing page, контактна форма, шлях бронювання або вебзастосунок.',
-    openGraphTitle: 'Контакт – Alexandroff',
+    openGraphTitle: 'Контакт – Loading Studio',
     openGraphDescription:
       'Опишіть ваш проєкт і потребу. Я повернуся з першою оцінкою обсягу, термінів і можливого бюджету.',
   },
   projects: {
     notFoundTitle: 'Проєкт не знайдено',
-    fallbackDescription: 'Обраний проєкт із портфоліо Alexandroff.',
+    fallbackDescription: 'Обраний проєкт із портфоліо Loading Studio.',
     openGraphTitleSuffix: '– Реалізація',
   },
   jsonLd: {

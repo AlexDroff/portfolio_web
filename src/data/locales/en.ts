@@ -191,7 +191,6 @@ const home: LocaleContent["home"] = {
           "Validation and UX states",
           "Post-launch fixes"
         ],
-        "note": "Best fit for local services, rentals, salons, and small service businesses.",
         "badge": "Most common choice",
         "ctaLabel": "Ask about this package ->",
         "ctaHref": "/contact"
@@ -1160,14 +1159,14 @@ const ui: LocaleContent["ui"] = {
 
 const seo: LocaleContent["seo"] = {
   root: {
-    title: "Alexandroff \u2013 websites for small service businesses",
-    titleTemplate: "%s | Alexandroff",
+    title: "Loading Studio \u2013 fast websites for small service businesses",
+    titleTemplate: "%s | Loading Studio",
     description:
       "I design fast, responsive websites and simple contact or booking paths for small service businesses. I help organize the offer, prepare basic SEO and launch the website safely.",
-    openGraphTitle: "Alexandroff \u2013 websites for small service businesses",
+    openGraphTitle: "Loading Studio \u2013 fast websites for small service businesses",
     openGraphDescription:
       "Fast websites, clear offers and easier customer contact for small service businesses.",
-    twitterTitle: "Alexandroff \u2013 websites for small service businesses",
+    twitterTitle: "Loading Studio \u2013 fast websites for small service businesses",
     twitterDescription:
       "Fast websites, clear offers and easier customer contact for small service businesses.",
   },
@@ -1175,13 +1174,13 @@ const seo: LocaleContent["seo"] = {
     title: "Contact",
     description:
       "Write to me if you need a website, landing page, contact form, booking request path, or web application.",
-    openGraphTitle: "Contact \u2013 Alexandroff",
+    openGraphTitle: "Contact \u2013 Loading Studio",
     openGraphDescription:
       "Tell me about your project and what you need. I'll reply with an initial scope, timeline, and possible budget.",
   },
   projects: {
     notFoundTitle: "Project not found",
-    fallbackDescription: "Selected project from the Alexandroff portfolio.",
+    fallbackDescription: "Selected project from the Loading Studio portfolio.",
     openGraphTitleSuffix: "\u2013 Case Study",
   },
   jsonLd: {
