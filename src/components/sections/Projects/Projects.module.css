@@ -50,14 +50,20 @@
 .arrowButtonPrev {
   left: max(
     calc(var(--space-2) * -1),
-    calc(50% - min(50%, var(--slider-card-half-width)) - var(--slider-arrow-width) - var(--slider-arrow-gap))
+    calc(
+      50% - min(50%, var(--slider-card-half-width)) -
+        var(--slider-arrow-width) - var(--slider-arrow-gap)
+    )
   );
 }
 
 .arrowButtonNext {
   right: max(
     calc(var(--space-2) * -1),
-    calc(50% - min(50%, var(--slider-card-half-width)) - var(--slider-arrow-width) - var(--slider-arrow-gap))
+    calc(
+      50% - min(50%, var(--slider-card-half-width)) -
+        var(--slider-arrow-width) - var(--slider-arrow-gap)
+    )
   );
 }
 
@@ -86,13 +92,13 @@
 }
 
 .arrowIconPrev {
-  mask: url('/icons/arrow_left.svg') center / contain no-repeat;
   -webkit-mask: url('/icons/arrow_left.svg') center / contain no-repeat;
+  mask: url('/icons/arrow_left.svg') center / contain no-repeat;
 }
 
 .arrowIconNext {
-  mask: url('/icons/arrow_right.svg') center / contain no-repeat;
   -webkit-mask: url('/icons/arrow_right.svg') center / contain no-repeat;
+  mask: url('/icons/arrow_right.svg') center / contain no-repeat;
 }
 
 .sliderTrack {
@@ -108,12 +114,17 @@
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 
-  scrollbar-width: none;
   -ms-overflow-style: none;
 }
 
 .sliderTrack::-webkit-scrollbar {
   display: none;
+}
+
+@supports (scrollbar-width: none) {
+  .sliderTrack {
+    scrollbar-width: none;
+  }
 }
 
 .slide {
