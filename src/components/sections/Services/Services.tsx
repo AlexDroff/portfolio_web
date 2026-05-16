@@ -35,7 +35,7 @@ export const Services = ({ locale, services }: ServicesProps) => {
             {services.items.map((item, index) => {
               return (
                 <li key={item.id} className={styles.cardItem}>
-                  <Reveal delay={index * 0.08}>
+                  <Reveal className={styles.cardReveal} delay={index * 0.08}>
                     {isCtaItem(item) ? (
                       <Link
                         href={getLocalizedPath(locale, item.href)}

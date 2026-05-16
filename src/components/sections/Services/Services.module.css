@@ -41,11 +41,17 @@
   min-width: 0;
 }
 
+.cardReveal {
+  height: 100%;
+  display: flex;
+}
+
 .card {
   --separator-color: var(--color-brand-accent);
   position: relative;
   display: block;
   height: 100%;
+  width: 100%;
   border: var(--border-width-default) solid var(--color-border-soft);
   border-radius: var(--space-1);
   padding: var(--space-5);
