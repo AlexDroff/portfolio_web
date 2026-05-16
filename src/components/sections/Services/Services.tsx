@@ -1,4 +1,5 @@
-﻿import { Container } from "@/components/ui/Container/Container";
+﻿import { Reveal } from "@/components/animation/Reveal";
+import { Container } from "@/components/ui/Container/Container";
 import { Section } from "@/components/ui/Section/Section";
 import type { Locale, LocaleContent } from "@/data/locales";
 import { getLocalizedPath } from "@/data/locales";
@@ -25,29 +26,31 @@ export const Services = ({ locale, services }: ServicesProps) => {
     <Section className={styles.section}>
       <Container>
         <div className={styles.wrapper}>
-          <div className={styles.header}>
+          <Reveal className={styles.header}>
             <h2 className={styles.title}>{services.title}</h2>
             <p className={styles.description}>{services.description}</p>
-          </div>
+          </Reveal>
 
           <ul className={styles.grid}>
-            {services.items.map((item) => {
+            {services.items.map((item, index) => {
               return (
                 <li key={item.id} className={styles.cardItem}>
-                  {isCtaItem(item) ? (
-                    <Link
-                      href={getLocalizedPath(locale, item.href)}
-                      className={`${styles.card} ${styles.ctaCard}`}
-                    >
-                      <h3 className={styles.cardTitle}>{item.title}</h3>
-                      <p className={styles.cardDescription}>{item.description}</p>
-                    </Link>
-                  ) : (
-                    <div className={styles.card}>
-                      <h3 className={styles.cardTitle}>{item.title}</h3>
-                      <p className={styles.cardDescription}>{item.description}</p>
-                    </div>
-                  )}
+                  <Reveal delay={index * 0.08}>
+                    {isCtaItem(item) ? (
+                      <Link
+                        href={getLocalizedPath(locale, item.href)}
+                        className={`${styles.card} ${styles.ctaCard}`}
+                      >
+                        <h3 className={styles.cardTitle}>{item.title}</h3>
+                        <p className={styles.cardDescription}>{item.description}</p>
+                      </Link>
+                    ) : (
+                      <div className={styles.card}>
+                        <h3 className={styles.cardTitle}>{item.title}</h3>
+                        <p className={styles.cardDescription}>{item.description}</p>
+                      </div>
+                    )}
+                  </Reveal>
                 </li>
               );
             })}
