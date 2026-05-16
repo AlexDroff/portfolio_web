@@ -7,6 +7,7 @@ import {
   type FocusEvent,
 } from 'react';
 import Image from 'next/image';
+import { HoverIcon } from '@/components/animation/HoverIcon';
 import { Reveal } from '@/components/animation/Reveal';
 import { Container } from '@/components/ui/Container/Container';
 import type { LocaleContent } from '@/data/locales';
@@ -137,13 +138,15 @@ export const About = ({ about, profilePhotoLabel }: AboutProps) => {
                             aria-controls={`about-popover-${item.id}`}
                             aria-describedby={`about-popover-${item.id}`}
                           >
-                            <Image
-                              src={item.iconSrc}
-                              alt={item.iconAlt}
-                              width={80}
-                              height={80}
-                              className={styles.icon}
-                            />
+                            <HoverIcon className={styles.iconMotion}>
+                              <Image
+                                src={item.iconSrc}
+                                alt={item.iconAlt}
+                                width={80}
+                                height={80}
+                                className={styles.icon}
+                              />
+                            </HoverIcon>
                             <span>{item.title}</span>
                           </button>
                         ) : (
@@ -154,13 +157,15 @@ export const About = ({ about, profilePhotoLabel }: AboutProps) => {
                             aria-expanded="false"
                             aria-controls={`about-popover-${item.id}`}
                           >
-                            <Image
-                              src={item.iconSrc}
-                              alt={item.iconAlt}
-                              width={80}
-                              height={80}
-                              className={styles.icon}
-                            />
+                            <HoverIcon className={styles.iconMotion}>
+                              <Image
+                                src={item.iconSrc}
+                                alt={item.iconAlt}
+                                width={80}
+                                height={80}
+                                className={styles.icon}
+                              />
+                            </HoverIcon>
                             <span>{item.title}</span>
                           </button>
                         )}
@@ -211,13 +216,15 @@ export const About = ({ about, profilePhotoLabel }: AboutProps) => {
                             aria-controls={`about-popover-${item.id}`}
                             aria-describedby={`about-popover-${item.id}`}
                           >
-                            <Image
-                              src={item.iconSrc}
-                              alt={item.iconAlt}
-                              width={80}
-                              height={80}
-                              className={styles.icon}
-                            />
+                            <HoverIcon className={styles.iconMotion}>
+                              <Image
+                                src={item.iconSrc}
+                                alt={item.iconAlt}
+                                width={80}
+                                height={80}
+                                className={styles.icon}
+                              />
+                            </HoverIcon>
                             <span>{item.title}</span>
                           </button>
                         ) : (
@@ -228,13 +235,15 @@ export const About = ({ about, profilePhotoLabel }: AboutProps) => {
                             aria-expanded="false"
                             aria-controls={`about-popover-${item.id}`}
                           >
-                            <Image
-                              src={item.iconSrc}
-                              alt={item.iconAlt}
-                              width={80}
-                              height={80}
-                              className={styles.icon}
-                            />
+                            <HoverIcon className={styles.iconMotion}>
+                              <Image
+                                src={item.iconSrc}
+                                alt={item.iconAlt}
+                                width={80}
+                                height={80}
+                                className={styles.icon}
+                              />
+                            </HoverIcon>
                             <span>{item.title}</span>
                           </button>
                         )}

@@ -46,6 +46,12 @@
   display: flex;
 }
 
+.cardMotion {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
 .card {
   --separator-color: var(--color-brand-accent);
   position: relative;
@@ -102,7 +108,6 @@
   background: var(--color-brand-accent);
   color: var(--color-brand-primary);
   border-color: var(--color-brand-accent);
-  transform: translateY(-4px);
 }
 
 .card:hover::before,
@@ -158,7 +163,6 @@
   background: var(--color-bg-primary);
   color: var(--color-text-primary);
   border-color: var(--color-bg-primary);
-  transform: translateY(-4px);
 }
 
 .ctaCard:hover::before,

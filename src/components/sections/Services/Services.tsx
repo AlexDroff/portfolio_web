@@ -1,4 +1,5 @@
-﻿import { Reveal } from "@/components/animation/Reveal";
+﻿import { HoverCard } from "@/components/animation/HoverCard";
+import { Reveal } from "@/components/animation/Reveal";
 import { Container } from "@/components/ui/Container/Container";
 import { Section } from "@/components/ui/Section/Section";
 import type { Locale, LocaleContent } from "@/data/locales";
@@ -36,20 +37,22 @@ export const Services = ({ locale, services }: ServicesProps) => {
               return (
                 <li key={item.id} className={styles.cardItem}>
                   <Reveal className={styles.cardReveal} delay={index * 0.08}>
-                    {isCtaItem(item) ? (
-                      <Link
-                        href={getLocalizedPath(locale, item.href)}
-                        className={`${styles.card} ${styles.ctaCard}`}
-                      >
-                        <h3 className={styles.cardTitle}>{item.title}</h3>
-                        <p className={styles.cardDescription}>{item.description}</p>
-                      </Link>
-                    ) : (
-                      <div className={styles.card}>
-                        <h3 className={styles.cardTitle}>{item.title}</h3>
-                        <p className={styles.cardDescription}>{item.description}</p>
-                      </div>
-                    )}
+                    <HoverCard className={styles.cardMotion}>
+                      {isCtaItem(item) ? (
+                        <Link
+                          href={getLocalizedPath(locale, item.href)}
+                          className={`${styles.card} ${styles.ctaCard}`}
+                        >
+                          <h3 className={styles.cardTitle}>{item.title}</h3>
+                          <p className={styles.cardDescription}>{item.description}</p>
+                        </Link>
+                      ) : (
+                        <div className={styles.card}>
+                          <h3 className={styles.cardTitle}>{item.title}</h3>
+                          <p className={styles.cardDescription}>{item.description}</p>
+                        </div>
+                      )}
+                    </HoverCard>
                   </Reveal>
                 </li>
               );

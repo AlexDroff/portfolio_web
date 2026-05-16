@@ -218,12 +218,10 @@
 
 /* HOVER */
 .item:hover {
-  transform: translateY(-4px) scale(1.05);
   color: var(--color-brand-accent);
 }
 
 .item:focus-within {
-  transform: translateY(-4px) scale(1.05);
   color: var(--color-brand-accent);
 }
 
@@ -234,19 +232,20 @@
   object-fit: contain;
 
   transition:
-    transform 0.2s ease,
     filter 0.2s ease;
+}
+
+.iconMotion {
+  display: inline-flex;
 }
 
 /* GREEN EFFECT */
 .item:hover .icon {
-  transform: scale(1.05);
   filter: brightness(0) saturate(100%) invert(48%) sepia(96%) saturate(500%)
     hue-rotate(90deg);
 }
 
 .item:focus-within .icon {
-  transform: scale(1.05);
   filter: brightness(0) saturate(100%) invert(48%) sepia(96%) saturate(500%)
     hue-rotate(90deg);
 }
