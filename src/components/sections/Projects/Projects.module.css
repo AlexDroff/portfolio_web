@@ -21,6 +21,9 @@
 
 .sliderFrame {
   position: relative;
+  --slider-card-half-width: 400px;
+  --slider-arrow-width: calc(var(--space-7) + var(--space-1));
+  --slider-arrow-gap: clamp(40px, 4vw, 72px);
   padding: 0 var(--space-7);
 }
 
@@ -29,7 +32,7 @@
   top: 50%;
   z-index: 2;
   transform: translateY(-50%);
-  width: calc(var(--space-7) + var(--space-1));
+  width: var(--slider-arrow-width);
   height: calc(var(--space-7) + var(--space-2));
   border: 0;
   border-radius: var(--space-2);
@@ -45,11 +48,17 @@
 }
 
 .arrowButtonPrev {
-  left: calc(var(--space-2) * -1);
+  left: max(
+    calc(var(--space-2) * -1),
+    calc(50% - min(50%, var(--slider-card-half-width)) - var(--slider-arrow-width) - var(--slider-arrow-gap))
+  );
 }
 
 .arrowButtonNext {
-  right: calc(var(--space-2) * -1);
+  right: max(
+    calc(var(--space-2) * -1),
+    calc(50% - min(50%, var(--slider-card-half-width)) - var(--slider-arrow-width) - var(--slider-arrow-gap))
+  );
 }
 
 .arrowButton:hover:not(:disabled),
@@ -108,16 +117,12 @@
 }
 
 .slide {
-  flex: 0 0 calc((100% - var(--space-6)) / 2);
+  flex: 0 0 100%;
   min-width: 0;
-  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  scroll-snap-align: center;
   scroll-snap-stop: always;
-}
-
-@media (max-width: 1024px) {
-  .slide {
-    flex-basis: 82%;
-  }
 }
 
 @media (max-width: 767px) {

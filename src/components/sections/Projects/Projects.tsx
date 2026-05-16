@@ -49,11 +49,13 @@ export const Projects = ({
     }
 
     const scrollLeft = track.scrollLeft;
+    const viewportCenter = scrollLeft + track.clientWidth / 2;
     let nearestIndex = 0;
     let nearestDistance = Number.POSITIVE_INFINITY;
 
     slides.forEach((slide, index) => {
-      const distance = Math.abs(slide.offsetLeft - scrollLeft);
+      const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
+      const distance = Math.abs(slideCenter - viewportCenter);
       if (distance < nearestDistance) {
         nearestDistance = distance;
         nearestIndex = index;
@@ -86,7 +88,7 @@ export const Projects = ({
     slides[clampedIndex].scrollIntoView({
       behavior: "smooth",
       block: "nearest",
-      inline: "start",
+      inline: "center",
     });
   }, []);
 
