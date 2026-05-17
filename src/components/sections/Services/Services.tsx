@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, type KeyboardEvent as ReactKeyboardEvent } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import Link from "next/link";
 
@@ -76,6 +76,16 @@ export const Services = ({ locale, services }: ServicesProps) => {
     setActiveCardId((prev) => (prev === id ? null : id));
   };
 
+  const handleCardKeyDown = (
+    event: ReactKeyboardEvent<HTMLDivElement>,
+    id: string,
+  ) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      toggleCard(id);
+    }
+  };
+
   return (
     <Section className={styles.section}>
       <Container>
@@ -85,11 +95,11 @@ export const Services = ({ locale, services }: ServicesProps) => {
             <p className={styles.description}>{services.description}</p>
           </Reveal>
 
-          <ul className={styles.grid}>
+          <div className={styles.grid}>
             {services.items.map((item, index) => {
               if (isCtaItem(item)) {
                 return (
-                  <li key={item.id} className={styles.cardItem}>
+                  <div key={item.id} className={styles.cardItem}>
                     <Reveal className={styles.cardReveal} delay={index * 0.08}>
                       <motion.div
                         className={styles.ctaMotion}
@@ -106,7 +116,7 @@ export const Services = ({ locale, services }: ServicesProps) => {
                         </Link>
                       </motion.div>
                     </Reveal>
-                  </li>
+                  </div>
                 );
               }
 
@@ -114,12 +124,13 @@ export const Services = ({ locale, services }: ServicesProps) => {
               const panelId = `service-back-${item.id}`;
               const cardClasses = styles.card;
               const frontCard = (
-                <button
-                  type="button"
+                <div
+                  role="button"
+                  tabIndex={0}
                   className={`${cardClasses} ${styles.cardButton}`}
                   data-service-card-id={item.id}
                   onClick={() => toggleCard(item.id)}
-                  aria-expanded={isActive ? "true" : "false"}
+                  onKeyDown={(event) => handleCardKeyDown(event, item.id)}
                   aria-controls={panelId}
                   aria-label={`${services.flipOpenLabel}: ${item.title}`}
                 >
@@ -128,17 +139,18 @@ export const Services = ({ locale, services }: ServicesProps) => {
                     <span className={styles.cardSeparator} aria-hidden="true" />
                   </div>
                   <p className={styles.cardDescription}>{item.description}</p>
-                </button>
+                </div>
               );
 
               const backCard = (
-                <button
+                <div
                   id={panelId}
-                  type="button"
+                  role="button"
+                  tabIndex={0}
                   className={`${cardClasses} ${styles.cardBackContent} ${styles.cardButton}`}
                   data-service-card-id={item.id}
                   onClick={() => toggleCard(item.id)}
-                  aria-expanded={isActive ? "true" : "false"}
+                  onKeyDown={(event) => handleCardKeyDown(event, item.id)}
                   aria-controls={panelId}
                   aria-label={`${services.flipOpenLabel}: ${item.title}`}
                 >
@@ -149,11 +161,11 @@ export const Services = ({ locale, services }: ServicesProps) => {
                       <li key={point}>{point}</li>
                     ))}
                   </ul>
-                </button>
+                </div>
               );
 
               return (
-                <li key={item.id} className={styles.cardItem}>
+                <div key={item.id} className={styles.cardItem}>
                   <Reveal className={styles.cardReveal} delay={index * 0.08}>
                     {shouldReduceMotion ? (
                       <div className={styles.cardScene}>{isActive ? backCard : frontCard}</div>
@@ -165,15 +177,13 @@ export const Services = ({ locale, services }: ServicesProps) => {
                           transition={{ duration: 0.45, ease: "easeOut" }}
                         >
                           <div
-                            className={`${styles.cardFace} ${styles.cardFront}`}
-                            aria-hidden={isActive ? "true" : "false"}
+                            className={`${styles.cardFace} ${styles.cardFront} ${isActive ? styles.cardFaceHidden : ""}`}
                           >
                             {frontCard}
                           </div>
 
                           <div
-                            className={`${styles.cardFace} ${styles.cardBack}`}
-                            aria-hidden={isActive ? "false" : "true"}
+                            className={`${styles.cardFace} ${styles.cardBack} ${isActive ? "" : styles.cardFaceHidden}`}
                           >
                             {backCard}
                           </div>
@@ -181,10 +191,10 @@ export const Services = ({ locale, services }: ServicesProps) => {
                       </div>
                     )}
                   </Reveal>
-                </li>
+                </div>
               );
             })}
-          </ul>
+          </div>
         </div>
       </Container>
     </Section>

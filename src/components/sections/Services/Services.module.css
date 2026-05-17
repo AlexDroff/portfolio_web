@@ -28,9 +28,6 @@
 }
 
 .grid {
-  margin: 0;
-  padding: 0;
-  list-style: none;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-5);
@@ -79,7 +76,7 @@
   transform: rotateY(180deg);
 }
 
-.cardFace[aria-hidden="true"] {
+.cardFaceHidden {
   pointer-events: none;
 }
 
