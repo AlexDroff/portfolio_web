@@ -35,7 +35,8 @@ export const ProjectCard = ({
         <Image
           src={image}
           alt={title}
-          fill
+          width={1600}
+          height={900}
           sizes="(max-width: 768px) 92vw, (max-width: 1024px) 82vw, 48vw"
           className={styles.image}
         />

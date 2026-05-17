@@ -160,25 +160,23 @@ export const Projects = ({
               ref={trackRef}
               onScroll={handleTrackScroll}
             >
-              {projects.map((project, index) => (
+              {projects.map((project) => (
                 <li
                   key={project.slug}
                   className={styles.slide}
                   data-project-slide="true"
                 >
-                  <Reveal delay={index * 0.08}>
-                    <ProjectCard
-                      locale={locale}
-                      viewCaseStudyLabel={projectCardLabels.viewCaseStudy}
-                      liveWebsiteLabel={projectCardLabels.liveWebsite}
-                      slug={project.slug}
-                      title={project.title}
-                      image={project.cardImage}
-                      businessSummary={project.businessSummary}
-                      badges={project.badges}
-                      liveDemoUrl={project.liveDemoUrl}
-                    />
-                  </Reveal>
+                  <ProjectCard
+                    locale={locale}
+                    viewCaseStudyLabel={projectCardLabels.viewCaseStudy}
+                    liveWebsiteLabel={projectCardLabels.liveWebsite}
+                    slug={project.slug}
+                    title={project.title}
+                    image={project.cardImage}
+                    businessSummary={project.businessSummary}
+                    badges={project.badges}
+                    liveDemoUrl={project.liveDemoUrl}
+                  />
                 </li>
               ))}
             </ul>
