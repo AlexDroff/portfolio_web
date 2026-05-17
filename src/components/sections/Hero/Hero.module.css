@@ -24,6 +24,15 @@
   letter-spacing: -0.02em;
 }
 
+.titleReveal {
+  display: block;
+}
+
+.titleWord {
+  display: inline-block;
+  white-space: pre;
+}
+
 .subtitle {
   font-size: var(--font-size-lg);
   line-height: 1.6;
