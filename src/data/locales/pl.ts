@@ -165,7 +165,7 @@ const home: LocaleContent['home'] = {
         backPoints: [
           'Tre\u015b\u0107 u\u0142o\u017cona w czytelne sekcje',
           'Lepszy wygl\u0105d na r\u00f3\u017cnych ekranach',
-          'Mniej krok\u00f3w do kontaktu',
+          '\u0141atwiejszy kontakt z klientem',
         ],
       },
       {
