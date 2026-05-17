@@ -72,20 +72,34 @@ export function PageLanguageToggle({ locale, currentPath }: PageLanguageTogglePr
 
   return (
     <div className={styles.wrapper} ref={wrapperRef}>
-      <button
-        type="button"
-        className={styles.trigger}
-        aria-label="Choose language"
-        aria-expanded={isOpen ? "true" : "false"}
-        aria-controls={menuId}
-        onClick={() => setIsOpen((prev) => !prev)}
-      >
-        <span>{languageLabels[locale].code}</span>
-        <span
-          className={`${styles.chevron} ${isOpen ? styles.chevronOpen : ""}`}
-          aria-hidden="true"
-        />
-      </button>
+      {isOpen ? (
+        <button
+          type="button"
+          className={styles.trigger}
+          aria-label="Choose language"
+          aria-expanded="true"
+          aria-controls={menuId}
+          onClick={() => setIsOpen(false)}
+        >
+          <span>{languageLabels[locale].code}</span>
+          <span
+            className={`${styles.chevron} ${styles.chevronOpen}`}
+            aria-hidden="true"
+          />
+        </button>
+      ) : (
+        <button
+          type="button"
+          className={styles.trigger}
+          aria-label="Choose language"
+          aria-expanded="false"
+          aria-controls={menuId}
+          onClick={() => setIsOpen(true)}
+        >
+          <span>{languageLabels[locale].code}</span>
+          <span className={styles.chevron} aria-hidden="true" />
+        </button>
+      )}
 
       {isOpen ? (
         <ul id={menuId} className={styles.menu} aria-label="Available languages">

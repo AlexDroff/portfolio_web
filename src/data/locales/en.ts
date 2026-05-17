@@ -514,7 +514,7 @@ const projects: Project[] = [
       "House detail pages",
       "Direct call booking"
     ],
-    "liveDemoUrl": "https://sablino.vercel.app/",
+    "liveDemoUrl": "https://usadba.kr.ua/",
     "imageFolder": "rental-house",
     "cardImage": "/projects cards/rental house.webp",
     "businessSummary": "A website for holiday cottages with accommodation offers, a gallery, and a simple reservation inquiry path.",
