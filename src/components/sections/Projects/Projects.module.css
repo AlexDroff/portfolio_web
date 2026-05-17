@@ -27,6 +27,23 @@
   padding: 0 var(--space-7);
 }
 
+.sliderStage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  perspective: 1200px;
+  overflow: hidden;
+}
+
+.slideMotion {
+  width: min(100%, 800px);
+  margin-inline: auto;
+  transform-origin: center;
+}
+
 .arrowButton {
   position: absolute;
   top: 50%;
@@ -101,41 +118,6 @@
   mask: url('/icons/arrow_right.svg') center / contain no-repeat;
 }
 
-.sliderTrack {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-
-  display: flex;
-  gap: var(--space-6);
-
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-
-  -ms-overflow-style: none;
-}
-
-.sliderTrack::-webkit-scrollbar {
-  display: none;
-}
-
-@supports (scrollbar-width: none) {
-  .sliderTrack {
-    scrollbar-width: none;
-  }
-}
-
-.slide {
-  flex: 0 0 100%;
-  min-width: 0;
-  display: flex;
-  justify-content: center;
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
-}
-
 @media (max-width: 767px) {
   .wrapper {
     gap: var(--space-6);
@@ -147,13 +129,5 @@
 
   .arrowButton {
     display: none;
-  }
-
-  .sliderTrack {
-    gap: var(--space-5);
-  }
-
-  .slide {
-    flex-basis: 100%;
   }
 }

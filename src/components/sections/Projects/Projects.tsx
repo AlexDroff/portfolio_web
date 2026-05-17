@@ -1,18 +1,15 @@
-﻿"use client";
+"use client";
 
-import {
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import { useState } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
+
 import { Reveal } from "@/components/animation/Reveal";
 import { Container } from "@/components/ui/Container/Container";
 import { Section } from "@/components/ui/Section/Section";
-import styles from "./Projects.module.css";
 import { ProjectCard } from "@/components/ui/ProjectCard/ProjectCard";
 import type { Locale, LocaleContent } from "@/data/locales";
 import type { Project } from "@/types/project";
+import styles from "./Projects.module.css";
 
 type ProjectsProps = {
   locale: Locale;
@@ -29,109 +26,54 @@ export const Projects = ({
   projectCardLabels,
   projects,
 }: ProjectsProps) => {
-  const trackRef = useRef<HTMLUListElement>(null);
-  const frameRef = useRef<number | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [canScrollPrev, setCanScrollPrev] = useState(false);
-  const [canScrollNext, setCanScrollNext] = useState(projects.length > 1);
+  const [direction, setDirection] = useState<"next" | "prev">("next");
+  const shouldReduceMotion = useReducedMotion();
+  const hasProjects = projects.length > 0;
+  const safeIndex = hasProjects ? Math.max(0, Math.min(activeIndex, projects.length - 1)) : 0;
+  const activeProject = hasProjects ? projects[safeIndex] : null;
+  const canScrollPrev = hasProjects && safeIndex > 0;
+  const canScrollNext = hasProjects && safeIndex < projects.length - 1;
 
-  const updateScrollState = useCallback(() => {
-    const track = trackRef.current;
-    if (!track) {
-      return;
-    }
-
-    const slides = Array.from(
-      track.querySelectorAll<HTMLElement>('[data-project-slide="true"]')
-    );
-
-    if (slides.length === 0) {
-      return;
-    }
-
-    const scrollLeft = track.scrollLeft;
-    const viewportCenter = scrollLeft + track.clientWidth / 2;
-    let nearestIndex = 0;
-    let nearestDistance = Number.POSITIVE_INFINITY;
-
-    slides.forEach((slide, index) => {
-      const slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
-      const distance = Math.abs(slideCenter - viewportCenter);
-      if (distance < nearestDistance) {
-        nearestDistance = distance;
-        nearestIndex = index;
+  const slideVariants = shouldReduceMotion
+    ? {
+        initial: { opacity: 1, x: 0, rotateY: 0, scale: 1 },
+        animate: { opacity: 1, x: 0, rotateY: 0, scale: 1 },
+        exit: { opacity: 1, x: 0, rotateY: 0, scale: 1 },
       }
-    });
-
-    const maxScrollLeft = track.scrollWidth - track.clientWidth;
-
-    setActiveIndex(nearestIndex);
-    setCanScrollPrev(scrollLeft > 1);
-    setCanScrollNext(scrollLeft < maxScrollLeft - 1);
-  }, []);
-
-  const scrollToIndex = useCallback((index: number) => {
-    const track = trackRef.current;
-    if (!track) {
-      return;
-    }
-
-    const slides = Array.from(
-      track.querySelectorAll<HTMLElement>('[data-project-slide="true"]')
-    );
-
-    if (slides.length === 0) {
-      return;
-    }
-
-    const clampedIndex = Math.max(0, Math.min(index, slides.length - 1));
-
-    slides[clampedIndex].scrollIntoView({
-      behavior: "smooth",
-      block: "nearest",
-      inline: "center",
-    });
-  }, []);
-
-  const handleTrackScroll = () => {
-    if (frameRef.current !== null) {
-      cancelAnimationFrame(frameRef.current);
-    }
-
-    frameRef.current = requestAnimationFrame(() => {
-      updateScrollState();
-      frameRef.current = null;
-    });
-  };
+    : {
+        initial: (currentDirection: "next" | "prev") => ({
+          opacity: 0,
+          x: currentDirection === "next" ? 80 : -80,
+          rotateY: currentDirection === "next" ? 8 : -8,
+          scale: 0.98,
+        }),
+        animate: { opacity: 1, x: 0, rotateY: 0, scale: 1 },
+        exit: (currentDirection: "next" | "prev") => ({
+          opacity: 0,
+          x: currentDirection === "next" ? -80 : 80,
+          rotateY: currentDirection === "next" ? -8 : 8,
+          scale: 0.98,
+        }),
+      };
 
   const handlePrevClick = () => {
-    scrollToIndex(activeIndex - 1);
+    if (!canScrollPrev) {
+      return;
+    }
+
+    setDirection("prev");
+    setActiveIndex((current) => Math.max(0, current - 1));
   };
 
   const handleNextClick = () => {
-    scrollToIndex(activeIndex + 1);
+    if (!canScrollNext) {
+      return;
+    }
+
+    setDirection("next");
+    setActiveIndex((current) => Math.min(projects.length - 1, current + 1));
   };
-
-  useEffect(() => {
-    const initFrame = requestAnimationFrame(() => {
-      updateScrollState();
-    });
-
-    const handleResize = () => {
-      updateScrollState();
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      cancelAnimationFrame(initFrame);
-
-      if (frameRef.current !== null) {
-        cancelAnimationFrame(frameRef.current);
-      }
-    };
-  }, [updateScrollState]);
 
   return (
     <Section id="projects" className={styles.section}>
@@ -155,31 +97,38 @@ export const Projects = ({
               />
             </button>
 
-            <ul
-              className={styles.sliderTrack}
-              ref={trackRef}
-              onScroll={handleTrackScroll}
-            >
-              {projects.map((project) => (
-                <li
-                  key={project.slug}
-                  className={styles.slide}
-                  data-project-slide="true"
+            <div className={styles.sliderStage}>
+              <AnimatePresence mode="wait" initial={false} custom={direction}>
+                <motion.div
+                  key={activeProject?.slug ?? "empty-project"}
+                  className={styles.slideMotion}
+                  custom={direction}
+                  variants={slideVariants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  transition={
+                    shouldReduceMotion
+                      ? { duration: 0 }
+                      : { duration: 0.4, ease: "easeOut" }
+                  }
                 >
-                  <ProjectCard
-                    locale={locale}
-                    viewCaseStudyLabel={projectCardLabels.viewCaseStudy}
-                    liveWebsiteLabel={projectCardLabels.liveWebsite}
-                    slug={project.slug}
-                    title={project.title}
-                    image={project.cardImage}
-                    businessSummary={project.businessSummary}
-                    badges={project.badges}
-                    liveDemoUrl={project.liveDemoUrl}
-                  />
-                </li>
-              ))}
-            </ul>
+                  {activeProject ? (
+                    <ProjectCard
+                      locale={locale}
+                      viewCaseStudyLabel={projectCardLabels.viewCaseStudy}
+                      liveWebsiteLabel={projectCardLabels.liveWebsite}
+                      slug={activeProject.slug}
+                      title={activeProject.title}
+                      image={activeProject.cardImage}
+                      businessSummary={activeProject.businessSummary}
+                      badges={activeProject.badges}
+                      liveDemoUrl={activeProject.liveDemoUrl}
+                    />
+                  ) : null}
+                </motion.div>
+              </AnimatePresence>
+            </div>
 
             <button
               type="button"

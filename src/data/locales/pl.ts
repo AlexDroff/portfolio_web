@@ -398,7 +398,7 @@ const projects: Project[] = enContent.projects.map((project) => {
         meta: [
           {
             label: 'Rola',
-            value: 'Projektant produktu i fullstack developer',
+            value: 'Projekt UI/UX i full-stack development',
           },
           {
             label: 'Typ',
@@ -419,8 +419,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           },
           {
             label: 'Czas realizacji',
-            value:
-              '3 tygodnie (1 tydzień projektowania, 2 tygodnie developmentu)',
+            value: '3 tyg.',
           },
         ],
         content: {
@@ -598,7 +597,7 @@ const projects: Project[] = enContent.projects.map((project) => {
         meta: [
           {
             label: 'Rola',
-            value: 'Projektant produktu i fullstack developer',
+            value: 'Projekt UI/UX i full-stack development',
           },
           {
             label: 'Typ',
@@ -619,8 +618,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           },
           {
             label: 'Czas realizacji',
-            value:
-              '3 tygodnie (1 tydzień projektowania, 2 tygodnie developmentu)',
+            value: '3 tyg.',
           },
         ],
         content: {
@@ -816,7 +814,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           },
           {
             label: 'Czas realizacji',
-            value: '3 dni',
+            value: '1 tydz.',
           },
         ],
         content: {
@@ -997,7 +995,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           },
           {
             label: 'Czas realizacji',
-            value: '2 tygodnie',
+            value: '2 tyg.',
           },
         ],
         content: {

@@ -354,7 +354,7 @@ const projects: Project[] = [
       "meta": [
         {
           "label": "Role",
-          "value": "Product Designer & Fullstack Developer"
+          "value": "UI/UX design and full-stack development"
         },
         {
           "label": "Type",
@@ -374,7 +374,7 @@ const projects: Project[] = [
         },
         {
           "label": "Duration",
-          "value": "3 weeks (1 week design, 2 weeks development)"
+          "value": "3 weeks"
         }
       ],
       "content": {
@@ -551,7 +551,7 @@ const projects: Project[] = [
       "meta": [
         {
           "label": "Role",
-          "value": "Product Designer & Fullstack Developer"
+          "value": "UI/UX design and full-stack development"
         },
         {
           "label": "Type",
@@ -571,7 +571,7 @@ const projects: Project[] = [
         },
         {
           "label": "Duration",
-          "value": "3 weeks (1 week design, 2 weeks development)"
+          "value": "3 weeks"
         }
       ],
       "content": {
@@ -766,7 +766,7 @@ const projects: Project[] = [
         },
         {
           "label": "Duration",
-          "value": "3 days"
+          "value": "1 week"
         }
       ],
       "content": {

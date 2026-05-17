@@ -396,7 +396,7 @@ const projects: Project[] = enContent.projects.map((project) => {
             'Сайт локальної клінінгової компанії з каталогом послуг і повним сценарієм заявки через WhatsApp.',
         },
         meta: [
-          { label: 'Роль', value: 'Product Designer & Fullstack Developer' },
+          { label: 'Роль', value: 'UI/UX-дизайн і full-stack розробка' },
           { label: 'Тип', value: 'Сайт бізнесу у сфері послуг із заявкою' },
           { label: 'Локація', value: 'Іспанія' },
           {
@@ -407,7 +407,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           { label: 'Стек', value: 'Next.js, TypeScript, CSS Modules' },
           {
             label: 'Тривалість',
-            value: '3 тижні (1 тиждень дизайн, 2 тижні розробка)',
+            value: '3 тиж.',
           },
         ],
         content: {
@@ -561,7 +561,7 @@ const projects: Project[] = enContent.projects.map((project) => {
             'Сайт заміського гостьового об’єкта з акцентом на атмосферу, презентацію будинків і прямий контакт для бронювання.',
         },
         meta: [
-          { label: 'Роль', value: 'Product Designer & Fullstack Developer' },
+          { label: 'Роль', value: 'UI/UX-дизайн і full-stack розробка' },
           { label: 'Тип', value: 'Сайт для будинків відпочинку' },
           { label: 'Локація', value: 'Україна' },
           {
@@ -572,7 +572,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           { label: 'Стек', value: 'Next.js, TypeScript, CSS Modules' },
           {
             label: 'Тривалість',
-            value: '3 тижні (1 тиждень дизайн, 2 тижні розробка)',
+            value: '3 тиж.',
           },
         ],
         content: {
@@ -716,7 +716,7 @@ const projects: Project[] = enContent.projects.map((project) => {
               'Реалізація динамічного каталогу з фільтрацією, запитом на бронювання та інтеграцією API.',
           },
           { label: 'Стек', value: 'Next.js, TypeScript, REST API' },
-          { label: 'Тривалість', value: '3 дні' },
+          { label: 'Тривалість', value: '1 тиж.' },
         ],
         content: {
           problem:
@@ -845,7 +845,7 @@ const projects: Project[] = enContent.projects.map((project) => {
               'Побудова масштабованої контент-платформи з авторизацією, публікацією історій і профільним сценарієм користувача.',
           },
           { label: 'Стек', value: 'Next.js, TypeScript, Node.js, REST API' },
-          { label: 'Тривалість', value: '2 тижні' },
+          { label: 'Тривалість', value: '2 тиж.' },
         ],
         content: {
           problem:
