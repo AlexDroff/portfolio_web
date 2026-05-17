@@ -23,14 +23,14 @@ type ProjectPageContentProps = {
 export function ProjectPageContent({ locale, content, project }: ProjectPageContentProps) {
   const { projectDetail, common } = content.ui;
   const { caseStudy } = project;
-  const homePath = getLocalizedPath(locale, "/");
+  const projectsPath = getLocalizedPath(locale, "/#projects");
 
   return (
     <>
       <div className={styles.backLinkWrap}>
         <Container>
-          <Link href={homePath} className={styles.backLink}>
-            {`\u2190 ${projectDetail.backToHome}`}
+          <Link href={projectsPath} className={styles.backLink}>
+            {`\u2190 ${projectDetail.backToProjects}`}
           </Link>
         </Container>
       </div>
@@ -62,8 +62,8 @@ export function ProjectPageContent({ locale, content, project }: ProjectPageCont
       />
       <div className={styles.backLinkWrap}>
         <Container>
-          <Link href={homePath} className={styles.backLink}>
-            {`\u2190 ${projectDetail.backToHome}`}
+          <Link href={projectsPath} className={styles.backLink}>
+            {`\u2190 ${projectDetail.backToProjects}`}
           </Link>
         </Container>
       </div>

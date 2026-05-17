@@ -1028,7 +1028,7 @@ const ui: LocaleContent['ui'] = {
     contributions: 'Що зроблено',
     gallery: 'Галерея',
     liveProject: 'Переглянути проєкт',
-    backToProjects: 'Повернутися до робіт',
+    backToProjects: 'Назад до проєктів',
     projectNotFoundTitle: 'Проєкт не знайдено',
     projectNotFoundDescription:
       'Проєкт, який ви шукаєте, не існує або був видалений.',
