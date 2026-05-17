@@ -42,6 +42,7 @@
   width: min(100%, 800px);
   margin-inline: auto;
   transform-origin: center;
+  touch-action: pan-y;
 }
 
 .arrowButton {
@@ -128,6 +129,24 @@
   }
 
   .arrowButton {
-    display: none;
+    display: inline-flex;
+    top: 38%;
+    width: 36px;
+    height: 48px;
+    border-radius: var(--radius-sm);
+  }
+
+  .arrowButtonPrev {
+    left: 0;
+  }
+
+  .arrowButtonNext {
+    right: 0;
+  }
+
+  .arrowIcon {
+    width: 15px;
+    height: 34px;
+    transform: none;
   }
 }

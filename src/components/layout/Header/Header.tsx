@@ -307,86 +307,88 @@ export const Header = ({ locale, navigation, hero }: HeaderProps) => {
               </button>
             </div>
 
-            <nav className={styles.menuNav}>
-              <Link
-                href={projectsPath}
-                className={styles.mobileNavLink}
-                onClick={(event) => handleHashClickAndClose(event, projectsPath, "projects")}
-              >
-                {navigation.projects}
-              </Link>
-              <Link href={contactPath} className={styles.mobileNavLink} onClick={closeMenu}>
-                {navigation.contact}
-              </Link>
-              <Link
-                href={packagesPath}
-                className={styles.mobileNavLink}
-                onClick={(event) => handleHashClickAndClose(event, packagesPath, "packages")}
-              >
-                {navigation.packages}
-              </Link>
-              <Link
-                href={faqPath}
-                className={styles.mobileNavLink}
-                onClick={(event) => handleHashClickAndClose(event, faqPath, "faq")}
-              >
-                {navigation.faq}
-              </Link>
-            </nav>
-
-            <div
-              className={`${styles.mobileLanguageDropdown} ${isMobileLanguageOpen ? styles.mobileLanguageDropdownOpen : ""}`}
-            >
-              {isMobileLanguageOpen ? (
-                <button
-                  type="button"
-                  className={styles.mobileLanguageTrigger}
-                  aria-label="Choose language"
-                  aria-expanded="true"
-                  aria-controls="mobile-language-menu"
-                  onClick={() => setIsMobileLanguageOpen(false)}
+            <div className={styles.mobileMenuTop}>
+              <nav className={styles.menuNav}>
+                <Link
+                  href={projectsPath}
+                  className={styles.mobileNavLink}
+                  onClick={(event) => handleHashClickAndClose(event, projectsPath, "projects")}
                 >
-                  <span>{currentLanguage.code}</span>
-                  <span
-                    className={`${styles.languageChevron} ${styles.languageChevronOpen}`}
-                    aria-hidden="true"
-                  />
-                </button>
-              ) : (
-                <button
-                  type="button"
-                  className={styles.mobileLanguageTrigger}
-                  aria-label="Choose language"
-                  aria-expanded="false"
-                  aria-controls="mobile-language-menu"
-                  onClick={() => setIsMobileLanguageOpen(true)}
+                  {navigation.projects}
+                </Link>
+                <Link href={contactPath} className={styles.mobileNavLink} onClick={closeMenu}>
+                  {navigation.contact}
+                </Link>
+                <Link
+                  href={packagesPath}
+                  className={styles.mobileNavLink}
+                  onClick={(event) => handleHashClickAndClose(event, packagesPath, "packages")}
                 >
-                  <span>{currentLanguage.code}</span>
-                  <span className={styles.languageChevron} aria-hidden="true" />
-                </button>
-              )}
+                  {navigation.packages}
+                </Link>
+                <Link
+                  href={faqPath}
+                  className={styles.mobileNavLink}
+                  onClick={(event) => handleHashClickAndClose(event, faqPath, "faq")}
+                >
+                  {navigation.faq}
+                </Link>
+              </nav>
 
-              <ul
-                id="mobile-language-menu"
-                className={styles.mobileLanguageMenu}
-                aria-label="Available languages"
-              >
-                {otherLanguages.map((language) => (
-                  <li key={language}>
-                    <Link
-                      href={getLanguageSwitchPath(language, currentPath)}
-                      className={styles.mobileLanguageMenuLink}
-                      aria-label={languageLabels[language].ariaLabel}
-                      onClick={closeMenu}
+              <div className={styles.mobileLanguageRow}>
+                <div
+                  className={`${styles.mobileLanguageDropdown} ${isMobileLanguageOpen ? styles.mobileLanguageDropdownOpen : ""}`}
+                >
+                  {isMobileLanguageOpen ? (
+                    <button
+                      type="button"
+                      className={styles.mobileLanguageTrigger}
+                      aria-label="Choose language"
+                      aria-expanded="true"
+                      aria-controls="mobile-language-menu"
+                      onClick={() => setIsMobileLanguageOpen(false)}
                     >
-                      {languageLabels[language].code}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+                      <span>{currentLanguage.code}</span>
+                      <span
+                        className={`${styles.languageChevron} ${styles.languageChevronOpen}`}
+                        aria-hidden="true"
+                      />
+                    </button>
+                  ) : (
+                    <button
+                      type="button"
+                      className={styles.mobileLanguageTrigger}
+                      aria-label="Choose language"
+                      aria-expanded="false"
+                      aria-controls="mobile-language-menu"
+                      onClick={() => setIsMobileLanguageOpen(true)}
+                    >
+                      <span>{currentLanguage.code}</span>
+                      <span className={styles.languageChevron} aria-hidden="true" />
+                    </button>
+                  )}
 
-            <div className={styles.mobileMenuSeparator} aria-hidden="true" />
+                  <ul
+                    id="mobile-language-menu"
+                    className={styles.mobileLanguageMenu}
+                    aria-label="Available languages"
+                  >
+                    {otherLanguages.map((language) => (
+                      <li key={language}>
+                        <Link
+                          href={getLanguageSwitchPath(language, currentPath)}
+                          className={styles.mobileLanguageMenuLink}
+                          aria-label={languageLabels[language].ariaLabel}
+                          onClick={closeMenu}
+                        >
+                          {languageLabels[language].code}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
 
             <div className={styles.mobileMenuActions}>
               <Button as="link" href={getLocalizedPath(locale, hero.primaryCta.href)} onClick={closeMenu} fullWidth>

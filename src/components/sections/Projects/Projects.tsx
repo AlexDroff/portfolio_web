@@ -75,6 +75,21 @@ export const Projects = ({
     setActiveIndex((current) => Math.min(projects.length - 1, current + 1));
   };
 
+  const handleSwipeEnd = (offsetX: number, velocityX: number) => {
+    if (!hasProjects) {
+      return;
+    }
+
+    if (offsetX < -50 || velocityX < -500) {
+      handleNextClick();
+      return;
+    }
+
+    if (offsetX > 50 || velocityX > 500) {
+      handlePrevClick();
+    }
+  };
+
   return (
     <Section id="projects" className={styles.section}>
       <Container>
@@ -102,6 +117,11 @@ export const Projects = ({
                 <motion.div
                   key={activeProject?.slug ?? "empty-project"}
                   className={styles.slideMotion}
+                  drag="x"
+                  dragConstraints={{ left: 0, right: 0 }}
+                  dragElastic={0.12}
+                  dragMomentum={false}
+                  onDragEnd={(_, info) => handleSwipeEnd(info.offset.x, info.velocity.x)}
                   custom={direction}
                   variants={slideVariants}
                   initial="initial"
