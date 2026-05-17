@@ -16,7 +16,7 @@ type PageLanguageToggleProps = {
 
 const languageOrder: Locale[] = ["pl", "en", "uk"];
 
-const languageLabels: Record<Locale, { code: "PL" | "EN" | "UK"; ariaLabel: string }> = {
+const languageLabels: Record<Locale, { code: "PL" | "EN" | "UA"; ariaLabel: string }> = {
   pl: {
     code: "PL",
     ariaLabel: "Switch language to Polish",
@@ -26,7 +26,7 @@ const languageLabels: Record<Locale, { code: "PL" | "EN" | "UK"; ariaLabel: stri
     ariaLabel: "Switch language to English",
   },
   uk: {
-    code: "UK",
+    code: "UA",
     ariaLabel: "Switch language to Ukrainian",
   },
 };
@@ -106,4 +106,3 @@ export function PageLanguageToggle({ locale, currentPath }: PageLanguageTogglePr
     </div>
   );
 }
-

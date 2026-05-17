@@ -36,7 +36,7 @@ export const Header = ({ locale, navigation, hero }: HeaderProps) => {
   const languageOptions: ReadonlyArray<Locale> = ["pl", "en", "uk"];
   const languageLabels: Record<
     Locale,
-    { code: "PL" | "EN" | "UK"; ariaLabel: "Switch language to Polish" | "Switch language to English" | "Switch language to Ukrainian" }
+    { code: "PL" | "EN" | "UA"; ariaLabel: "Switch language to Polish" | "Switch language to English" | "Switch language to Ukrainian" }
   > = {
     pl: {
       code: "PL",
@@ -47,7 +47,7 @@ export const Header = ({ locale, navigation, hero }: HeaderProps) => {
       ariaLabel: "Switch language to English",
     },
     uk: {
-      code: "UK",
+      code: "UA",
       ariaLabel: "Switch language to Ukrainian",
     },
   };
