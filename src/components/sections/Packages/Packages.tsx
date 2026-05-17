@@ -72,29 +72,45 @@ export const Packages = ({ locale, packages }: PackagesProps) => {
           </Reveal>
 
           <ul className={styles.grid} ref={gridRef}>
-            {packageItems.map((item, index) => (
-              <li key={item.id} className={styles.card}>
-                <Reveal className={styles.cardContent} delay={index * 0.08}>
-                  {item.badge ? <span className={styles.badge}>{item.badge}</span> : null}
-                  <h3 className={styles.cardTitle}>{item.title}</h3>
-                  <p className={styles.price}>{item.price}</p>
-                  <p className={styles.cardDescription}>{item.description}</p>
-                  <ul className={styles.features}>
-                    {item.features.map((feature) => (
-                      <li key={`${item.id}-${feature}`} className={styles.featureItem}>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  {item.note ? <p className={styles.note}>{item.note}</p> : null}
-                  {item.ctaLabel && item.ctaHref ? (
-                    <Link href={getLocalizedPath(locale, item.ctaHref)} className={styles.cardCta}>
-                      {item.ctaLabel}
-                    </Link>
-                  ) : null}
-                </Reveal>
-              </li>
-            ))}
+            {packageItems.map((item, index) => {
+              const isRecommended = item.id === "booking-flow" && Boolean(item.badge);
+
+              return (
+                <li
+                  key={item.id}
+                  className={`${styles.card} ${isRecommended ? styles.recommendedCard : ""}`}
+                >
+                  <Reveal className={styles.cardContent} delay={index * 0.08}>
+                    <div className={styles.cardHeader}>
+                      {item.badge ? <span className={styles.badge}>{item.badge}</span> : null}
+                      <h3 className={styles.cardTitle}>{item.title}</h3>
+                      <p className={styles.price}>{item.price}</p>
+                    </div>
+
+                    <p className={styles.cardDescription}>{item.description}</p>
+
+                    <div className={styles.featuresBlock}>
+                      <ul className={styles.features}>
+                        {item.features.map((feature) => (
+                          <li key={`${item.id}-${feature}`} className={styles.featureItem}>
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className={styles.cardFooter}>
+                      {item.note ? <p className={styles.note}>{item.note}</p> : null}
+                      {item.ctaLabel && item.ctaHref ? (
+                        <Link href={getLocalizedPath(locale, item.ctaHref)} className={styles.cardCta}>
+                          {item.ctaLabel}
+                        </Link>
+                      ) : null}
+                    </div>
+                  </Reveal>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </Container>
