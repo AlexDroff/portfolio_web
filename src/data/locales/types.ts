@@ -5,6 +5,8 @@ import type { Project } from "@/types/project";
 export type LocaleServiceItem = HomeContent["services"]["items"][number] & {
   variant?: "default" | "cta";
   href?: string;
+  backDescription: string;
+  backPoints: string[];
 };
 
 export type LocalePackageItem = HomeContent["packages"]["items"][number] & {
@@ -15,6 +17,7 @@ export type LocalePackageItem = HomeContent["packages"]["items"][number] & {
 
 export type LocaleHomeContent = Omit<HomeContent, "services"> & {
   services: Omit<HomeContent["services"], "items"> & {
+    flipOpenLabel: string;
     items: LocaleServiceItem[];
   };
   packages: Omit<HomeContent["packages"], "items"> & {

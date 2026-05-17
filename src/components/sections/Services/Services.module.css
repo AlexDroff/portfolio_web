@@ -39,17 +39,48 @@
 
 .cardItem {
   min-width: 0;
+  display: flex;
 }
 
 .cardReveal {
-  height: 100%;
   display: flex;
-}
-
-.cardMotion {
   width: 100%;
   height: 100%;
+}
+
+.ctaMotion {
   display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.cardScene {
+  width: 100%;
+  height: 100%;
+  perspective: 1200px;
+}
+
+.cardInner {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.cardFace {
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  pointer-events: auto;
+}
+
+.cardBack {
+  transform: rotateY(180deg);
+}
+
+.cardFace[aria-hidden="true"] {
+  pointer-events: none;
 }
 
 .card {
@@ -60,18 +91,28 @@
   width: 100%;
   border: var(--border-width-default) solid var(--color-border-soft);
   border-radius: var(--space-1);
-  padding: var(--space-5);
+  padding: var(--space-4);
   background: var(--color-brand-primary);
   color: var(--color-bg-primary);
   text-decoration: none;
   transition:
     background-color 0.2s ease,
     color 0.2s ease,
-    border-color 0.2s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease,
     transform 0.2s ease;
 }
 
-.card::before {
+.cardButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+}
+
+.ctaCard::before {
   content: "";
   display: block;
   position: relative;
@@ -102,25 +143,20 @@
   pointer-events: none;
 }
 
-.card:hover,
-.card:focus-within {
-  --separator-color: var(--color-brand-primary);
-  background: var(--color-brand-accent);
-  color: var(--color-brand-primary);
+.card:not(.ctaCard)::before,
+.card:not(.ctaCard)::after {
+  content: none;
+}
+
+.card:not(.ctaCard):hover,
+.card:not(.ctaCard):focus-within {
   border-color: var(--color-brand-accent);
+  box-shadow: 0 0 0 var(--border-width-default) var(--color-brand-accent);
 }
 
-.card:hover::before,
-.card:focus-within::before {
-  width: 66%;
-  background: var(--color-brand-primary);
-}
-
-.card:hover::after,
-.card:focus-within::after {
-  left: calc(66% + 6px);
-  opacity: 1;
-  transform: translateY(-50%) translateX(0) rotate(45deg);
+.cardButton:focus-visible {
+  outline: var(--border-width-strong) solid var(--color-brand-accent);
+  outline-offset: var(--space-2);
 }
 
 .cardTitle {
@@ -130,6 +166,40 @@
   line-height: 1.25;
 }
 
+.cardHeading {
+  width: 100%;
+  max-width: 100%;
+  margin-inline: auto;
+}
+
+.cardFrontTitle {
+  text-align: center;
+}
+
+.cardSeparator {
+  display: block;
+  width: 100%;
+  height: 3px;
+  margin: var(--space-3) auto 0;
+  border-radius: var(--radius-full);
+  background: var(--color-brand-accent);
+  transform: scaleX(0.42);
+  transform-origin: center;
+  transition: transform 0.4s ease;
+}
+
+.card:not(.ctaCard):hover .cardHeading,
+.card:not(.ctaCard):focus-visible .cardHeading,
+.card:not(.ctaCard):focus-within .cardHeading {
+  width: 100%;
+}
+
+.card:not(.ctaCard):hover .cardSeparator,
+.card:not(.ctaCard):focus-visible .cardSeparator,
+.card:not(.ctaCard):focus-within .cardSeparator {
+  transform: scaleX(1);
+}
+
 .cardDescription {
   margin: var(--space-3) 0 0;
   font-size: var(--font-size-sm);
@@ -137,42 +207,108 @@
   color: var(--color-text-muted);
 }
 
-.card:hover .cardDescription,
-.card:focus-within .cardDescription {
-  color: rgba(255, 255, 255, 0.88);
-}
-
-.ctaCard {
-  --separator-color: var(--color-brand-primary);
+.cardBackContent {
+  display: flex;
+  flex-direction: column;
   background: var(--color-brand-accent);
   color: var(--color-brand-primary);
   border-color: var(--color-brand-accent);
+  box-shadow: 0 0 0 var(--border-width-default) var(--color-brand-accent);
 }
 
-.ctaCard::before {
+.cardBackContent::before,
+.cardBackContent::after {
+  content: none;
+}
+
+.backPoints {
+  margin: var(--space-3) auto 0;
+  padding-left: var(--space-5);
+  list-style: disc;
+  width: min(100%, 32ch);
+  text-align: left;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: var(--font-size-sm);
+  line-height: 1.45;
+}
+
+.backPoints li + li {
+  margin-top: var(--space-2);
+}
+
+.cardBackTitle {
+  width: min(100%, 32ch);
+  margin-inline: auto;
+  text-align: center;
+}
+
+.cardBackSeparator {
+  display: block;
+  width: 100%;
+  height: 3px;
+  margin: var(--space-3) 0 0;
+  border-radius: var(--radius-full);
   background: var(--color-brand-primary);
 }
 
-.ctaCard .cardDescription {
-  color: rgba(255, 255, 255, 0.9);
+.cardButton > .cardDescription {
+  width: min(100%, 32ch);
+  margin-inline: auto;
+  text-align: left;
+}
+
+.ctaCard {
+  --separator-color: var(--color-brand-accent);
+  background: var(--color-brand-primary);
+  color: var(--color-brand-accent);
+  border-color: var(--color-border-soft);
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-5);
+  cursor: pointer;
+}
+
+.ctaCard::before,
+.ctaCard::after {
+  content: none;
+}
+
+.ctaHeading {
+  width: 100%;
+  margin: 0;
+}
+
+.ctaTitle {
+  font-size: var(--font-size-xl);
+  line-height: 1.2;
+  color: var(--color-bg-primary);
+  text-align: center;
+}
+
+.ctaSeparator {
+  transform: scaleX(1);
+  transition: none;
+  background: var(--color-brand-accent);
+  margin-top: var(--space-4);
+}
+
+.ctaDescription {
+  width: 100%;
+  margin: 0;
+  font-size: var(--font-size-md);
+  line-height: 1.45;
+  text-align: center;
+  color: var(--color-text-muted);
 }
 
 .ctaCard:hover,
 .ctaCard:focus-visible {
-  --separator-color: var(--color-brand-accent);
-  background: var(--color-bg-primary);
-  color: var(--color-text-primary);
-  border-color: var(--color-bg-primary);
-}
-
-.ctaCard:hover::before,
-.ctaCard:focus-visible::before {
   background: var(--color-brand-accent);
-}
-
-.ctaCard:hover .cardDescription,
-.ctaCard:focus-visible .cardDescription {
-  color: var(--color-text-secondary);
+  color: var(--color-brand-primary);
+  border-color: var(--color-brand-accent);
+  box-shadow: 0 12px 24px rgba(34, 197, 94, 0.24);
 }
 
 .ctaCard:focus-visible {
@@ -180,11 +316,37 @@
   outline-offset: var(--space-2);
 }
 
+.ctaCard:hover .ctaDescription,
+.ctaCard:focus-visible .ctaDescription {
+  color: var(--color-brand-primary);
+}
+
+.ctaCard:hover .ctaTitle,
+.ctaCard:focus-visible .ctaTitle {
+  color: var(--color-brand-primary);
+}
+
+.ctaCard:hover .ctaSeparator,
+.ctaCard:focus-visible .ctaSeparator {
+  background: var(--color-brand-primary);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .card,
   .card::before,
-  .card::after {
+  .card::after,
+  .cardInner {
     transition: none;
+  }
+
+  .cardInner {
+    transform-style: flat;
+  }
+
+  .cardFace {
+    grid-area: auto;
+    backface-visibility: visible;
+    transform: none;
   }
 }
 

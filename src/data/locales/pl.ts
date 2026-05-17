@@ -123,36 +123,72 @@ const home: LocaleContent['home'] = {
     title: 'Co mog\u0119 dla Ciebie przygotowa\u0107',
     description:
       'Strony i proste aplikacje, kt\u00f3re porz\u0105dkuj\u0105 ofert\u0119, u\u0142atwiaj\u0105 kontakt i pomagaj\u0105 wystartowa\u0107 bez zb\u0119dnej komplikacji.',
+    flipOpenLabel: 'Poka\u017c szczeg\u00f3\u0142y',
     items: [
       {
         id: 'business-websites',
         title: 'Strony dla firm',
         description:
           'Tworz\u0119 czytelne strony us\u0142ugowe, landing page i portfolio, kt\u00f3re jasno pokazuj\u0105 ofert\u0119 i kieruj\u0105 do kontaktu.',
+        backDescription:
+          'Strona ma jasno pokaza\u0107 ofert\u0119 i szybko doprowadzi\u0107 klienta do kontaktu.',
+        backPoints: [
+          'Uk\u0142ad pod najwa\u017cniejsze us\u0142ugi',
+          'Czytelna oferta od pierwszego ekranu',
+          'Prosty krok do wys\u0142ania zapytania',
+        ],
       },
       {
         id: 'booking-contact-flows',
         title: 'Kontakt i rezerwacje',
         description:
           'Przygotowuj\u0119 formularze, zapytania o rezerwacj\u0119 i prost\u0105 \u015bcie\u017ck\u0119 kontaktu przez email, telefon, Telegram lub WhatsApp.',
+        backDescription:
+          'Upraszczam kontakt, aby klient szybciej wys\u0142a\u0142 zapytanie albo pro\u015bb\u0119 o rezerwacj\u0119.',
+        backPoints: [
+          'Kr\u00f3tki i wygodny formularz',
+          'Jasne kroki bez zb\u0119dnych pyta\u0144',
+          'Kontakt przez kana\u0142 wybrany przez klienta',
+        ],
       },
       {
         id: 'web-apps-mvp',
         title: 'Aplikacje webowe / MVP',
         description:
           'Buduj\u0119 proste aplikacje, katalogi i panele, kt\u00f3re wspieraj\u0105 codzienny proces pracy i kontakt z klientem.',
+        backDescription:
+          'Tworz\u0119 prosty produkt, kt\u00f3ry porz\u0105dkuje prac\u0119 i obs\u0142ug\u0119 klienta na co dzie\u0144.',
+        backPoints: [
+          'Najwa\u017cniejsze funkcje na start',
+          'Czytelny interfejs dla zespo\u0142u',
+          'Gotowo\u015b\u0107 do dalszego rozwoju',
+        ],
       },
       {
         id: 'website-modernization',
         title: 'Modernizacja strony',
         description:
           'Od\u015bwie\u017cam istniej\u0105ce strony, poprawiam czytelno\u015b\u0107, wygod\u0119 na telefonie i og\u00f3lne dzia\u0142anie serwisu.',
+        backDescription:
+          'Od\u015bwie\u017cony serwis dzia\u0142a sprawniej i lepiej t\u0142umaczy ofert\u0119 Twojej firmy.',
+        backPoints: [
+          'Porz\u0105dek w tre\u015bci i sekcjach',
+          'Lepsza czytelno\u015b\u0107 na telefonie',
+          'Mniej tarcia przy kontakcie',
+        ],
       },
       {
         id: 'seo-deployment',
         title: 'SEO i wdro\u017cenie',
         description:
           'Przygotowuj\u0119 metadane, sitemap, robots, konfiguracj\u0119 domeny i publikacj\u0119 strony na wybranej platformie.',
+        backDescription:
+          'Dopinamy techniczne podstawy, aby strona by\u0142a gotowa do spokojnego startu.',
+        backPoints: [
+          'Metadane i poprawna struktura strony',
+          'Sitemap i robots',
+          'Bezpieczne uruchomienie na domenie',
+        ],
       },
       {
         id: 'services-contact-cta',
@@ -160,6 +196,13 @@ const home: LocaleContent['home'] = {
         description: 'Napisz do mnie \u2192',
         variant: 'cta',
         href: '/contact',
+        backDescription:
+          'Pomog\u0119 uporz\u0105dkowa\u0107 pomys\u0142 i zaproponuj\u0119 sensowny pierwszy zakres prac.',
+        backPoints: [
+          'Kr\u00f3tka rozmowa o celu',
+          'Wst\u0119pny plan realizacji',
+          'Jasny kolejny krok',
+        ],
       },
     ],
   },

@@ -110,38 +110,75 @@ const home: LocaleContent["home"] = {
   "services": {
     "title": "What I can prepare for you",
     "description": "Websites and simple web apps that organize your offer, make contact easier and help you launch without unnecessary complexity.",
+    "flipOpenLabel": "Show details",
     "items": [
       {
         "id": "business-websites",
         "title": "Business websites",
-        "description": "Service websites, landing pages, and portfolio pages that clearly present your offer and guide customers toward contact."
+        "description": "Service websites, landing pages, and portfolio pages that clearly present your offer and guide customers toward contact.",
+        "backDescription": "The page should explain your offer clearly and lead people to a quick contact step.",
+        "backPoints": [
+          "Structure around your key services",
+          "Clear offer from the first screen",
+          "Simple inquiry step"
+        ]
       },
       {
         "id": "booking-contact-flows",
         "title": "Contact & booking",
-        "description": "Contact forms, booking requests, call CTAs, and simple contact paths through email, Telegram, or WhatsApp."
+        "description": "Contact forms, booking requests, call CTAs, and simple contact paths through email, Telegram, or WhatsApp.",
+        "backDescription": "I simplify contact so customers can send an inquiry or booking request faster.",
+        "backPoints": [
+          "Short and clear form",
+          "Straight path to send a request",
+          "Contact channel that fits your audience"
+        ]
       },
       {
         "id": "web-apps-mvp",
         "title": "Web apps / MVP",
-        "description": "Catalogs, dashboards, and simple web apps built around clear user actions and practical data handling."
+        "description": "Catalogs, dashboards, and simple web apps built around clear user actions and practical data handling.",
+        "backDescription": "A focused product version that supports day-to-day work and customer communication.",
+        "backPoints": [
+          "Core features for launch",
+          "Clean interface for daily use",
+          "Ready for next iterations"
+        ]
       },
       {
         "id": "website-modernization",
         "title": "Website modernization",
-        "description": "UI improvements, responsive fixes, performance updates, and cleanup of an existing website."
+        "description": "UI improvements, responsive fixes, performance updates, and cleanup of an existing website.",
+        "backDescription": "Your existing website gets clearer, faster, and easier to use on mobile.",
+        "backPoints": [
+          "Cleaner structure and sections",
+          "Better readability on phones",
+          "Smoother contact path"
+        ]
       },
       {
         "id": "seo-deployment",
         "title": "SEO basics & launch",
-        "description": "Metadata, sitemap, robots, Open Graph, domain setup, and launch on your selected platform."
+        "description": "Metadata, sitemap, robots, Open Graph, domain setup, and launch on your selected platform.",
+        "backDescription": "I handle the technical basics so your website is ready to launch safely.",
+        "backPoints": [
+          "Metadata and page structure",
+          "Sitemap and robots setup",
+          "Domain and launch support"
+        ]
       },
       {
         "id": "services-contact-cta",
         "title": "Have a project idea?",
         "description": "Tell me about it ->",
         "variant": "cta",
-        "href": "/contact"
+        "href": "/contact",
+        "backDescription": "We can quickly shape your idea into a practical first scope.",
+        "backPoints": [
+          "Short call about your goal",
+          "Initial implementation plan",
+          "Clear next step"
+        ]
       }
     ]
   },
