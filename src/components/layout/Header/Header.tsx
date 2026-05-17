@@ -172,11 +172,26 @@ export const Header = ({ locale, navigation, hero }: HeaderProps) => {
     }
   };
 
+  const handleLogoClick = () => {
+    setIsMobileLanguageOpen(false);
+    setIsMenuOpen(false);
+
+    if (window.location.hash) {
+      window.history.replaceState(null, "", homePath);
+      setCurrentHash("");
+    }
+  };
+
   return (
     <header className={styles.header}>
       <Container>
         <div className={styles.inner}>
-          <Link href={homePath} className={styles.logoLink} aria-label={navigation.home}>
+          <Link
+            href={homePath}
+            className={styles.logoLink}
+            aria-label={navigation.home}
+            onClick={handleLogoClick}
+          >
             <LogoAnimated />
           </Link>
 

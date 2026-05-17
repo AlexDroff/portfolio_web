@@ -21,10 +21,9 @@ const home: LocaleContent['home'] = {
   about: {
     title: 'Loading \u2013 strony dla ma\u0142ych firm us\u0142ugowych.',
     description: [
-      'Nazywam si\u0119 Oleksandr Aleksandrov i rozwijam Loading \u2013 ma\u0142e studio, kt\u00f3re pomaga firmom us\u0142ugowym uporz\u0105dkowa\u0107 obecno\u015b\u0107 w internecie. Przygotowuj\u0119 strony, formularze i proste rozwi\u0105zania, dzi\u0119ki kt\u00f3rym klient szybciej rozumie ofert\u0119 i \u0142atwiej nawi\u0105zuje kontakt.',
-      'Projektuj\u0119 strony z my\u015bl\u0105 o konkretnym celu: jasnej prezentacji us\u0142ug, wygodnej strukturze na r\u00f3\u017cnych ekranach i prostym przej\u015bciu od pierwszej wizyty do zapytania, rezerwacji albo rozmowy.',
-      'Loading jest m\u0142odym studiem, dlatego ka\u017cdy projekt traktuj\u0119 konkretnie i z du\u017cym zaanga\u017cowaniem. Dobieram rozwi\u0105zania do aktualnego etapu firmy, bez dok\u0142adania funkcji, kt\u00f3re nie pomagaj\u0105 u\u017cytkownikowi ani w\u0142a\u015bcicielowi biznesu.',
-      'Mam ju\u017c zrealizowane strony i aplikacje webowe, a teraz rozwijam Loading jako miejsce dla ma\u0142ych firm, kt\u00f3re chc\u0105 wystartowa\u0107 online, od\u015bwie\u017cy\u0107 obecn\u0105 stron\u0119 albo upro\u015bci\u0107 kontakt z klientami.',
+      'Jestem Oleksandr Aleksandrov, full-stack developer. Projektuj\u0119 i tworz\u0119 strony oraz proste aplikacje dla ma\u0142ych firm us\u0142ugowych.',
+      'Pod mark\u0105 Loading pomagam uporz\u0105dkowa\u0107 ofert\u0119, zaprojektowa\u0107 czytelny interfejs i wdro\u017cy\u0107 stron\u0119, kt\u00f3ra prowadzi klienta do kontaktu, rezerwacji albo zapytania.',
+      '\u0141\u0105cz\u0119 UI/UX, frontend i podstawow\u0105 logik\u0119 backendow\u0105, dlatego mog\u0119 przeprowadzi\u0107 projekt od pierwszego uk\u0142adu po publikacj\u0119 i dalsze poprawki.',
     ],
     blocks: [
       {

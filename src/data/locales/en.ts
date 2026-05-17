@@ -18,10 +18,9 @@ const home: LocaleContent["home"] = {
   "about": {
     "title": "Loading \u2013 websites for small service businesses.",
     "description": [
-      "My name is Oleksandr Aleksandrov and I'm developing Loading \u2013 a small studio that helps service businesses organize their online presence. I prepare websites, forms and simple solutions that help customers understand the offer faster and get in touch more easily.",
-      "I design websites around a clear goal: presenting services clearly, creating a structure that works well across screen sizes, and guiding visitors from the first visit toward an inquiry, booking request or conversation.",
-      "Loading is a young studio, so I approach every project with focus and strong involvement. I choose solutions that fit the current stage of the business, without adding features that do not help the user or the business owner.",
-      "I already have completed websites and web applications, and now I'm developing Loading as a place for small businesses that want to start online, refresh an existing website or make customer contact easier."
+      "I am Oleksandr Aleksandrov, a full-stack developer. I design and build websites and simple web apps for small service businesses.",
+      "Under the Loading brand, I help organize the offer, design a clear interface, and launch a website that guides visitors to contact, booking, or an inquiry.",
+      "I combine UI/UX, frontend, and basic backend logic, so I can take a project from the first layout to deployment and later improvements."
     ],
     "blocks": [
       {

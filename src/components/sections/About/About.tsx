@@ -7,6 +7,7 @@ import {
   type FocusEvent,
 } from 'react';
 import Image from 'next/image';
+import { motion, useReducedMotion } from 'motion/react';
 import { HoverIcon } from '@/components/animation/HoverIcon';
 import { Reveal } from '@/components/animation/Reveal';
 import { Container } from '@/components/ui/Container/Container';
@@ -21,6 +22,8 @@ type AboutProps = {
 
 export const About = ({ about, profilePhotoLabel }: AboutProps) => {
   const [activeItem, setActiveItem] = useState<string | null>(null);
+  const [isProfileExpanded, setIsProfileExpanded] = useState(false);
+  const shouldReduceMotion = useReducedMotion();
   const [whatYouGetBlock, howIWorkBlock] = about.blocks;
 
   useEffect(() => {
@@ -84,23 +87,44 @@ export const About = ({ about, profilePhotoLabel }: AboutProps) => {
 
           <Reveal>
             <div className={styles.introRow}>
+              <div className={styles.photoStage}>
+                <motion.button
+                  type="button"
+                  className={`${styles.profileCard} ${isProfileExpanded ? styles.profileCardActive : ''}`}
+                  aria-label="Toggle profile photo size"
+                  aria-expanded={isProfileExpanded ? 'true' : 'false'}
+                  onClick={() => setIsProfileExpanded((current) => !current)}
+                  style={shouldReduceMotion ? { transitionDuration: '0s' } : undefined}
+                  initial={false}
+                  animate={{
+                    borderRadius: isProfileExpanded ? '16px' : '18px',
+                    boxShadow: isProfileExpanded
+                      ? '0 8px 20px rgba(10, 18, 28, 0.14)'
+                      : '0 0 0 rgba(10, 18, 28, 0)',
+                  }}
+                  transition={
+                    shouldReduceMotion
+                      ? { duration: 0 }
+                      : { duration: 0.38, ease: 'easeOut' }
+                  }
+                >
+                  <Image
+                    src={myPhoto}
+                    alt={profilePhotoLabel}
+                    width={myPhoto.width}
+                    height={myPhoto.height}
+                    className={styles.profileImage}
+                    priority={false}
+                  />
+                </motion.button>
+              </div>
+
               <div className={styles.textGroup}>
                 {about.description.map((paragraph) => (
                   <p key={paragraph} className={styles.text}>
                     {paragraph}
                   </p>
                 ))}
-              </div>
-
-              <div className={styles.profileCard} aria-label={profilePhotoLabel}>
-                <Image
-                  src={myPhoto}
-                  alt={profilePhotoLabel}
-                  width={myPhoto.width}
-                  height={myPhoto.height}
-                  className={styles.profileImage}
-                  priority={false}
-                />
               </div>
             </div>
           </Reveal>
