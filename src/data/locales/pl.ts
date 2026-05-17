@@ -129,12 +129,10 @@ const home: LocaleContent['home'] = {
         title: 'Strony dla firm',
         description:
           'Tworz\u0119 czytelne strony us\u0142ugowe, landing page i portfolio, kt\u00f3re jasno pokazuj\u0105 ofert\u0119 i kieruj\u0105 do kontaktu.',
-        backDescription:
-          'Strona ma jasno pokaza\u0107 ofert\u0119 i szybko doprowadzi\u0107 klienta do kontaktu.',
         backPoints: [
-          'Uk\u0142ad pod najwa\u017cniejsze us\u0142ugi',
-          'Czytelna oferta od pierwszego ekranu',
-          'Prosty krok do wys\u0142ania zapytania',
+          'Najwa\u017cniejsze us\u0142ugi widoczne od razu',
+          'Oferta podzielona na proste sekcje',
+          'Jasny krok do kontaktu lub zapytania',
         ],
       },
       {
@@ -142,12 +140,10 @@ const home: LocaleContent['home'] = {
         title: 'Kontakt i rezerwacje',
         description:
           'Przygotowuj\u0119 formularze, zapytania o rezerwacj\u0119 i prost\u0105 \u015bcie\u017ck\u0119 kontaktu przez email, telefon, Telegram lub WhatsApp.',
-        backDescription:
-          'Upraszczam kontakt, aby klient szybciej wys\u0142a\u0142 zapytanie albo pro\u015bb\u0119 o rezerwacj\u0119.',
         backPoints: [
-          'Kr\u00f3tki i wygodny formularz',
-          'Jasne kroki bez zb\u0119dnych pyta\u0144',
-          'Kontakt przez kana\u0142 wybrany przez klienta',
+          'Kr\u00f3tki formularz bez zb\u0119dnych p\u00f3l',
+          'Prosty wyb\u00f3r kontaktu lub rezerwacji',
+          'Wiadomo\u015b\u0107 trafia do w\u0142a\u015bciwego kana\u0142u',
         ],
       },
       {
@@ -155,12 +151,10 @@ const home: LocaleContent['home'] = {
         title: 'Aplikacje webowe / MVP',
         description:
           'Buduj\u0119 proste aplikacje, katalogi i panele, kt\u00f3re wspieraj\u0105 codzienny proces pracy i kontakt z klientem.',
-        backDescription:
-          'Tworz\u0119 prosty produkt, kt\u00f3ry porz\u0105dkuje prac\u0119 i obs\u0142ug\u0119 klienta na co dzie\u0144.',
         backPoints: [
-          'Najwa\u017cniejsze funkcje na start',
-          'Czytelny interfejs dla zespo\u0142u',
-          'Gotowo\u015b\u0107 do dalszego rozwoju',
+          'Pierwsza wersja bez zb\u0119dnych funkcji',
+          'Widok dopasowany do codziennej pracy',
+          'Struktura gotowa na kolejne modu\u0142y',
         ],
       },
       {
@@ -168,12 +162,10 @@ const home: LocaleContent['home'] = {
         title: 'Modernizacja strony',
         description:
           'Od\u015bwie\u017cam istniej\u0105ce strony, poprawiam czytelno\u015b\u0107, wygod\u0119 na telefonie i og\u00f3lne dzia\u0142anie serwisu.',
-        backDescription:
-          'Od\u015bwie\u017cony serwis dzia\u0142a sprawniej i lepiej t\u0142umaczy ofert\u0119 Twojej firmy.',
         backPoints: [
-          'Porz\u0105dek w tre\u015bci i sekcjach',
-          'Lepsza czytelno\u015b\u0107 na telefonie',
-          'Mniej tarcia przy kontakcie',
+          'Tre\u015b\u0107 u\u0142o\u017cona w czytelne sekcje',
+          'Lepszy wygl\u0105d na r\u00f3\u017cnych ekranach',
+          'Mniej krok\u00f3w do kontaktu',
         ],
       },
       {
@@ -181,12 +173,10 @@ const home: LocaleContent['home'] = {
         title: 'SEO i wdro\u017cenie',
         description:
           'Przygotowuj\u0119 metadane, sitemap, robots, konfiguracj\u0119 domeny i publikacj\u0119 strony na wybranej platformie.',
-        backDescription:
-          'Dopinamy techniczne podstawy, aby strona by\u0142a gotowa do spokojnego startu.',
         backPoints: [
-          'Metadane i poprawna struktura strony',
-          'Sitemap i robots',
-          'Bezpieczne uruchomienie na domenie',
+          'Podstawy widoczno\u015bci w wyszukiwarce',
+          'Strona przygotowana do indeksowania',
+          'Publikacja i pod\u0142\u0105czenie domeny',
         ],
       },
       {
@@ -195,13 +185,6 @@ const home: LocaleContent['home'] = {
         description: 'Napisz do mnie \u2192',
         variant: 'cta',
         href: '/contact',
-        backDescription:
-          'Pomog\u0119 uporz\u0105dkowa\u0107 pomys\u0142 i zaproponuj\u0119 sensowny pierwszy zakres prac.',
-        backPoints: [
-          'Kr\u00f3tka rozmowa o celu',
-          'Wst\u0119pny plan realizacji',
-          'Jasny kolejny krok',
-        ],
       },
     ],
   },

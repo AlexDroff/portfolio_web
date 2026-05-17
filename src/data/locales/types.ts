@@ -2,12 +2,19 @@ import type { HomeContent } from "@/types/home";
 import type { FAQContent } from "@/types/faq";
 import type { Project } from "@/types/project";
 
-export type LocaleServiceItem = HomeContent["services"]["items"][number] & {
-  variant?: "default" | "cta";
-  href?: string;
-  backDescription: string;
-  backPoints: string[];
-};
+type LocaleServiceBaseItem = HomeContent["services"]["items"][number];
+
+export type LocaleServiceItem =
+  | (LocaleServiceBaseItem & {
+      variant?: "default";
+      backPoints: string[];
+      href?: never;
+    })
+  | (LocaleServiceBaseItem & {
+      variant: "cta";
+      href: string;
+      backPoints?: never;
+    });
 
 export type LocalePackageItem = HomeContent["packages"]["items"][number] & {
   badge?: string;

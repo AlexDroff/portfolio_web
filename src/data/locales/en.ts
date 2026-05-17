@@ -115,55 +115,50 @@ const home: LocaleContent["home"] = {
         "id": "business-websites",
         "title": "Business websites",
         "description": "Service websites, landing pages, and portfolio pages that clearly present your offer and guide customers toward contact.",
-        "backDescription": "The page should explain your offer clearly and lead people to a quick contact step.",
         "backPoints": [
-          "Structure around your key services",
-          "Clear offer from the first screen",
-          "Simple inquiry step"
+          "Key services visible from the first screen",
+          "Offer divided into clear sections",
+          "Clear step to contact or inquiry"
         ]
       },
       {
         "id": "booking-contact-flows",
         "title": "Contact & booking",
         "description": "Contact forms, booking requests, call CTAs, and simple contact paths through email, Telegram, or WhatsApp.",
-        "backDescription": "I simplify contact so customers can send an inquiry or booking request faster.",
         "backPoints": [
-          "Short and clear form",
-          "Straight path to send a request",
-          "Contact channel that fits your audience"
+          "Short form without unnecessary fields",
+          "Simple contact or booking path",
+          "Message sent to the right channel"
         ]
       },
       {
         "id": "web-apps-mvp",
         "title": "Web apps / MVP",
         "description": "Catalogs, dashboards, and simple web apps built around clear user actions and practical data handling.",
-        "backDescription": "A focused product version that supports day-to-day work and customer communication.",
         "backPoints": [
-          "Core features for launch",
-          "Clean interface for daily use",
-          "Ready for next iterations"
+          "First version without unnecessary features",
+          "Interface shaped around daily work",
+          "Structure ready for future modules"
         ]
       },
       {
         "id": "website-modernization",
         "title": "Website modernization",
         "description": "UI improvements, responsive fixes, performance updates, and cleanup of an existing website.",
-        "backDescription": "Your existing website gets clearer, faster, and easier to use on mobile.",
         "backPoints": [
-          "Cleaner structure and sections",
-          "Better readability on phones",
-          "Smoother contact path"
+          "Content arranged into clearer sections",
+          "Better layout across screen sizes",
+          "Fewer steps to contact"
         ]
       },
       {
         "id": "seo-deployment",
         "title": "SEO basics & launch",
         "description": "Metadata, sitemap, robots, Open Graph, domain setup, and launch on your selected platform.",
-        "backDescription": "I handle the technical basics so your website is ready to launch safely.",
         "backPoints": [
-          "Metadata and page structure",
-          "Sitemap and robots setup",
-          "Domain and launch support"
+          "Search visibility basics",
+          "Website prepared for indexing",
+          "Launch and domain connection"
         ]
       },
       {
@@ -171,13 +166,7 @@ const home: LocaleContent["home"] = {
         "title": "Have a project idea?",
         "description": "Tell me about it ->",
         "variant": "cta",
-        "href": "/contact",
-        "backDescription": "We can quickly shape your idea into a practical first scope.",
-        "backPoints": [
-          "Short call about your goal",
-          "Initial implementation plan",
-          "Clear next step"
-        ]
+        "href": "/contact"
       }
     ]
   },

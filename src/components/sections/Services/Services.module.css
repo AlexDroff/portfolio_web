@@ -222,7 +222,7 @@
   margin: var(--space-3) auto 0;
   padding-left: var(--space-5);
   list-style: disc;
-  width: min(100%, 32ch);
+  width: min(100%, 36ch);
   text-align: left;
   color: rgba(255, 255, 255, 0.9);
   font-size: var(--font-size-sm);
