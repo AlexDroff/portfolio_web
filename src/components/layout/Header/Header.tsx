@@ -212,8 +212,8 @@ export const Header = ({ locale, navigation, hero }: HeaderProps) => {
                   type="button"
                   className={styles.languageTrigger}
                   aria-label="Choose language"
-                  aria-haspopup="true"
                   aria-expanded="true"
+                  aria-controls="desktop-language-menu"
                   onClick={() => setIsDesktopLanguageOpen(false)}
                 >
                   <span>{currentLanguage.code}</span>
@@ -227,8 +227,8 @@ export const Header = ({ locale, navigation, hero }: HeaderProps) => {
                   type="button"
                   className={styles.languageTrigger}
                   aria-label="Choose language"
-                  aria-haspopup="true"
                   aria-expanded="false"
+                  aria-controls="desktop-language-menu"
                   onClick={() => setIsDesktopLanguageOpen(true)}
                 >
                   <span>{currentLanguage.code}</span>
@@ -236,7 +236,11 @@ export const Header = ({ locale, navigation, hero }: HeaderProps) => {
                 </button>
               )}
 
-              <ul className={styles.languageMenu} aria-label="Choose language">
+              <ul
+                id="desktop-language-menu"
+                className={styles.languageMenu}
+                aria-label="Available languages"
+              >
                 {otherLanguages.map((language) => (
                   <li key={language}>
                     <Link
@@ -341,8 +345,8 @@ export const Header = ({ locale, navigation, hero }: HeaderProps) => {
                   type="button"
                   className={styles.mobileLanguageTrigger}
                   aria-label="Choose language"
-                  aria-haspopup="true"
                   aria-expanded="true"
+                  aria-controls="mobile-language-menu"
                   onClick={() => setIsMobileLanguageOpen(false)}
                 >
                   <span>{currentLanguage.code}</span>
@@ -356,8 +360,8 @@ export const Header = ({ locale, navigation, hero }: HeaderProps) => {
                   type="button"
                   className={styles.mobileLanguageTrigger}
                   aria-label="Choose language"
-                  aria-haspopup="true"
                   aria-expanded="false"
+                  aria-controls="mobile-language-menu"
                   onClick={() => setIsMobileLanguageOpen(true)}
                 >
                   <span>{currentLanguage.code}</span>
@@ -365,7 +369,11 @@ export const Header = ({ locale, navigation, hero }: HeaderProps) => {
                 </button>
               )}
 
-              <ul className={styles.mobileLanguageMenu} aria-label="Choose language">
+              <ul
+                id="mobile-language-menu"
+                className={styles.mobileLanguageMenu}
+                aria-label="Available languages"
+              >
                 {otherLanguages.map((language) => (
                   <li key={language}>
                     <Link
