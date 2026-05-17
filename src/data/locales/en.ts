@@ -691,6 +691,18 @@ const projects: Project[] = [
               "kind": "default"
             }
           ]
+        },
+        {
+          "title": "Booking Form",
+          "description": "Booking form that sends the request to Telegram.",
+          "layout": "fullWidth",
+          "images": [
+            {
+              "index": 10,
+              "label": "Booking form",
+              "kind": "default"
+            }
+          ]
         }
       ],
       "cta": {

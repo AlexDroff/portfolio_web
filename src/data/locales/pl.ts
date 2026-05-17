@@ -749,6 +749,18 @@ const projects: Project[] = enContent.projects.map((project) => {
               },
             ],
           },
+          {
+            title: 'Formularz rezerwacji',
+            description: 'Formularz rezerwacji wysyłający zgłoszenie do Telegrama.',
+            layout: 'fullWidth',
+            images: [
+              {
+                index: 10,
+                label: 'Formularz rezerwacji',
+                kind: 'default',
+              },
+            ],
+          },
         ],
         cta: localizedCta,
       },

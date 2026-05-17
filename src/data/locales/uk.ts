@@ -665,6 +665,15 @@ const projects: Project[] = enContent.projects.map((project) => {
               { index: 9, label: 'Детальна сторінка будинку', kind: 'default' },
             ],
           },
+          {
+            title: 'Форма бронювання',
+            description:
+              'Форма бронювання, яка надсилає заявку в Telegram.',
+            layout: 'fullWidth',
+            images: [
+              { index: 10, label: 'Форма бронювання', kind: 'default' },
+            ],
+          },
         ],
         cta: localizedCta,
       },
