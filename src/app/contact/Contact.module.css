@@ -224,6 +224,20 @@
   outline: none;
 }
 
+.socialBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.socialTitle {
+  margin-top: var(--space-2);
+}
+
+.socialBackLink {
+  margin-top: var(--space-4);
+}
+
 @media (max-width: 768px) {
   .contacts {
     width: 100%;
