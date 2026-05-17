@@ -261,7 +261,7 @@ const faq: FAQContent = {
       id: 'timeline',
       question: 'Ile trwa wykonanie strony?',
       answer:
-        'Landing page to zwykle 1вЂ“2 tygodnie, strona firmowa 2вЂ“4 tygodnie, a wi\u0119kszy projekt 4вЂ“6 tygodni. Termin zale\u017cy od zakresu i tempa przekazywania materia\u0142\u00f3w.',
+        'Landing page to zwykle 1–2 tygodnie, strona firmowa 2–4 tygodnie, a wi\u0119kszy projekt 4–6 tygodni. Termin zale\u017cy od zakresu i tempa przekazywania materia\u0142\u00f3w.',
     },
     {
       id: 'process',
@@ -322,29 +322,29 @@ const projects: Project[] = enContent.projects.map((project) => {
       ...project,
       title: 'Strona firmy sprzątającej',
       description:
-        'Strona lokalnej firmy sprzД…tajД…cej z katalogiem usЕ‚ug i Е›cieЕјkД… zamГіwienia przez WhatsApp.',
+        'Strona lokalnej firmy sprzątającej z katalogiem usług i ścieżką zamówienia przez WhatsApp.',
       highlights: [
-        'Interfejs wyboru usЕ‚ug',
-        'ЕљcieЕјka zamГіwienia przez WhatsApp',
-        'Logika podsumowania zamГіwienia',
+        'Interfejs wyboru usług',
+        'Ścieżka zamówienia przez WhatsApp',
+        'Logika podsumowania zamówienia',
       ],
       businessSummary:
         'Strona dla firmy sprzątającej z wyceną usług, wyborem pakietu i szybkim kontaktem przez WhatsApp.',
       badges: ['React', 'TypeScript', 'Wycena usług', 'Wybór usług', 'WhatsApp'],
       summary: {
-        projectType: 'Strona dla firmy usЕ‚ugowej',
-        goal: 'PrzejrzyЕ›cie pokazaД‡ usЕ‚ugi sprzД…tania i uЕ‚atwiД‡ klientom przygotowanie zapytania oraz szybki kontakt z firmД….',
+        projectType: 'Strona dla firmy usługowej',
+        goal: 'Przejrzyście pokazać usługi sprzątania i ułatwić klientom przygotowanie zapytania oraz szybki kontakt z firmą.',
         mainFeatures: [
-          'Struktura usЕ‚ug',
+          'Struktura usług',
           'Logika wyceny',
-          'ЕљcieЕјka zapytania w stylu koszyka',
-          'ZamГіwienie przez WhatsApp',
+          'Ścieżka zapytania w stylu koszyka',
+          'Zamówienie przez WhatsApp',
           'Responsywny layout',
         ],
-        role: 'Projekt i implementacja frontendu, struktura UI, logika interakcji oraz przygotowanie do wdroЕјenia.',
+        role: 'Projekt i implementacja frontendu, struktura UI, logika interakcji oraz przygotowanie do wdrożenia.',
         stack: project.summary.stack,
         result:
-          'Gotowa produkcyjnie strona z czytelnД… ofertД…, interaktywnД… wycenД… i bezpoЕ›redniД… Е›cieЕјkД… od wyboru usЕ‚ugi do kontaktu.',
+          'Gotowa produkcyjnie strona z czytelną ofertą, interaktywną wyceną i bezpośrednią ścieżką od wyboru usługi do kontaktu.',
       },
       caseStudy: {
         hero: {
@@ -358,7 +358,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           },
           {
             label: 'Typ',
-            value: 'Strona firmowa ze Е›cieЕјkД… zamГіwienia',
+            value: 'Strona firmowa ze ścieżką zamówienia',
           },
           {
             label: 'Lokalizacja',
@@ -367,7 +367,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             label: 'Zakres',
             value:
-              'Zaprojektowanie prostej i czytelnej Е›cieЕјki zamГіwienia bez rozbudowanego backendu.',
+              'Zaprojektowanie prostej i czytelnej ścieżki zamówienia bez rozbudowanego backendu.',
           },
           {
             label: 'Stack',
@@ -376,40 +376,40 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             label: 'Czas realizacji',
             value:
-              '3 tygodnie (1 tydzieЕ„ projektowania, 2 tygodnie developmentu)',
+              '3 tygodnie (1 tydzień projektowania, 2 tygodnie developmentu)',
           },
         ],
         content: {
           problem:
-            'Klient nie miaЕ‚ strony internetowej ani uporzД…dkowanego sposobu prezentacji usЕ‚ug i przyjmowania zamГіwieЕ„.',
+            'Klient nie miał strony internetowej ani uporządkowanego sposobu prezentacji usług i przyjmowania zamówień.',
           solution:
-            'ZaprojektowaЕ‚em i wdroЕјyЕ‚em stronД™ usЕ‚ugowД… z prostД… Е›cieЕјkД… zamГіwieЕ„. UЕјytkownik wybiera usЕ‚ugi, sprawdza szczegГіЕ‚y i dodaje je do zapytania, a system generuje gotowД… wiadomoЕ›Д‡ WhatsApp z podsumowaniem.',
+            'Zaprojektowałem i wdrożyłem stronę usługową z prostą ścieżką zamówień. Użytkownik wybiera usługi, sprawdza szczegóły i dodaje je do zapytania, a system generuje gotową wiadomość WhatsApp z podsumowaniem.',
           result:
-            'Efektem jest szybka i czytelna strona, ktГіra pomaga klientowi otrzymywaД‡ uporzД…dkowane zapytania przez WhatsApp.',
+            'Efektem jest szybka i czytelna strona, która pomaga klientowi otrzymywać uporządkowane zapytania przez WhatsApp.',
         },
         contributions: {
           title: 'Strona firmy sprzątającej',
           items: [
-            'ZaprojektowaЕ‚em caЕ‚y interfejs i UX od podstaw',
-            'PrzygotowaЕ‚em w peЕ‚ni responsywne widoki (mobile, tablet, desktop)',
-            'WdroЕјyЕ‚em logikД™ koszyka i kalkulacjД™ ceny',
-            'ZaimplementowaЕ‚em modale ze szczegГіЕ‚ami usЕ‚ug',
-            'WdroЕјyЕ‚em generowanie wiadomoЕ›ci do WhatsApp',
-            'ZbudowaЕ‚em kompletnД… Е›cieЕјkД™ zamГіwienia bez backendu',
-            'DodaЕ‚em obsЕ‚ugД™ wielu wersji jД™zykowych (EN / ES)',
-            'WdroЕјyЕ‚em motyw jasny i ciemny',
+            'Zaprojektowałem cały interfejs i UX od podstaw',
+            'Przygotowałem w pełni responsywne widoki (mobile, tablet, desktop)',
+            'Wdrożyłem logikę koszyka i kalkulację ceny',
+            'Zaimplementowałem modale ze szczegółami usług',
+            'Wdrożyłem generowanie wiadomości do WhatsApp',
+            'Zbudowałem kompletną ścieżkę zamówienia bez backendu',
+            'Dodałem obsługę wielu wersji językowych (EN / ES)',
+            'Wdrożyłem motyw jasny i ciemny',
           ],
         },
         gallery: [
           {
             title: 'Strona firmy sprzątającej',
             description:
-              'GЕ‚Гіwne otwarcie strony z najwaЕјniejszД… propozycjД… wartoЕ›ci.',
+              'Główne otwarcie strony z najważniejszą propozycją wartości.',
             layout: 'fullWidth',
             images: [
               {
                 index: 3,
-                label: 'GЕ‚Гіwne ujД™cie hero',
+                label: 'Główne ujęcie hero',
                 kind: 'default',
               },
             ],
@@ -417,7 +417,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             title: 'Strona firmy sprzątającej',
             description:
-              'Widoki desktop i mobile pokazujД…ce peЕ‚nД… responsywnoЕ›Д‡ interfejsu.',
+              'Widoki desktop i mobile pokazujące pełną responsywność interfejsu.',
             layout: 'responsive',
             images: [
               {
@@ -435,12 +435,12 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             title: 'Strona firmy sprzątającej',
             description:
-              'Sekcje budujД…ce zaufanie i prowadzД…ce uЕјytkownika przez ofertД™.',
+              'Sekcje budujące zaufanie i prowadzące użytkownika przez ofertę.',
             layout: 'fullWidth',
             images: [
               {
                 index: 4,
-                label: 'Kroki usЕ‚ugi i sekcje zaufania',
+                label: 'Kroki usługi i sekcje zaufania',
                 kind: 'default',
               },
             ],
@@ -448,12 +448,12 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             title: 'Strona firmy sprzątającej',
             description:
-              'Przejrzysty grid usЕ‚ug z cenami i dodatkowymi informacjami.',
+              'Przejrzysty grid usług z cenami i dodatkowymi informacjami.',
             layout: 'fullWidth',
             images: [
               {
                 index: 5,
-                label: 'Grid kart usЕ‚ug',
+                label: 'Grid kart usług',
                 kind: 'default',
               },
             ],
@@ -461,12 +461,12 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             title: 'Strona firmy sprzątającej',
             description:
-              'SzczegГіЕ‚y wybranej usЕ‚ugi przed dodaniem do zapytania.',
+              'Szczegóły wybranej usługi przed dodaniem do zapytania.',
             layout: 'single',
             images: [
               {
                 index: 7,
-                label: 'Modal wybranej usЕ‚ugi',
+                label: 'Modal wybranej usługi',
                 kind: 'default',
               },
             ],
@@ -474,7 +474,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             title: 'Strona firmy sprzątającej',
             description:
-              'Widok zapytania z wybranymi usЕ‚ugami, iloЕ›ciД… i sumД….',
+              'Widok zapytania z wybranymi usługami, ilością i sumą.',
             layout: 'single',
             images: [
               {
@@ -487,12 +487,12 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             title: 'Strona firmy sprzątającej',
             description:
-              'Bloki informacyjne, ktГіre redukujД… bariery przed kontaktem.',
+              'Bloki informacyjne, które redukują bariery przed kontaktem.',
             layout: 'fullWidth',
             images: [
               {
                 index: 6,
-                label: 'Sekcja FAQ i treЕ›ci wspierajД…ce',
+                label: 'Sekcja FAQ i treści wspierające',
                 kind: 'default',
               },
             ],
@@ -500,7 +500,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             title: 'Strona firmy sprzątającej',
             description:
-              'Finalny krok, ktГіry uЕ‚atwia szybkie wysЕ‚anie zapytania.',
+              'Finalny krok, który ułatwia szybkie wysłanie zapytania.',
             layout: 'fullWidth',
             images: [
               {
@@ -521,29 +521,29 @@ const projects: Project[] = enContent.projects.map((project) => {
       ...project,
       title: 'Strona domków wypoczynkowych',
       description:
-        'Strona pensjonatu na wsi z prezentacjД… obiektu i Е›cieЕјkД… rezerwacji przez bezpoЕ›redni telefon.',
+        'Strona pensjonatu na wsi z prezentacją obiektu i ścieżką rezerwacji przez bezpośredni telefon.',
       highlights: [
         'Projekt oparty na klimacie marki',
-        'Podstrony domkГіw',
-        'BezpoЕ›rednia rezerwacja telefoniczna',
+        'Podstrony domków',
+        'Bezpośrednia rezerwacja telefoniczna',
       ],
       businessSummary:
         'Strona miejsca wypoczynku z ofertą domków, galerią i prostą ścieżką zapytania o rezerwację.',
       badges: ['Next.js', 'TypeScript', 'SEO', 'Domki', 'Rezerwacje', 'Telegram'],
       summary: {
         projectType: 'Strona dla biznesu wynajmu',
-        goal: 'PokazaД‡ domki, warunki pobytu, galerie i opcje kontaktu dla obiektu wynajmu na wsi.',
+        goal: 'Pokazać domki, warunki pobytu, galerie i opcje kontaktu dla obiektu wynajmu na wsi.',
         mainFeatures: [
-          'Lista domkГіw',
-          'Podstrony szczegГіЕ‚owe domkГіw',
+          'Lista domków',
+          'Podstrony szczegółowe domków',
           'Galeria',
           'CTA kontaktowe',
           'Struktura gotowa pod SEO',
         ],
-        role: 'Implementacja frontendu, struktura treЕ›ci, responsywny UI, podstawy SEO i wsparcie wdroЕјenia.',
+        role: 'Implementacja frontendu, struktura treści, responsywny UI, podstawy SEO i wsparcie wdrożenia.',
         stack: project.summary.stack,
         result:
-          'Gotowa produkcyjnie strona wynajmu z uporzД…dkowanymi podstronami i prostД… Е›cieЕјkД… kontaktu przy rezerwacji.',
+          'Gotowa produkcyjnie strona wynajmu z uporządkowanymi podstronami i prostą ścieżką kontaktu przy rezerwacji.',
       },
       caseStudy: {
         hero: {
@@ -566,7 +566,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             label: 'Zakres',
             value:
-              'Zaprojektowanie spokojnego i konwersyjnego UX, ktГіry prowadzi od przeglД…dania oferty do bezpoЕ›redniego kontaktu.',
+              'Zaprojektowanie spokojnego i konwersyjnego UX, który prowadzi od przeglądania oferty do bezpośredniego kontaktu.',
           },
           {
             label: 'Stack',
@@ -575,38 +575,38 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             label: 'Czas realizacji',
             value:
-              '3 tygodnie (1 tydzieЕ„ projektowania, 2 tygodnie developmentu)',
+              '3 tygodnie (1 tydzień projektowania, 2 tygodnie developmentu)',
           },
         ],
         content: {
           problem:
-            'Klient miaЕ‚ przestarzaЕ‚Д… stronД™, ktГіra nie oddawaЕ‚a jakoЕ›ci obiektu i nie prowadziЕ‚a uЕјytkownika do kontaktu.',
+            'Klient miał przestarzałą stronę, która nie oddawała jakości obiektu i nie prowadziła użytkownika do kontaktu.',
           solution:
-            'ZaprojektowaЕ‚em i wdroЕјyЕ‚em stronД™ opartД… na klimacie miejsca i czytelnej strukturze oferty. Zamiast formularzy zastosowaЕ‚em prostД… Е›cieЕјkД™ rezerwacji opartД… na bezpoЕ›rednim kontakcie telefonicznym.',
+            'Zaprojektowałem i wdrożyłem stronę opartą na klimacie miejsca i czytelnej strukturze oferty. Zamiast formularzy zastosowałem prostą ścieżkę rezerwacji opartą na bezpośrednim kontakcie telefonicznym.',
           result:
-            'Nowa strona lepiej pokazuje ofertД™ i uЕ‚atwia szybki kontakt z wЕ‚aЕ›cicielem.',
+            'Nowa strona lepiej pokazuje ofertę i ułatwia szybki kontakt z właścicielem.',
         },
         contributions: {
           title: 'Strona domków wypoczynkowych',
           items: [
-            'ZaprojektowaЕ‚em caЕ‚y interfejs i UX od podstaw',
-            'PrzygotowaЕ‚em w peЕ‚ni responsywne widoki (mobile, tablet, desktop)',
-            'UЕ‚oЕјyЕ‚em karty domkГіw i szczegГіЕ‚owe podstrony obiektu',
-            'WdroЕјyЕ‚em Е›cieЕјkД™ rezerwacji przez bezpoЕ›redni telefon (bez formularzy)',
-            'ZaprojektowaЕ‚em sekcje galerii i prezentacji treЕ›ci',
-            'ZbudowaЕ‚em sekcjД™ kontaktu z mapД… i kontekstem lokalizacji',
+            'Zaprojektowałem cały interfejs i UX od podstaw',
+            'Przygotowałem w pełni responsywne widoki (mobile, tablet, desktop)',
+            'Ułożyłem karty domków i szczegółowe podstrony obiektu',
+            'Wdrożyłem ścieżkę rezerwacji przez bezpośredni telefon (bez formularzy)',
+            'Zaprojektowałem sekcje galerii i prezentacji treści',
+            'Zbudowałem sekcję kontaktu z mapą i kontekstem lokalizacji',
           ],
         },
         gallery: [
           {
             title: 'Strona domków wypoczynkowych',
             description:
-              'GЕ‚Гіwne ujД™cie projektu z widocznym CTA i klimatem miejsca.',
+              'Główne ujęcie projektu z widocznym CTA i klimatem miejsca.',
             layout: 'fullWidth',
             images: [
               {
                 index: 3,
-                label: 'GЕ‚Гіwne ujД™cie strony',
+                label: 'Główne ujęcie strony',
                 kind: 'default',
               },
             ],
@@ -614,7 +614,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             title: 'Strona domków wypoczynkowych',
             description:
-              'Prezentacja widokГіw desktop i mobile z dopasowaniem ukЕ‚adu.',
+              'Prezentacja widoków desktop i mobile z dopasowaniem układu.',
             layout: 'responsive',
             images: [
               {
@@ -632,7 +632,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             title: 'Strona domków wypoczynkowych',
             description:
-              'Blok storytellingowy pokazujД…cy klimat i charakter miejsca.',
+              'Blok storytellingowy pokazujący klimat i charakter miejsca.',
             layout: 'fullWidth',
             images: [
               {
@@ -645,19 +645,19 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             title: 'Strona domków wypoczynkowych',
             description:
-              'Karty domkГіw z podstawowymi informacjami i przejЕ›ciem do szczegГіЕ‚Гіw.',
+              'Karty domków z podstawowymi informacjami i przejściem do szczegółów.',
             layout: 'fullWidth',
             images: [
               {
                 index: 5,
-                label: 'Karty domkГіw',
+                label: 'Karty domków',
                 kind: 'default',
               },
             ],
           },
           {
             title: 'Strona domków wypoczynkowych',
-            description: 'Sekcja galerii prezentujД…ca obiekt i jego otoczenie.',
+            description: 'Sekcja galerii prezentująca obiekt i jego otoczenie.',
             layout: 'fullWidth',
             images: [
               {
@@ -670,7 +670,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             title: 'Strona domków wypoczynkowych',
             description:
-              'Finalny blok konwersyjny prowadzД…cy do bezpoЕ›redniego kontaktu telefonicznego.',
+              'Finalny blok konwersyjny prowadzący do bezpośredniego kontaktu telefonicznego.',
             layout: 'fullWidth',
             images: [
               {
@@ -683,7 +683,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             title: 'Strona domków wypoczynkowych',
             description:
-              'Blok kontaktowy z numerami telefonu, mapД… i kontekstem lokalizacji.',
+              'Blok kontaktowy z numerami telefonu, mapą i kontekstem lokalizacji.',
             layout: 'fullWidth',
             images: [
               {
@@ -696,12 +696,12 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             title: 'Strona domków wypoczynkowych',
             description:
-              'Podstrona szczegГіЕ‚owa z opisem, zdjД™ciami i jasnД… Е›cieЕјkД… kontaktu.',
+              'Podstrona szczegółowa z opisem, zdjęciami i jasną ścieżką kontaktu.',
             layout: 'fullWidth',
             images: [
               {
                 index: 9,
-                label: 'Podstrona szczegГіЕ‚owa domku',
+                label: 'Podstrona szczegółowa domku',
                 kind: 'default',
               },
             ],
@@ -717,29 +717,29 @@ const projects: Project[] = enContent.projects.map((project) => {
       ...project,
       title: 'Katalog wynajmu aut',
       description:
-        'Aplikacja webowa do przeglД…dania, filtrowania i wysyЕ‚ania zapytaЕ„ o wynajem auta.',
+        'Aplikacja webowa do przeglądania, filtrowania i wysyłania zapytań o wynajem auta.',
       highlights: [
         'Dynamiczny system filtrowania',
         'Katalog oparty o API',
-        'ЕљcieЕјka zapytania o rezerwacjД™',
+        'Ścieżka zapytania o rezerwację',
       ],
       businessSummary:
         'Katalog samochodów na wynajem z filtrowaniem, ulubionymi i zapytaniem o rezerwację.',
       badges: ['React', 'TypeScript', 'API', 'Filtrowanie', 'Ulubione', 'Rezerwacje'],
       summary: {
         projectType: 'Aplikacja katalogowa',
-        goal: 'StworzyД‡ interfejs wynajmu aut, w ktГіrym uЕјytkownik moЕјe przeglД…daД‡ auta, filtrowaД‡ oferty i wysyЕ‚aД‡ zapytanie o rezerwacjД™.',
+        goal: 'Stworzyć interfejs wynajmu aut, w którym użytkownik może przeglądać auta, filtrować oferty i wysyłać zapytanie o rezerwację.',
         mainFeatures: [
           'Katalog aut',
           'Filtrowanie',
           'Ulubione',
-          'ЕљcieЕјka zapytania o rezerwacjД™',
+          'Ścieżka zapytania o rezerwację',
           'Integracja API',
         ],
-        role: 'Implementacja frontendu, logika UI, obsЕ‚uga danych z API i responsywny layout.',
+        role: 'Implementacja frontendu, logika UI, obsługa danych z API i responsywny layout.',
         stack: project.summary.stack,
         result:
-          'Aplikacja katalogowa z uporzД…dkowanym przeglД…daniem ofert, wygodnym filtrowaniem i czytelnД… Е›cieЕјkД… zapytania.',
+          'Aplikacja katalogowa z uporządkowanym przeglądaniem ofert, wygodnym filtrowaniem i czytelną ścieżką zapytania.',
       },
       caseStudy: {
         hero: {
@@ -757,12 +757,12 @@ const projects: Project[] = enContent.projects.map((project) => {
           },
           {
             label: 'Lokalizacja',
-            value: 'Projekt miД™dzynarodowy',
+            value: 'Projekt międzynarodowy',
           },
           {
             label: 'Zakres',
             value:
-              'Implementacja dynamicznego katalogu z filtrowaniem, Е›cieЕјkД… rezerwacji i integracjД… API.',
+              'Implementacja dynamicznego katalogu z filtrowaniem, ścieżką rezerwacji i integracją API.',
           },
           {
             label: 'Stack',
@@ -775,28 +775,28 @@ const projects: Project[] = enContent.projects.map((project) => {
         ],
         content: {
           problem:
-            'UЕјytkownicy potrzebowali szybkiego i intuicyjnego sposobu na przeglД…danie aut, filtrowanie ofert i wysyЕ‚anie zapytaЕ„ o rezerwacjД™.',
+            'Użytkownicy potrzebowali szybkiego i intuicyjnego sposobu na przeglądanie aut, filtrowanie ofert i wysyłanie zapytań o rezerwację.',
           solution:
-            'Na bazie dostarczonego projektu graficznego przygotowaЕ‚em frontend z dynamicznym filtrowaniem i integracjД… API. UЕјytkownik moЕјe przeglД…daД‡ oferty, filtrowaД‡ wyniki, sprawdzaД‡ szczegГіЕ‚y oraz wysyЕ‚aД‡ zapytanie z walidacjД….',
+            'Na bazie dostarczonego projektu graficznego przygotowałem frontend z dynamicznym filtrowaniem i integracją API. Użytkownik może przeglądać oferty, filtrować wyniki, sprawdzać szczegóły oraz wysyłać zapytanie z walidacją.',
           result:
-            'PowstaЕ‚a funkcjonalna aplikacja, ktГіra pokazuje praktyczne wykorzystanie API, logiki filtrowania i realnej Е›cieЕјki uЕјytkownika.',
+            'Powstała funkcjonalna aplikacja, która pokazuje praktyczne wykorzystanie API, logiki filtrowania i realnej ścieżki użytkownika.',
         },
         contributions: {
           title: 'Katalog wynajmu aut',
           items: [
-            'ZaimplementowaЕ‚em caЕ‚y frontend na podstawie projektu z Figma',
-            'ZbudowaЕ‚em dynamiczny katalog aut oparty o dane z API',
-            'WdroЕјyЕ‚em system filtrowania (marka, cena, przebieg)',
-            'ZaimplementowaЕ‚em funkcjД™ ulubionych',
-            'PrzygotowaЕ‚em strony szczegГіЕ‚owe pojazdГіw',
-            'ZbudowaЕ‚em formularz rezerwacji z walidacjД… i date pickerem',
-            'ZintegrowaЕ‚em API do pobierania i renderowania danych',
+            'Zaimplementowałem cały frontend na podstawie projektu z Figma',
+            'Zbudowałem dynamiczny katalog aut oparty o dane z API',
+            'Wdrożyłem system filtrowania (marka, cena, przebieg)',
+            'Zaimplementowałem funkcję ulubionych',
+            'Przygotowałem strony szczegółowe pojazdów',
+            'Zbudowałem formularz rezerwacji z walidacją i date pickerem',
+            'Zintegrowałem API do pobierania i renderowania danych',
           ],
         },
         gallery: [
           {
             title: 'Katalog wynajmu aut',
-            description: 'Sekcja otwierajД…ca z gЕ‚Гіwnym przekazem aplikacji.',
+            description: 'Sekcja otwierająca z głównym przekazem aplikacji.',
             layout: 'fullWidth',
             images: [
               {
@@ -826,7 +826,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             title: 'Katalog wynajmu aut',
             description:
-              'Widok katalogu samochodГіw z wyszukiwaniem i przeglД…daniem ofert.',
+              'Widok katalogu samochodów z wyszukiwaniem i przeglądaniem ofert.',
             layout: 'single',
             images: [
               {
@@ -850,7 +850,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           },
           {
             title: 'Katalog wynajmu aut',
-            description: 'Stan zaznaczonych ofert i obsЕ‚uga listy ulubionych.',
+            description: 'Stan zaznaczonych ofert i obsługa listy ulubionych.',
             layout: 'single',
             images: [
               {
@@ -863,12 +863,12 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             title: 'Katalog wynajmu aut',
             description:
-              'Podstrona szczegГіЕ‚owa z parametrami i informacjami o aucie.',
+              'Podstrona szczegółowa z parametrami i informacjami o aucie.',
             layout: 'single',
             images: [
               {
                 index: 6,
-                label: 'Widok szczegГіЕ‚Гіw auta',
+                label: 'Widok szczegółów auta',
                 kind: 'default',
               },
             ],
@@ -876,12 +876,12 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             title: 'Katalog wynajmu aut',
             description:
-              'WysyЕ‚anie zapytania o wynajem bezpoЕ›rednio ze strony szczegГіЕ‚owej.',
+              'Wysyłanie zapytania o wynajem bezpośrednio ze strony szczegółowej.',
             layout: 'single',
             images: [
               {
                 index: 7,
-                label: 'Formularz zapytania o rezerwacjД™',
+                label: 'Formularz zapytania o rezerwację',
                 kind: 'default',
               },
             ],
@@ -897,29 +897,29 @@ const projects: Project[] = enContent.projects.map((project) => {
       ...project,
       title: 'Platforma historii z podróży',
       description:
-        'Fullstackowa aplikacja webowa do publikowania historii podrГіЕјniczych z profilami uЕјytkownikГіw i autoryzacjД….',
+        'Fullstackowa aplikacja webowa do publikowania historii podróżniczych z profilami użytkowników i autoryzacją.',
       highlights: [
         'System autoryzacji',
-        'ЕљcieЕјka publikacji historii',
-        'System profili uЕјytkownika',
+        'Ścieżka publikacji historii',
+        'System profili użytkownika',
       ],
       businessSummary:
         'Platforma podróżnicza z logowaniem, profilami użytkowników i publikowaniem własnych historii.',
       badges: ['React', 'Node.js', 'MongoDB', 'Autoryzacja', 'Profile', 'Publikacja'],
       summary: {
         projectType: 'Platforma fullstack',
-        goal: 'ZbudowaД‡ platformД™ historii podrГіЕјniczych z kontami uЕјytkownikГіw, profilami i publikowaniem treЕ›ci.',
+        goal: 'Zbudować platformę historii podróżniczych z kontami użytkowników, profilami i publikowaniem treści.',
         mainFeatures: [
           'Autoryzacja',
-          'Profile uЕјytkownikГіw',
+          'Profile użytkowników',
           'Publikowanie historii',
           'Backend API',
-          'Integracja z bazД… danych',
+          'Integracja z bazą danych',
         ],
-        role: 'WkЕ‚ad fullstack obejmujД…cy frontend, backend API, strukturД™ danych i implementacjД™ funkcji.',
+        role: 'Wkład fullstack obejmujący frontend, backend API, strukturę danych i implementację funkcji.',
         stack: project.summary.stack,
         result:
-          'Platforma fullstack z kontami uЕјytkownikГіw, publikowaniem treЕ›ci i uporzД…dkowanД… integracjД… backendu.',
+          'Platforma fullstack z kontami użytkowników, publikowaniem treści i uporządkowaną integracją backendu.',
       },
       caseStudy: {
         hero: {
@@ -942,7 +942,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             label: 'Zakres',
             value:
-              'Budowa skalowalnej platformy treЕ›ciowej z autoryzacjД…, publikowaniem historii i profilem uЕјytkownika.',
+              'Budowa skalowalnej platformy treściowej z autoryzacją, publikowaniem historii i profilem użytkownika.',
           },
           {
             label: 'Stack',
@@ -955,36 +955,36 @@ const projects: Project[] = enContent.projects.map((project) => {
         ],
         content: {
           problem:
-            'Projekt wymagaЕ‚ stworzenia platformy fullstack, w ktГіrej uЕјytkownicy mogД… rejestrowaД‡ konta, publikowaД‡ historie, zarzД…dzaД‡ profilem i wchodziД‡ w interakcje z treЕ›ciД….',
+            'Projekt wymagał stworzenia platformy fullstack, w której użytkownicy mogą rejestrować konta, publikować historie, zarządzać profilem i wchodzić w interakcje z treścią.',
           solution:
-            'W zespole 12-osobowym realizowaЕ‚em zadania frontendowe i wspieraЕ‚em backend. ZaimplementowaЕ‚em kluczowe komponenty UI, miД™dzy innymi nagЕ‚Гіwki, modale, karty historii i Е›cieЕјkД™ edycji profilu, oraz pracowaЕ‚em nad wspГіlnymi strukturami danych.',
+            'W zespole 12-osobowym realizowałem zadania frontendowe i wspierałem backend. Zaimplementowałem kluczowe komponenty UI, między innymi nagłówki, modale, karty historii i ścieżkę edycji profilu, oraz pracowałem nad wspólnymi strukturami danych.',
           result:
-            'Platforma obsЕ‚uguje autoryzacjД™, publikowanie i interakcje uЕјytkownikГіw, pokazujД…c praktycznД… architekturД™ fullstack i pracД™ zespoЕ‚owД….',
+            'Platforma obsługuje autoryzację, publikowanie i interakcje użytkowników, pokazując praktyczną architekturę fullstack i pracę zespołową.',
         },
         contributions: {
           title: 'Platforma historii z podróży',
           items: [
-            'ZaimplementowaЕ‚em kilka wariantГіw nagЕ‚Гіwka dla rГіЕјnych kontekstГіw strony',
-            'ZbudowaЕ‚em komponent modala potwierdzajД…cego (ConfirmModal)',
-            'PrzygotowaЕ‚em komponenty kart historii',
-            'ZaimplementowaЕ‚em stronД™ edycji profilu',
-            'WdroЕјyЕ‚em logikД™ aktywnej nawigacji na podstawie trasy',
-            'ZintegrowaЕ‚em system SVG sprite',
-            'ZoptymalizowaЕ‚em zasoby obrazГіw i strukturД™ katalogu public',
-            'WsparЕ‚em typowanie backendu i wspГіlne struktury danych',
-            'DodaЕ‚em dokumentacjД™ projektu (README)',
+            'Zaimplementowałem kilka wariantów nagłówka dla różnych kontekstów strony',
+            'Zbudowałem komponent modala potwierdzającego (ConfirmModal)',
+            'Przygotowałem komponenty kart historii',
+            'Zaimplementowałem stronę edycji profilu',
+            'Wdrożyłem logikę aktywnej nawigacji na podstawie trasy',
+            'Zintegrowałem system SVG sprite',
+            'Zoptymalizowałem zasoby obrazów i strukturę katalogu public',
+            'Wsparłem typowanie backendu i wspólne struktury danych',
+            'Dodałem dokumentację projektu (README)',
           ],
         },
         gallery: [
           {
             title: 'Platforma historii z podróży',
             description:
-              'Publiczny widok startowy zapraszajД…cy nowych uЕјytkownikГіw.',
+              'Publiczny widok startowy zapraszający nowych użytkowników.',
             layout: 'single',
             images: [
               {
                 index: 3,
-                label: 'Hero вЂ“ stan goЕ›cia',
+                label: 'Hero – stan gościa',
                 kind: 'default',
               },
             ],
@@ -992,12 +992,12 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             title: 'Platforma historii z podróży',
             description:
-              'Widok po zalogowaniu z rozszerzonД… nawigacjД… i dodatkowymi akcjami.',
+              'Widok po zalogowaniu z rozszerzoną nawigacją i dodatkowymi akcjami.',
             layout: 'single',
             images: [
               {
                 index: 5,
-                label: 'Hero вЂ“ stan zalogowany',
+                label: 'Hero – stan zalogowany',
                 kind: 'default',
               },
             ],
@@ -1005,7 +1005,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             title: 'Platforma historii z podróży',
             description:
-              'ЕљcieЕјka logowania dajД…ca dostД™p do publikacji i funkcji profilu.',
+              'Ścieżka logowania dająca dostęp do publikacji i funkcji profilu.',
             layout: 'single',
             images: [
               {
@@ -1018,7 +1018,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             title: 'Platforma historii z podróży',
             description:
-              'Dopasowanie gЕ‚Гіwnego widoku aplikacji do desktopu i mobile.',
+              'Dopasowanie głównego widoku aplikacji do desktopu i mobile.',
             layout: 'responsive',
             images: [
               {
@@ -1036,7 +1036,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             title: 'Platforma historii z podróży',
             description:
-              'GЕ‚Гіwny feed historii wraz z sekcjami odkrywania wedЕ‚ug kategorii.',
+              'Główny feed historii wraz z sekcjami odkrywania według kategorii.',
             layout: 'single',
             images: [
               {
@@ -1049,12 +1049,12 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             title: 'Platforma historii z podróży',
             description:
-              'Katalog autorГіw uЕ‚atwiajД…cy przeglД…danie profili uЕјytkownikГіw.',
+              'Katalog autorów ułatwiający przeglądanie profili użytkowników.',
             layout: 'single',
             images: [
               {
                 index: 7,
-                label: 'Widok spoЕ‚ecznoЕ›ci',
+                label: 'Widok społeczności',
                 kind: 'default',
               },
             ],
@@ -1062,19 +1062,19 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             title: 'Platforma historii z podróży',
             description:
-              'Obszar profilu do zarzД…dzania aktywnoЕ›ciД… i zapisanymi treЕ›ciami.',
+              'Obszar profilu do zarządzania aktywnością i zapisanymi treściami.',
             layout: 'single',
             images: [
               {
                 index: 8,
-                label: 'Widok profilu uЕјytkownika',
+                label: 'Widok profilu użytkownika',
                 kind: 'default',
               },
             ],
           },
           {
             title: 'Platforma historii z podróży',
-            description: 'ЕљcieЕјka publikacji nowych historii podrГіЕјniczych.',
+            description: 'Ścieżka publikacji nowych historii podróżniczych.',
             layout: 'single',
             images: [
               {
@@ -1087,12 +1087,12 @@ const projects: Project[] = enContent.projects.map((project) => {
           {
             title: 'Platforma historii z podróży',
             description:
-              'Widok artykuЕ‚u z metadanymi autora i kontekstem kategorii.',
+              'Widok artykułu z metadanymi autora i kontekstem kategorii.',
             layout: 'single',
             images: [
               {
                 index: 10,
-                label: 'Widok szczegГіЕ‚Гіw historii',
+                label: 'Widok szczegółów historii',
                 kind: 'default',
               },
             ],
@@ -1123,9 +1123,9 @@ const contact: LocaleContent['contact'] = {
   emailLabel: 'Email',
   messageLabel: 'Wiadomo\u015b\u0107',
   validation: {
-    nameInvalid: 'Imi\u0119 musi mie\u0107 3вЂ“18 znak\u00f3w.',
+    nameInvalid: 'Imi\u0119 musi mie\u0107 3–18 znak\u00f3w.',
     emailInvalid: 'Wpisz poprawny adres email.',
-    messageInvalid: 'Wiadomo\u015b\u0107 musi mie\u0107 5вЂ“500 znak\u00f3w.',
+    messageInvalid: 'Wiadomo\u015b\u0107 musi mie\u0107 5–500 znak\u00f3w.',
   },
   mailto: {
     subject: 'Zapytanie o projekt',
