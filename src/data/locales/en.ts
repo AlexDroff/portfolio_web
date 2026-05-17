@@ -311,8 +311,8 @@ const faq: FAQContent = {
 const projects: Project[] = [
   {
     "slug": "cleaning",
-    "title": "Cleaning Services",
-    "description": "Website for a local cleaning business with service catalog and a WhatsApp booking path.",
+    "title": "Cleaning company website",
+    "description": "A website for a cleaning company with service pricing, package selection, and quick WhatsApp contact.",
     "highlights": [
       "Service selection UI",
       "WhatsApp booking path",
@@ -321,7 +321,7 @@ const projects: Project[] = [
     "liveDemoUrl": "https://pure-soft-six.vercel.app/",
     "imageFolder": "cleaning",
     "cardImage": "/projects cards/cleaning.webp",
-    "businessSummary": "Service website with pricing logic, a cart-like request path, and WhatsApp order requests.",
+    "businessSummary": "A website for a cleaning company with service pricing, package selection, and quick WhatsApp contact.",
     "badges": [
       "React",
       "TypeScript",
@@ -348,7 +348,7 @@ const projects: Project[] = [
     },
     "caseStudy": {
       "hero": {
-        "title": "Cleaning Services",
+        "title": "Cleaning company website",
         "subtitle": "Website for a local cleaning company with a service catalog and a complete WhatsApp-based order path."
       },
       "meta": [
@@ -507,8 +507,8 @@ const projects: Project[] = [
   },
   {
     "slug": "rental",
-    "title": "Countryside Retreat",
-    "description": "Website for a countryside guest house with property presentation and a direct-call booking path.",
+    "title": "Holiday cottages website",
+    "description": "A website for holiday cottages with accommodation offers, a gallery, and a simple reservation inquiry path.",
     "highlights": [
       "Atmosphere-driven design",
       "House detail pages",
@@ -517,7 +517,7 @@ const projects: Project[] = [
     "liveDemoUrl": "https://sablino.vercel.app/",
     "imageFolder": "rental-house",
     "cardImage": "/projects cards/rental house.webp",
-    "businessSummary": "Website for a countryside rental business with house pages, gallery, contact CTAs and booking-oriented structure.",
+    "businessSummary": "A website for holiday cottages with accommodation offers, a gallery, and a simple reservation inquiry path.",
     "badges": [
       "Next.js",
       "TypeScript",
@@ -545,7 +545,7 @@ const projects: Project[] = [
     },
     "caseStudy": {
       "hero": {
-        "title": "Countryside Retreat",
+        "title": "Holiday cottages website",
         "subtitle": "Website for a countryside guest house focused on atmosphere, property presentation, and direct-call booking."
       },
       "meta": [
@@ -702,8 +702,8 @@ const projects: Project[] = [
   },
   {
     "slug": "rentalcar",
-    "title": "Car Rental App",
-    "description": "Web application for browsing, filtering, and requesting car rentals with a structured booking path.",
+    "title": "Car rental catalog",
+    "description": "A car rental catalog with filtering, favorites, and reservation inquiries.",
     "highlights": [
       "Dynamic filtering system",
       "API-driven catalog",
@@ -712,7 +712,7 @@ const projects: Project[] = [
     "liveDemoUrl": "https://rentalcar-frontend-six.vercel.app/",
     "imageFolder": "rental-car",
     "cardImage": "/projects cards/rental car.webp",
-    "businessSummary": "Catalog-style web app with filtering, favorites, and a booking request path.",
+    "businessSummary": "A car rental catalog with filtering, favorites, and reservation inquiries.",
     "badges": [
       "React",
       "API",
@@ -740,7 +740,7 @@ const projects: Project[] = [
     },
     "caseStudy": {
       "hero": {
-        "title": "Car Rental App",
+        "title": "Car rental catalog",
         "subtitle": "Web application for browsing, filtering, and booking rental cars with API-driven data and a clear request path."
       },
       "meta": [
@@ -886,8 +886,8 @@ const projects: Project[] = [
   },
   {
     "slug": "travel",
-    "title": "Travel Stories",
-    "description": "Fullstack web application for publishing travel stories with user profiles and authentication.",
+    "title": "Travel stories platform",
+    "description": "A travel platform with login, user profiles, and publishing personal travel stories.",
     "highlights": [
       "Authentication system",
       "Story publishing path",
@@ -896,7 +896,7 @@ const projects: Project[] = [
     "liveDemoUrl": "https://travelers-khaki-ten.vercel.app/",
     "imageFolder": "travel",
     "cardImage": "/projects cards/travels.webp",
-    "businessSummary": "Fullstack travel platform with authentication, user profiles and story publishing.",
+    "businessSummary": "A travel platform with login, user profiles, and publishing personal travel stories.",
     "badges": [
       "React",
       "Node.js",
@@ -924,7 +924,7 @@ const projects: Project[] = [
     },
     "caseStudy": {
       "hero": {
-        "title": "Travel Stories",
+        "title": "Travel stories platform",
         "subtitle": "Fullstack platform for publishing travel stories with authentication, user profiles, and content management paths."
       },
       "meta": [

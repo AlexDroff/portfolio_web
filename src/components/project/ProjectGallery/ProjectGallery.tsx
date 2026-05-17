@@ -84,8 +84,8 @@ export const ProjectGallery = ({ folder, sections }: ProjectGalleryProps) => {
   return (
     <section className={styles.section}>
       <Container>
-        {sections.map((section) => (
-          <div key={section.title} className={styles.group}>
+        {sections.map((section, sectionIndex) => (
+          <div key={`${section.title}-${sectionIndex}`} className={styles.group}>
             <header className={styles.groupHeader}>
               <h3 className={styles.groupTitle}>{section.title}</h3>
               {section.description ? (
@@ -122,7 +122,6 @@ export const ProjectGallery = ({ folder, sections }: ProjectGalleryProps) => {
                       />
                     )}
                   </div>
-                  <p className={styles.label}>{image.label}</p>
                 </article>
               ))}
             </div>

@@ -6,7 +6,7 @@ export const siteConfig = {
   email: "olexandr.alexandroff@gmail.com",
   location: "Poland",
   githubUrl: "https://github.com/AlexDroff",
-  linkedinUrl: "https://www.linkedin.com/in/oleksandr-aleksandov/",
+  linkedinUrl: "https://www.linkedin.com/in/oleksandr-aleksandrov/",
   telegramUrl: "https://t.me/Oleksandr_Alexandrov",
   availability: "Available for freelance projects",
   mainStack: ["Next.js", "React", "TypeScript", "Node.js"],

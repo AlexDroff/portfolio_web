@@ -6,9 +6,12 @@ import styles from "./ProjectSummary.module.css";
 type ProjectSummaryProps = {
   summary: ProjectSummaryType;
   labels: LocaleContent["ui"]["projectDetail"];
+  heroTitle: string;
 };
 
-export const ProjectSummary = ({ summary, labels }: ProjectSummaryProps) => {
+export const ProjectSummary = ({ summary, labels, heroTitle }: ProjectSummaryProps) => {
+  const showProjectType = summary.projectType.trim() !== heroTitle.trim();
+
   return (
     <section className={styles.section} aria-labelledby="project-summary-title">
       <Container>
@@ -18,10 +21,12 @@ export const ProjectSummary = ({ summary, labels }: ProjectSummaryProps) => {
           </h2>
 
           <dl className={styles.grid}>
-            <div className={styles.item}>
-              <dt className={styles.term}>{labels.projectType}</dt>
-              <dd className={styles.value}>{summary.projectType}</dd>
-            </div>
+            {showProjectType ? (
+              <div className={styles.item}>
+                <dt className={styles.term}>{labels.projectType}</dt>
+                <dd className={styles.value}>{summary.projectType}</dd>
+              </div>
+            ) : null}
 
             <div className={styles.item}>
               <dt className={styles.term}>{labels.goal}</dt>

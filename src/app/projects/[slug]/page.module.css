@@ -2,6 +2,17 @@
   padding-top: var(--space-6);
 }
 
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.topBar .backLink {
+  margin-bottom: 0;
+}
+
 .backLink {
   display: inline-flex;
   align-items: center;
@@ -37,6 +48,10 @@
 @media (max-width: 768px) {
   .backLinkWrap {
     padding-top: var(--space-5);
+  }
+
+  .topBar {
+    width: 100%;
   }
 
   .backLink {

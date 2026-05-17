@@ -11,6 +11,7 @@ import { getLocalizedPath } from "@/data/locales";
 import { Container } from "@/components/ui/Container/Container";
 import { Section } from "@/components/ui/Section/Section";
 import { Button } from "@/components/ui/Button/Button";
+import { PageLanguageToggle } from "@/components/ui/PageLanguageToggle/PageLanguageToggle";
 import styles from "./Contact.module.css";
 
 type FormErrors = {
@@ -57,6 +58,7 @@ export const ContactPageClient = ({ locale, contact }: ContactPageClientProps) =
     message: "",
   });
   const backHomeHref = getLocalizedPath(locale, "/");
+  const currentContactPath = getLocalizedPath(locale, "/contact");
   const fullPlaceholders = useMemo(
     () => ({
       name: contact.namePlaceholder,
@@ -191,9 +193,12 @@ export const ContactPageClient = ({ locale, contact }: ContactPageClientProps) =
     <Section>
       <Container>
         <div className={styles.wrapper}>
-          <Link href={backHomeHref} className={styles.backLink}>
-            {`\u2190 ${contact.links.backHome}`}
-          </Link>
+          <div className={styles.topBar}>
+            <Link href={backHomeHref} className={styles.backLink}>
+              {`\u2190 ${contact.links.backHome}`}
+            </Link>
+            <PageLanguageToggle locale={locale} currentPath={currentContactPath} />
+          </div>
 
           <motion.div className={styles.intro} {...getRevealProps(0)}>
             <h1 className={styles.title}>{contact.title}</h1>

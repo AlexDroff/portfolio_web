@@ -392,7 +392,8 @@ const projects: Project[] = enContent.projects.map((project) => {
       caseStudy: {
         hero: {
           title: 'Strona firmy sprzątającej',
-          subtitle: 'Strona firmy sprzątającej',
+          subtitle:
+            'Strona lokalnej firmy sprzątającej z katalogiem usług i pełną ścieżką zapytania przez WhatsApp.',
         },
         meta: [
           {
@@ -591,7 +592,8 @@ const projects: Project[] = enContent.projects.map((project) => {
       caseStudy: {
         hero: {
           title: 'Strona domków wypoczynkowych',
-          subtitle: 'Strona domków wypoczynkowych',
+          subtitle:
+            'Strona miejsca wypoczynku z ofertą domków, galerią i prostą ścieżką zapytania o rezerwację.',
         },
         meta: [
           {
@@ -787,7 +789,8 @@ const projects: Project[] = enContent.projects.map((project) => {
       caseStudy: {
         hero: {
           title: 'Katalog wynajmu aut',
-          subtitle: 'Katalog wynajmu aut',
+          subtitle:
+            'Katalog samochodów na wynajem z filtrowaniem, ulubionymi i zapytaniem o rezerwację.',
         },
         meta: [
           {
@@ -967,7 +970,8 @@ const projects: Project[] = enContent.projects.map((project) => {
       caseStudy: {
         hero: {
           title: 'Platforma historii z podróży',
-          subtitle: 'Platforma historii z podróży',
+          subtitle:
+            'Platforma podróżnicza z logowaniem, profilami użytkowników i publikowaniem własnych historii.',
         },
         meta: [
           {

@@ -202,9 +202,6 @@ export const Header = ({ locale, navigation, hero }: HeaderProps) => {
 
             <div
               className={`${styles.languageDropdown} ${isDesktopLanguageOpen ? styles.languageDropdownOpen : ""}`}
-              onMouseEnter={() => setIsDesktopLanguageOpen(true)}
-              onMouseLeave={() => setIsDesktopLanguageOpen(false)}
-              onFocusCapture={() => setIsDesktopLanguageOpen(true)}
               onBlurCapture={handleDesktopDropdownBlur}
             >
               {isDesktopLanguageOpen ? (

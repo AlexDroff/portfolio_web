@@ -7,6 +7,13 @@
   text-align: left;
 }
 
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
 .backLink {
   display: inline-flex;
   align-items: center;
@@ -239,6 +246,10 @@
 }
 
 @media (max-width: 768px) {
+  .topBar {
+    width: 100%;
+  }
+
   .contacts {
     width: 100%;
     justify-content: center;
