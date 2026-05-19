@@ -306,7 +306,7 @@ const projects: Project[] = [
       "WhatsApp booking path",
       "Order summary logic"
     ],
-    "liveDemoUrl": "https://pure-soft-six.vercel.app/",
+    "liveDemoUrl": "https://www.puresoft.es/",
     "imageFolder": "cleaning",
     "cardImage": "/projects cards/cleaning.webp",
     "businessSummary": "A website for a cleaning company with service pricing, package selection, and quick WhatsApp contact.",
