@@ -1,19 +1,33 @@
 # Loading Studio
 
-Loading Studio to portfolio i strona usługowa studia tworzącego szybkie strony internetowe, landing pages i proste systemy kontaktu dla małych firm usługowych.
+Loading Studio to portfolio i strona usługowa studia tworzącego szybkie strony internetowe, landing pages, strony firmowe oraz proste flow kontaktowe i rezerwacyjne dla małych firm usługowych.
 
 Domyślny język:
 - polski
 
+Dostępne języki:
+- polski
+- angielski
+- ukraiński
+
 Główne usługi:
 - szybkie strony internetowe dla małych firm usługowych
-- flow kontaktowe i rezerwacyjne
+- landing pages
 - strony firmowe
+- flow kontaktowe i rezerwacyjne
 - aplikacje webowe / MVP
-- modernizacja stron
-- podstawy SEO i wsparcie przy wdrożeniu
+- modernizacja istniejących stron
+- podstawy SEO
+- wsparcie przy wdrożeniu i publikacji strony
 
-Główne technologie:
+Technologie używane w tym portfolio:
+- Next.js
+- React
+- TypeScript
+- CSS Modules
+- Motion
+
+Technologie używane w projektach i usługach:
 - Next.js
 - React
 - TypeScript
@@ -28,7 +42,19 @@ Ważne strony:
 - /projects/cleaning
 - /projects/rental
 - /projects/rentalcar
+- /projects/booksy
 - /projects/travel
+- /projects/notehub
+- /projects/ecotote
+
+Przykładowe case studies:
+- Cleaning company website
+- Holiday cottages website
+- Car rental catalog
+- Book catalog with cart
+- Travel stories platform
+- Notes app with authentication
+- Website with eco bag catalog
 
 Kontakt:
 - olexandr.alexandroff@gmail.com
