@@ -427,7 +427,7 @@ const projects: Project[] = enContent.projects.map((project) => {
         },
         gallery: [
           {
-            title: 'Strona firmy sprzątającej',
+            title: 'Hero',
             description:
               'Główne otwarcie strony z najważniejszą propozycją wartości.',
             layout: 'fullWidth',
@@ -440,9 +440,9 @@ const projects: Project[] = enContent.projects.map((project) => {
             ],
           },
           {
-            title: 'Strona firmy sprzątającej',
+            title: 'Responsywność',
             description:
-              'Widoki desktop i mobile pokazujące pełną responsywność interfejsu.',
+              'Widoki desktop i mobile pokazujące responsywność interfejsu.',
             layout: 'responsive',
             images: [
               {
@@ -458,7 +458,7 @@ const projects: Project[] = enContent.projects.map((project) => {
             ],
           },
           {
-            title: 'Strona firmy sprzątającej',
+            title: 'Struktura landing page',
             description:
               'Sekcje budujące zaufanie i prowadzące użytkownika przez ofertę.',
             layout: 'fullWidth',
@@ -471,7 +471,7 @@ const projects: Project[] = enContent.projects.map((project) => {
             ],
           },
           {
-            title: 'Strona firmy sprzątającej',
+            title: 'Katalog usług',
             description:
               'Przejrzysty grid usług z cenami i dodatkowymi informacjami.',
             layout: 'fullWidth',
@@ -484,52 +484,65 @@ const projects: Project[] = enContent.projects.map((project) => {
             ],
           },
           {
-            title: 'Strona firmy sprzątającej',
+            title: 'Sekcja FAQ',
+            description:
+              'Odpowiedzi na najczęstsze pytania klientów.',
+            layout: 'fullWidth',
+            images: [
+              {
+                index: 6,
+                label: 'Sekcja FAQ',
+                kind: 'default',
+              },
+            ],
+          },
+          {
+            title: 'Galeria i stopka',
+            description:
+              'Slider galerii oraz końcowa część strony z kontaktem.',
+            layout: 'fullWidth',
+            images: [
+              {
+                index: 7,
+                label: 'Galeria i stopka',
+                kind: 'default',
+              },
+            ],
+          },
+          {
+            title: 'Modal usługi',
             description:
               'Szczegóły wybranej usługi przed dodaniem do zapytania.',
             layout: 'single',
             images: [
               {
-                index: 7,
+                index: 8,
                 label: 'Modal wybranej usługi',
                 kind: 'default',
               },
             ],
           },
           {
-            title: 'Strona firmy sprzątającej',
+            title: 'Podsumowanie zamówienia',
             description:
               'Widok zapytania z wybranymi usługami, ilością i sumą.',
             layout: 'single',
             images: [
               {
-                index: 8,
+                index: 9,
                 label: 'Podsumowanie zapytania',
                 kind: 'default',
               },
             ],
           },
           {
-            title: 'Strona firmy sprzątającej',
-            description:
-              'Bloki informacyjne, które redukują bariery przed kontaktem.',
-            layout: 'fullWidth',
-            images: [
-              {
-                index: 6,
-                label: 'Sekcja FAQ i treści wspierające',
-                kind: 'default',
-              },
-            ],
-          },
-          {
-            title: 'Strona firmy sprzątającej',
+            title: 'Kontakt i konwersja',
             description:
               'Finalny krok, który ułatwia szybkie wysłanie zapytania.',
             layout: 'fullWidth',
             images: [
               {
-                index: 9,
+                index: 10,
                 label: 'Finalny formularz zapytania',
                 kind: 'default',
               },
@@ -930,6 +943,144 @@ const projects: Project[] = enContent.projects.map((project) => {
     };
   }
 
+  if (project.slug === 'booksy') {
+    return {
+      ...project,
+      title: 'Katalog książek z koszykiem',
+      description:
+        'Aplikacja księgarni z katalogiem książek, filtrowaniem, szczegółami produktu, koszykiem i prostym scenariuszem zakupu.',
+      highlights: ['Katalog książek', 'Modal produktu', 'Koszyk i wishlist'],
+      businessSummary:
+        'Aplikacja księgarni z katalogiem książek, filtrowaniem, szczegółami produktu, koszykiem i prostym scenariuszem zakupu.',
+      badges: ['JavaScript', 'Vite', 'API', 'Koszyk', 'Modal produktu', 'LocalStorage'],
+      summary: {
+        projectType: 'Prototyp katalogu e-commerce',
+        goal: 'Zbudować prosty katalog książek z filtrowaniem, kartą produktu, koszykiem i podstawowym procesem zakupu.',
+        mainFeatures: [
+          'Katalog książek',
+          'Filtrowanie kategorii',
+          'Modal produktu',
+          'Koszyk',
+          'Wishlist',
+          'Powiadomienia',
+        ],
+        role: 'Frontend development w projekcie zespołowym',
+        stack: ['HTML', 'CSS', 'JavaScript', 'Vite', 'API', 'LocalStorage'],
+        result:
+          'Responsywny prototyp księgarni z podstawowym shopping flow i interaktywnymi stanami UI.',
+      },
+      caseStudy: {
+        hero: {
+          title: 'Katalog książek z koszykiem',
+          subtitle:
+            'Responsywny prototyp księgarni z katalogiem, modalem produktu, koszykiem i prostym scenariuszem zakupu.',
+        },
+        meta: [
+          {
+            label: 'Rola',
+            value: 'Frontend development w projekcie zespołowym',
+          },
+          {
+            label: 'Typ',
+            value: 'Prototyp katalogu e-commerce',
+          },
+          {
+            label: 'Lokalizacja',
+            value: 'Projekt kursowy',
+          },
+          {
+            label: 'Zakres',
+            value:
+              'Implementacja katalogu książek z filtrowaniem, modalem produktu, koszykiem i powiadomieniami.',
+          },
+          {
+            label: 'Stack',
+            value: 'HTML, CSS, JavaScript, Vite, API, LocalStorage',
+          },
+          {
+            label: 'Czas realizacji',
+            value: '1 tydz.',
+          },
+        ],
+        content: {
+          problem:
+            'Użytkownik potrzebuje szybko przejrzeć katalog książek, zawęzić listę według kategorii, zobaczyć szczegóły produktu i dodać wybrane pozycje do koszyka bez przechodzenia przez złożony proces.',
+          solution:
+            'Projekt łączy katalog książek, filtrowanie, modal produktu, koszyk, wishlist i krótkie komunikaty systemowe. Interfejs został przygotowany jako responsywny widok sklepu z podstawowym scenariuszem zakupowym.',
+          result:
+            'Powstał działający prototyp księgarni, który pokazuje pełną ścieżkę od przeglądania książek do dodania produktu do koszyka i potwierdzenia akcji.',
+        },
+        contributions: {
+          title: 'Co zrobiliśmy',
+          items: [
+            'Współtworzyliśmy frontend aplikacji w zespole',
+            'Zaimplementowaliśmy przeglądanie katalogu i filtrowanie kategorii',
+            'Przygotowaliśmy obsługę modala produktu i stanów szczegółów',
+            'Dodaliśmy logikę koszyka i wishlist opartą o LocalStorage',
+            'Zintegrowaliśmy widoki z danymi z API',
+            'Zadbaliśmy o responsywność kluczowych sekcji',
+            'Dodaliśmy stany powiadomień po akcjach użytkownika',
+            'Wspieraliśmy integrację modułów w jeden spójny flow',
+          ],
+        },
+        gallery: [
+          {
+            title: 'Katalog książek',
+            description: 'Główna sekcja z hero, kategoriami i listą książek.',
+            layout: 'fullWidth',
+            images: [{ index: 3, label: 'Katalog książek', kind: 'default' }],
+          },
+          {
+            title: 'Responsywność',
+            description:
+              'Widoki desktop i mobile pokazujące responsywność interfejsu.',
+            layout: 'responsive',
+            images: [
+              { index: 1, label: 'Widok desktop', kind: 'desktop' },
+              { index: 2, label: 'Widok mobilny', kind: 'mobile' },
+            ],
+          },
+          {
+            title: 'Opinie i wydarzenia',
+            description:
+              'Sekcje z opiniami klientów oraz wydarzeniami księgarni.',
+            layout: 'fullWidth',
+            images: [{ index: 4, label: 'Opinie i wydarzenia', kind: 'default' }],
+          },
+          {
+            title: 'Sekcja lokalizacji',
+            description:
+              'Blok kontaktowy z adresem, danymi kontaktowymi i mapą.',
+            layout: 'fullWidth',
+            images: [{ index: 5, label: 'Sekcja lokalizacji', kind: 'default' }],
+          },
+          {
+            title: 'Modal produktu',
+            description:
+              'Widok szczegółów książki z ceną, ilością i akcjami zakupu.',
+            layout: 'single',
+            images: [{ index: 6, label: 'Modal produktu', kind: 'default' }],
+          },
+          {
+            title: 'Szczegóły produktu',
+            description:
+              'Rozwinięte sekcje informacji o książce, dostawie i zwrotach.',
+            layout: 'single',
+            images: [{ index: 7, label: 'Szczegóły produktu', kind: 'default' }],
+          },
+          {
+            title: 'Powiadomienia koszyka',
+            description:
+              'Komunikaty po dodaniu produktu do koszyka i zakończeniu zakupu.',
+            layout: 'single',
+            images: [{ index: 8, label: 'Powiadomienia koszyka', kind: 'default' }],
+          },
+        ],
+        cta: localizedCta,
+      },
+    };
+  }
+
   if (project.slug === 'travel') {
     return {
       ...project,
@@ -1287,6 +1438,8 @@ export const plContent: LocaleContent = {
   ui,
   seo,
 };
+
+
 
 
 

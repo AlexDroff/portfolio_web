@@ -101,6 +101,10 @@
 }
 
 @media (max-width: 768px) {
+  .image {
+    filter: none;
+  }
+
   .content {
     padding: var(--space-5);
     gap: var(--space-4);

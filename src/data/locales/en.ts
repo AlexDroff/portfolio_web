@@ -1,4 +1,4 @@
-import type { FAQContent } from "@/types/faq";
+﻿import type { FAQContent } from "@/types/faq";
 import type { Project } from "@/types/project";
 import type { LocaleContent } from "./types";
 
@@ -256,7 +256,7 @@ const faq: FAQContent = {
     {
       "id": "timeline",
       "question": "How long does it take to build a website?",
-      "answer": "A landing page usually takes 1–2 weeks, a business website 2–4 weeks, and a larger project 4–6 weeks or more. The exact timeline depends on scope."
+      "answer": "A landing page usually takes 1вЂ“2 weeks, a business website 2вЂ“4 weeks, and a larger project 4вЂ“6 weeks or more. The exact timeline depends on scope."
     },
     {
       "id": "process",
@@ -438,12 +438,36 @@ const projects: Project[] = [
           ]
         },
         {
+          "title": "FAQ & Content",
+          "description": "Answers to the most common customer questions.",
+          "layout": "fullWidth",
+          "images": [
+            {
+              "index": 6,
+              "label": "FAQ section",
+              "kind": "default"
+            }
+          ]
+        },
+        {
+          "title": "Gallery and footer",
+          "description": "Gallery slider and the final contact area of the website.",
+          "layout": "fullWidth",
+          "images": [
+            {
+              "index": 7,
+              "label": "Gallery and footer",
+              "kind": "default"
+            }
+          ]
+        },
+        {
           "title": "Service Details Modal",
           "description": "Focused modal view presenting a selected service, short explanation, and quick pricing context before adding it to the order.",
           "layout": "single",
           "images": [
             {
-              "index": 7,
+              "index": 8,
               "label": "Selected service modal",
               "kind": "default"
             }
@@ -455,20 +479,8 @@ const projects: Project[] = [
           "layout": "single",
           "images": [
             {
-              "index": 8,
+              "index": 9,
               "label": "Cart sidebar with selected services and subtotal",
-              "kind": "default"
-            }
-          ]
-        },
-        {
-          "title": "FAQ & Content",
-          "description": "Supporting content blocks that reduce friction and answer common questions.",
-          "layout": "fullWidth",
-          "images": [
-            {
-              "index": 6,
-              "label": "FAQ list with supporting visual content section",
               "kind": "default"
             }
           ]
@@ -479,7 +491,7 @@ const projects: Project[] = [
           "layout": "fullWidth",
           "images": [
             {
-              "index": 9,
+              "index": 10,
               "label": "Final order and contact form modal",
               "kind": "default"
             }
@@ -811,7 +823,7 @@ const projects: Project[] = [
             },
             {
               "index": 2,
-              "label": "Mobile view",
+              "label": "Responsive Design",
               "kind": "mobile"
             }
           ]
@@ -872,6 +884,197 @@ const projects: Project[] = [
             {
               "index": 7,
               "label": "Booking request path",
+              "kind": "default"
+            }
+          ]
+        }
+      ],
+      "cta": {
+        "title": "Need a website that makes customer contact easier?",
+        "subtext": "I can prepare a clear website with a simple path to an inquiry, booking request or conversation.",
+        "buttonLabel": "Start a project"
+      }
+    }
+  },
+  {
+    "slug": "booksy",
+    "title": "Book catalog with cart",
+    "description": "A bookstore app with a book catalog, filtering, product details, cart, and a simple purchase flow.",
+    "highlights": [
+      "Book catalog",
+      "Product modal",
+      "Cart and wishlist flow"
+    ],
+    "liveDemoUrl": "https://andrusway.github.io/project-CodeCrafters-3-js/",
+    "githubUrl": "https://github.com/Andrusway/project-CodeCrafters-3-js",
+    "imageFolder": "booksy",
+    "cardImage": "/projects cards/booksy.webp",
+    "businessSummary": "A bookstore app with a book catalog, filtering, product details, cart, and a simple purchase flow.",
+    "badges": [
+      "JavaScript",
+      "Vite",
+      "API",
+      "Cart",
+      "Product modal",
+      "LocalStorage"
+    ],
+    "summary": {
+      "projectType": "E-commerce catalog prototype",
+      "goal": "Build a simple book catalog with filtering, product details, cart, and a basic purchase flow.",
+      "mainFeatures": [
+        "Book catalog",
+        "Category filtering",
+        "Product modal",
+        "Cart",
+        "Wishlist",
+        "Notifications"
+      ],
+      "role": "Frontend development in a team project",
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Vite",
+        "API",
+        "LocalStorage"
+      ],
+      "result": "A responsive bookstore prototype with a basic shopping flow and interactive UI states."
+    },
+    "caseStudy": {
+      "hero": {
+        "title": "Book catalog with cart",
+        "subtitle": "Responsive bookstore catalog prototype with product details, cart interactions, and a simple purchase path."
+      },
+      "meta": [
+        {
+          "label": "Role",
+          "value": "Frontend development in a team project"
+        },
+        {
+          "label": "Type",
+          "value": "E-commerce catalog prototype"
+        },
+        {
+          "label": "Location",
+          "value": "Course project"
+        },
+        {
+          "label": "Focus",
+          "value": "Building a practical bookstore catalog flow with filtering, product details, and cart interactions."
+        },
+        {
+          "label": "Stack",
+          "value": "HTML, CSS, JavaScript, Vite, API, LocalStorage"
+        },
+        {
+          "label": "Duration",
+          "value": "1 week"
+        }
+      ],
+      "content": {
+        "problem": "Users need a quick way to browse books, narrow the list by category, open product details, and add selected items to the cart without a complex flow.",
+        "solution": "The project combines a book catalog, category filtering, product modal, cart, wishlist, and short system notifications. The interface was built as a responsive bookstore view with a basic shopping flow.",
+        "result": "The result is a working bookstore prototype that shows the path from browsing books to adding a product to the cart and confirming the action."
+      },
+      "contributions": {
+        "title": "What we did",
+        "items": [
+          "Implemented key frontend modules in a team workflow",
+          "Built the catalog browsing and category filtering experience",
+          "Implemented product modal interactions and detail states",
+          "Added cart and wishlist state handling with LocalStorage",
+          "Connected UI logic with API-driven book data",
+          "Implemented responsive behavior for catalog sections",
+          "Added notification states for cart and purchase actions",
+          "Integrated and stabilized UI flows across team modules"
+        ]
+      },
+      "gallery": [
+        {
+          "title": "Book catalog",
+          "description": "Main section with hero, categories, and book list.",
+          "layout": "fullWidth",
+          "images": [
+            {
+              "index": 3,
+              "label": "Book catalog",
+              "kind": "default"
+            }
+          ]
+        },
+        {
+          "title": "Responsive Design",
+          "description": "Desktop and mobile views showing the responsive interface.",
+          "layout": "responsive",
+          "images": [
+            {
+              "index": 1,
+              "label": "Desktop view",
+              "kind": "desktop"
+            },
+            {
+              "index": 2,
+              "label": "Mobile view",
+              "kind": "mobile"
+            }
+          ]
+        },
+        {
+          "title": "Feedbacks and events",
+          "description": "Sections with customer feedback and bookstore events.",
+          "layout": "fullWidth",
+          "images": [
+            {
+              "index": 4,
+              "label": "Feedbacks and events",
+              "kind": "default"
+            }
+          ]
+        },
+        {
+          "title": "Location section",
+          "description": "Contact block with address, contact details, and map.",
+          "layout": "fullWidth",
+          "images": [
+            {
+              "index": 5,
+              "label": "Location section",
+              "kind": "default"
+            }
+          ]
+        },
+        {
+          "title": "Product modal",
+          "description": "Book details view with price, quantity, and purchase actions.",
+          "layout": "single",
+          "images": [
+            {
+              "index": 6,
+              "label": "Product modal",
+              "kind": "default"
+            }
+          ]
+        },
+        {
+          "title": "Product details",
+          "description": "Expanded information sections for book details, shipping, and returns.",
+          "layout": "single",
+          "images": [
+            {
+              "index": 7,
+              "label": "Product details",
+              "kind": "default"
+            }
+          ]
+        },
+        {
+          "title": "Cart notifications",
+          "description": "Messages after adding a product to the cart and completing purchase.",
+          "layout": "single",
+          "images": [
+            {
+              "index": 8,
+              "label": "Cart notifications",
               "kind": "default"
             }
           ]
@@ -1021,7 +1224,7 @@ const projects: Project[] = [
             },
             {
               "index": 2,
-              "label": "Mobile view",
+              "label": "Responsive Design",
               "kind": "mobile"
             }
           ]
@@ -1113,9 +1316,9 @@ const contact: LocaleContent["contact"] = {
   emailLabel: "Email",
   messageLabel: "Message",
   validation: {
-    nameInvalid: "Name must be 3–18 characters.",
+    nameInvalid: "Name must be 3вЂ“18 characters.",
     emailInvalid: "Enter a valid email address.",
-    messageInvalid: "Message must be 5–500 characters.",
+    messageInvalid: "Message must be 5вЂ“500 characters.",
   },
   mailto: {
     subject: "Project inquiry",
@@ -1237,3 +1440,5 @@ export const enContent: LocaleContent = {
   ui,
   seo,
 };
+
+

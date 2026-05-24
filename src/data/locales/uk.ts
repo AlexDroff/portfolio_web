@@ -430,7 +430,7 @@ const projects: Project[] = enContent.projects.map((project) => {
             layout: 'responsive',
             images: [
               { index: 1, label: 'Десктопний вигляд', kind: 'desktop' },
-              { index: 2, label: 'Мобільний вигляд', kind: 'mobile' },
+              { index: 2, label: 'Адаптивність', kind: 'mobile' },
             ],
           },
           {
@@ -456,12 +456,38 @@ const projects: Project[] = enContent.projects.map((project) => {
             ],
           },
           {
+            title: 'FAQ та додатковий контент',
+            description:
+              'Відповіді на найчастіші запитання клієнтів.',
+            layout: 'fullWidth',
+            images: [
+              {
+                index: 6,
+                label: 'Секція FAQ',
+                kind: 'default',
+              },
+            ],
+          },
+          {
+            title: 'Галерея і футер',
+            description:
+              'Слайдер галереї та фінальний контактний блок сторінки.',
+            layout: 'fullWidth',
+            images: [
+              {
+                index: 7,
+                label: 'Галерея і футер',
+                kind: 'default',
+              },
+            ],
+          },
+          {
             title: 'Модальне вікно послуги',
             description: 'Фокус на вибраній послузі перед додаванням у заявку.',
             layout: 'single',
             images: [
               {
-                index: 7,
+                index: 8,
                 label: 'Модальне вікно вибраної послуги',
                 kind: 'default',
               },
@@ -474,21 +500,8 @@ const projects: Project[] = enContent.projects.map((project) => {
             layout: 'single',
             images: [
               {
-                index: 8,
+                index: 9,
                 label: 'Сайдбар із вибраними послугами і сумою',
-                kind: 'default',
-              },
-            ],
-          },
-          {
-            title: 'FAQ та додатковий контент',
-            description:
-              'Контентні блоки, що зменшують сумніви та відповідають на часті питання.',
-            layout: 'fullWidth',
-            images: [
-              {
-                index: 6,
-                label: 'FAQ і підтримувальний контент',
                 kind: 'default',
               },
             ],
@@ -498,7 +511,7 @@ const projects: Project[] = enContent.projects.map((project) => {
             description: 'Фінальний крок із швидким оформленням заявки.',
             layout: 'fullWidth',
             images: [
-              { index: 9, label: 'Фінальна форма заявки', kind: 'default' },
+              { index: 10, label: 'Фінальна форма заявки', kind: 'default' },
             ],
           },
         ],
@@ -593,7 +606,7 @@ const projects: Project[] = enContent.projects.map((project) => {
             layout: 'responsive',
             images: [
               { index: 1, label: 'Десктопний вигляд', kind: 'desktop' },
-              { index: 2, label: 'Мобільний вигляд', kind: 'mobile' },
+              { index: 2, label: 'Адаптивність', kind: 'mobile' },
             ],
           },
           {
@@ -742,7 +755,7 @@ const projects: Project[] = enContent.projects.map((project) => {
             layout: 'responsive',
             images: [
               { index: 1, label: 'Десктопний вигляд', kind: 'desktop' },
-              { index: 2, label: 'Мобільний вигляд', kind: 'mobile' },
+              { index: 2, label: 'Адаптивність', kind: 'mobile' },
             ],
           },
           {
@@ -784,6 +797,152 @@ const projects: Project[] = enContent.projects.map((project) => {
                 kind: 'default',
               },
             ],
+          },
+        ],
+        cta: localizedCta,
+      },
+    };
+  }
+
+  if (project.slug === 'booksy') {
+    return {
+      ...project,
+      title: 'Каталог книжок із кошиком',
+      description:
+        'Застосунок книгарні з каталогом книжок, фільтрацією, деталями товару, кошиком і простим сценарієм покупки.',
+      highlights: ['Каталог книжок', 'Модальне вікно товару', 'Кошик і wishlist'],
+      businessSummary:
+        'Застосунок книгарні з каталогом книжок, фільтрацією, деталями товару, кошиком і простим сценарієм покупки.',
+      badges: [
+        'JavaScript',
+        'Vite',
+        'API',
+        'Кошик',
+        'Модальне вікно товару',
+        'LocalStorage',
+      ],
+      summary: {
+        projectType: 'Прототип e-commerce каталогу',
+        goal: 'Створити простий каталог книжок із фільтрацією, деталями товару, кошиком і базовим сценарієм покупки.',
+        mainFeatures: [
+          'Каталог книжок',
+          'Фільтрація категорій',
+          'Модальне вікно товару',
+          'Кошик',
+          'Wishlist',
+          'Сповіщення',
+        ],
+        role: 'Frontend розробка в командному проєкті',
+        stack: ['HTML', 'CSS', 'JavaScript', 'Vite', 'API', 'LocalStorage'],
+        result:
+          'Адаптивний прототип книгарні з базовим shopping flow і інтерактивними станами інтерфейсу.',
+      },
+      caseStudy: {
+        hero: {
+          title: 'Каталог книжок із кошиком',
+          subtitle:
+            'Адаптивний прототип книгарні з каталогом, модальним вікном товару, кошиком і простим сценарієм покупки.',
+        },
+        meta: [
+          {
+            label: 'Роль',
+            value: 'Frontend розробка в командному проєкті',
+          },
+          {
+            label: 'Тип',
+            value: 'Прототип e-commerce каталогу',
+          },
+          {
+            label: 'Локація',
+            value: 'Навчальний проєкт',
+          },
+          {
+            label: 'Фокус',
+            value:
+              'Реалізація каталогу книжок із фільтрацією, модальним вікном товару, кошиком і сповіщеннями.',
+          },
+          {
+            label: 'Стек',
+            value: 'HTML, CSS, JavaScript, Vite, API, LocalStorage',
+          },
+          {
+            label: 'Тривалість',
+            value: '1 тиж.',
+          },
+        ],
+        content: {
+          problem:
+            'Користувачу потрібен швидкий спосіб переглянути книжки, звузити список за категоріями, відкрити деталі товару і додати вибрані позиції до кошика без складного процесу.',
+          solution:
+            'Проєкт поєднує каталог книжок, фільтрацію, модальне вікно товару, кошик, wishlist і короткі системні повідомлення. Інтерфейс зроблений як адаптивний вигляд книгарні з базовим сценарієм покупки.',
+          result:
+            'У результаті вийшов робочий прототип книгарні, який показує шлях від перегляду книжок до додавання товару в кошик і підтвердження дії.',
+        },
+        contributions: {
+          title: 'Що ми зробили',
+          items: [
+            'Брали участь у командній frontend-розробці застосунку',
+            'Реалізували перегляд каталогу і фільтрацію категорій',
+            'Додали взаємодію з модальним вікном товару і деталями',
+            'Реалізували стани кошика та wishlist через LocalStorage',
+            'Інтегрували UI з даними, що надходять з API',
+            'Забезпечили адаптивність ключових секцій',
+            'Додали повідомлення після дій із кошиком і покупкою',
+            'Допомогли інтегрувати командні модулі в єдиний user flow',
+          ],
+        },
+        gallery: [
+          {
+            title: 'Каталог книжок',
+            description: 'Головна секція з hero, категоріями і списком книжок.',
+            layout: 'fullWidth',
+            images: [{ index: 3, label: 'Каталог книжок', kind: 'default' }],
+          },
+          {
+            title: 'Адаптивність',
+            description:
+              'Desktop і mobile вигляди, які показують адаптивність інтерфейсу.',
+            layout: 'responsive',
+            images: [
+              { index: 1, label: 'Десктопний вигляд', kind: 'desktop' },
+              { index: 2, label: 'Мобільний вигляд', kind: 'mobile' },
+            ],
+          },
+          {
+            title: 'Відгуки і події',
+            description: 'Секції з відгуками клієнтів і подіями книгарні.',
+            layout: 'fullWidth',
+            images: [{ index: 4, label: 'Відгуки і події', kind: 'default' }],
+          },
+          {
+            title: 'Секція локації',
+            description:
+              'Контактний блок з адресою, контактними даними і мапою.',
+            layout: 'fullWidth',
+            images: [{ index: 5, label: 'Секція локації', kind: 'default' }],
+          },
+          {
+            title: 'Модальне вікно товару',
+            description:
+              'Вигляд деталей книжки з ціною, кількістю і діями покупки.',
+            layout: 'single',
+            images: [
+              { index: 6, label: 'Модальне вікно товару', kind: 'default' },
+            ],
+          },
+          {
+            title: 'Деталі товару',
+            description:
+              'Розкриті секції інформації про книжку, доставку і повернення.',
+            layout: 'single',
+            images: [{ index: 7, label: 'Деталі товару', kind: 'default' }],
+          },
+          {
+            title: 'Сповіщення кошика',
+            description:
+              'Повідомлення після додавання товару до кошика і завершення покупки.',
+            layout: 'single',
+            images: [{ index: 8, label: 'Сповіщення кошика', kind: 'default' }],
           },
         ],
         cta: localizedCta,
@@ -892,7 +1051,7 @@ const projects: Project[] = enContent.projects.map((project) => {
             layout: 'responsive',
             images: [
               { index: 1, label: 'Десктопний вигляд', kind: 'desktop' },
-              { index: 2, label: 'Мобільний вигляд', kind: 'mobile' },
+              { index: 2, label: 'Адаптивність', kind: 'mobile' },
             ],
           },
           {
@@ -1088,3 +1247,5 @@ export const ukContent: LocaleContent = {
   ui,
   seo,
 };
+
+

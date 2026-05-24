@@ -54,6 +54,7 @@ export type ProjectCardData = {
   description: string;
   highlights: string[];
   liveDemoUrl: string;
+  githubUrl?: string;
   imageFolder: string;
   cardImage: string;
   businessSummary: string;
