@@ -1293,6 +1293,295 @@ const projects: Project[] = enContent.projects.map((project) => {
     };
   }
 
+  if (project.slug === 'notehub') {
+    return {
+      ...project,
+      title: 'Aplikacja notatek z logowaniem',
+      description:
+        'Aplikacja do zarządzania notatkami z logowaniem, profilem użytkownika, filtrowaniem, wyszukiwaniem i tworzeniem nowych wpisów.',
+      highlights: [
+        'Logowanie i autoryzacja',
+        'Chronione widoki dashboardu',
+        'CRUD notatek',
+      ],
+      businessSummary:
+        'Aplikacja do zarządzania notatkami z logowaniem, profilem użytkownika, filtrowaniem, wyszukiwaniem i tworzeniem nowych wpisów.',
+      badges: [
+        'Next.js',
+        'TypeScript',
+        'Auth',
+        'Chronione trasy',
+        'CRUD',
+        'Dashboard',
+      ],
+      summary: {
+        projectType: 'Aplikacja notesowa z autoryzacją',
+        goal: 'Zbudować aplikację z logowaniem, ochroną tras i panelem do przeglądania oraz tworzenia notatek.',
+        mainFeatures: [
+          'Logowanie i rejestracja',
+          'Chronione trasy',
+          'Profil użytkownika',
+          'Lista notatek',
+          'Filtrowanie kategorii',
+          'Wyszukiwanie',
+          'Tworzenie notatki',
+        ],
+        role: 'Frontend development i integracja logiki auth',
+        stack: ['Next.js', 'TypeScript', 'CSS', 'Auth', 'Middleware', 'API'],
+        result:
+          'Działający prototyp aplikacji notesowej z podstawową autoryzacją, filtrowaniem i zarządzaniem notatkami.',
+      },
+      caseStudy: {
+        hero: {
+          title: 'Aplikacja notatek z logowaniem',
+          subtitle:
+            'Prototyp aplikacji NoteHub z logowaniem, chronionymi trasami i panelem notatek.',
+        },
+        meta: [
+          {
+            label: 'Rola',
+            value: 'Frontend development i integracja logiki auth',
+          },
+          {
+            label: 'Typ',
+            value: 'Aplikacja notesowa z autoryzacją',
+          },
+          {
+            label: 'Lokalizacja',
+            value: 'Projekt kursowy',
+          },
+          {
+            label: 'Zakres',
+            value:
+              'Implementacja logowania, ochrony tras, dashboardu notatek i operacji filtrowania.',
+          },
+          {
+            label: 'Stack',
+            value: 'Next.js, TypeScript, CSS, Auth, Middleware, API',
+          },
+          {
+            label: 'Czas realizacji',
+            value: '1 tydz.',
+          },
+        ],
+        content: {
+          problem:
+            'Aplikacja z notatkami potrzebuje nie tylko listy wpisów, ale też bezpiecznego dostępu, podstawowej nawigacji po danych i szybkiego sposobu odnalezienia potrzebnych informacji.',
+          solution:
+            'Projekt łączy logowanie, rejestrację, chronione widoki, profil użytkownika, listę notatek, filtrowanie według kategorii, wyszukiwanie i formularz tworzenia nowej notatki.',
+          result:
+            'Powstał prototyp aplikacji, który pokazuje pełny flow od wejścia na stronę, przez autoryzację, po pracę z notatkami w panelu użytkownika.',
+        },
+        contributions: {
+          title: 'Co zrobiłem',
+          items: [
+            'Zaimplementowałem logowanie, rejestrację i obsługę stanu użytkownika',
+            'Wdrożyłem ochronę tras oraz logikę przekierowań w aplikacji',
+            'Przygotowałem dashboard notatek i nawigację po widokach',
+            'Dodałem filtrowanie kategorii i wyszukiwanie notatek',
+            'Zaimplementowałem formularz tworzenia nowej notatki',
+            'Zintegrowałem frontend z middleware i API aplikacji',
+          ],
+        },
+        gallery: [
+          {
+            title: 'Ekran startowy',
+            description:
+              'Strona powitalna z krótkim opisem aplikacji NoteHub.',
+            layout: 'fullWidth',
+            images: [{ index: 1, label: 'Ekran startowy', kind: 'default' }],
+          },
+          {
+            title: 'Logowanie',
+            description: 'Formularz wejścia do aplikacji dla istniejącego użytkownika.',
+            layout: 'single',
+            images: [{ index: 2, label: 'Logowanie', kind: 'default' }],
+          },
+          {
+            title: 'Rejestracja',
+            description: 'Formularz utworzenia nowego konta użytkownika.',
+            layout: 'single',
+            images: [{ index: 3, label: 'Rejestracja', kind: 'default' }],
+          },
+          {
+            title: 'Profil użytkownika',
+            description:
+              'Chroniona strona profilu z danymi zalogowanego użytkownika.',
+            layout: 'single',
+            images: [{ index: 4, label: 'Profil użytkownika', kind: 'default' }],
+          },
+          {
+            title: 'Panel notatek',
+            description:
+              'Lista notatek z kategoriami, paginacją i akcją tworzenia nowego wpisu.',
+            layout: 'fullWidth',
+            images: [{ index: 5, label: 'Panel notatek', kind: 'default' }],
+          },
+          {
+            title: 'Filtrowanie kategorii',
+            description: 'Widok notatek zawężony do wybranej kategorii.',
+            layout: 'single',
+            images: [{ index: 6, label: 'Filtrowanie kategorii', kind: 'default' }],
+          },
+          {
+            title: 'Wyszukiwanie',
+            description:
+              'Filtrowanie notatek po wpisanej frazie w polu wyszukiwania.',
+            layout: 'single',
+            images: [{ index: 7, label: 'Wyszukiwanie', kind: 'default' }],
+          },
+          {
+            title: 'Tworzenie notatki',
+            description:
+              'Formularz dodawania nowej notatki z tytułem, treścią i tagiem.',
+            layout: 'single',
+            images: [{ index: 8, label: 'Tworzenie notatki', kind: 'default' }],
+          },
+        ],
+        cta: localizedCta,
+      },
+    };
+  }
+
+  if (project.slug === 'ecotote') {
+    return {
+      ...project,
+      title: 'Strona z katalogiem toreb ekologicznych',
+      description:
+        'Jednostronicowa strona marki ekologicznych toreb z katalogiem produktów, galerią, opiniami i formularzem kontaktowym.',
+      highlights: [
+        'Strona marki eco',
+        'Katalog produktów',
+        'Współpraca zespołowa',
+      ],
+      businessSummary:
+        'Jednostronicowa strona marki ekologicznych toreb z katalogiem produktów, galerią, opiniami i formularzem kontaktowym.',
+      badges: [
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'Handlebars',
+        'Scrum Master',
+        'Team project',
+      ],
+      summary: {
+        projectType: 'Strona produktowa z katalogiem',
+        goal: 'Przygotować stronę marki ekologicznych toreb z katalogiem produktów i prostą ścieżką kontaktu.',
+        mainFeatures: [
+          'Hero marki',
+          'Katalog produktów',
+          'Sekcja zalet',
+          'Galeria',
+          'Opinie klientów',
+          'Formularz kontaktowy',
+        ],
+        role: 'Scrum Master i frontend contribution w projekcie zespołowym',
+        stack: ['HTML', 'CSS', 'JavaScript', 'Handlebars', 'Responsive layout', 'Git'],
+        result:
+          'Responsywna strona pokazująca ofertę marki, produkty i podstawową ścieżkę kontaktu z klientem.',
+      },
+      caseStudy: {
+        hero: {
+          title: 'Strona z katalogiem toreb ekologicznych',
+          subtitle:
+            'Jednostronicowa strona EcoTote z katalogiem produktów, sekcjami wizualnymi, opiniami i formularzem kontaktowym.',
+        },
+        meta: [
+          {
+            label: 'Rola',
+            value: 'Scrum Master i frontend contribution w projekcie zespołowym',
+          },
+          {
+            label: 'Typ',
+            value: 'Strona produktowa z katalogiem',
+          },
+          {
+            label: 'Lokalizacja',
+            value: 'Projekt kursowy',
+          },
+          {
+            label: 'Zakres',
+            value:
+              'Pokazanie marki eco, prezentacja produktów i poprowadzenie użytkownika do prostego kontaktu.',
+          },
+          {
+            label: 'Stack',
+            value: 'HTML, CSS, JavaScript, Handlebars, Responsive layout, Git',
+          },
+          {
+            label: 'Czas realizacji',
+            value: '1 tydz.',
+          },
+        ],
+        content: {
+          problem:
+            'Marka ekologicznych toreb potrzebowała prostej strony, która pokazuje styl produktów, ich zalety i daje użytkownikowi szybki sposób kontaktu.',
+          solution:
+            'Zespół przygotował jednostronicową stronę z dużym hero, sekcjami o wartościach marki, katalogiem produktów, galerią, opiniami klientów i formularzem kontaktowym.',
+          result:
+            'Powstała responsywna strona prezentacyjna, która prowadzi użytkownika od poznania marki do obejrzenia produktów i wysłania zapytania.',
+        },
+        contributions: {
+          title: 'Moja rola w projekcie',
+          items: [
+            'Koordynowałem pracę zespołu jako Scrum Master',
+            'Przygotowałem sekcję Hero',
+            'Zrealizowałem Footer z danymi kontaktowymi',
+            'Obrabiałem i przygotowywałem grafiki do użycia na stronie',
+            'Przygotowałem sprite / zestaw ikon dla interfejsu',
+            'Wspierałem integrację sekcji w jedną spójną stronę',
+          ],
+        },
+        gallery: [
+          {
+            title: 'Hero marki',
+            description:
+              'Główne otwarcie strony z hasłem marki i zdjęciem produktów.',
+            layout: 'fullWidth',
+            images: [{ index: 3, label: 'Hero marki', kind: 'default' }],
+          },
+          {
+            title: 'Responsywność',
+            description:
+              'Widoki desktop i mobile pokazujące responsywność interfejsu.',
+            layout: 'responsive',
+            images: [
+              { index: 1, label: 'Widok desktop', kind: 'desktop' },
+              { index: 2, label: 'Widok mobile', kind: 'mobile' },
+            ],
+          },
+          {
+            title: 'Sekcja zalet',
+            description: 'Blok o materiałach, trwałości i stylu produktów.',
+            layout: 'single',
+            images: [{ index: 4, label: 'Sekcja zalet', kind: 'default' }],
+          },
+          {
+            title: 'Katalog produktów',
+            description:
+              'Lista produktów z nazwami, opisami, cenami i przyciskami zakupu.',
+            layout: 'single',
+            images: [{ index: 5, label: 'Katalog produktów', kind: 'default' }],
+          },
+          {
+            title: 'Galeria marki',
+            description:
+              'Wizualna galeria pokazująca torby EcoTote w codziennym użyciu.',
+            layout: 'single',
+            images: [{ index: 6, label: 'Galeria marki', kind: 'default' }],
+          },
+          {
+            title: 'Opinie i kontakt',
+            description: 'Sekcja opinii klientów oraz formularz kontaktowy.',
+            layout: 'single',
+            images: [{ index: 7, label: 'Opinie i kontakt', kind: 'default' }],
+          },
+        ],
+        cta: localizedCta,
+      },
+    };
+  }
+
   return project;
 });
 

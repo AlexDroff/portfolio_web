@@ -1296,6 +1296,380 @@ const projects: Project[] = [
         "buttonLabel": "Start a project"
       }
     }
+  },
+  {
+    "slug": "notehub",
+    "title": "Notes app with authentication",
+    "description": "A notes management app with login, user profile, filtering, search, and note creation flow.",
+    "highlights": [
+      "Authentication flow",
+      "Protected dashboard",
+      "Notes CRUD path"
+    ],
+    "liveDemoUrl": "https://goit-next-hw-09.vercel.app/",
+    "githubUrl": "https://github.com/AlexDroff/goit-next-hw-09",
+    "imageFolder": "notehub",
+    "cardImage": "/projects cards/notehub.webp",
+    "businessSummary": "A notes management app with login, user profile, filtering, search, and note creation flow.",
+    "badges": [
+      "Next.js",
+      "TypeScript",
+      "Auth",
+      "Protected routes",
+      "CRUD",
+      "Dashboard"
+    ],
+    "summary": {
+      "projectType": "Notes application with authentication",
+      "goal": "Build an app with login, protected routes, and a dashboard for browsing and creating notes.",
+      "mainFeatures": [
+        "Login and registration",
+        "Protected routes",
+        "User profile",
+        "Notes list",
+        "Category filtering",
+        "Search",
+        "Create note flow"
+      ],
+      "role": "Frontend development and auth logic integration",
+      "stack": [
+        "Next.js",
+        "TypeScript",
+        "CSS",
+        "Auth",
+        "Middleware",
+        "API"
+      ],
+      "result": "A working notes app prototype with basic authentication, filtering, and note management."
+    },
+    "caseStudy": {
+      "hero": {
+        "title": "Notes app with authentication",
+        "subtitle": "A notes dashboard prototype with login, protected routes, category filtering, search, and note creation."
+      },
+      "meta": [
+        {
+          "label": "Role",
+          "value": "Frontend development and auth logic integration"
+        },
+        {
+          "label": "Type",
+          "value": "Notes application with authentication"
+        },
+        {
+          "label": "Location",
+          "value": "Course project"
+        },
+        {
+          "label": "Focus",
+          "value": "Building a practical notes workflow with secure access and dashboard navigation."
+        },
+        {
+          "label": "Stack",
+          "value": "Next.js, TypeScript, CSS, Auth, Middleware, API"
+        },
+        {
+          "label": "Duration",
+          "value": "1 week"
+        }
+      ],
+      "content": {
+        "problem": "A notes app needs more than a list of entries: it also requires secure access, basic data navigation, and a quick way to find relevant information.",
+        "solution": "The project combines login, registration, protected views, user profile, notes list, category filtering, search, and a form for creating new notes.",
+        "result": "The result is a prototype that shows the full flow from landing page and authentication to working with notes inside the user dashboard."
+      },
+      "contributions": {
+        "title": "What I did",
+        "items": [
+          "Implemented authentication UI and protected route behavior",
+          "Integrated dashboard navigation and notes interaction flows",
+          "Built filtering and search interactions for notes list",
+          "Implemented create-note form flow with controlled state",
+          "Connected frontend logic with app API routes",
+          "Structured responsive page layouts for core views"
+        ]
+      },
+      "gallery": [
+        {
+          "title": "Home screen",
+          "description": "Landing page with a short description of the NoteHub app.",
+          "layout": "fullWidth",
+          "images": [
+            {
+              "index": 1,
+              "label": "Home screen",
+              "kind": "default"
+            }
+          ]
+        },
+        {
+          "title": "Login",
+          "description": "Sign-in form for an existing user.",
+          "layout": "single",
+          "images": [
+            {
+              "index": 2,
+              "label": "Login",
+              "kind": "default"
+            }
+          ]
+        },
+        {
+          "title": "Sign up",
+          "description": "Registration form for creating a new user account.",
+          "layout": "single",
+          "images": [
+            {
+              "index": 3,
+              "label": "Sign up",
+              "kind": "default"
+            }
+          ]
+        },
+        {
+          "title": "User profile",
+          "description": "Protected profile page with signed-in user data.",
+          "layout": "single",
+          "images": [
+            {
+              "index": 4,
+              "label": "User profile",
+              "kind": "default"
+            }
+          ]
+        },
+        {
+          "title": "Notes dashboard",
+          "description": "Notes list with categories, pagination, and create note action.",
+          "layout": "fullWidth",
+          "images": [
+            {
+              "index": 5,
+              "label": "Notes dashboard",
+              "kind": "default"
+            }
+          ]
+        },
+        {
+          "title": "Category filtering",
+          "description": "Notes view filtered by the selected category.",
+          "layout": "single",
+          "images": [
+            {
+              "index": 6,
+              "label": "Category filtering",
+              "kind": "default"
+            }
+          ]
+        },
+        {
+          "title": "Search",
+          "description": "Filtering notes by a typed search phrase.",
+          "layout": "single",
+          "images": [
+            {
+              "index": 7,
+              "label": "Search",
+              "kind": "default"
+            }
+          ]
+        },
+        {
+          "title": "Create note",
+          "description": "Form for adding a new note with title, content, and tag.",
+          "layout": "single",
+          "images": [
+            {
+              "index": 8,
+              "label": "Create note",
+              "kind": "default"
+            }
+          ]
+        }
+      ],
+      "cta": {
+        "title": "Need a website that makes customer contact easier?",
+        "subtext": "I can prepare a clear website with a simple path to an inquiry, booking request or conversation.",
+        "buttonLabel": "Start a project"
+      }
+    }
+  },
+  {
+    "slug": "ecotote",
+    "title": "Website with eco bag catalog",
+    "description": "A single-page website for an eco tote brand with a product catalog, gallery, testimonials, and a contact form.",
+    "highlights": [
+      "Brand website",
+      "Product showcase",
+      "Team collaboration flow"
+    ],
+    "liveDemoUrl": "https://alexdroff.github.io/group-project-html-css/",
+    "githubUrl": "https://github.com/AlexDroff/group-project-html-css",
+    "imageFolder": "ecotote",
+    "cardImage": "/projects cards/ecotote.webp",
+    "businessSummary": "A single-page website for an eco tote brand with a product catalog, gallery, testimonials, and a contact form.",
+    "badges": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Handlebars",
+      "Scrum Master",
+      "Team project"
+    ],
+    "summary": {
+      "projectType": "Product website with catalog",
+      "goal": "Prepare a website for an eco tote brand with a product catalog and a simple contact path.",
+      "mainFeatures": [
+        "Brand hero",
+        "Product catalog",
+        "Benefits section",
+        "Gallery",
+        "Customer testimonials",
+        "Contact form"
+      ],
+      "role": "Scrum Master and frontend contribution in a team project",
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Handlebars",
+        "Responsive layout",
+        "Git"
+      ],
+      "result": "A responsive website presenting the brand offer, products, and a basic customer contact path."
+    },
+    "caseStudy": {
+      "hero": {
+        "title": "Website with eco bag catalog",
+        "subtitle": "A single-page website for EcoTote with product catalog, visual sections, testimonials, and a contact form."
+      },
+      "meta": [
+        {
+          "label": "Role",
+          "value": "Scrum Master and frontend contribution in a team project"
+        },
+        {
+          "label": "Type",
+          "value": "Product website with catalog"
+        },
+        {
+          "label": "Location",
+          "value": "Course project"
+        },
+        {
+          "label": "Focus",
+          "value": "Presenting the eco brand, showcasing products, and guiding users to a simple contact action."
+        },
+        {
+          "label": "Stack",
+          "value": "HTML, CSS, JavaScript, Handlebars, Responsive layout, Git"
+        },
+        {
+          "label": "Duration",
+          "value": "1 week"
+        }
+      ],
+      "content": {
+        "problem": "An eco tote brand needed a simple website that presents the product style, explains the benefits, and gives users a quick way to get in touch.",
+        "solution": "The team prepared a single-page website with a large hero, brand value sections, product catalog, gallery, customer testimonials, and a contact form.",
+        "result": "The result is a responsive presentation website that guides users from understanding the brand to viewing products and sending an inquiry."
+      },
+      "contributions": {
+        "title": "My role in the project",
+        "items": [
+          "Coordinated team work as Scrum Master",
+          "Built the Hero section",
+          "Implemented the Footer with contact details",
+          "Processed and prepared images for use on the website",
+          "Prepared the sprite / icon set for the interface",
+          "Supported the integration of sections into one consistent page"
+        ]
+      },
+      "gallery": [
+        {
+          "title": "Brand hero",
+          "description": "Main page opening with brand message and product image.",
+          "layout": "fullWidth",
+          "images": [
+            {
+              "index": 3,
+              "label": "Brand hero",
+              "kind": "default"
+            }
+          ]
+        },
+        {
+          "title": "Responsive Design",
+          "description": "Desktop and mobile views showing the responsive interface.",
+          "layout": "responsive",
+          "images": [
+            {
+              "index": 1,
+              "label": "Desktop view",
+              "kind": "desktop"
+            },
+            {
+              "index": 2,
+              "label": "Mobile view",
+              "kind": "mobile"
+            }
+          ]
+        },
+        {
+          "title": "Benefits section",
+          "description": "Section about materials, durability, and product style.",
+          "layout": "single",
+          "images": [
+            {
+              "index": 4,
+              "label": "Benefits section",
+              "kind": "default"
+            }
+          ]
+        },
+        {
+          "title": "Product catalog",
+          "description": "Product list with names, descriptions, prices, and purchase buttons.",
+          "layout": "single",
+          "images": [
+            {
+              "index": 5,
+              "label": "Product catalog",
+              "kind": "default"
+            }
+          ]
+        },
+        {
+          "title": "Brand gallery",
+          "description": "Visual gallery showing EcoTote bags in everyday use.",
+          "layout": "single",
+          "images": [
+            {
+              "index": 6,
+              "label": "Brand gallery",
+              "kind": "default"
+            }
+          ]
+        },
+        {
+          "title": "Testimonials and contact",
+          "description": "Customer testimonials section and contact form.",
+          "layout": "single",
+          "images": [
+            {
+              "index": 7,
+              "label": "Testimonials and contact",
+              "kind": "default"
+            }
+          ]
+        }
+      ],
+      "cta": {
+        "title": "Need a website that makes customer contact easier?",
+        "subtext": "I can prepare a clear website with a simple path to an inquiry, booking request or conversation.",
+        "buttonLabel": "Start a project"
+      }
+    }
   }
 ];
 
