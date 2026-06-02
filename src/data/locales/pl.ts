@@ -413,7 +413,7 @@ const projects: Project[] = enContent.projects.map((project) => {
             'Efektem jest szybka i czytelna strona, która pomaga klientowi otrzymywać uporządkowane zapytania przez WhatsApp.',
         },
         contributions: {
-          title: 'Strona firmy sprzątającej',
+          title: 'Co zrobiłem',
           items: [
             'Zaprojektowałem cały interfejs i UX od podstaw',
             'Przygotowałem w pełni responsywne widoki (mobile, tablet, desktop)',
@@ -625,7 +625,7 @@ const projects: Project[] = enContent.projects.map((project) => {
             'Nowa strona lepiej pokazuje ofertę i ułatwia szybki kontakt z właścicielem.',
         },
         contributions: {
-          title: 'Strona domków wypoczynkowych',
+          title: 'Co zrobiłem',
           items: [
             'Zaprojektowałem cały interfejs i UX od podstaw',
             'Przygotowałem w pełni responsywne widoki (mobile, tablet, desktop)',
@@ -833,7 +833,7 @@ const projects: Project[] = enContent.projects.map((project) => {
             'Powstała funkcjonalna aplikacja, która pokazuje praktyczne wykorzystanie API, logiki filtrowania i realnej ścieżki użytkownika.',
         },
         contributions: {
-          title: 'Katalog wynajmu aut',
+          title: 'Co zrobiłem',
           items: [
             'Zaimplementowałem cały frontend na podstawie projektu z Figma',
             'Zbudowałem dynamiczny katalog aut oparty o dane z API',
@@ -1152,7 +1152,7 @@ const projects: Project[] = enContent.projects.map((project) => {
             'Platforma obsługuje autoryzację, publikowanie i interakcje użytkowników, pokazując praktyczną architekturę fullstack i pracę zespołową.',
         },
         contributions: {
-          title: 'Platforma historii z podróży',
+          title: 'Co zrobiłem',
           items: [
             'Zaimplementowałem kilka wariantów nagłówka dla różnych kontekstów strony',
             'Zbudowałem komponent modala potwierdzającego (ConfirmModal)',
@@ -1475,7 +1475,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           'Opinie klientów',
           'Formularz kontaktowy',
         ],
-        role: 'Scrum Master i frontend contribution w projekcie zespołowym',
+        role: 'Scrum Master i wkład frontendowy w projekcie zespołowym',
         stack: ['HTML', 'CSS', 'JavaScript', 'Handlebars', 'Responsive layout', 'Git'],
         result:
           'Responsywna strona pokazująca ofertę marki, produkty i podstawową ścieżkę kontaktu z klientem.',
@@ -1489,7 +1489,7 @@ const projects: Project[] = enContent.projects.map((project) => {
         meta: [
           {
             label: 'Rola',
-            value: 'Scrum Master i frontend contribution w projekcie zespołowym',
+            value: 'Scrum Master i wkład frontendowy w projekcie zespołowym',
           },
           {
             label: 'Typ',
@@ -1668,7 +1668,7 @@ const ui: LocaleContent['ui'] = {
   },
   common: {
     backToTop: 'Wr\u00f3\u0107 na g\u00f3r\u0119',
-    profilePhoto: 'Oleksandr Aleksandrov \u2013 fullstack developer',
+    profilePhoto: 'Oleksandr Aleksandrov \u2013 full-stack developer',
     homeAriaLabel: 'Strona g\u0142\u00f3wna',
     logoAlt: 'Logo OA',
   },
@@ -1713,7 +1713,7 @@ const seo: LocaleContent['seo'] = {
   jsonLd: {
     websiteDescription:
       'Portfolio i oferta tworzenia stron dla ma\u0142ych firm us\u0142ugowych.',
-    personJobTitle: 'Fullstack Developer',
+    personJobTitle: 'Full-stack Developer',
     professionalServiceDescription:
       'Pomagam ma\u0142ym firmom us\u0142ugowym przygotowa\u0107 szybkie strony, czyteln\u0105 ofert\u0119 i prost\u0105 \u015bcie\u017ck\u0119 kontaktu lub rezerwacji.',
   },

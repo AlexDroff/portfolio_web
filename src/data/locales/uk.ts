@@ -196,11 +196,11 @@ const home: LocaleContent['home'] = {
       {
         id: 'landing-page',
         title: 'Landing Page',
-        price: 'from 1800 PLN',
+        price: 'від 1800 PLN',
         description:
           'Для однієї послуги, кампанії або простої пропозиції, яку потрібно швидко й зрозуміло показати онлайн.',
         features: [
-          'One-page структура',
+          'Односторінкова структура',
           'Блоки пропозиції, переваг і контакту',
           'Адаптивний вигляд',
           'Чіткий CTA для звернення',
@@ -212,7 +212,7 @@ const home: LocaleContent['home'] = {
       {
         id: 'business-website',
         title: 'Сайт компанії',
-        price: 'from 3000 PLN',
+        price: 'від 3000 PLN',
         description:
           'Для малого бізнесу, якому потрібен повніший сайт із пропозицією, довірою та контактами.',
         features: [
@@ -228,7 +228,7 @@ const home: LocaleContent['home'] = {
       {
         id: 'booking-flow',
         title: 'Сайт + шлях бронювання',
-        price: 'from 4500 PLN',
+        price: 'від 4500 PLN',
         description:
           'Для послуг, де важливі швидкий запит, бронювання або прямий контакт із клієнтом.',
         features: [
@@ -245,7 +245,7 @@ const home: LocaleContent['home'] = {
       {
         id: 'custom-web-app',
         title: 'Вебзастосунок / MVP',
-        price: 'from 8000 PLN',
+        price: 'від 8000 PLN',
         description:
           'Для проєктів, яким потрібні логіка користувача, дані, кабінет, API, авторизація або власний процес роботи.',
         features: [
@@ -430,7 +430,7 @@ const projects: Project[] = enContent.projects.map((project) => {
             layout: 'responsive',
             images: [
               { index: 1, label: 'Десктопний вигляд', kind: 'desktop' },
-              { index: 2, label: 'Адаптивність', kind: 'mobile' },
+              { index: 2, label: 'Мобільний вигляд', kind: 'mobile' },
             ],
           },
           {
@@ -457,8 +457,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           },
           {
             title: 'FAQ та додатковий контент',
-            description:
-              'Відповіді на найчастіші запитання клієнтів.',
+            description: 'Відповіді на найчастіші запитання клієнтів.',
             layout: 'fullWidth',
             images: [
               {
@@ -606,7 +605,7 @@ const projects: Project[] = enContent.projects.map((project) => {
             layout: 'responsive',
             images: [
               { index: 1, label: 'Десктопний вигляд', kind: 'desktop' },
-              { index: 2, label: 'Адаптивність', kind: 'mobile' },
+              { index: 2, label: 'Мобільний вигляд', kind: 'mobile' },
             ],
           },
           {
@@ -662,12 +661,9 @@ const projects: Project[] = enContent.projects.map((project) => {
           },
           {
             title: 'Форма бронювання',
-            description:
-              'Форма бронювання, яка надсилає заявку в Telegram.',
+            description: 'Форма бронювання, яка надсилає заявку в Telegram.',
             layout: 'fullWidth',
-            images: [
-              { index: 10, label: 'Форма бронювання', kind: 'default' },
-            ],
+            images: [{ index: 10, label: 'Форма бронювання', kind: 'default' }],
           },
         ],
         cta: localizedCta,
@@ -755,7 +751,7 @@ const projects: Project[] = enContent.projects.map((project) => {
             layout: 'responsive',
             images: [
               { index: 1, label: 'Десктопний вигляд', kind: 'desktop' },
-              { index: 2, label: 'Адаптивність', kind: 'mobile' },
+              { index: 2, label: 'Мобільний вигляд', kind: 'mobile' },
             ],
           },
           {
@@ -810,7 +806,11 @@ const projects: Project[] = enContent.projects.map((project) => {
       title: 'Каталог книжок із кошиком',
       description:
         'Застосунок книгарні з каталогом книжок, фільтрацією, деталями товару, кошиком і простим сценарієм покупки.',
-      highlights: ['Каталог книжок', 'Модальне вікно товару', 'Кошик і wishlist'],
+      highlights: [
+        'Каталог книжок',
+        'Модальне вікно товару',
+        'Кошик і wishlist',
+      ],
       businessSummary:
         'Застосунок книгарні з каталогом книжок, фільтрацією, деталями товару, кошиком і простим сценарієм покупки.',
       badges: [
@@ -986,7 +986,7 @@ const projects: Project[] = enContent.projects.map((project) => {
             'Повноцінна вебплатформа для публікації історій подорожей з авторизацією, профілями і керуванням контентом.',
         },
         meta: [
-          { label: 'Роль', value: 'Frontend Developer + backend contribution' },
+          { label: 'Роль', value: 'Frontend-розробка та участь у backend-частині' },
           { label: 'Тип', value: 'Контент-платформа' },
           { label: 'Локація', value: 'Навчальний проєкт' },
           {
@@ -1051,7 +1051,7 @@ const projects: Project[] = enContent.projects.map((project) => {
             layout: 'responsive',
             images: [
               { index: 1, label: 'Десктопний вигляд', kind: 'desktop' },
-              { index: 2, label: 'Адаптивність', kind: 'mobile' },
+              { index: 2, label: 'Мобільний вигляд', kind: 'mobile' },
             ],
           },
           {
@@ -1109,11 +1109,7 @@ const projects: Project[] = enContent.projects.map((project) => {
       title: 'Застосунок нотаток з авторизацією',
       description:
         'Застосунок для керування нотатками з входом, профілем користувача, фільтрацією, пошуком і створенням нових записів.',
-      highlights: [
-        'Вхід і авторизація',
-        'Захищені маршрути',
-        'CRUD нотаток',
-      ],
+      highlights: ['Вхід і авторизація', 'Захищені маршрути', 'CRUD нотаток'],
       businessSummary:
         'Застосунок для керування нотатками з входом, профілем користувача, фільтрацією, пошуком і створенням нових записів.',
       badges: [
@@ -1203,8 +1199,7 @@ const projects: Project[] = enContent.projects.map((project) => {
           },
           {
             title: 'Вхід',
-            description:
-              'Форма входу в застосунок для існуючого користувача.',
+            description: 'Форма входу в застосунок для існуючого користувача.',
             layout: 'single',
             images: [{ index: 2, label: 'Вхід', kind: 'default' }],
           },
@@ -1219,7 +1214,9 @@ const projects: Project[] = enContent.projects.map((project) => {
             description:
               'Захищена сторінка профілю з даними авторизованого користувача.',
             layout: 'single',
-            images: [{ index: 4, label: 'Профіль користувача', kind: 'default' }],
+            images: [
+              { index: 4, label: 'Профіль користувача', kind: 'default' },
+            ],
           },
           {
             title: 'Панель нотаток',
@@ -1233,12 +1230,13 @@ const projects: Project[] = enContent.projects.map((project) => {
             description:
               'Вигляд нотаток, відфільтрований за вибраною категорією.',
             layout: 'single',
-            images: [{ index: 6, label: 'Фільтрація категорій', kind: 'default' }],
+            images: [
+              { index: 6, label: 'Фільтрація категорій', kind: 'default' },
+            ],
           },
           {
             title: 'Пошук',
-            description:
-              'Фільтрація нотаток за введеним пошуковим запитом.',
+            description: 'Фільтрація нотаток за введеним пошуковим запитом.',
             layout: 'single',
             images: [{ index: 7, label: 'Пошук', kind: 'default' }],
           },
@@ -1261,11 +1259,7 @@ const projects: Project[] = enContent.projects.map((project) => {
       title: 'Сайт із каталогом еко-сумок',
       description:
         'Односторінковий сайт для бренду еко-сумок із каталогом товарів, галереєю, відгуками і контактною формою.',
-      highlights: [
-        'Сайт eco-бренду',
-        'Каталог товарів',
-        'Командна реалізація',
-      ],
+      highlights: ['Сайт eco-бренду', 'Каталог товарів', 'Командна реалізація'],
       businessSummary:
         'Односторінковий сайт для бренду еко-сумок із каталогом товарів, галереєю, відгуками і контактною формою.',
       badges: [
@@ -1288,7 +1282,14 @@ const projects: Project[] = enContent.projects.map((project) => {
           'Контактна форма',
         ],
         role: 'Scrum Master і frontend-внесок у командному проєкті',
-        stack: ['HTML', 'CSS', 'JavaScript', 'Handlebars', 'Responsive layout', 'Git'],
+        stack: [
+          'HTML',
+          'CSS',
+          'JavaScript',
+          'Handlebars',
+          'Responsive layout',
+          'Git',
+        ],
         result:
           'Адаптивний сайт, який презентує бренд, товари і базовий шлях контакту з клієнтом.',
       },
@@ -1481,7 +1482,7 @@ const ui: LocaleContent['ui'] = {
   },
   common: {
     backToTop: 'Повернутися вгору',
-    profilePhoto: 'Oleksandr Aleksandrov – fullstack developer',
+    profilePhoto: 'Oleksandr Aleksandrov – full-stack розробник',
     homeAriaLabel: 'Головна сторінка',
     logoAlt: 'Логотип OA',
   },
@@ -1501,7 +1502,8 @@ const seo: LocaleContent['seo'] = {
     titleTemplate: '%s | Loading Studio',
     description:
       'Проєктую швидкі адаптивні сайти та прості шляхи контакту або бронювання для малого бізнесу у сфері послуг. Допомагаю впорядкувати пропозицію, підготувати базове SEO і безпечно запустити сайт.',
-    openGraphTitle: 'Loading Studio – швидкі сайти для малого сервісного бізнесу',
+    openGraphTitle:
+      'Loading Studio – швидкі сайти для малого сервісного бізнесу',
     openGraphDescription:
       'Швидкі сайти, зрозуміла пропозиція і простіший контакт із клієнтами для малого бізнесу у сфері послуг.',
     twitterTitle: 'Loading Studio – швидкі сайти для малого сервісного бізнесу',
@@ -1524,7 +1526,7 @@ const seo: LocaleContent['seo'] = {
   jsonLd: {
     websiteDescription:
       'Портфоліо та послуги зі створення сайтів для малого бізнесу у сфері послуг.',
-    personJobTitle: 'Fullstack Developer',
+    personJobTitle: 'Full-stack розробник',
     professionalServiceDescription:
       'Допомагаю малому бізнесу у сфері послуг запускати швидкі сайти зі зрозумілою пропозицією та простим шляхом до контакту або заявки на бронювання.',
   },
@@ -1538,5 +1540,3 @@ export const ukContent: LocaleContent = {
   ui,
   seo,
 };
-
-

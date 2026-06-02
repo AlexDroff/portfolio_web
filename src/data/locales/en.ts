@@ -164,7 +164,7 @@ const home: LocaleContent["home"] = {
       {
         "id": "services-contact-cta",
         "title": "Have a project idea?",
-        "description": "Tell me about it ->",
+        "description": "Tell me about it →",
         "variant": "cta",
         "href": "/contact"
       }
@@ -186,7 +186,7 @@ const home: LocaleContent["home"] = {
           "Clear contact CTA",
           "Basic SEO and launch"
         ],
-        "ctaLabel": "Ask about this package ->",
+        "ctaLabel": "Ask about this package →",
         "ctaHref": "/contact"
       },
       {
@@ -201,7 +201,7 @@ const home: LocaleContent["home"] = {
           "Contact section",
           "Basic SEO and deployment"
         ],
-        "ctaLabel": "Ask about this package ->",
+        "ctaLabel": "Ask about this package →",
         "ctaHref": "/contact"
       },
       {
@@ -217,7 +217,7 @@ const home: LocaleContent["home"] = {
           "Post-launch fixes"
         ],
         "badge": "Most common choice",
-        "ctaLabel": "Ask about this package ->",
+        "ctaLabel": "Ask about this package →",
         "ctaHref": "/contact"
       },
       {
@@ -232,7 +232,7 @@ const home: LocaleContent["home"] = {
           "PostgreSQL or MongoDB when needed",
           "Scalable project structure"
         ],
-        "ctaLabel": "Ask about this package ->",
+        "ctaLabel": "Ask about this package →",
         "ctaHref": "/contact"
       }
     ]
@@ -256,7 +256,7 @@ const faq: FAQContent = {
     {
       "id": "timeline",
       "question": "How long does it take to build a website?",
-      "answer": "A landing page usually takes 1вЂ“2 weeks, a business website 2вЂ“4 weeks, and a larger project 4вЂ“6 weeks or more. The exact timeline depends on scope."
+      "answer": "A landing page usually takes 1–2 weeks, a business website 2–4 weeks, and a larger project 4–6 weeks or more. The exact timeline depends on scope."
     },
     {
       "id": "process",
@@ -1177,25 +1177,25 @@ const projects: Project[] = [
       },
       "gallery": [
         {
-          "title": "Hero - Guest State",
+          "title": "Hero – Guest State",
           "description": "Public landing experience introducing the platform and inviting new users to join the community.",
           "layout": "single",
           "images": [
             {
               "index": 3,
-              "label": "Hero - Guest State",
+              "label": "Hero – Guest State",
               "kind": "default"
             }
           ]
         },
         {
-          "title": "Hero - Authenticated State",
+          "title": "Hero – Authenticated State",
           "description": "Authenticated landing state showing how navigation and available actions expand after login.",
           "layout": "single",
           "images": [
             {
               "index": 5,
-              "label": "Hero - Authenticated State",
+              "label": "Hero – Authenticated State",
               "kind": "default"
             }
           ]
@@ -1690,9 +1690,9 @@ const contact: LocaleContent["contact"] = {
   emailLabel: "Email",
   messageLabel: "Message",
   validation: {
-    nameInvalid: "Name must be 3вЂ“18 characters.",
+    nameInvalid: "Name must be 3–18 characters.",
     emailInvalid: "Enter a valid email address.",
-    messageInvalid: "Message must be 5вЂ“500 characters.",
+    messageInvalid: "Message must be 5–500 characters.",
   },
   mailto: {
     subject: "Project inquiry",
@@ -1757,7 +1757,7 @@ const ui: LocaleContent["ui"] = {
   },
   common: {
     backToTop: "Back to top",
-    profilePhoto: "Oleksandr Aleksandrov \u2013 fullstack developer",
+    profilePhoto: "Oleksandr Aleksandrov \u2013 full-stack developer",
     homeAriaLabel: "Home",
     logoAlt: "OA logo",
   },
@@ -1800,7 +1800,7 @@ const seo: LocaleContent["seo"] = {
   jsonLd: {
     websiteDescription:
       "Portfolio and website services for small service businesses.",
-    personJobTitle: "Fullstack Developer",
+    personJobTitle: "Full-stack Developer",
     professionalServiceDescription:
       "I help small service businesses launch fast websites with clear offers and simple paths to contact or booking requests.",
   },
